@@ -881,7 +881,7 @@
 		</Group>
 		<ComplicationSlot slotId="0" displayName="top_left_complication" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="0" y="0" width="225" height="225" name="top_left_complication" alpha="255">
 			<DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="RANGED_VALUE" />
-			<BoundingArc centerX="225" centerY="225" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="279" endAngle="351" direction="CLOCKWISE" />
+			<BoundingArc centerX="225" centerY="225" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="279" endAngle="351" />
 			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z3_aod_compl]? 255: 0" />
 			<Complication type="RANGED_VALUE">
 				<Condition>
@@ -892,13 +892,13 @@
 					</Expressions>
 					<Compare expression="noIcon">
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
+							<Arc width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
 								<Transform target="startAngle" value="288 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="289" endAngle="351" centerX="225" centerY="225">
+							<Arc width="350" height="350" startAngle="289" endAngle="351" centerX="225" centerY="225">
 								<Transform target="startAngle" value="295 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Transform target="endAngle" value="295 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (56 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
@@ -926,13 +926,13 @@
 					</Compare>
 					<Default>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="289" endAngle="351" centerX="225" centerY="225">
+							<Arc width="350" height="350" startAngle="289" endAngle="351" centerX="225" centerY="225">
 								<Transform target="startAngle" value="295 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="289" endAngle="351" centerX="225" centerY="225">
+							<Arc width="350" height="350" startAngle="289" endAngle="351" centerX="225" centerY="225">
 								<Transform target="startAngle" value="295 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Transform target="endAngle" value="295 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (56 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
@@ -1003,7 +1003,7 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc direction="CLOCKWISE" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
+									<Arc width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
@@ -1053,7 +1053,7 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc direction="CLOCKWISE" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
+									<Arc width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
@@ -1107,7 +1107,7 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc direction="CLOCKWISE" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
+									<Arc width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
@@ -1149,13 +1149,13 @@
 					</PartText>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc direction="CLOCKWISE" width="350" height="350" startAngle="279" endAngle="305" centerX="225" centerY="225">
+						<Arc width="350" height="350" startAngle="279" endAngle="305" centerX="225" centerY="225">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc direction="CLOCKWISE" width="350" height="350" startAngle="325" endAngle="351" centerX="225" centerY="225">
+						<Arc width="350" height="350" startAngle="325" endAngle="351" centerX="225" centerY="225">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
@@ -1170,7 +1170,7 @@
 		</ComplicationSlot>
 		<ComplicationSlot slotId="1" displayName="top_right_complication" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="225" y="0" width="225" height="225" name="top_left_complication" alpha="255">
 			<DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="RANGED_VALUE" />
-			<BoundingArc centerX="0" centerY="225" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="9" endAngle="72" direction="CLOCKWISE" />
+			<BoundingArc centerX="0" centerY="225" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="9" endAngle="72" />
 			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z3_aod_compl]? 255: 0" />
 			<Complication type="RANGED_VALUE">
 				<Condition>
@@ -1181,13 +1181,13 @@
 					</Expressions>
 					<Compare expression="noIcon">
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="19" endAngle="72" centerX="0" centerY="225">
+							<Arc width="350" height="350" startAngle="19" endAngle="72" centerX="0" centerY="225">
 								<Transform target="startAngle" value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="19" endAngle="72" centerX="0" centerY="225">
+							<Arc width="350" height="350" startAngle="19" endAngle="72" centerX="0" centerY="225">
 								<Transform target="startAngle" value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Transform target="endAngle" value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
@@ -1215,13 +1215,13 @@
 					</Compare>
 					<Default>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="19" endAngle="72" centerX="0" centerY="225">
+							<Arc width="350" height="350" startAngle="19" endAngle="72" centerX="0" centerY="225">
 								<Transform target="startAngle" value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="19" endAngle="72" centerX="0" centerY="225">
+							<Arc width="350" height="350" startAngle="19" endAngle="72" centerX="0" centerY="225">
 								<Transform target="startAngle" value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Transform target="endAngle" value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
@@ -1292,7 +1292,7 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc direction="CLOCKWISE" width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225">
+									<Arc width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
@@ -1373,7 +1373,7 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc direction="CLOCKWISE" width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225">
+									<Arc width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
@@ -1415,13 +1415,13 @@
 					</PartText>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc direction="CLOCKWISE" width="350" height="350" startAngle="9" endAngle="30" centerX="0" centerY="225">
+						<Arc width="350" height="350" startAngle="9" endAngle="30" centerX="0" centerY="225">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc direction="CLOCKWISE" width="350" height="350" startAngle="50" endAngle="72" centerX="0" centerY="225">
+						<Arc width="350" height="350" startAngle="50" endAngle="72" centerX="0" centerY="225">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
@@ -1436,7 +1436,7 @@
 		</ComplicationSlot>
 		<ComplicationSlot slotId="2" displayName="bottom_left_complication" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="0" y="225" width="225" height="225" name="top_left_complication" alpha="255">
 			<DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="RANGED_VALUE" />
-			<BoundingArc centerX="225" centerY="0" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="189" endAngle="261" direction="CLOCKWISE" />
+			<BoundingArc centerX="225" centerY="0" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="189" endAngle="261" />
 			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z3_aod_compl]? 255: 0" />
 			<Complication type="RANGED_VALUE">
 				<Condition>
@@ -1447,13 +1447,13 @@
 					</Expressions>
 					<Compare expression="noIcon">
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
+							<Arc width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
 								<Transform target="startAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
+							<Arc width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
 								<Transform target="startAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Transform target="endAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (56 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
@@ -1481,13 +1481,13 @@
 					</Compare>
 					<Default>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
+							<Arc width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
 								<Transform target="startAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
+							<Arc width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
 								<Transform target="startAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Transform target="endAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (56 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
@@ -1558,7 +1558,7 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc direction="CLOCKWISE" width="350" height="350" startAngle="189" endAngle="261" centerX="225" centerY="0">
+									<Arc width="350" height="350" startAngle="189" endAngle="261" centerX="225" centerY="0">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
@@ -1608,7 +1608,7 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc direction="CLOCKWISE" width="350" height="350" startAngle="189" endAngle="261" centerX="225" centerY="0">
+									<Arc width="350" height="350" startAngle="189" endAngle="261" centerX="225" centerY="0">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
@@ -1662,7 +1662,7 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc direction="CLOCKWISE" width="350" height="350" startAngle="189" endAngle="261" centerX="225" centerY="0">
+									<Arc width="350" height="350" startAngle="189" endAngle="261" centerX="225" centerY="0">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
@@ -1704,13 +1704,13 @@
 					</PartText>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc direction="CLOCKWISE" width="350" height="350" centerX="225" centerY="0" startAngle="189" endAngle="215">
+						<Arc width="350" height="350" centerX="225" centerY="0" startAngle="189" endAngle="215">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc direction="CLOCKWISE" width="350" height="350" centerX="225" centerY="0" startAngle="235" endAngle="261">
+						<Arc width="350" height="350" centerX="225" centerY="0" startAngle="235" endAngle="261">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
@@ -1725,7 +1725,7 @@
 		</ComplicationSlot>
 		<ComplicationSlot slotId="3" displayName="bottom_right_complication" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="225" y="225" width="225" height="225" name="top_left_complication" alpha="255">
 			<DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="RANGED_VALUE" />
-			<BoundingArc centerX="0" centerY="0" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="108" endAngle="171" direction="CLOCKWISE" />
+			<BoundingArc centerX="0" centerY="0" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="108" endAngle="171" />
 			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z3_aod_compl]? 255: 0" />
 			<Complication type="RANGED_VALUE">
 				<Condition>
@@ -1736,13 +1736,13 @@
 					</Expressions>
 					<Compare expression="noIcon">
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="118" endAngle="171" centerX="0" centerY="0">
+							<Arc width="350" height="350" startAngle="118" endAngle="171" centerX="0" centerY="0">
 								<Transform target="startAngle" value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="108" endAngle="171" centerX="0" centerY="0">
+							<Arc width="350" height="350" startAngle="108" endAngle="171" centerX="0" centerY="0">
 								<Transform target="startAngle" value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Transform target="endAngle" value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
@@ -1770,13 +1770,13 @@
 					</Compare>
 					<Default>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="118" endAngle="171" centerX="0" centerY="0">
+							<Arc width="350" height="350" startAngle="118" endAngle="171" centerX="0" centerY="0">
 								<Transform target="startAngle" value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc direction="CLOCKWISE" width="350" height="350" startAngle="118" endAngle="171" centerX="0" centerY="0">
+							<Arc width="350" height="350" startAngle="118" endAngle="171" centerX="0" centerY="0">
 								<Transform target="startAngle" value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Transform target="endAngle" value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
@@ -1847,7 +1847,7 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc direction="CLOCKWISE" width="350" height="350" startAngle="108" endAngle="171" centerX="0" centerY="0">
+									<Arc width="350" height="350" startAngle="108" endAngle="171" centerX="0" centerY="0">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
@@ -1897,7 +1897,7 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc direction="CLOCKWISE" width="350" height="350" startAngle="108" endAngle="171" centerX="0" centerY="0">
+									<Arc width="350" height="350" startAngle="108" endAngle="171" centerX="0" centerY="0">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
@@ -1951,7 +1951,7 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc direction="CLOCKWISE" width="350" height="350" startAngle="108" endAngle="171" centerX="0" centerY="0">
+									<Arc width="350" height="350" startAngle="108" endAngle="171" centerX="0" centerY="0">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
@@ -1993,13 +1993,13 @@
 					</PartText>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc direction="CLOCKWISE" width="350" height="350" centerX="0" centerY="0" startAngle="108" endAngle="130">
+						<Arc width="350" height="350" centerX="0" centerY="0" startAngle="108" endAngle="130">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc direction="CLOCKWISE" width="350" height="350" centerX="0" centerY="0" startAngle="150" endAngle="171">
+						<Arc width="350" height="350" centerX="0" centerY="0" startAngle="150" endAngle="171">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
@@ -2042,7 +2042,7 @@
 						<Group x="50" y="16" width="32" height="32" name="icon" tintColor="[CONFIGURATION.a2AccentColor]" alpha="255">
 							<PartImage x="0" y="0" width="32" height="32" name="icon">
 								<ImageFilters>
-									<HsbFilter hueRotate="0" saturate="0" brightness="1" />
+									<HsbFilter saturate="0" />
 								</ImageFilters>
 								<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
 							</PartImage>
@@ -2094,7 +2094,7 @@
 				<Group x="44" y="28" width="48" height="48" name="icon" tintColor="[CONFIGURATION.a2AccentColor]" alpha="255">
 					<PartImage x="0" y="0" width="48" height="48" name="icon">
 						<ImageFilters>
-							<HsbFilter hueRotate="0" saturate="0" brightness="1" />
+							<HsbFilter saturate="0" />
 						</ImageFilters>
 						<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
 					</PartImage>
