@@ -4,7 +4,12 @@
       "Bash(mkdir -p app/src/main)",
       "Bash(git mv *)",
       "WebSearch",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(curl -s \"https://api.github.com/repos/google/watchface/contents/third_party/wff/specification/documents/4/common/variant\")",
+      "Bash(python -c \"import sys, json; d=json.load\\(sys.stdin\\); [print\\(i['name']\\) for i in d]\")",
+      "Bash(curl -s \"https://api.github.com/repos/google/watchface/contents/third_party/wff/specification/documents/4/common/transform\")",
+      "Bash(curl *)",
+      "Bash(python -c \"import sys, json; d=json.load\\(sys.stdin\\); [print\\(i['name'], i['type']\\) for i in d]\")"
     ]
   }
 }
