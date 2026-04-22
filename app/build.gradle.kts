@@ -1,10 +1,12 @@
+import com.android.build.api.dsl.ApplicationExtension
+
 plugins {
     id("com.android.application")
 }
 
-android {
+configure<ApplicationExtension> {
     namespace = "com.watchfacedesigns.Concentric"
-    compileSdk = 34
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.watchfacedesigns.Concentric"
