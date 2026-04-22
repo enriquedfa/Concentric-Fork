@@ -180,96 +180,96 @@
 				<Variant mode="AMBIENT" target="alpha" value="255 * ([CONFIGURATION.z1_aod] == 2 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
 				<PartText x="261" y="145" width="40" height="30" name="00" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							00
 						</Font>
 					</Text>
 				</PartText>
 				<PartText x="245" y="85" width="40" height="30" name="05" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							05
 						</Font>
 					</Text>
 				</PartText>
 				<PartText x="201" y="40" width="40" height="30" name="10" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							10
 						</Font>
 					</Text>
 				</PartText>
 				<PartText x="140" y="24" width="40" height="30" name="15" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							15
 						</Font>
 					</Text>
 				</PartText>
 				<PartText x="80" y="40" width="40" height="30" name="20" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							20
 						</Font>
 					</Text>
 				</PartText>
 				<PartText x="35" y="85" width="40" height="30" name="25" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							25
 						</Font>
 					</Text>
 				</PartText>
 				<PartText x="19" y="145" width="40" height="30" name="30" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							30
 						</Font>
 					</Text>
 				</PartText>
 				<PartText x="35" y="206" width="40" height="30" name="35" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							35
 						</Font>
 					</Text>
 				</PartText>
 				<PartText x="80" y="250" width="40" height="30" name="40" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							40
 						</Font>
 					</Text>
 				</PartText>
 				<PartText x="140" y="266" width="40" height="30" name="45" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							45
 						</Font>
 					</Text>
 				</PartText>
 				<PartText x="201" y="250" width="40" height="30" name="50" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							50
 						</Font>
 					</Text>
 				</PartText>
 				<PartText x="245" y="206" width="40" height="30" name="55" alpha="255">
 					<Transform target="angle" value="[MINUTE] * (-6)" />
-					<Text align="CENTER" ellipsis="FALSE">
-						<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ff999999">
+					<Text>
+						<Font family="inter_regular" size="24" color="#ff999999">
 							55
 						</Font>
 					</Text>
@@ -342,8 +342,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									00
 								</Font>
 							</Text>
@@ -352,8 +352,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									05
 								</Font>
 							</Text>
@@ -362,8 +362,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									10
 								</Font>
 							</Text>
@@ -372,8 +372,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									15
 								</Font>
 							</Text>
@@ -382,8 +382,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									20
 								</Font>
 							</Text>
@@ -392,8 +392,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									25
 								</Font>
 							</Text>
@@ -402,8 +402,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									30
 								</Font>
 							</Text>
@@ -412,8 +412,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									35
 								</Font>
 							</Text>
@@ -422,8 +422,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									40
 								</Font>
 							</Text>
@@ -432,8 +432,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									45
 								</Font>
 							</Text>
@@ -442,8 +442,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									50
 								</Font>
 							</Text>
@@ -452,8 +452,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									55
 								</Font>
 							</Text>
@@ -467,8 +467,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									00
 								</Font>
 							</Text>
@@ -477,8 +477,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									05
 								</Font>
 							</Text>
@@ -487,8 +487,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									10
 								</Font>
 							</Text>
@@ -497,8 +497,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									15
 								</Font>
 							</Text>
@@ -507,8 +507,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									20
 								</Font>
 							</Text>
@@ -517,8 +517,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									25
 								</Font>
 							</Text>
@@ -527,8 +527,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									30
 								</Font>
 							</Text>
@@ -537,8 +537,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									35
 								</Font>
 							</Text>
@@ -547,8 +547,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									40
 								</Font>
 							</Text>
@@ -557,8 +557,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									45
 								</Font>
 							</Text>
@@ -567,8 +567,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									50
 								</Font>
 							</Text>
@@ -577,8 +577,8 @@
 							<Transform target="angle" value="[SECOND] * (-6) - 6">
 								<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
 							</Transform>
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									55
 								</Font>
 							</Text>
@@ -652,85 +652,85 @@
 				<ListOption id="0">
 					<Group x="0" y="0" width="450" height="450" name="seconds" alpha="255">
 						<PartText x="392" y="210" width="40" height="30" name="00" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									00
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="366" y="116" width="40" height="30" name="05" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									05
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="298" y="48" width="40" height="30" name="10" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									10
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="205" y="23" width="40" height="30" name="15" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									15
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="112" y="48" width="40" height="30" name="20" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									20
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="44" y="116" width="40" height="30" name="25" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									25
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="18" y="210" width="40" height="30" name="30" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									30
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="44" y="304" width="40" height="30" name="35" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									35
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="112" y="372" width="40" height="30" name="40" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									40
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="205" y="397" width="40" height="30" name="45" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									45
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="298" y="372" width="40" height="30" name="50" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									50
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="366" y="304" width="40" height="30" name="55" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_regular" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_regular" size="24" color="#ffffffff">
 									55
 								</Font>
 							</Text>
@@ -740,85 +740,85 @@
 				<ListOption id="1">
 					<Group x="0" y="0" width="450" height="450" name="seconds" alpha="255">
 						<PartText x="414" y="210" width="40" height="30" name="00" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									00
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="386" y="107" width="40" height="30" name="05" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									05
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="309" y="27" width="40" height="30" name="10" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									10
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="205" y="-3" width="40" height="30" name="15" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									15
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="101" y="28" width="40" height="30" name="20" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									20
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="25" y="105" width="40" height="30" name="25" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									25
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="-4" y="210" width="40" height="30" name="30" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									30
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="24" y="314" width="40" height="30" name="35" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									35
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="99" y="391" width="40" height="30" name="40" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									40
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="205" y="419" width="40" height="30" name="45" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									45
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="310" y="391" width="40" height="30" name="50" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									50
 								</Font>
 							</Text>
 						</PartText>
 						<PartText x="387" y="314" width="40" height="30" name="55" tintColor="[CONFIGURATION.a0SecondsColor]" alpha="255">
-							<Text align="CENTER" ellipsis="FALSE">
-								<Font family="inter_medium" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text>
+								<Font family="inter_medium" size="20" color="#ffffffff">
 									55
 								</Font>
 							</Text>
@@ -859,8 +859,8 @@
 				</Group>
 			</Group>
 			<PartText x="145" y="20" width="80" height="60" name="minute" alpha="255">
-				<Text align="CENTER" ellipsis="FALSE">
-					<Font family="inter_medium" size="42" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+				<Text>
+					<Font family="inter_medium" size="42" color="#ffffffff">
 						<Template>
 							%s
 							<Parameter expression="[MINUTE_Z]" />
@@ -869,8 +869,8 @@
 				</Text>
 			</PartText>
 			<PartText x="0" y="0" width="150" height="100" name="hour" alpha="255">
-				<Text align="CENTER" ellipsis="FALSE">
-					<Font family="inter_medium" size="90" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+				<Text>
+					<Font family="inter_medium" size="90" color="#ffffffff">
 						<Template>
 							%s
 							<Parameter expression="[IS_24_HOUR_MODE]? [HOUR_0_23_Z]: [HOUR_1_12]" />
@@ -906,7 +906,7 @@
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="START" ellipsis="FALSE" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+								<TextCircular align="START" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 									<Font family="roboto_mono_sb" size="24" color="#ffffff">
 										<Upper>
 											<Template>
@@ -940,7 +940,7 @@
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="START" ellipsis="FALSE" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+								<TextCircular align="START" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 									<Font family="SYNC_TO_DEVICE" size="24" color="#ffffff">
 										<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 										<Template>
@@ -982,7 +982,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="272" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="272" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring" width="80" height="30" />
 											<Template>
@@ -1010,7 +1010,7 @@
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="278" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="278" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1036,7 +1036,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="270" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="270" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring" width="80" height="30" />
 											<Upper>
@@ -1060,7 +1060,7 @@
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<Upper>
 												<Template>
@@ -1085,7 +1085,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="272" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="272" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring" width="80" height="30" />
 											<Template>
@@ -1114,7 +1114,7 @@
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="278" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="278" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1141,7 +1141,7 @@
 			<Complication type="MONOCHROMATIC_IMAGE">
 				<Group x="0" y="0" width="225" height="225" name="mono_image">
 					<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-						<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+						<TextCircular width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 							<Font family="roboto_sb" size="30" color="#ffffff">
 								<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 							</Font>
@@ -1195,7 +1195,7 @@
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="START" ellipsis="FALSE" width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
+								<TextCircular align="START" width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
 									<Font family="roboto_mono_sb" size="24" color="#ffffff">
 										<Upper>
 											<Template>
@@ -1229,7 +1229,7 @@
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="START" ellipsis="FALSE" width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
+								<TextCircular align="START" width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
 									<Font family="SYNC_TO_DEVICE" size="24" color="#ffffff">
 										<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 										<Template>
@@ -1271,7 +1271,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="8" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="8" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring" width="80" height="30" />
 											<Template>
@@ -1299,7 +1299,7 @@
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="8" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="8" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1323,7 +1323,7 @@
 					<Compare expression="shortTextTitle">
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" name="text" renderMode="MASK" alpha="255">
-								<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
+								<TextCircular width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
 									<Font family="roboto_sb" size="24" color="#ffffff">
 										<InlineImage resource="ring" width="80" height="30" />
 										<Upper>
@@ -1351,7 +1351,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="8" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="8" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring" width="80" height="30" />
 											<Template>
@@ -1380,7 +1380,7 @@
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="8" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="8" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1407,7 +1407,7 @@
 			<Complication type="MONOCHROMATIC_IMAGE">
 				<Group x="0" y="0" width="225" height="225" name="mono_image">
 					<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-						<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
+						<TextCircular width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
 							<Font family="roboto_sb" size="30" color="#ffffff">
 								<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 							</Font>
@@ -1461,7 +1461,7 @@
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="END" ellipsis="FALSE" width="350" height="350" startAngle="261" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+								<TextCircular align="END" width="350" height="350" startAngle="261" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 									<Font family="roboto_mono_sb" size="24" color="#ffffff">
 										<Upper>
 											<Template>
@@ -1495,7 +1495,7 @@
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="END" ellipsis="FALSE" width="350" height="350" startAngle="261" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+								<TextCircular align="END" width="350" height="350" startAngle="261" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 									<Font family="roboto_mono_sb" size="24" color="#ffffff">
 										<Upper>
 											<Template>
@@ -1537,7 +1537,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="268" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="268" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring_inverse" width="80" height="30" />
 											<Template>
@@ -1565,7 +1565,7 @@
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="262" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="262" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1591,7 +1591,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="267" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="267" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring_inverse" width="80" height="30" />
 											<Upper>
@@ -1615,7 +1615,7 @@
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="261" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="261" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<Upper>
 												<Template>
@@ -1640,7 +1640,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="268" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="268" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring_inverse" width="80" height="30" />
 											<Template>
@@ -1669,7 +1669,7 @@
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="262" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="262" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1696,7 +1696,7 @@
 			<Complication type="MONOCHROMATIC_IMAGE">
 				<Group x="0" y="0" width="225" height="225" name="mono_image">
 					<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-						<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" centerX="225" centerY="0" startAngle="261" endAngle="189" direction="COUNTER_CLOCKWISE">
+						<TextCircular width="350" height="350" centerX="225" centerY="0" startAngle="261" endAngle="189" direction="COUNTER_CLOCKWISE">
 							<Font family="roboto_sb" size="30" color="#ffffff">
 								<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 							</Font>
@@ -1750,7 +1750,7 @@
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="END" ellipsis="FALSE" width="350" height="350" startAngle="171" endAngle="108" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
+								<TextCircular align="END" width="350" height="350" startAngle="171" endAngle="108" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
 									<Font family="roboto_mono_sb" size="24" color="#ffffff">
 										<Upper>
 											<Template>
@@ -1784,7 +1784,7 @@
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="END" ellipsis="FALSE" width="350" height="350" startAngle="171" endAngle="108" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
+								<TextCircular align="END" width="350" height="350" startAngle="171" endAngle="108" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
 									<Font family="roboto_mono_sb" size="24" color="#ffffff">
 										<Upper>
 											<Template>
@@ -1826,7 +1826,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="178" endAngle="102" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="178" endAngle="102" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring_inverse" width="80" height="30" />
 											<Template>
@@ -1854,7 +1854,7 @@
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="172" endAngle="108" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="172" endAngle="108" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1880,7 +1880,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="177" endAngle="102" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="177" endAngle="102" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring_inverse" width="80" height="30" />
 											<Upper>
@@ -1904,7 +1904,7 @@
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="171" endAngle="108" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="171" endAngle="108" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<Upper>
 												<Template>
@@ -1929,7 +1929,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="178" endAngle="102" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="178" endAngle="102" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring_inverse" width="80" height="30" />
 											<Template>
@@ -1958,7 +1958,7 @@
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" startAngle="172" endAngle="108" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="172" endAngle="108" centerX="0" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1985,7 +1985,7 @@
 			<Complication type="MONOCHROMATIC_IMAGE">
 				<Group x="0" y="0" width="225" height="225" name="mono_image">
 					<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-						<TextCircular align="CENTER" ellipsis="FALSE" width="350" height="350" centerX="0" centerY="0" startAngle="171" endAngle="108" direction="COUNTER_CLOCKWISE">
+						<TextCircular width="350" height="350" centerX="0" centerY="0" startAngle="171" endAngle="108" direction="COUNTER_CLOCKWISE">
 							<Font family="roboto_sb" size="30" color="#ffffff">
 								<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 							</Font>
@@ -2028,8 +2028,8 @@
 							<Image resource="complication_border" />
 						</PartImage>
 						<PartText x="6" y="52" width="120" height="40" name="text" alpha="255">
-							<Text align="CENTER" ellipsis="TRUE">
-								<Font family="inter_medium" size="28" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text ellipsis="TRUE">
+								<Font family="inter_medium" size="28" color="#ffffffff">
 									<Upper>
 										<Template>
 											%s
@@ -2053,8 +2053,8 @@
 							<Image resource="complication_border" />
 						</PartImage>
 						<PartText x="6" y="52" width="120" height="40" name="text" alpha="255">
-							<Text align="CENTER" ellipsis="TRUE">
-								<Font family="inter_medium" size="28" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text ellipsis="TRUE">
+								<Font family="inter_medium" size="28" color="#ffffffff">
 									<Upper>
 										<Template>
 											%s
@@ -2065,8 +2065,8 @@
 							</Text>
 						</PartText>
 						<PartText x="6" y="12" width="120" height="40" name="title" tintColor="[CONFIGURATION.a2AccentColor]" alpha="255">
-							<Text align="CENTER" ellipsis="TRUE">
-								<Font family="inter_medium" size="24" weight="NORMAL" slant="NORMAL" color="#ffffffff">
+							<Text ellipsis="TRUE">
+								<Font family="inter_medium" size="24" color="#ffffffff">
 									<Upper>
 										<Template>
 											%s

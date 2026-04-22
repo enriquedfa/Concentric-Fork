@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <manifest
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools">
+	xmlns:android="http://schemas.android.com/apk/res/android">
 	<uses-feature android:name="android.hardware.type.watch" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<application android:label="@string/watch_face_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:hasCode="false">
