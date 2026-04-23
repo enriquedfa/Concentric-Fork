@@ -153,7 +153,9 @@
 		<Group x="65" y="65" width="320" height="320" scaleX="0.95" scaleY="0.95" name="minutes" alpha="255">
 			<Transform target="scaleX" value="[CONFIGURATION.z1_mode] != 0? 0.95: 1.0" />
 			<Transform target="scaleY" value="[CONFIGURATION.z1_mode] != 0? 0.95: 1.0" />
-			<Transform target="angle" value="[MINUTE] * 6" />
+			<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * 6">
+				<Animation duration="1" angleDirection="CLOCKWISE" />
+			</Transform>
 			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z1_aod] == 3 ? 0 : 255" />
 			<ListConfiguration id="z0_index">
 				<ListOption id="0">
@@ -179,7 +181,9 @@
 			<Group x="0" y="0" width="320" height="320" name="numbers" alpha="255">
 				<Variant mode="AMBIENT" target="alpha" value="255 * ([CONFIGURATION.z1_aod] == 2 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
 				<PartText x="261" y="145" width="40" height="30" name="00" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							00
@@ -187,7 +191,9 @@
 					</Text>
 				</PartText>
 				<PartText x="245" y="85" width="40" height="30" name="05" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							05
@@ -195,7 +201,9 @@
 					</Text>
 				</PartText>
 				<PartText x="201" y="40" width="40" height="30" name="10" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							10
@@ -203,7 +211,9 @@
 					</Text>
 				</PartText>
 				<PartText x="140" y="24" width="40" height="30" name="15" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							15
@@ -211,7 +221,9 @@
 					</Text>
 				</PartText>
 				<PartText x="80" y="40" width="40" height="30" name="20" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							20
@@ -219,7 +231,9 @@
 					</Text>
 				</PartText>
 				<PartText x="35" y="85" width="40" height="30" name="25" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							25
@@ -227,7 +241,9 @@
 					</Text>
 				</PartText>
 				<PartText x="19" y="145" width="40" height="30" name="30" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							30
@@ -235,7 +251,9 @@
 					</Text>
 				</PartText>
 				<PartText x="35" y="206" width="40" height="30" name="35" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							35
@@ -243,7 +261,9 @@
 					</Text>
 				</PartText>
 				<PartText x="80" y="250" width="40" height="30" name="40" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							40
@@ -251,7 +271,9 @@
 					</Text>
 				</PartText>
 				<PartText x="140" y="266" width="40" height="30" name="45" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							45
@@ -259,7 +281,9 @@
 					</Text>
 				</PartText>
 				<PartText x="201" y="250" width="40" height="30" name="50" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							50
@@ -267,7 +291,9 @@
 					</Text>
 				</PartText>
 				<PartText x="245" y="206" width="40" height="30" name="55" alpha="255">
-					<Transform target="angle" value="[MINUTE] * (-6)" />
+					<Transform target="angle" value="([MINUTE] + [SECOND] / 60) * (-6)">
+						<Animation duration="1" angleDirection="COUNTER_CLOCKWISE" />
+					</Transform>
 					<Text>
 						<Font family="inter_regular" size="24" color="#ff999999">
 							55
