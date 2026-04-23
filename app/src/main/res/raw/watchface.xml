@@ -882,8 +882,10 @@
 		<ComplicationSlot slotId="0" displayName="top_left_complication" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="0" y="0" width="225" height="225" name="top_left_complication" alpha="255">
 			<DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="RANGED_VALUE" />
 			<BoundingArc centerX="225" centerY="225" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="279" endAngle="351" />
-			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z3_aod_compl]? 255: 0" />
+			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : ([CONFIGURATION.z3_aod_compl]? 255: 0)" />
 			<Complication type="RANGED_VALUE">
+				<Group x="0" y="0" width="225" height="225" name="z1_gate" alpha="255">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 				<Condition>
 					<Expressions>
 						<Expression name="noIcon">
@@ -966,8 +968,11 @@
 						</Group>
 					</Default>
 				</Condition>
+				</Group>
 			</Complication>
 			<Complication type="SHORT_TEXT">
+				<Group x="0" y="0" width="225" height="225" name="z1_gate" alpha="255">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 				<Condition>
 					<Expressions>
 						<Expression name="shortTextIcon">
@@ -1137,9 +1142,11 @@
 						</Group>
 					</Default>
 				</Condition>
+				</Group>
 			</Complication>
 			<Complication type="MONOCHROMATIC_IMAGE">
 				<Group x="0" y="0" width="225" height="225" name="mono_image">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 					<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
 						<TextCircular width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 							<Font family="roboto_sb" size="30" color="#ffffff">
@@ -1171,8 +1178,10 @@
 		<ComplicationSlot slotId="1" displayName="top_right_complication" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="225" y="0" width="225" height="225" name="top_left_complication" alpha="255">
 			<DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="RANGED_VALUE" />
 			<BoundingArc centerX="0" centerY="225" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="9" endAngle="72" />
-			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z3_aod_compl]? 255: 0" />
+			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : ([CONFIGURATION.z3_aod_compl]? 255: 0)" />
 			<Complication type="RANGED_VALUE">
+				<Group x="0" y="0" width="225" height="225" name="z1_gate" alpha="255">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 				<Condition>
 					<Expressions>
 						<Expression name="noIcon">
@@ -1255,8 +1264,11 @@
 						</Group>
 					</Default>
 				</Condition>
+				</Group>
 			</Complication>
 			<Complication type="SHORT_TEXT">
+				<Group x="0" y="0" width="225" height="225" name="z1_gate" alpha="255">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 				<Condition>
 					<Expressions>
 						<Expression name="shortTextIcon">
@@ -1403,9 +1415,11 @@
 						</Group>
 					</Default>
 				</Condition>
+				</Group>
 			</Complication>
 			<Complication type="MONOCHROMATIC_IMAGE">
 				<Group x="0" y="0" width="225" height="225" name="mono_image">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 					<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
 						<TextCircular width="350" height="350" startAngle="9" endAngle="72" centerX="0" centerY="225" direction="CLOCKWISE">
 							<Font family="roboto_sb" size="30" color="#ffffff">
@@ -1437,8 +1451,10 @@
 		<ComplicationSlot slotId="2" displayName="bottom_left_complication" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="0" y="225" width="225" height="225" name="top_left_complication" alpha="255">
 			<DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="RANGED_VALUE" />
 			<BoundingArc centerX="225" centerY="0" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="189" endAngle="261" />
-			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z3_aod_compl]? 255: 0" />
+			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : ([CONFIGURATION.z3_aod_compl]? 255: 0)" />
 			<Complication type="RANGED_VALUE">
+				<Group x="0" y="0" width="225" height="225" name="z1_gate" alpha="255">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 				<Condition>
 					<Expressions>
 						<Expression name="noIcon">
@@ -1521,8 +1537,11 @@
 						</Group>
 					</Default>
 				</Condition>
+				</Group>
 			</Complication>
 			<Complication type="SHORT_TEXT">
+				<Group x="0" y="0" width="225" height="225" name="z1_gate" alpha="255">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 				<Condition>
 					<Expressions>
 						<Expression name="shortTextIcon">
@@ -1692,9 +1711,11 @@
 						</Group>
 					</Default>
 				</Condition>
+				</Group>
 			</Complication>
 			<Complication type="MONOCHROMATIC_IMAGE">
 				<Group x="0" y="0" width="225" height="225" name="mono_image">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 					<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
 						<TextCircular width="350" height="350" centerX="225" centerY="0" startAngle="261" endAngle="189" direction="COUNTER_CLOCKWISE">
 							<Font family="roboto_sb" size="30" color="#ffffff">
@@ -1726,8 +1747,10 @@
 		<ComplicationSlot slotId="3" displayName="bottom_right_complication" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="225" y="225" width="225" height="225" name="top_left_complication" alpha="255">
 			<DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="RANGED_VALUE" />
 			<BoundingArc centerX="0" centerY="0" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="108" endAngle="171" />
-			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z3_aod_compl]? 255: 0" />
+			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : ([CONFIGURATION.z3_aod_compl]? 255: 0)" />
 			<Complication type="RANGED_VALUE">
+				<Group x="0" y="0" width="225" height="225" name="z1_gate" alpha="255">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 				<Condition>
 					<Expressions>
 						<Expression name="noIcon">
@@ -1810,8 +1833,11 @@
 						</Group>
 					</Default>
 				</Condition>
+				</Group>
 			</Complication>
 			<Complication type="SHORT_TEXT">
+				<Group x="0" y="0" width="225" height="225" name="z1_gate" alpha="255">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 				<Condition>
 					<Expressions>
 						<Expression name="shortTextIcon">
@@ -1981,9 +2007,11 @@
 						</Group>
 					</Default>
 				</Condition>
+				</Group>
 			</Complication>
 			<Complication type="MONOCHROMATIC_IMAGE">
 				<Group x="0" y="0" width="225" height="225" name="mono_image">
+				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 					<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
 						<TextCircular width="350" height="350" centerX="0" centerY="0" startAngle="171" endAngle="108" direction="COUNTER_CLOCKWISE">
 							<Font family="roboto_sb" size="30" color="#ffffff">
