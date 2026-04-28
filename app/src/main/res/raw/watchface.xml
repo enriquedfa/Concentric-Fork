@@ -897,7 +897,7 @@
 		</Group>
 		<ComplicationSlot slotId="0" displayName="top_left_complication" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="0" y="0" width="225" height="225" name="top_left_complication" alpha="255">
 			<DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="RANGED_VALUE" />
-			<BoundingArc centerX="225" centerY="225" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="279" endAngle="351" />
+			<BoundingArc centerX="225" centerY="225" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="288" endAngle="351" />
 			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : ([CONFIGURATION.z3_aod_compl]? 255: 0)" />
 			<Complication type="RANGED_VALUE">
 				<Group x="0" y="0" width="225" height="225" name="z1_gate" alpha="255">
@@ -910,21 +910,21 @@
 					</Expressions>
 					<Compare expression="noIcon">
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
-								<Transform target="startAngle" value="288 + textLength([COMPLICATION.TEXT]) * 4.5" />
+							<Arc width="350" height="350" startAngle="288" endAngle="351" centerX="225" centerY="225">
+								<Transform target="startAngle" value="297 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]">
-							<Arc width="350" height="350" startAngle="289" endAngle="351" centerX="225" centerY="225">
-								<Transform target="startAngle" value="295 + textLength([COMPLICATION.TEXT]) * 4.5" />
-								<Transform target="endAngle" value="295 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (56 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+							<Arc width="350" height="350" startAngle="298" endAngle="351" centerX="225" centerY="225">
+								<Transform target="startAngle" value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
+								<Transform target="endAngle" value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 							</Arc>
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="START" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+								<TextCircular align="START" width="350" height="350" startAngle="288" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 									<Font family="roboto_mono_sb" size="24" color="#ffffff">
 										<Upper>
 											<Template>
@@ -944,21 +944,21 @@
 					</Compare>
 					<Default>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc width="350" height="350" startAngle="289" endAngle="351" centerX="225" centerY="225">
-								<Transform target="startAngle" value="295 + textLength([COMPLICATION.TEXT]) * 4.5" />
+							<Arc width="350" height="350" startAngle="298" endAngle="351" centerX="225" centerY="225">
+								<Transform target="startAngle" value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]">
-							<Arc width="350" height="350" startAngle="289" endAngle="351" centerX="225" centerY="225">
-								<Transform target="startAngle" value="295 + textLength([COMPLICATION.TEXT]) * 4.5" />
-								<Transform target="endAngle" value="295 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (56 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+							<Arc width="350" height="350" startAngle="298" endAngle="351" centerX="225" centerY="225">
+								<Transform target="startAngle" value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
+								<Transform target="endAngle" value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 							</Arc>
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="START" width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+								<TextCircular align="START" width="350" height="350" startAngle="288" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 									<Font family="SYNC_TO_DEVICE" size="24" color="#ffffff">
 										<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 										<Template>
@@ -1003,7 +1003,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="272" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="281" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring" width="80" height="30" />
 											<Template>
@@ -1024,14 +1024,14 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
+									<Arc width="350" height="350" startAngle="288" endAngle="351" centerX="225" centerY="225">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="278" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="287" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1057,7 +1057,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="270" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="279" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring" width="80" height="30" />
 											<Upper>
@@ -1074,14 +1074,14 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
+									<Arc width="350" height="350" startAngle="288" endAngle="351" centerX="225" centerY="225">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="288" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<Upper>
 												<Template>
@@ -1106,7 +1106,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="272" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="281" endAngle="357" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring" width="80" height="30" />
 											<Template>
@@ -1128,14 +1128,14 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225">
+									<Arc width="350" height="350" startAngle="288" endAngle="351" centerX="225" centerY="225">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="278" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="287" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1164,7 +1164,7 @@
 				<Group x="0" y="0" width="225" height="225" name="mono_image">
 				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 					<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-						<TextCircular width="350" height="350" startAngle="279" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
+						<TextCircular width="350" height="350" startAngle="288" endAngle="351" centerX="225" centerY="225" direction="CLOCKWISE">
 							<Font family="roboto_sb" size="30" color="#ffffff">
 								<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 							</Font>
@@ -1172,13 +1172,13 @@
 					</PartText>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc width="350" height="350" startAngle="279" endAngle="305" centerX="225" centerY="225">
+						<Arc width="350" height="350" startAngle="288" endAngle="310" centerX="225" centerY="225">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc width="350" height="350" startAngle="325" endAngle="351" centerX="225" centerY="225">
+						<Arc width="350" height="350" startAngle="330" endAngle="351" centerX="225" centerY="225">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
@@ -1466,7 +1466,7 @@
 		</ComplicationSlot>
 		<ComplicationSlot slotId="2" displayName="bottom_left_complication" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="0" y="225" width="225" height="225" name="top_left_complication" alpha="255">
 			<DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="RANGED_VALUE" />
-			<BoundingArc centerX="225" centerY="0" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="189" endAngle="261" />
+			<BoundingArc centerX="225" centerY="0" width="388" height="388" thickness="34" isRoundEdge="TRUE" startAngle="189" endAngle="252" />
 			<Variant mode="AMBIENT" target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : ([CONFIGURATION.z3_aod_compl]? 255: 0)" />
 			<Complication type="RANGED_VALUE">
 				<Group x="0" y="0" width="225" height="225" name="z1_gate" alpha="255">
@@ -1479,21 +1479,21 @@
 					</Expressions>
 					<Compare expression="noIcon">
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
+							<Arc width="350" height="350" startAngle="199" endAngle="252" centerX="225" centerY="0">
 								<Transform target="startAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
+							<Arc width="350" height="350" startAngle="199" endAngle="252" centerX="225" centerY="0">
 								<Transform target="startAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
-								<Transform target="endAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (56 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+								<Transform target="endAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 							</Arc>
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="END" width="350" height="350" startAngle="261" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+								<TextCircular align="END" width="350" height="350" startAngle="252" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 									<Font family="roboto_mono_sb" size="24" color="#ffffff">
 										<Upper>
 											<Template>
@@ -1513,21 +1513,21 @@
 					</Compare>
 					<Default>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
+							<Arc width="350" height="350" startAngle="199" endAngle="252" centerX="225" centerY="0">
 								<Transform target="startAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
 								<Stroke color="#33ffffff" cap="ROUND" thickness="4" />
 							</Arc>
 						</PartDraw>
 						<PartDraw x="0" y="0" width="225" height="225" name="border" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-							<Arc width="350" height="350" startAngle="199" endAngle="261" centerX="225" centerY="0">
+							<Arc width="350" height="350" startAngle="199" endAngle="252" centerX="225" centerY="0">
 								<Transform target="startAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
-								<Transform target="endAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (56 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+								<Transform target="endAngle" value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
 								<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 							</Arc>
 						</PartDraw>
 						<Group x="0" y="0" width="225" height="225" name="color_maks">
 							<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-								<TextCircular align="END" width="350" height="350" startAngle="261" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+								<TextCircular align="END" width="350" height="350" startAngle="252" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 									<Font family="roboto_mono_sb" size="24" color="#ffffff">
 										<Upper>
 											<Template>
@@ -1572,7 +1572,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="268" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="259" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring_inverse" width="80" height="30" />
 											<Template>
@@ -1593,14 +1593,14 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc width="350" height="350" startAngle="189" endAngle="261" centerX="225" centerY="0">
+									<Arc width="350" height="350" startAngle="189" endAngle="252" centerX="225" centerY="0">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="262" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="253" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1626,7 +1626,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="267" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="258" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring_inverse" width="80" height="30" />
 											<Upper>
@@ -1643,14 +1643,14 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc width="350" height="350" startAngle="189" endAngle="261" centerX="225" centerY="0">
+									<Arc width="350" height="350" startAngle="189" endAngle="252" centerX="225" centerY="0">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="261" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="252" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<Upper>
 												<Template>
@@ -1675,7 +1675,7 @@
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="268" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="259" endAngle="183" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="ring_inverse" width="80" height="30" />
 											<Template>
@@ -1697,14 +1697,14 @@
 									</TextCircular>
 								</PartText>
 								<PartDraw x="0" y="0" width="225" height="225" tintColor="[CONFIGURATION.a1ComplicationColor]" alpha="255">
-									<Arc width="350" height="350" startAngle="189" endAngle="261" centerX="225" centerY="0">
+									<Arc width="350" height="350" startAngle="189" endAngle="252" centerX="225" centerY="0">
 										<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 									</Arc>
 								</PartDraw>
 							</Group>
 							<Group x="0" y="0" width="225" height="225" name="color_maks">
 								<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-									<TextCircular width="350" height="350" startAngle="262" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
+									<TextCircular width="350" height="350" startAngle="253" endAngle="189" centerX="225" centerY="0" direction="COUNTER_CLOCKWISE">
 										<Font family="roboto_sb" size="24" color="#ffffff">
 											<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 											<Upper>
@@ -1733,7 +1733,7 @@
 				<Group x="0" y="0" width="225" height="225" name="mono_image">
 				<Transform target="alpha" value="[CONFIGURATION.z1_mode] == 0 ? 0 : 255" />
 					<PartText x="0" y="0" width="225" height="225" renderMode="MASK" alpha="255">
-						<TextCircular width="350" height="350" centerX="225" centerY="0" startAngle="261" endAngle="189" direction="COUNTER_CLOCKWISE">
+						<TextCircular width="350" height="350" centerX="225" centerY="0" startAngle="252" endAngle="189" direction="COUNTER_CLOCKWISE">
 							<Font family="roboto_sb" size="30" color="#ffffff">
 								<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" width="28" height="28" />
 							</Font>
@@ -1741,13 +1741,13 @@
 					</PartText>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc width="350" height="350" centerX="225" centerY="0" startAngle="189" endAngle="215">
+						<Arc width="350" height="350" centerX="225" centerY="0" startAngle="189" endAngle="211">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
 					<PartDraw x="0" y="0" width="225" height="225" name="border" renderMode="MASK" alpha="255">
 						<Transform target="alpha" value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-						<Arc width="350" height="350" centerX="225" centerY="0" startAngle="235" endAngle="261">
+						<Arc width="350" height="350" centerX="225" centerY="0" startAngle="231" endAngle="252">
 							<Stroke color="#ffffff" cap="ROUND" thickness="5" />
 						</Arc>
 					</PartDraw>
