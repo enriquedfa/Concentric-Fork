@@ -621,7 +621,6 @@
 			</ListConfiguration>
 		</Group>
 		<Group x="0" y="0" width="450" height="450" name="seconds_preview" alpha="255">
-			<Variant mode="AMBIENT" target="alpha" value="0" />
 			<Transform target="alpha" value="([SECOND_MILLISECOND]==0.0)? 255: 0" />
 			<ListConfiguration id="z0_index">
 				<ListOption id="0">
