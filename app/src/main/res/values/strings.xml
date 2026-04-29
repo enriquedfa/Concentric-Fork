@@ -28,7 +28,7 @@
 		AOD Style
 	</string>
 	<string name="aod_0">
-		Deafult AOD
+		Default AOD
 	</string>
 	<string name="aod_1">
 		Ring &amp; Index
@@ -49,13 +49,13 @@
 		Mode
 	</string>
 	<string name="mode_0">
-		Default Mode
+		Dials
 	</string>
 	<string name="mode_1">
-		Small Seconds
+		Dials and Arcs
 	</string>
-	<string name="mode_2">
-		Index Only
+	<string name="hide_seconds">
+		Hide Seconds
 	</string>
 	<string name="aod_compl">
 		AOD Complication
