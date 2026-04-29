@@ -10,6 +10,7 @@ For format reference, always consult the **WFF v4 documentation**: https://devel
 
 ## Build & tooling
 
+- **Docs**: `android docs` to search docs through android CLI, it might or might not be useful for wear os.
 - **Gradle wrapper**: `./gradlew <task>` (use `gradlew.bat` on Windows cmd; the wrapper works from bash).
 - **Assemble**: `./gradlew :app:assembleDebug` / `:app:assembleRelease`.
 - **Install to a paired watch / emulator**: `./gradlew :app:installDebug` (requires adb-connected Wear OS device). The `android` CLI helper is the preferred way to manage emulators, SDK components, and deploys from the terminal — prefer it over manual `adb`/`sdkmanager` invocations when available.

@@ -3,7 +3,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android">
 	<uses-feature android:name="android.hardware.type.watch" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
-	<application android:label="@string/watch_face_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:hasCode="false">
+	<application android:label="@string/watch_face_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:hasCode="false" android:directBootAware="true">
 		<property android:name="com.google.wear.watchface.format.version" android:value="4" />
 		<meta-data android:name="com.google.android.wearable.standalone" android:value="true" />
 	</application>
