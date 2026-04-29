@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="watch_face_name">
+	<string name="watch_face_name" translatable="false">
 		Concentric
 	</string>
 	<string name="secondsColor">
@@ -22,28 +22,25 @@
 		Partial
 	</string>
 	<string name="index_2">
-		-
+		No indexes
 	</string>
 	<string name="aod_style">
 		AOD Style
 	</string>
 	<string name="aod_0">
-		Default AOD
+		Minutes Only
 	</string>
 	<string name="aod_1">
-		Ring &amp; Index
+		Minutes + Seconds Ring
 	</string>
 	<string name="aod_2">
-		Index
+		Both Rings Only
 	</string>
 	<string name="aod_3">
 		Only Time
 	</string>
 	<string name="aod_pill">
-		AOD Pill
-	</string>
-	<string name="smoother">
-		Smoother
+		AOD Pill Animation
 	</string>
 	<string name="mode">
 		Mode

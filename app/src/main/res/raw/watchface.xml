@@ -316,9 +316,23 @@
 				<Compare expression="hideSeconds">
 					<Group x="0" y="0" width="450" height="450" name="index_forced" alpha="255">
 						<Variant mode="AMBIENT" target="alpha" value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
-						<PartImage x="0" y="0" width="450" height="450" tintColor="#ff57595c">
-							<Image resource="index_seconds_0" />
-						</PartImage>
+						<Condition>
+							<Expressions>
+								<Expression name="small">
+									[CONFIGURATION.z1_mode] == 1
+								</Expression>
+							</Expressions>
+							<Compare expression="small">
+								<PartImage x="0" y="0" width="450" height="450" tintColor="#ff57595c">
+									<Image resource="index_small_seconds_0" />
+								</PartImage>
+							</Compare>
+							<Default>
+								<PartImage x="0" y="0" width="450" height="450" tintColor="#ff57595c">
+									<Image resource="index_seconds_0" />
+								</PartImage>
+							</Default>
+						</Condition>
 					</Group>
 				</Compare>
 				<Default>
@@ -639,9 +653,23 @@
 				<Compare expression="hideSeconds">
 					<Group x="0" y="0" width="450" height="450" name="index_forced" alpha="255">
 						<Variant mode="AMBIENT" target="alpha" value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
-						<PartImage x="0" y="0" width="450" height="450" tintColor="#ff57595c">
-							<Image resource="index_seconds_0" />
-						</PartImage>
+						<Condition>
+							<Expressions>
+								<Expression name="small">
+									[CONFIGURATION.z1_mode] == 1
+								</Expression>
+							</Expressions>
+							<Compare expression="small">
+								<PartImage x="0" y="0" width="450" height="450" tintColor="#ff57595c">
+									<Image resource="index_small_seconds_0" />
+								</PartImage>
+							</Compare>
+							<Default>
+								<PartImage x="0" y="0" width="450" height="450" tintColor="#ff57595c">
+									<Image resource="index_seconds_0" />
+								</PartImage>
+							</Default>
+						</Condition>
 					</Group>
 				</Compare>
 				<Default>
@@ -2273,7 +2301,7 @@
 								<Stroke color="#ffffffff" thickness="4" />
 							</RoundRectangle>
 						</PartDraw>
-						<Group x="50" y="24" width="32" height="32" name="icon" tintColor="[CONFIGURATION.a2AccentColor]" alpha="255">
+						<Group x="42" y="24" width="32" height="32" name="icon" tintColor="[CONFIGURATION.a2AccentColor]" alpha="255">
 							<PartImage x="0" y="0" width="32" height="32" name="icon">
 								<ImageFilters>
 									<HsbFilter saturate="0" />
@@ -2281,7 +2309,7 @@
 								<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
 							</PartImage>
 						</Group>
-						<PartText x="92" y="20" width="98" height="40" name="text" alpha="255">
+						<PartText x="84" y="20" width="98" height="40" name="text" alpha="255">
 							<Text ellipsis="TRUE">
 								<Font family="inter_medium" size="28" color="#ffffffff">
 									<Upper>
@@ -2305,7 +2333,7 @@
 								<Stroke color="#ffffffff" thickness="4" />
 							</RoundRectangle>
 						</PartDraw>
-						<PartText x="48" y="22" width="44" height="36" name="title" tintColor="[CONFIGURATION.a2AccentColor]" alpha="255">
+						<PartText x="40" y="22" width="44" height="36" name="title" tintColor="[CONFIGURATION.a2AccentColor]" alpha="255">
 							<Text ellipsis="TRUE">
 								<Font family="inter_medium" size="20" color="#ffffffff">
 									<Upper>
