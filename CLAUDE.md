@@ -44,6 +44,12 @@ The entire watch face lives in three XML files under `app/src/main/res/`:
 - **Redundant defaults are intentionally stripped** — don't re-add `align="CENTER"`, `ellipsis="FALSE"`, `weight="NORMAL"`, `slant="NORMAL"`, `direction="CLOCKWISE"` on `<Arc>`/`<BoundingArc>`, or `hueRotate="0"` / `brightness="1"` on `<HsbFilter>`. The lint inspection will flag them again if reintroduced. `saturate="0"` on `HsbFilter` is *not* a default (desaturation before tinting) — keep it.
 - **Known IDE false-positive errors** in `watchface.xml`: `Cannot resolve symbol 'empty'` on `<InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" ...>` and `<expr> expected` on `<Parameter expression="&#160;" />`. These are Watch Face Studio export idioms — `source` overrides `resource` at runtime, and `&#160;` injects literal whitespace. They don't affect the build; don't "fix" them without testing the rendered watch face.
 
+### WFF quirks (learned the hard way)
+
+- **`ListConfiguration` does NOT re-evaluate when nested inside a `<Condition><Default>` branch.** If a `<ListConfiguration>` lives inside the `Default` (or `Compare`) child of an outer `<Condition>`, the editor switch will appear to do nothing — only the first `<ListOption>` ever renders. This was the bug introduced in commit `c29078f` (seconds index stuck on option 0) and reverted afterward.
+  - **Pattern to use instead**: when you need to gate visibility on a boolean, use parallel sibling `<Group>`s, each with a `<Transform target="alpha" value="[CONFIGURATION.flag] ? 0 : 255" />` (and the inverse on the other group). Keep `<ListConfiguration>` as a direct child of its Group. The seconds `index_default` / `index_forced` siblings in `raw/watchface.xml` are the canonical example.
+  - **Note**: `<Condition>` with inline `<Compare expression="...">`/`<Default>` *does* work for choosing between static content (it's used for the `small` z1_mode switch). The quirk only bites when a `<ListConfiguration>` is inside the chosen branch.
+
 ### Assets
 
 - `res/drawable-nodpi/` — all raster assets (rings, index marks, complication border, preview). Referenced by `resource="name"` without a type prefix in WFF.
