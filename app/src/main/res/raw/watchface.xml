@@ -957,149 +957,161 @@
 					angleDirection="CLOCKWISE"
 					duration="1" />
 			</Transform>
-			<Condition>
-				<Expressions>
-					<Expression name="hideSeconds">
-						[CONFIGURATION.z5_hide_seconds]
-					</Expression>
-				</Expressions>
-				<Compare expression="hideSeconds">
-					<Group
-						name="index_forced"
-						alpha="255"
-						height="450"
-						width="450"
-						x="0"
-						y="0">
-						<Variant
-							mode="AMBIENT"
-							target="alpha"
-							value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
-						<Condition>
-							<Expressions>
-								<Expression name="small">
-									[CONFIGURATION.z1_mode] == 1
-								</Expression>
-							</Expressions>
-							<Compare expression="small">
-								<PartImage
-									height="450"
-									tintColor="#ff57595c"
-									width="450"
-									x="0"
-									y="0">
-									<Image resource="index_small_seconds_0" />
-								</PartImage>
-							</Compare>
-							<Default>
-								<PartImage
-									height="450"
-									tintColor="#ff57595c"
-									width="450"
-									x="0"
-									y="0">
-									<Image resource="index_seconds_0" />
-								</PartImage>
-							</Default>
-						</Condition>
-					</Group>
-				</Compare>
-				<Default>
-					<Group
-						name="index_default"
-						alpha="255"
-						height="450"
-						width="450"
-						x="0"
-						y="0">
-						<ListConfiguration id="z0_index">
-							<ListOption id="0">
-								<Group
-									name="index"
-									alpha="255"
-									height="450"
-									width="450"
-									x="0"
-									y="0">
-									<Variant
-										mode="AMBIENT"
-										target="alpha"
-										value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
-									<Condition>
-										<Expressions>
-											<Expression name="small">
-												[CONFIGURATION.z1_mode] == 1
-											</Expression>
-										</Expressions>
-										<Compare expression="small">
-											<PartImage
-												height="450"
-												tintColor="#ff57595c"
-												width="450"
-												x="0"
-												y="0">
-												<Image resource="index_small_seconds_0" />
-											</PartImage>
-										</Compare>
-										<Default>
-											<PartImage
-												height="450"
-												tintColor="#ff57595c"
-												width="450"
-												x="0"
-												y="0">
-												<Image resource="index_seconds_0" />
-											</PartImage>
-										</Default>
-									</Condition>
-								</Group>
-							</ListOption>
-							<ListOption id="1">
-								<Group
-									name="index"
-									alpha="255"
-									height="450"
-									width="450"
-									x="0"
-									y="0">
-									<Variant
-										mode="AMBIENT"
-										target="alpha"
-										value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
-									<Condition>
-										<Expressions>
-											<Expression name="small">
-												[CONFIGURATION.z1_mode] == 1
-											</Expression>
-										</Expressions>
-										<Compare expression="small">
-											<PartImage
-												angle="15"
-												height="450"
-												tintColor="#ff57595c"
-												width="450"
-												x="0"
-												y="0">
-												<Image resource="index_seconds_1" />
-											</PartImage>
-										</Compare>
-										<Default>
-											<PartImage
-												height="450"
-												tintColor="#ff57595c"
-												width="450"
-												x="0"
-												y="0">
-												<Image resource="index_seconds_1" />
-											</PartImage>
-										</Default>
-									</Condition>
-								</Group>
-							</ListOption>
-						</ListConfiguration>
-					</Group>
-				</Default>
-			</Condition>
+			<Group
+				name="index_default"
+				alpha="255"
+				height="450"
+				width="450"
+				x="0"
+				y="0">
+				<Transform
+					target="alpha"
+					value="[CONFIGURATION.z5_hide_seconds] ? 0 : 255" />
+				<ListConfiguration id="z0_index">
+					<ListOption id="0">
+						<Group
+							name="index"
+							alpha="255"
+							height="450"
+							width="450"
+							x="0"
+							y="0">
+							<Variant
+								mode="AMBIENT"
+								target="alpha"
+								value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+							<Condition>
+								<Expressions>
+									<Expression name="small">
+										[CONFIGURATION.z1_mode] == 1
+									</Expression>
+								</Expressions>
+								<Compare expression="small">
+									<PartImage
+										height="450"
+										tintColor="#ff57595c"
+										width="450"
+										x="0"
+										y="0">
+										<Image resource="index_small_seconds_0" />
+									</PartImage>
+								</Compare>
+								<Default>
+									<PartImage
+										height="450"
+										tintColor="#ff57595c"
+										width="450"
+										x="0"
+										y="0">
+										<Image resource="index_seconds_0" />
+									</PartImage>
+								</Default>
+							</Condition>
+						</Group>
+					</ListOption>
+					<ListOption id="1">
+						<Group
+							name="index"
+							alpha="255"
+							height="450"
+							width="450"
+							x="0"
+							y="0">
+							<Variant
+								mode="AMBIENT"
+								target="alpha"
+								value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+							<Condition>
+								<Expressions>
+									<Expression name="small">
+										[CONFIGURATION.z1_mode] == 1
+									</Expression>
+								</Expressions>
+								<Compare expression="small">
+									<PartImage
+										angle="15"
+										height="450"
+										tintColor="#ff57595c"
+										width="450"
+										x="0"
+										y="0">
+										<Image resource="index_seconds_1" />
+									</PartImage>
+								</Compare>
+								<Default>
+									<PartImage
+										height="450"
+										tintColor="#ff57595c"
+										width="450"
+										x="0"
+										y="0">
+										<Image resource="index_seconds_1" />
+									</PartImage>
+								</Default>
+							</Condition>
+						</Group>
+					</ListOption>
+					<ListOption id="2">
+						<PartDraw
+							name="empty"
+							alpha="0"
+							height="450"
+							width="450"
+							x="0"
+							y="0">
+							<Rectangle
+								height="450"
+								width="450"
+								x="0"
+								y="0">
+								<Fill color="#00ffffff" />
+							</Rectangle>
+						</PartDraw>
+					</ListOption>
+				</ListConfiguration>
+			</Group>
+			<Group
+				name="index_forced"
+				alpha="255"
+				height="450"
+				width="450"
+				x="0"
+				y="0">
+				<Transform
+					target="alpha"
+					value="[CONFIGURATION.z5_hide_seconds] ? 255 : 0" />
+				<Variant
+					mode="AMBIENT"
+					target="alpha"
+					value="[CONFIGURATION.z5_hide_seconds] ? (255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)) : 0" />
+				<Condition>
+					<Expressions>
+						<Expression name="small">
+							[CONFIGURATION.z1_mode] == 1
+						</Expression>
+					</Expressions>
+					<Compare expression="small">
+						<PartImage
+							height="450"
+							tintColor="#ff57595c"
+							width="450"
+							x="0"
+							y="0">
+							<Image resource="index_small_seconds_0" />
+						</PartImage>
+					</Compare>
+					<Default>
+						<PartImage
+							height="450"
+							tintColor="#ff57595c"
+							width="450"
+							x="0"
+							y="0">
+							<Image resource="index_seconds_0" />
+						</PartImage>
+					</Default>
+				</Condition>
+			</Group>
 			<Group
 				name="numbers_gate"
 				alpha="255"
@@ -1728,141 +1740,153 @@
 			<Transform
 				target="alpha"
 				value="([SECOND_MILLISECOND]==0.0)? 255: 0" />
-			<Condition>
-				<Expressions>
-					<Expression name="hideSeconds">
-						[CONFIGURATION.z5_hide_seconds]
-					</Expression>
-				</Expressions>
-				<Compare expression="hideSeconds">
-					<Group
-						name="index_forced"
-						alpha="255"
-						height="450"
-						width="450"
-						x="0"
-						y="0">
-						<Variant
-							mode="AMBIENT"
-							target="alpha"
-							value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
-						<Condition>
-							<Expressions>
-								<Expression name="small">
-									[CONFIGURATION.z1_mode] == 1
-								</Expression>
-							</Expressions>
-							<Compare expression="small">
-								<PartImage
-									height="450"
-									tintColor="#ff57595c"
-									width="450"
-									x="0"
-									y="0">
-									<Image resource="index_small_seconds_0" />
-								</PartImage>
-							</Compare>
-							<Default>
-								<PartImage
-									height="450"
-									tintColor="#ff57595c"
-									width="450"
-									x="0"
-									y="0">
-									<Image resource="index_seconds_0" />
-								</PartImage>
-							</Default>
-						</Condition>
-					</Group>
-				</Compare>
-				<Default>
-					<Group
-						name="index_default"
-						alpha="255"
-						height="450"
-						width="450"
-						x="0"
-						y="0">
-						<ListConfiguration id="z0_index">
-							<ListOption id="0">
-								<Group
-									name="index"
-									alpha="255"
-									height="450"
-									width="450"
-									x="0"
-									y="0">
-									<Condition>
-										<Expressions>
-											<Expression name="small">
-												[CONFIGURATION.z1_mode] == 1
-											</Expression>
-										</Expressions>
-										<Compare expression="small">
-											<PartImage
-												height="450"
-												tintColor="#ff57595c"
-												width="450"
-												x="0"
-												y="0">
-												<Image resource="index_small_seconds_0" />
-											</PartImage>
-										</Compare>
-										<Default>
-											<PartImage
-												height="450"
-												tintColor="#ff57595c"
-												width="450"
-												x="0"
-												y="0">
-												<Image resource="index_seconds_0" />
-											</PartImage>
-										</Default>
-									</Condition>
-								</Group>
-							</ListOption>
-							<ListOption id="1">
-								<Group
-									name="index"
-									alpha="255"
-									height="450"
-									width="450"
-									x="0"
-									y="0">
-									<Condition>
-										<Expressions>
-											<Expression name="small">
-												[CONFIGURATION.z1_mode] == 1
-											</Expression>
-										</Expressions>
-										<Compare expression="small">
-											<PartImage
-												angle="15"
-												height="450"
-												tintColor="#ff57595c"
-												width="450"
-												x="0"
-												y="0">
-												<Image resource="index_seconds_1" />
-											</PartImage>
-										</Compare>
-										<Default>
-											<PartImage
-												height="450"
-												tintColor="#ff57595c"
-												width="450"
-												x="0"
-												y="0">
-												<Image resource="index_seconds_1" />
-											</PartImage>
-										</Default>
-									</Condition>
-								</Group>
-							</ListOption>
-						</ListConfiguration>
-					</Group>
-				</Default>
-			</Condition>
+			<Group
+				name="index_default"
+				alpha="255"
+				height="450"
+				width="450"
+				x="0"
+				y="0">
+				<Transform
+					target="alpha"
+					value="[CONFIGURATION.z5_hide_seconds] ? 0 : 255" />
+				<ListConfiguration id="z0_index">
+					<ListOption id="0">
+						<Group
+							name="index"
+							alpha="255"
+							height="450"
+							width="450"
+							x="0"
+							y="0">
+							<Condition>
+								<Expressions>
+									<Expression name="small">
+										[CONFIGURATION.z1_mode] == 1
+									</Expression>
+								</Expressions>
+								<Compare expression="small">
+									<PartImage
+										height="450"
+										tintColor="#ff57595c"
+										width="450"
+										x="0"
+										y="0">
+										<Image resource="index_small_seconds_0" />
+									</PartImage>
+								</Compare>
+								<Default>
+									<PartImage
+										height="450"
+										tintColor="#ff57595c"
+										width="450"
+										x="0"
+										y="0">
+										<Image resource="index_seconds_0" />
+									</PartImage>
+								</Default>
+							</Condition>
+						</Group>
+					</ListOption>
+					<ListOption id="1">
+						<Group
+							name="index"
+							alpha="255"
+							height="450"
+							width="450"
+							x="0"
+							y="0">
+							<Condition>
+								<Expressions>
+									<Expression name="small">
+										[CONFIGURATION.z1_mode] == 1
+									</Expression>
+								</Expressions>
+								<Compare expression="small">
+									<PartImage
+										angle="15"
+										height="450"
+										tintColor="#ff57595c"
+										width="450"
+										x="0"
+										y="0">
+										<Image resource="index_seconds_1" />
+									</PartImage>
+								</Compare>
+								<Default>
+									<PartImage
+										height="450"
+										tintColor="#ff57595c"
+										width="450"
+										x="0"
+										y="0">
+										<Image resource="index_seconds_1" />
+									</PartImage>
+								</Default>
+							</Condition>
+						</Group>
+					</ListOption>
+					<ListOption id="2">
+						<PartDraw
+							name="empty"
+							alpha="0"
+							height="450"
+							width="450"
+							x="0"
+							y="0">
+							<Rectangle
+								height="450"
+								width="450"
+								x="0"
+								y="0">
+								<Fill color="#00ffffff" />
+							</Rectangle>
+						</PartDraw>
+					</ListOption>
+				</ListConfiguration>
+			</Group>
+			<Group
+				name="index_forced"
+				alpha="255"
+				height="450"
+				width="450"
+				x="0"
+				y="0">
+				<Transform
+					target="alpha"
+					value="[CONFIGURATION.z5_hide_seconds] ? 255 : 0" />
+				<Variant
+					mode="AMBIENT"
+					target="alpha"
+					value="[CONFIGURATION.z5_hide_seconds] ? (255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)) : 0" />
+				<Condition>
+					<Expressions>
+						<Expression name="small">
+							[CONFIGURATION.z1_mode] == 1
+						</Expression>
+					</Expressions>
+					<Compare expression="small">
+						<PartImage
+							height="450"
+							tintColor="#ff57595c"
+							width="450"
+							x="0"
+							y="0">
+							<Image resource="index_small_seconds_0" />
+						</PartImage>
+					</Compare>
+					<Default>
+						<PartImage
+							height="450"
+							tintColor="#ff57595c"
+							width="450"
+							x="0"
+							y="0">
+							<Image resource="index_seconds_0" />
+						</PartImage>
+					</Default>
+				</Condition>
+			</Group>
 			<Group
 				name="numbers_gate"
 				alpha="255"
