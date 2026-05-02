@@ -1,0 +1,44 @@
+<!--
+  Pattern: <Condition>/<Compare>/<Default> for static content choices.
+
+  This form IS safe — the quirk that bites <ListConfiguration> does NOT
+  apply when the branches contain only static rendered nodes.
+
+  Use this when:
+    - You want to swap between two rendered fragments based on an expression.
+    - Neither branch contains a <ListConfiguration>.
+    - The expression result is well-defined at render time.
+
+  Lifted from raw/watchface.xml lines ~983–1009 (small-mode index swap).
+-->
+<Condition>
+	<Expressions>
+		<Expression name="small">
+			[CONFIGURATION.z1_mode] == 1
+		</Expression>
+	</Expressions>
+	<Compare expression="small">
+		<PartImage height="450" tintColor="#ff57595c" width="450" x="0" y="0">
+			<Image resource="index_small_seconds_0" />
+		</PartImage>
+	</Compare>
+	<Default>
+		<PartImage height="450" tintColor="#ff57595c" width="450" x="0" y="0">
+			<Image resource="index_seconds_0" />
+		</PartImage>
+	</Default>
+</Condition>
+
+<!--
+  NOTE: Multi-way switches use multiple <Compare> children, e.g.:
+
+    <Condition>
+      <Expressions>
+        <Expression name="a">[CONFIGURATION.x] == 0</Expression>
+        <Expression name="b">[CONFIGURATION.x] == 1</Expression>
+      </Expressions>
+      <Compare expression="a"> ... </Compare>
+      <Compare expression="b"> ... </Compare>
+      <Default> ... </Default>
+    </Condition>
+-->

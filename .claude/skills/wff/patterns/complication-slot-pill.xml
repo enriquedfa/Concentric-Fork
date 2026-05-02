@@ -1,0 +1,66 @@
+<!--
+  Pattern: Pill-shaped ComplicationSlot with a rectangular tap target.
+
+  Differences from the corner-arc variant:
+    - Tap area is <BoundingBox>, not <BoundingArc>.
+    - Visual chrome is a <RoundRectangle> with Fill (background) and a second
+      <RoundRectangle> with Stroke (border).
+    - SHORT_TEXT carries an optional TITLE in addition to TEXT — switch
+      based on whether TITLE is null and an icon is supplied.
+    - SMALL_IMAGE is its own type alongside MONOCHROMATIC_IMAGE.
+
+  Lifted from raw/watchface.xml lines ~5877–6175 (left pill / slot 4).
+-->
+<ComplicationSlot
+	alpha="255"
+	displayName="left_pill_complication"
+	height="80"
+	isCustomizable="TRUE"
+	slotId="4"
+	supportedTypes="SHORT_TEXT SMALL_IMAGE MONOCHROMATIC_IMAGE "
+	width="200"
+	x="-36"
+	y="185">
+
+	<DefaultProviderPolicy
+		defaultSystemProvider="EMPTY"
+		defaultSystemProviderType="SHORT_TEXT" />
+
+	<BoundingBox height="80" width="200" x="0" y="0" />
+
+	<Variant
+		mode="AMBIENT"
+		target="alpha"
+		value="[CONFIGURATION.z3_aod_compl]? 255: 0" />
+
+	<Complication type="SHORT_TEXT">
+		<Condition>
+			<Expressions>
+				<Expression name="shortTextIcon">
+					[COMPLICATION.TITLE] == null &amp;&amp;
+					[COMPLICATION.MONOCHROMATIC_IMAGE] != null
+				</Expression>
+			</Expressions>
+			<Compare expression="shortTextIcon">
+				<!-- Icon + text: PartImage at left, PartText at right. -->
+			</Compare>
+			<Default>
+				<!-- Title + text: two PartText elements side by side. -->
+			</Default>
+		</Condition>
+	</Complication>
+
+	<Complication type="SMALL_IMAGE">
+		<!-- Background + border + centered <PartImage> bound to [COMPLICATION.SMALL_IMAGE]. -->
+	</Complication>
+
+	<Complication type="MONOCHROMATIC_IMAGE">
+		<!-- Background + border + centered tinted glyph.
+		     Use <HsbFilter saturate="0" /> in <ImageFilters> before tintColor
+		     applies — saturate=0 desaturates the source so tintColor reads cleanly. -->
+	</Complication>
+
+	<!-- Note: this slot omits <Complication type="EMPTY" />. The slot still
+	     supports being left empty per the supportedTypes list; rendering
+	     nothing is the default for the EMPTY type. -->
+</ComplicationSlot>

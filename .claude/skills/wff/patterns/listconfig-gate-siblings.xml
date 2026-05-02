@@ -1,0 +1,82 @@
+<!--
+  Pattern: Boolean-gated visibility with two parallel sibling Groups, each
+  containing its own <ListConfiguration>.
+
+  WHY: A <ListConfiguration> placed inside a <Condition>'s <Compare> or
+  <Default> branch does NOT re-evaluate when the user changes the option.
+  Only the first ListOption ever renders. (Reproduced live in commit c29078f
+  and reverted afterward.)
+
+  WHEN TO USE: Any time you want to:
+    1. show/hide a chunk of UI based on a BooleanConfiguration, AND
+    2. let the user pick between several rendered variants (a ListConfiguration)
+       on the visible side.
+
+  HOW: Make TWO sibling <Group>s. Use <Transform target="alpha"> with the
+  boolean as the gate (and the inverse on the other group). Each group
+  contains its own <ListConfiguration> as a DIRECT child — never nested
+  inside a <Condition>.
+
+  Lifted from raw/watchface.xml lines ~960–1114 (the seconds index
+  default/forced switch driven by z5_hide_seconds).
+-->
+<Group
+	name="seconds_index_gate"
+	alpha="255"
+	height="450"
+	width="450"
+	x="0"
+	y="0">
+
+	<!-- VISIBLE-WHEN-FALSE branch: ListConfiguration is a direct child here.
+	     The Transform alpha drives whether this entire group renders. -->
+	<Group
+		name="index_default"
+		alpha="255"
+		height="450"
+		width="450"
+		x="0"
+		y="0">
+		<Transform
+			target="alpha"
+			value="[CONFIGURATION.z5_hide_seconds] ? 0 : 255" />
+		<ListConfiguration id="z0_index">
+			<ListOption id="0">
+				<PartImage height="450" tintColor="#ff57595c" width="450" x="0" y="0">
+					<Image resource="index_seconds_0" />
+				</PartImage>
+			</ListOption>
+			<ListOption id="1">
+				<PartImage height="450" tintColor="#ff57595c" width="450" x="0" y="0">
+					<Image resource="index_seconds_1" />
+				</PartImage>
+			</ListOption>
+			<ListOption id="2">
+				<!-- "empty" rendered via a transparent rectangle -->
+				<PartDraw alpha="0" height="450" width="450" x="0" y="0">
+					<Rectangle height="450" width="450" x="0" y="0">
+						<Fill color="#00ffffff" />
+					</Rectangle>
+				</PartDraw>
+			</ListOption>
+		</ListConfiguration>
+	</Group>
+
+	<!-- VISIBLE-WHEN-TRUE branch: inverse alpha. No ListConfiguration is needed
+	     here in this example — but if it were, it would also be a direct child
+	     of this Group, NOT inside a Condition. -->
+	<Group
+		name="index_forced"
+		alpha="255"
+		height="450"
+		width="450"
+		x="0"
+		y="0">
+		<Transform
+			target="alpha"
+			value="[CONFIGURATION.z5_hide_seconds] ? 255 : 0" />
+		<PartImage height="450" tintColor="#ff57595c" width="450" x="0" y="0">
+			<Image resource="index_seconds_0" />
+		</PartImage>
+	</Group>
+</Group>

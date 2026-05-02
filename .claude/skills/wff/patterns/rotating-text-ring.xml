@@ -1,0 +1,52 @@
+<!--
+  Pattern: A rotating ring of text labels, one per element, animated by an
+  expression on <Transform target="angle">.
+
+  How it works in Concentric: each minute marker (00, 05, 10, ..., 55) is a
+  separate <PartText> placed at a fixed (x, y) on a 320×320 canvas. All twelve
+  share the same Transform/Animation so the whole ring rotates as a unit:
+
+      angle = [MINUTE] * (-6)
+
+  Negative because the ring rotates COUNTER_CLOCKWISE under a fixed indicator,
+  giving the illusion that the indicator advances forward through minutes.
+  6° per minute = 360°/60.
+
+  Lifted from raw/watchface.xml lines ~654–760 (the "numbers" group).
+
+  Notes:
+  - The Transform's child <Animation> with duration="1" smooths the per-minute
+    tick. angleDirection must match the sign of the expression's delta.
+  - Each PartText carries its own Transform — they can't inherit the parent's,
+    because each one needs to also be re-positioned by its (x,y).
+  - When adding a new label, its (x,y) is computed for angle=0 (i.e. the
+    label's home position). The Transform handles rotation around the group
+    center.
+-->
+<Group name="numbers" alpha="255" height="320" width="320" x="0" y="0">
+	<Variant
+		mode="AMBIENT"
+		target="alpha"
+		value="255 * ([CONFIGURATION.z1_aod] == 2 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+
+	<PartText name="00" alpha="255" height="30" width="40" x="261" y="145">
+		<Transform target="angle" value="[MINUTE] * (-6)">
+			<Animation angleDirection="COUNTER_CLOCKWISE" duration="1" />
+		</Transform>
+		<Text>
+			<Font color="#ff999999" family="inter_regular" size="24">00</Font>
+		</Text>
+	</PartText>
+
+	<PartText name="05" alpha="255" height="30" width="40" x="245" y="85">
+		<Transform target="angle" value="[MINUTE] * (-6)">
+			<Animation angleDirection="COUNTER_CLOCKWISE" duration="1" />
+		</Transform>
+		<Text>
+			<Font color="#ff999999" family="inter_regular" size="24">05</Font>
+		</Text>
+	</PartText>
+
+	<!-- ... 10, 15, 20, 25, 30, 35, 40, 45, 50, 55 follow the same shape,
+	     each with its own (x, y) for the home position. -->
+</Group>
