@@ -1,0 +1,60 @@
+<!--
+  Pattern: AOD/ambient-mode visibility via <Variant mode="AMBIENT">.
+
+  <Variant> overrides an attribute (typically `alpha`) when the watch is in
+  ambient mode. The `value` is an expression — combine with [CONFIGURATION.*]
+  to let the user choose how AOD looks.
+
+  Concentric uses three z1_aod options:
+    0 = "off"        — hide most decoration in AOD
+    1 = "outline"
+    2 = "default"
+    3 = "all hidden" — used to hide rotating elements that would burn-in
+
+  The pattern below mirrors lines ~600–620 (minutes group AOD gating) and
+  lines ~960–1086 (per-element AOD branches).
+
+  Notes:
+  - Multiplying booleans-as-0/1 is the idiomatic way to AND multiple gates:
+      255 * (a==0?0:1) * (b==3?0:1)
+    Reads as: full alpha unless a==0 OR b==3.
+  - <Variant> only fires in AMBIENT; the base attribute drives interactive.
+-->
+
+<!-- Hide an entire group when z1_aod option 3 is selected. -->
+<Group name="minutes" alpha="255" height="320" width="320" x="65" y="65">
+	<Variant
+		mode="AMBIENT"
+		target="alpha"
+		value="[CONFIGURATION.z1_aod] == 3 ? 0 : 255" />
+	<!-- ... children ... -->
+</Group>
+
+<!-- Hide a single PartImage when z1_aod is 0 OR 3. -->
+<PartImage name="index" height="320" tintColor="#ff57595c" width="320" x="0" y="0">
+	<Variant
+		mode="AMBIENT"
+		target="alpha"
+		value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+	<Image resource="index_minutes_0" />
+</PartImage>
+
+<!-- Hide a complication slot in AOD unless the user opted in via z3_aod_compl,
+     and only when the watch is in z1_mode != 0 (small mode). -->
+<ComplicationSlot
+	name="top_left_complication"
+	alpha="255"
+	displayName="top_left_complication"
+	height="225"
+	isCustomizable="TRUE"
+	slotId="0"
+	supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
+	width="225"
+	x="0"
+	y="0">
+	<Variant
+		mode="AMBIENT"
+		target="alpha"
+		value="[CONFIGURATION.z1_mode] == 0 ? 0 : ([CONFIGURATION.z3_aod_compl]? 255: 0)" />
+	<!-- ... DefaultProviderPolicy, BoundingArc, Complication branches ... -->
+</ComplicationSlot>

@@ -1,0 +1,63 @@
+<!--
+  Pattern: <UserConfigurations> — the editor-facing knobs.
+
+  This skeleton shows the three configuration types Concentric uses:
+    1. <ColorConfiguration> with <ColorOption> children — palette swatches.
+    2. <ListConfiguration> with <ListOption> children — enum / radio.
+    3. <BooleanConfiguration> — single toggle.
+
+  Each option's `displayName` is a string-resource KEY, NOT a literal label.
+  You MUST add a matching <string name="..."> to res/values/strings.xml or the
+  editor will show the raw key.
+
+  Order in raw/watchface.xml: <UserConfigurations> is the first child of
+  <WatchFace>, before <Scene>.
+
+  Lifted from raw/watchface.xml lines ~12–576.
+-->
+<UserConfigurations>
+
+	<!-- A 40-color palette. Concentric uses three of these (a0SecondsColor,
+	     a1ComplicationColor, a2AccentColor), each with the same options.
+	     Reference from the scene as: tintColor="[CONFIGURATION.a0SecondsColor]" -->
+	<ColorConfiguration
+		defaultValue="1"
+		displayName="secondsColor"
+		id="a0SecondsColor">
+		<ColorOption colors="#ffffff" displayName="snow"  id="0" />
+		<ColorOption colors="#a7a7a7" displayName="cloud" id="1" />
+		<!-- ... repeat for ids 2..39 ... -->
+	</ColorConfiguration>
+
+	<!-- A list/enum configuration. Reference as: [CONFIGURATION.z0_index]
+	     The result is the option's id (as an integer for these option ids).
+	     `icon` is a drawable name shown in the editor. -->
+	<ListConfiguration
+		defaultValue="0"
+		displayName="index"
+		icon="index_icon_0"
+		id="z0_index">
+		<ListOption displayName="index_0" icon="index_icon_0" id="0" />
+		<ListOption displayName="index_1" icon="index_icon_1" id="1" />
+		<ListOption displayName="index_2" icon="index_icon_2" id="2" />
+	</ListConfiguration>
+
+	<!-- A boolean toggle. Reference as: [CONFIGURATION.z2_aod_pill]
+	     The result is TRUE/FALSE; in expressions it behaves as 1/0 in
+	     arithmetic and as truthy/falsy in ternaries. -->
+	<BooleanConfiguration
+		defaultValue="TRUE"
+		displayName="aod_pill"
+		id="z2_aod_pill" />
+
+</UserConfigurations>
+
+<!--
+  HOUSE STYLE:
+  - id prefix encodes ordering in the editor: a0/a1/a2 first (color), then
+    z0/z1/.../z5 (lists and booleans). Keep this convention when adding new
+    options so the editor pane stays organized.
+  - For every new `displayName` value, add a <string name="..."> to
+    res/values/strings.xml in the same change.
+  - When a list option needs an icon, add it to res/drawable-nodpi/.
+-->

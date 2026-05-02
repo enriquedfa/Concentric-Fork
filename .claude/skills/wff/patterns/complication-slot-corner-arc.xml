@@ -1,0 +1,101 @@
+<!--
+  Pattern: Corner ComplicationSlot with a curved <BoundingArc> tap target.
+
+  Anatomy:
+    <ComplicationSlot> ........ slot definition (id, types, geometry)
+      <DefaultProviderPolicy>   default complication when none selected
+      <BoundingArc>             tap region — sweeping arc instead of a box
+      <Variant mode="AMBIENT">  AOD visibility gating
+      <Complication type="...">    one block per supported type, in order
+        <Condition>                 (optional) type-internal layout switch
+          <Expressions> ...         predicates over [COMPLICATION.*] / [CONFIGURATION.*]
+          <Compare expression="...">...</Compare>
+          <Default>...</Default>
+        </Condition>
+      </Complication>
+      ... repeat per type ...
+      <Complication type="EMPTY" />   <-- shorthand: render nothing
+
+  Key tricks used by Concentric:
+    - BoundingArc.centerX/centerY set to 0 or 225 (canvas corners) to place
+      the arc's center off-canvas. The visible sweep wraps the slot region.
+    - `noIcon` predicate combines null-check on MONOCHROMATIC_IMAGE with
+      textLength([COMPLICATION.TEXT]) to fall back to a text-only layout when
+      the icon is missing OR the text is too long to share space.
+    - For RANGED_VALUE, the displayed bar arc is built from <Arc> with
+      startAngle/endAngle driven by the ranged value, e.g.:
+        endAngle = startBase
+                 + ((value - min) / (max - min)) * sweepLength
+    - The MONOCHROMATIC_IMAGE branch uses the WFS-export idiom
+      <InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" .../>
+      `resource="empty"` is a placeholder; `source` overrides at runtime.
+      DO NOT "fix" the IDE warning on this — see antipatterns.md.
+
+  Lifted from raw/watchface.xml lines ~2424–3301 (top-left / slot 0).
+  Slimmed to skeleton — copy and fill in inner draw nodes from the live file.
+-->
+<ComplicationSlot
+	name="top_left_complication"
+	alpha="255"
+	displayName="top_left_complication"
+	height="225"
+	isCustomizable="TRUE"
+	slotId="0"
+	supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
+	width="225"
+	x="0"
+	y="0">
+
+	<DefaultProviderPolicy
+		defaultSystemProvider="EMPTY"
+		defaultSystemProviderType="RANGED_VALUE" />
+
+	<!-- Tap area is a 72°-ish arc swept around an off-canvas pivot. -->
+	<BoundingArc
+		centerX="225"
+		centerY="225"
+		endAngle="351"
+		height="388"
+		isRoundEdge="TRUE"
+		startAngle="288"
+		thickness="34"
+		width="388" />
+
+	<!-- AOD: hidden in default (small) mode unless user opted in. -->
+	<Variant
+		mode="AMBIENT"
+		target="alpha"
+		value="[CONFIGURATION.z1_mode] == 0 ? 0 : ([CONFIGURATION.z3_aod_compl]? 255: 0)" />
+
+	<!-- TYPE 1 of 4: RANGED_VALUE -->
+	<Complication type="RANGED_VALUE">
+		<Condition>
+			<Expressions>
+				<Expression name="noIcon">
+					[COMPLICATION.MONOCHROMATIC_IMAGE] == null ||
+					textLength([COMPLICATION.TEXT]) > 6
+				</Expression>
+			</Expressions>
+			<Compare expression="noIcon">
+				<!-- Text-only layout: arc track + filled value arc + circular text. -->
+			</Compare>
+			<Default>
+				<!-- Icon + text + arc layout. -->
+			</Default>
+		</Condition>
+	</Complication>
+
+	<!-- TYPE 2 of 4: SHORT_TEXT (text + optional title) -->
+	<Complication type="SHORT_TEXT">
+		<!-- Same noIcon-style condition; render text along an arc using TextCircular. -->
+	</Complication>
+
+	<!-- TYPE 3 of 4: MONOCHROMATIC_IMAGE -->
+	<Complication type="MONOCHROMATIC_IMAGE">
+		<!-- Render the supplied glyph; placeholder uses InlineImage idiom:
+		     <InlineImage resource="empty" source="COMPLICATION.MONOCHROMATIC_IMAGE" .../> -->
+	</Complication>
+
+	<!-- TYPE 4 of 4: EMPTY — self-closing, draws nothing. -->
+	<Complication type="EMPTY" />
+</ComplicationSlot>
