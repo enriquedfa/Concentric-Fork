@@ -3276,7 +3276,7 @@
 			<Complication type="EMPTY" />
 		</ComplicationSlot>
 		<ComplicationSlot
-			name="top_left_complication"
+			name="top_right_complication"
 			alpha="255"
 			displayName="top_right_complication"
 			height="225"
@@ -4091,7 +4091,7 @@
 			<Complication type="EMPTY" />
 		</ComplicationSlot>
 		<ComplicationSlot
-			name="top_left_complication"
+			name="bottom_left_complication"
 			alpha="255"
 			displayName="bottom_left_complication"
 			height="225"
@@ -4971,7 +4971,7 @@
 			<Complication type="EMPTY" />
 		</ComplicationSlot>
 		<ComplicationSlot
-			name="top_left_complication"
+			name="bottom_right_complication"
 			alpha="255"
 			displayName="bottom_right_complication"
 			height="225"
