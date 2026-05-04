@@ -11,7 +11,7 @@
 		value="12:45:00" />
 	<UserConfigurations>
 		<ColorConfiguration
-			defaultValue="1"
+			defaultValue="6"
 			displayName="primaryColor"
 			id="a0PrimaryColor">
 			<ColorOption
@@ -19,164 +19,244 @@
 				displayName="snow"
 				id="0" />
 			<ColorOption
+				colors="#e8e2d9"
+				displayName="ivory"
+				id="1" />
+			<ColorOption
+				colors="#dcd7ca"
+				displayName="linen"
+				id="2" />
+			<ColorOption
+				colors="#c6bab2"
+				displayName="stone"
+				id="3" />
+			<ColorOption
+				colors="#c2beb9"
+				displayName="ash"
+				id="4" />
+			<ColorOption
+				colors="#c4c6c1"
+				displayName="silver"
+				id="5" />
+			<ColorOption
 				colors="#a7a7a7"
 				displayName="cloud"
-				id="1" />
+				id="6" />
+			<ColorOption
+				colors="#b2ab97"
+				displayName="taupe"
+				id="7" />
+			<ColorOption
+				colors="#9a9a8b"
+				displayName="sage"
+				id="8" />
+			<ColorOption
+				colors="#73665e"
+				displayName="espresso"
+				id="9" />
 			<ColorOption
 				colors="#e96868"
 				displayName="watermelon"
-				id="2" />
+				id="10" />
+			<ColorOption
+				colors="#ff774d"
+				displayName="ember"
+				id="11" />
 			<ColorOption
 				colors="#f97254"
 				displayName="tangerine_red"
-				id="3" />
+				id="12" />
 			<ColorOption
 				colors="#f48465"
 				displayName="pumpkin"
-				id="4" />
+				id="13" />
 			<ColorOption
 				colors="#c0a489"
 				displayName="coral"
-				id="5" />
+				id="14" />
 			<ColorOption
 				colors="#f3976b"
 				displayName="mango"
-				id="6" />
+				id="15" />
 			<ColorOption
 				colors="#f4af65"
 				displayName="gold"
-				id="7" />
+				id="16" />
 			<ColorOption
 				colors="#edb789"
 				displayName="tangerine"
-				id="8" />
+				id="17" />
 			<ColorOption
 				colors="#fec086"
 				displayName="peach"
-				id="9" />
+				id="18" />
+			<ColorOption
+				colors="#efd0ba"
+				displayName="almond"
+				id="19" />
 			<ColorOption
 				colors="#e6d469"
 				displayName="sunshine"
-				id="10" />
+				id="20" />
 			<ColorOption
 				colors="#edd854"
 				displayName="minty_yellow"
-				id="11" />
+				id="21" />
+			<ColorOption
+				colors="#ffe454"
+				displayName="lemon"
+				id="22" />
 			<ColorOption
 				colors="#f8d280"
 				displayName="mango_yellow"
-				id="12" />
+				id="23" />
 			<ColorOption
 				colors="#88c58e"
 				displayName="mint"
-				id="13" />
+				id="24" />
 			<ColorOption
 				colors="#6ee294"
 				displayName="peppermint"
-				id="14" />
+				id="25" />
+			<ColorOption
+				colors="#72f95c"
+				displayName="slime"
+				id="26" />
 			<ColorOption
 				colors="#a4ce82"
 				displayName="spring_green"
-				id="15" />
+				id="27" />
 			<ColorOption
 				colors="#aac588"
 				displayName="forest"
-				id="16" />
+				id="28" />
 			<ColorOption
 				colors="#abd686"
 				displayName="emerald"
-				id="17" />
+				id="29" />
 			<ColorOption
 				colors="#b7e26e"
 				displayName="lime"
-				id="18" />
+				id="30" />
 			<ColorOption
-				colors="#99b4c5"
-				displayName="sky"
-				id="19" />
+				colors="#c5ff97"
+				displayName="matcha"
+				id="31" />
 			<ColorOption
 				colors="#83d7ba"
 				displayName="turquoise"
-				id="20" />
+				id="32" />
 			<ColorOption
 				colors="#83d7ba"
 				displayName="teal"
-				id="21" />
+				id="33" />
 			<ColorOption
-				colors="#79b1f3"
-				displayName="ocean"
-				id="22" />
-			<ColorOption
-				colors="#8ec2df"
-				displayName="celeste"
-				id="23" />
-			<ColorOption
-				colors="#86b0fa"
-				displayName="azure"
-				id="24" />
+				colors="#84d5c1"
+				displayName="seafoam"
+				id="34" />
 			<ColorOption
 				colors="#80f5e2"
 				displayName="aquamarine"
-				id="25" />
-			<ColorOption
-				colors="#a4beff"
-				displayName="periwinkle"
-				id="26" />
+				id="35" />
 			<ColorOption
 				colors="#b0e6de"
 				displayName="frost"
-				id="27" />
+				id="36" />
+			<ColorOption
+				colors="#99b4c5"
+				displayName="sky"
+				id="37" />
+			<ColorOption
+				colors="#8ec2df"
+				displayName="celeste"
+				id="38" />
+			<ColorOption
+				colors="#7cb3e5"
+				displayName="water"
+				id="39" />
+			<ColorOption
+				colors="#79b1f3"
+				displayName="ocean"
+				id="40" />
+			<ColorOption
+				colors="#7092ea"
+				displayName="cornflower"
+				id="41" />
+			<ColorOption
+				colors="#2295ff"
+				displayName="marine"
+				id="42" />
+			<ColorOption
+				colors="#86b0fa"
+				displayName="azure"
+				id="43" />
 			<ColorOption
 				colors="#aed3fb"
 				displayName="baby_blue"
-				id="28" />
+				id="44" />
 			<ColorOption
 				colors="#aed6fb"
 				displayName="aqua_light"
-				id="29" />
+				id="45" />
+			<ColorOption
+				colors="#a3bdff"
+				displayName="powder"
+				id="46" />
+			<ColorOption
+				colors="#a4beff"
+				displayName="periwinkle"
+				id="47" />
+			<ColorOption
+				colors="#4b5ea3"
+				displayName="indigo"
+				id="48" />
 			<ColorOption
 				colors="#9990be"
 				displayName="royal"
-				id="30" />
+				id="49" />
 			<ColorOption
 				colors="#9281ef"
 				displayName="lavender"
-				id="31" />
+				id="50" />
 			<ColorOption
 				colors="#b08cd1"
 				displayName="amethyst"
-				id="32" />
+				id="51" />
 			<ColorOption
 				colors="#c091eb"
 				displayName="floral"
-				id="33" />
+				id="52" />
 			<ColorOption
 				colors="#ada5fc"
 				displayName="lilac"
-				id="34" />
+				id="53" />
 			<ColorOption
 				colors="#c3a6ee"
 				displayName="apricot"
-				id="35" />
+				id="54" />
 			<ColorOption
 				colors="#e0b2fc"
 				displayName="cotton_candy"
-				id="36" />
+				id="55" />
+			<ColorOption
+				colors="#ce7fb3"
+				displayName="orchid"
+				id="56" />
 			<ColorOption
 				colors="#e58bb6"
 				displayName="flamingo"
-				id="37" />
+				id="57" />
 			<ColorOption
 				colors="#e58bb6"
 				displayName="blush"
-				id="38" />
+				id="58" />
 			<ColorOption
 				colors="#ff8ed3"
 				displayName="rose"
-				id="39" />
+				id="59" />
 		</ColorConfiguration>
 		<ColorConfiguration
-			defaultValue="1"
+			defaultValue="6"
 			displayName="accentColor"
 			id="a1AccentColor">
 			<ColorOption
@@ -184,164 +264,244 @@
 				displayName="snow"
 				id="0" />
 			<ColorOption
+				colors="#e8e2d9"
+				displayName="ivory"
+				id="1" />
+			<ColorOption
+				colors="#dcd7ca"
+				displayName="linen"
+				id="2" />
+			<ColorOption
+				colors="#c6bab2"
+				displayName="stone"
+				id="3" />
+			<ColorOption
+				colors="#c2beb9"
+				displayName="ash"
+				id="4" />
+			<ColorOption
+				colors="#c4c6c1"
+				displayName="silver"
+				id="5" />
+			<ColorOption
 				colors="#a7a7a7"
 				displayName="cloud"
-				id="1" />
+				id="6" />
+			<ColorOption
+				colors="#b2ab97"
+				displayName="taupe"
+				id="7" />
+			<ColorOption
+				colors="#9a9a8b"
+				displayName="sage"
+				id="8" />
+			<ColorOption
+				colors="#73665e"
+				displayName="espresso"
+				id="9" />
 			<ColorOption
 				colors="#e96868"
 				displayName="watermelon"
-				id="2" />
+				id="10" />
+			<ColorOption
+				colors="#ff774d"
+				displayName="ember"
+				id="11" />
 			<ColorOption
 				colors="#f97254"
 				displayName="tangerine_red"
-				id="3" />
+				id="12" />
 			<ColorOption
 				colors="#f48465"
 				displayName="pumpkin"
-				id="4" />
+				id="13" />
 			<ColorOption
 				colors="#c0a489"
 				displayName="coral"
-				id="5" />
+				id="14" />
 			<ColorOption
 				colors="#f3976b"
 				displayName="mango"
-				id="6" />
+				id="15" />
 			<ColorOption
 				colors="#f4af65"
 				displayName="gold"
-				id="7" />
+				id="16" />
 			<ColorOption
 				colors="#edb789"
 				displayName="tangerine"
-				id="8" />
+				id="17" />
 			<ColorOption
 				colors="#fec086"
 				displayName="peach"
-				id="9" />
+				id="18" />
+			<ColorOption
+				colors="#efd0ba"
+				displayName="almond"
+				id="19" />
 			<ColorOption
 				colors="#e6d469"
 				displayName="sunshine"
-				id="10" />
+				id="20" />
 			<ColorOption
 				colors="#edd854"
 				displayName="minty_yellow"
-				id="11" />
+				id="21" />
+			<ColorOption
+				colors="#ffe454"
+				displayName="lemon"
+				id="22" />
 			<ColorOption
 				colors="#f8d280"
 				displayName="mango_yellow"
-				id="12" />
+				id="23" />
 			<ColorOption
 				colors="#88c58e"
 				displayName="mint"
-				id="13" />
+				id="24" />
 			<ColorOption
 				colors="#6ee294"
 				displayName="peppermint"
-				id="14" />
+				id="25" />
+			<ColorOption
+				colors="#72f95c"
+				displayName="slime"
+				id="26" />
 			<ColorOption
 				colors="#a4ce82"
 				displayName="spring_green"
-				id="15" />
+				id="27" />
 			<ColorOption
 				colors="#aac588"
 				displayName="forest"
-				id="16" />
+				id="28" />
 			<ColorOption
 				colors="#abd686"
 				displayName="emerald"
-				id="17" />
+				id="29" />
 			<ColorOption
 				colors="#b7e26e"
 				displayName="lime"
-				id="18" />
+				id="30" />
 			<ColorOption
-				colors="#99b4c5"
-				displayName="sky"
-				id="19" />
+				colors="#c5ff97"
+				displayName="matcha"
+				id="31" />
 			<ColorOption
 				colors="#83d7ba"
 				displayName="turquoise"
-				id="20" />
+				id="32" />
 			<ColorOption
 				colors="#83d7ba"
 				displayName="teal"
-				id="21" />
+				id="33" />
 			<ColorOption
-				colors="#79b1f3"
-				displayName="ocean"
-				id="22" />
-			<ColorOption
-				colors="#8ec2df"
-				displayName="celeste"
-				id="23" />
-			<ColorOption
-				colors="#86b0fa"
-				displayName="azure"
-				id="24" />
+				colors="#84d5c1"
+				displayName="seafoam"
+				id="34" />
 			<ColorOption
 				colors="#80f5e2"
 				displayName="aquamarine"
-				id="25" />
-			<ColorOption
-				colors="#a4beff"
-				displayName="periwinkle"
-				id="26" />
+				id="35" />
 			<ColorOption
 				colors="#b0e6de"
 				displayName="frost"
-				id="27" />
+				id="36" />
+			<ColorOption
+				colors="#99b4c5"
+				displayName="sky"
+				id="37" />
+			<ColorOption
+				colors="#8ec2df"
+				displayName="celeste"
+				id="38" />
+			<ColorOption
+				colors="#7cb3e5"
+				displayName="water"
+				id="39" />
+			<ColorOption
+				colors="#79b1f3"
+				displayName="ocean"
+				id="40" />
+			<ColorOption
+				colors="#7092ea"
+				displayName="cornflower"
+				id="41" />
+			<ColorOption
+				colors="#2295ff"
+				displayName="marine"
+				id="42" />
+			<ColorOption
+				colors="#86b0fa"
+				displayName="azure"
+				id="43" />
 			<ColorOption
 				colors="#aed3fb"
 				displayName="baby_blue"
-				id="28" />
+				id="44" />
 			<ColorOption
 				colors="#aed6fb"
 				displayName="aqua_light"
-				id="29" />
+				id="45" />
+			<ColorOption
+				colors="#a3bdff"
+				displayName="powder"
+				id="46" />
+			<ColorOption
+				colors="#a4beff"
+				displayName="periwinkle"
+				id="47" />
+			<ColorOption
+				colors="#4b5ea3"
+				displayName="indigo"
+				id="48" />
 			<ColorOption
 				colors="#9990be"
 				displayName="royal"
-				id="30" />
+				id="49" />
 			<ColorOption
 				colors="#9281ef"
 				displayName="lavender"
-				id="31" />
+				id="50" />
 			<ColorOption
 				colors="#b08cd1"
 				displayName="amethyst"
-				id="32" />
+				id="51" />
 			<ColorOption
 				colors="#c091eb"
 				displayName="floral"
-				id="33" />
+				id="52" />
 			<ColorOption
 				colors="#ada5fc"
 				displayName="lilac"
-				id="34" />
+				id="53" />
 			<ColorOption
 				colors="#c3a6ee"
 				displayName="apricot"
-				id="35" />
+				id="54" />
 			<ColorOption
 				colors="#e0b2fc"
 				displayName="cotton_candy"
-				id="36" />
+				id="55" />
+			<ColorOption
+				colors="#ce7fb3"
+				displayName="orchid"
+				id="56" />
 			<ColorOption
 				colors="#e58bb6"
 				displayName="flamingo"
-				id="37" />
+				id="57" />
 			<ColorOption
 				colors="#e58bb6"
 				displayName="blush"
-				id="38" />
+				id="58" />
 			<ColorOption
 				colors="#ff8ed3"
 				displayName="rose"
-				id="39" />
+				id="59" />
 		</ColorConfiguration>
 		<ColorConfiguration
-			defaultValue="1"
+			defaultValue="6"
 			displayName="compBaseColor"
 			id="a2CompBaseColor">
 			<ColorOption
@@ -349,164 +509,244 @@
 				displayName="snow"
 				id="0" />
 			<ColorOption
+				colors="#e8e2d9"
+				displayName="ivory"
+				id="1" />
+			<ColorOption
+				colors="#dcd7ca"
+				displayName="linen"
+				id="2" />
+			<ColorOption
+				colors="#c6bab2"
+				displayName="stone"
+				id="3" />
+			<ColorOption
+				colors="#c2beb9"
+				displayName="ash"
+				id="4" />
+			<ColorOption
+				colors="#c4c6c1"
+				displayName="silver"
+				id="5" />
+			<ColorOption
 				colors="#a7a7a7"
 				displayName="cloud"
-				id="1" />
+				id="6" />
+			<ColorOption
+				colors="#b2ab97"
+				displayName="taupe"
+				id="7" />
+			<ColorOption
+				colors="#9a9a8b"
+				displayName="sage"
+				id="8" />
+			<ColorOption
+				colors="#73665e"
+				displayName="espresso"
+				id="9" />
 			<ColorOption
 				colors="#e96868"
 				displayName="watermelon"
-				id="2" />
+				id="10" />
+			<ColorOption
+				colors="#ff774d"
+				displayName="ember"
+				id="11" />
 			<ColorOption
 				colors="#f97254"
 				displayName="tangerine_red"
-				id="3" />
+				id="12" />
 			<ColorOption
 				colors="#f48465"
 				displayName="pumpkin"
-				id="4" />
+				id="13" />
 			<ColorOption
 				colors="#c0a489"
 				displayName="coral"
-				id="5" />
+				id="14" />
 			<ColorOption
 				colors="#f3976b"
 				displayName="mango"
-				id="6" />
+				id="15" />
 			<ColorOption
 				colors="#f4af65"
 				displayName="gold"
-				id="7" />
+				id="16" />
 			<ColorOption
 				colors="#edb789"
 				displayName="tangerine"
-				id="8" />
+				id="17" />
 			<ColorOption
 				colors="#fec086"
 				displayName="peach"
-				id="9" />
+				id="18" />
+			<ColorOption
+				colors="#efd0ba"
+				displayName="almond"
+				id="19" />
 			<ColorOption
 				colors="#e6d469"
 				displayName="sunshine"
-				id="10" />
+				id="20" />
 			<ColorOption
 				colors="#edd854"
 				displayName="minty_yellow"
-				id="11" />
+				id="21" />
+			<ColorOption
+				colors="#ffe454"
+				displayName="lemon"
+				id="22" />
 			<ColorOption
 				colors="#f8d280"
 				displayName="mango_yellow"
-				id="12" />
+				id="23" />
 			<ColorOption
 				colors="#88c58e"
 				displayName="mint"
-				id="13" />
+				id="24" />
 			<ColorOption
 				colors="#6ee294"
 				displayName="peppermint"
-				id="14" />
+				id="25" />
+			<ColorOption
+				colors="#72f95c"
+				displayName="slime"
+				id="26" />
 			<ColorOption
 				colors="#a4ce82"
 				displayName="spring_green"
-				id="15" />
+				id="27" />
 			<ColorOption
 				colors="#aac588"
 				displayName="forest"
-				id="16" />
+				id="28" />
 			<ColorOption
 				colors="#abd686"
 				displayName="emerald"
-				id="17" />
+				id="29" />
 			<ColorOption
 				colors="#b7e26e"
 				displayName="lime"
-				id="18" />
+				id="30" />
 			<ColorOption
-				colors="#99b4c5"
-				displayName="sky"
-				id="19" />
+				colors="#c5ff97"
+				displayName="matcha"
+				id="31" />
 			<ColorOption
 				colors="#83d7ba"
 				displayName="turquoise"
-				id="20" />
+				id="32" />
 			<ColorOption
 				colors="#83d7ba"
 				displayName="teal"
-				id="21" />
+				id="33" />
 			<ColorOption
-				colors="#79b1f3"
-				displayName="ocean"
-				id="22" />
-			<ColorOption
-				colors="#8ec2df"
-				displayName="celeste"
-				id="23" />
-			<ColorOption
-				colors="#86b0fa"
-				displayName="azure"
-				id="24" />
+				colors="#84d5c1"
+				displayName="seafoam"
+				id="34" />
 			<ColorOption
 				colors="#80f5e2"
 				displayName="aquamarine"
-				id="25" />
-			<ColorOption
-				colors="#a4beff"
-				displayName="periwinkle"
-				id="26" />
+				id="35" />
 			<ColorOption
 				colors="#b0e6de"
 				displayName="frost"
-				id="27" />
+				id="36" />
+			<ColorOption
+				colors="#99b4c5"
+				displayName="sky"
+				id="37" />
+			<ColorOption
+				colors="#8ec2df"
+				displayName="celeste"
+				id="38" />
+			<ColorOption
+				colors="#7cb3e5"
+				displayName="water"
+				id="39" />
+			<ColorOption
+				colors="#79b1f3"
+				displayName="ocean"
+				id="40" />
+			<ColorOption
+				colors="#7092ea"
+				displayName="cornflower"
+				id="41" />
+			<ColorOption
+				colors="#2295ff"
+				displayName="marine"
+				id="42" />
+			<ColorOption
+				colors="#86b0fa"
+				displayName="azure"
+				id="43" />
 			<ColorOption
 				colors="#aed3fb"
 				displayName="baby_blue"
-				id="28" />
+				id="44" />
 			<ColorOption
 				colors="#aed6fb"
 				displayName="aqua_light"
-				id="29" />
+				id="45" />
+			<ColorOption
+				colors="#a3bdff"
+				displayName="powder"
+				id="46" />
+			<ColorOption
+				colors="#a4beff"
+				displayName="periwinkle"
+				id="47" />
+			<ColorOption
+				colors="#4b5ea3"
+				displayName="indigo"
+				id="48" />
 			<ColorOption
 				colors="#9990be"
 				displayName="royal"
-				id="30" />
+				id="49" />
 			<ColorOption
 				colors="#9281ef"
 				displayName="lavender"
-				id="31" />
+				id="50" />
 			<ColorOption
 				colors="#b08cd1"
 				displayName="amethyst"
-				id="32" />
+				id="51" />
 			<ColorOption
 				colors="#c091eb"
 				displayName="floral"
-				id="33" />
+				id="52" />
 			<ColorOption
 				colors="#ada5fc"
 				displayName="lilac"
-				id="34" />
+				id="53" />
 			<ColorOption
 				colors="#c3a6ee"
 				displayName="apricot"
-				id="35" />
+				id="54" />
 			<ColorOption
 				colors="#e0b2fc"
 				displayName="cotton_candy"
-				id="36" />
+				id="55" />
+			<ColorOption
+				colors="#ce7fb3"
+				displayName="orchid"
+				id="56" />
 			<ColorOption
 				colors="#e58bb6"
 				displayName="flamingo"
-				id="37" />
+				id="57" />
 			<ColorOption
 				colors="#e58bb6"
 				displayName="blush"
-				id="38" />
+				id="58" />
 			<ColorOption
 				colors="#ff8ed3"
 				displayName="rose"
-				id="39" />
+				id="59" />
 		</ColorConfiguration>
 		<ColorConfiguration
-			defaultValue="1"
+			defaultValue="6"
 			displayName="compFgColor"
 			id="a3CompFgColor">
 			<ColorOption
@@ -514,161 +754,241 @@
 				displayName="snow"
 				id="0" />
 			<ColorOption
+				colors="#e8e2d9"
+				displayName="ivory"
+				id="1" />
+			<ColorOption
+				colors="#dcd7ca"
+				displayName="linen"
+				id="2" />
+			<ColorOption
+				colors="#c6bab2"
+				displayName="stone"
+				id="3" />
+			<ColorOption
+				colors="#c2beb9"
+				displayName="ash"
+				id="4" />
+			<ColorOption
+				colors="#c4c6c1"
+				displayName="silver"
+				id="5" />
+			<ColorOption
 				colors="#a7a7a7"
 				displayName="cloud"
-				id="1" />
+				id="6" />
+			<ColorOption
+				colors="#b2ab97"
+				displayName="taupe"
+				id="7" />
+			<ColorOption
+				colors="#9a9a8b"
+				displayName="sage"
+				id="8" />
+			<ColorOption
+				colors="#73665e"
+				displayName="espresso"
+				id="9" />
 			<ColorOption
 				colors="#e96868"
 				displayName="watermelon"
-				id="2" />
+				id="10" />
+			<ColorOption
+				colors="#ff774d"
+				displayName="ember"
+				id="11" />
 			<ColorOption
 				colors="#f97254"
 				displayName="tangerine_red"
-				id="3" />
+				id="12" />
 			<ColorOption
 				colors="#f48465"
 				displayName="pumpkin"
-				id="4" />
+				id="13" />
 			<ColorOption
 				colors="#c0a489"
 				displayName="coral"
-				id="5" />
+				id="14" />
 			<ColorOption
 				colors="#f3976b"
 				displayName="mango"
-				id="6" />
+				id="15" />
 			<ColorOption
 				colors="#f4af65"
 				displayName="gold"
-				id="7" />
+				id="16" />
 			<ColorOption
 				colors="#edb789"
 				displayName="tangerine"
-				id="8" />
+				id="17" />
 			<ColorOption
 				colors="#fec086"
 				displayName="peach"
-				id="9" />
+				id="18" />
+			<ColorOption
+				colors="#efd0ba"
+				displayName="almond"
+				id="19" />
 			<ColorOption
 				colors="#e6d469"
 				displayName="sunshine"
-				id="10" />
+				id="20" />
 			<ColorOption
 				colors="#edd854"
 				displayName="minty_yellow"
-				id="11" />
+				id="21" />
+			<ColorOption
+				colors="#ffe454"
+				displayName="lemon"
+				id="22" />
 			<ColorOption
 				colors="#f8d280"
 				displayName="mango_yellow"
-				id="12" />
+				id="23" />
 			<ColorOption
 				colors="#88c58e"
 				displayName="mint"
-				id="13" />
+				id="24" />
 			<ColorOption
 				colors="#6ee294"
 				displayName="peppermint"
-				id="14" />
+				id="25" />
+			<ColorOption
+				colors="#72f95c"
+				displayName="slime"
+				id="26" />
 			<ColorOption
 				colors="#a4ce82"
 				displayName="spring_green"
-				id="15" />
+				id="27" />
 			<ColorOption
 				colors="#aac588"
 				displayName="forest"
-				id="16" />
+				id="28" />
 			<ColorOption
 				colors="#abd686"
 				displayName="emerald"
-				id="17" />
+				id="29" />
 			<ColorOption
 				colors="#b7e26e"
 				displayName="lime"
-				id="18" />
+				id="30" />
 			<ColorOption
-				colors="#99b4c5"
-				displayName="sky"
-				id="19" />
+				colors="#c5ff97"
+				displayName="matcha"
+				id="31" />
 			<ColorOption
 				colors="#83d7ba"
 				displayName="turquoise"
-				id="20" />
+				id="32" />
 			<ColorOption
 				colors="#83d7ba"
 				displayName="teal"
-				id="21" />
+				id="33" />
 			<ColorOption
-				colors="#79b1f3"
-				displayName="ocean"
-				id="22" />
-			<ColorOption
-				colors="#8ec2df"
-				displayName="celeste"
-				id="23" />
-			<ColorOption
-				colors="#86b0fa"
-				displayName="azure"
-				id="24" />
+				colors="#84d5c1"
+				displayName="seafoam"
+				id="34" />
 			<ColorOption
 				colors="#80f5e2"
 				displayName="aquamarine"
-				id="25" />
-			<ColorOption
-				colors="#a4beff"
-				displayName="periwinkle"
-				id="26" />
+				id="35" />
 			<ColorOption
 				colors="#b0e6de"
 				displayName="frost"
-				id="27" />
+				id="36" />
+			<ColorOption
+				colors="#99b4c5"
+				displayName="sky"
+				id="37" />
+			<ColorOption
+				colors="#8ec2df"
+				displayName="celeste"
+				id="38" />
+			<ColorOption
+				colors="#7cb3e5"
+				displayName="water"
+				id="39" />
+			<ColorOption
+				colors="#79b1f3"
+				displayName="ocean"
+				id="40" />
+			<ColorOption
+				colors="#7092ea"
+				displayName="cornflower"
+				id="41" />
+			<ColorOption
+				colors="#2295ff"
+				displayName="marine"
+				id="42" />
+			<ColorOption
+				colors="#86b0fa"
+				displayName="azure"
+				id="43" />
 			<ColorOption
 				colors="#aed3fb"
 				displayName="baby_blue"
-				id="28" />
+				id="44" />
 			<ColorOption
 				colors="#aed6fb"
 				displayName="aqua_light"
-				id="29" />
+				id="45" />
+			<ColorOption
+				colors="#a3bdff"
+				displayName="powder"
+				id="46" />
+			<ColorOption
+				colors="#a4beff"
+				displayName="periwinkle"
+				id="47" />
+			<ColorOption
+				colors="#4b5ea3"
+				displayName="indigo"
+				id="48" />
 			<ColorOption
 				colors="#9990be"
 				displayName="royal"
-				id="30" />
+				id="49" />
 			<ColorOption
 				colors="#9281ef"
 				displayName="lavender"
-				id="31" />
+				id="50" />
 			<ColorOption
 				colors="#b08cd1"
 				displayName="amethyst"
-				id="32" />
+				id="51" />
 			<ColorOption
 				colors="#c091eb"
 				displayName="floral"
-				id="33" />
+				id="52" />
 			<ColorOption
 				colors="#ada5fc"
 				displayName="lilac"
-				id="34" />
+				id="53" />
 			<ColorOption
 				colors="#c3a6ee"
 				displayName="apricot"
-				id="35" />
+				id="54" />
 			<ColorOption
 				colors="#e0b2fc"
 				displayName="cotton_candy"
-				id="36" />
+				id="55" />
+			<ColorOption
+				colors="#ce7fb3"
+				displayName="orchid"
+				id="56" />
 			<ColorOption
 				colors="#e58bb6"
 				displayName="flamingo"
-				id="37" />
+				id="57" />
 			<ColorOption
 				colors="#e58bb6"
 				displayName="blush"
-				id="38" />
+				id="58" />
 			<ColorOption
 				colors="#ff8ed3"
 				displayName="rose"
-				id="39" />
+				id="59" />
 		</ColorConfiguration>
 		<ListConfiguration
 			defaultValue="0"
@@ -689,7 +1009,7 @@
 				id="2" />
 		</ListConfiguration>
 		<ListConfiguration
-			defaultValue="2"
+			defaultValue="1"
 			displayName="aod_style"
 			icon="aod_icon_0"
 			id="z1_aod">
@@ -711,7 +1031,7 @@
 				id="3" />
 		</ListConfiguration>
 		<ListConfiguration
-			defaultValue="0"
+			defaultValue="1"
 			displayName="mode"
 			id="z1_mode">
 			<ListOption
@@ -739,6 +1059,183 @@
 			defaultValue="FALSE"
 			displayName="hide_seconds"
 			id="z5_hide_seconds" />
+		<Flavors defaultValue="porcelain_dials_and_arcs">
+			<Flavor
+				displayName="flavor_glacier_dials"
+				id="glacier_dials"
+				screenReaderText="flavor_glacier_dials">
+				<Configuration
+					id="z1_mode"
+					optionId="0" />
+				<Configuration
+					id="a0PrimaryColor"
+					optionId="39" />
+				<Configuration
+					id="a1AccentColor"
+					optionId="48" />
+				<Configuration
+					id="a2CompBaseColor"
+					optionId="46" />
+				<Configuration
+					id="a3CompFgColor"
+					optionId="42" />
+			</Flavor>
+			<Flavor
+				displayName="flavor_pebble_dials"
+				id="pebble_dials"
+				screenReaderText="flavor_pebble_dials">
+				<Configuration
+					id="z1_mode"
+					optionId="0" />
+				<Configuration
+					id="a0PrimaryColor"
+					optionId="2" />
+				<Configuration
+					id="a1AccentColor"
+					optionId="7" />
+				<Configuration
+					id="a2CompBaseColor"
+					optionId="8" />
+				<Configuration
+					id="a3CompFgColor"
+					optionId="3" />
+			</Flavor>
+			<Flavor
+				displayName="flavor_porcelain_dials_and_arcs"
+				id="porcelain_dials_and_arcs"
+				screenReaderText="flavor_porcelain_dials_and_arcs">
+				<Configuration
+					id="z1_mode"
+					optionId="1" />
+				<Configuration
+					id="a0PrimaryColor"
+					optionId="1" />
+				<Configuration
+					id="a1AccentColor"
+					optionId="4" />
+				<Configuration
+					id="a2CompBaseColor"
+					optionId="9" />
+				<Configuration
+					id="a3CompFgColor"
+					optionId="19" />
+				<ComplicationSlot slotId="0">
+					<DefaultProviderPolicy
+						defaultSystemProvider="NEXT_EVENT"
+						defaultSystemProviderType="SHORT_TEXT" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="1">
+					<DefaultProviderPolicy
+						defaultSystemProvider="WATCH_BATTERY"
+						defaultSystemProviderType="RANGED_VALUE" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="2">
+					<DefaultProviderPolicy
+						defaultSystemProvider="STEP_COUNT"
+						defaultSystemProviderType="RANGED_VALUE" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="3">
+					<DefaultProviderPolicy
+						defaultSystemProvider="HEART_RATE"
+						defaultSystemProviderType="RANGED_VALUE" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="4">
+					<DefaultProviderPolicy
+						defaultSystemProvider="DATE"
+						defaultSystemProviderType="SHORT_TEXT" />
+				</ComplicationSlot>
+			</Flavor>
+			<Flavor
+				displayName="flavor_ooze_dials_and_arcs"
+				id="ooze_dials_and_arcs"
+				screenReaderText="flavor_ooze_dials_and_arcs">
+				<Configuration
+					id="z1_mode"
+					optionId="1" />
+				<Configuration
+					id="a0PrimaryColor"
+					optionId="31" />
+				<Configuration
+					id="a1AccentColor"
+					optionId="26" />
+				<Configuration
+					id="a2CompBaseColor"
+					optionId="34" />
+				<Configuration
+					id="a3CompFgColor"
+					optionId="11" />
+				<ComplicationSlot slotId="0">
+					<DefaultProviderPolicy
+						defaultSystemProvider="NEXT_EVENT"
+						defaultSystemProviderType="SHORT_TEXT" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="1">
+					<DefaultProviderPolicy
+						defaultSystemProvider="WATCH_BATTERY"
+						defaultSystemProviderType="RANGED_VALUE" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="2">
+					<DefaultProviderPolicy
+						defaultSystemProvider="STEP_COUNT"
+						defaultSystemProviderType="RANGED_VALUE" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="3">
+					<DefaultProviderPolicy
+						defaultSystemProvider="HEART_RATE"
+						defaultSystemProviderType="RANGED_VALUE" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="4">
+					<DefaultProviderPolicy
+						defaultSystemProvider="DATE"
+						defaultSystemProviderType="SHORT_TEXT" />
+				</ComplicationSlot>
+			</Flavor>
+			<Flavor
+				displayName="flavor_jester_dials_and_arcs"
+				id="jester_dials_and_arcs"
+				screenReaderText="flavor_jester_dials_and_arcs">
+				<Configuration
+					id="z1_mode"
+					optionId="1" />
+				<Configuration
+					id="a0PrimaryColor"
+					optionId="5" />
+				<Configuration
+					id="a1AccentColor"
+					optionId="41" />
+				<Configuration
+					id="a2CompBaseColor"
+					optionId="22" />
+				<Configuration
+					id="a3CompFgColor"
+					optionId="56" />
+				<ComplicationSlot slotId="0">
+					<DefaultProviderPolicy
+						defaultSystemProvider="NEXT_EVENT"
+						defaultSystemProviderType="SHORT_TEXT" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="1">
+					<DefaultProviderPolicy
+						defaultSystemProvider="WATCH_BATTERY"
+						defaultSystemProviderType="RANGED_VALUE" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="2">
+					<DefaultProviderPolicy
+						defaultSystemProvider="STEP_COUNT"
+						defaultSystemProviderType="RANGED_VALUE" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="3">
+					<DefaultProviderPolicy
+						defaultSystemProvider="HEART_RATE"
+						defaultSystemProviderType="RANGED_VALUE" />
+				</ComplicationSlot>
+				<ComplicationSlot slotId="4">
+					<DefaultProviderPolicy
+						defaultSystemProvider="DATE"
+						defaultSystemProviderType="SHORT_TEXT" />
+				</ComplicationSlot>
+			</Flavor>
+		</Flavors>
 	</UserConfigurations>
 	<Scene backgroundColor="#ff000000">
 		<Group

@@ -186,4 +186,79 @@
 	<string name="rose">
 		Rose
 	</string>
+	<string name="ivory">
+		Ivory
+	</string>
+	<string name="linen">
+		Linen
+	</string>
+	<string name="stone">
+		Stone
+	</string>
+	<string name="ash">
+		Ash
+	</string>
+	<string name="silver">
+		Silver
+	</string>
+	<string name="taupe">
+		Taupe
+	</string>
+	<string name="sage">
+		Sage
+	</string>
+	<string name="espresso">
+		Espresso
+	</string>
+	<string name="ember">
+		Ember
+	</string>
+	<string name="almond">
+		Almond
+	</string>
+	<string name="lemon">
+		Lemon
+	</string>
+	<string name="slime">
+		Slime
+	</string>
+	<string name="matcha">
+		Matcha
+	</string>
+	<string name="seafoam">
+		Seafoam
+	</string>
+	<string name="water">
+		Water
+	</string>
+	<string name="cornflower">
+		Cornflower
+	</string>
+	<string name="marine">
+		Marine
+	</string>
+	<string name="powder">
+		Powder
+	</string>
+	<string name="indigo">
+		Indigo
+	</string>
+	<string name="orchid">
+		Orchid
+	</string>
+	<string name="flavor_glacier_dials">
+		Glacier
+	</string>
+	<string name="flavor_pebble_dials">
+		Pebble
+	</string>
+	<string name="flavor_porcelain_dials_and_arcs">
+		Porcelain
+	</string>
+	<string name="flavor_ooze_dials_and_arcs">
+		Ooze
+	</string>
+	<string name="flavor_jester_dials_and_arcs">
+		Jester
+	</string>
 </resources>
