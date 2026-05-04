@@ -58,7 +58,7 @@ The entire watch face lives in three XML files under `app/src/main/res/`:
 
 ## Modifying the watch face
 
-When editing `watchface.xml`, keep in mind:
+Most modification will go to `watchface.xml`, keep in mind:
 - Coordinates are in the **450×450** canvas declared by `watch_face_shapes.xml`; many nested groups use a **225×225** local frame (quadrants) — check the enclosing `<Group>` before reading `x`/`y`.
 - When adding a user-facing option, add the `<ColorOption>`/`<ListOption>` in `<UserConfigurations>` **and** a matching `<string>` in `res/values/strings.xml` (displayed labels come from there).
 - Bump `android:value` on the `com.google.wear.watchface.format.version` `<property>` in the manifest only if you start using features from a newer WFF version — and update the docs URL accordingly.
