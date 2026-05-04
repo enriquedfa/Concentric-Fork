@@ -3,14 +3,17 @@
 	<string name="watch_face_name" translatable="false">
 		Concentric
 	</string>
-	<string name="secondsColor">
-		Seconds Color
-	</string>
-	<string name="complicationColor">
-		Complication Color
+	<string name="primaryColor">
+		Digits Color
 	</string>
 	<string name="accentColor">
-		Accent Color
+		Indices Color
+	</string>
+	<string name="compBaseColor">
+		Complication Value Color
+	</string>
+	<string name="compFgColor">
+		Complication Accent Color
 	</string>
 	<string name="index">
 		Index

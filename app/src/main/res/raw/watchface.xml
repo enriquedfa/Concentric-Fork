@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+﻿<?xml version="1.0" ?>
 <WatchFace
 	clipShape="CIRCLE"
 	height="450"
@@ -12,173 +12,8 @@
 	<UserConfigurations>
 		<ColorConfiguration
 			defaultValue="1"
-			displayName="secondsColor"
-			id="a0SecondsColor">
-			<ColorOption
-				colors="#ffffff"
-				displayName="snow"
-				id="0" />
-			<ColorOption
-				colors="#a7a7a7"
-				displayName="cloud"
-				id="1" />
-			<ColorOption
-				colors="#e96868"
-				displayName="watermelon"
-				id="2" />
-			<ColorOption
-				colors="#f97254"
-				displayName="tangerine_red"
-				id="3" />
-			<ColorOption
-				colors="#f48465"
-				displayName="pumpkin"
-				id="4" />
-			<ColorOption
-				colors="#c0a489"
-				displayName="coral"
-				id="5" />
-			<ColorOption
-				colors="#f3976b"
-				displayName="mango"
-				id="6" />
-			<ColorOption
-				colors="#f4af65"
-				displayName="gold"
-				id="7" />
-			<ColorOption
-				colors="#edb789"
-				displayName="tangerine"
-				id="8" />
-			<ColorOption
-				colors="#fec086"
-				displayName="peach"
-				id="9" />
-			<ColorOption
-				colors="#e6d469"
-				displayName="sunshine"
-				id="10" />
-			<ColorOption
-				colors="#edd854"
-				displayName="minty_yellow"
-				id="11" />
-			<ColorOption
-				colors="#f8d280"
-				displayName="mango_yellow"
-				id="12" />
-			<ColorOption
-				colors="#88c58e"
-				displayName="mint"
-				id="13" />
-			<ColorOption
-				colors="#6ee294"
-				displayName="peppermint"
-				id="14" />
-			<ColorOption
-				colors="#a4ce82"
-				displayName="spring_green"
-				id="15" />
-			<ColorOption
-				colors="#aac588"
-				displayName="forest"
-				id="16" />
-			<ColorOption
-				colors="#abd686"
-				displayName="emerald"
-				id="17" />
-			<ColorOption
-				colors="#b7e26e"
-				displayName="lime"
-				id="18" />
-			<ColorOption
-				colors="#99b4c5"
-				displayName="sky"
-				id="19" />
-			<ColorOption
-				colors="#83d7ba"
-				displayName="turquoise"
-				id="20" />
-			<ColorOption
-				colors="#83d7ba"
-				displayName="teal"
-				id="21" />
-			<ColorOption
-				colors="#79b1f3"
-				displayName="ocean"
-				id="22" />
-			<ColorOption
-				colors="#8ec2df"
-				displayName="celeste"
-				id="23" />
-			<ColorOption
-				colors="#86b0fa"
-				displayName="azure"
-				id="24" />
-			<ColorOption
-				colors="#80f5e2"
-				displayName="aquamarine"
-				id="25" />
-			<ColorOption
-				colors="#a4beff"
-				displayName="periwinkle"
-				id="26" />
-			<ColorOption
-				colors="#b0e6de"
-				displayName="frost"
-				id="27" />
-			<ColorOption
-				colors="#aed3fb"
-				displayName="baby_blue"
-				id="28" />
-			<ColorOption
-				colors="#aed6fb"
-				displayName="aqua_light"
-				id="29" />
-			<ColorOption
-				colors="#9990be"
-				displayName="royal"
-				id="30" />
-			<ColorOption
-				colors="#9281ef"
-				displayName="lavender"
-				id="31" />
-			<ColorOption
-				colors="#b08cd1"
-				displayName="amethyst"
-				id="32" />
-			<ColorOption
-				colors="#c091eb"
-				displayName="floral"
-				id="33" />
-			<ColorOption
-				colors="#ada5fc"
-				displayName="lilac"
-				id="34" />
-			<ColorOption
-				colors="#c3a6ee"
-				displayName="apricot"
-				id="35" />
-			<ColorOption
-				colors="#e0b2fc"
-				displayName="cotton_candy"
-				id="36" />
-			<ColorOption
-				colors="#e58bb6"
-				displayName="flamingo"
-				id="37" />
-			<ColorOption
-				colors="#e58bb6"
-				displayName="blush"
-				id="38" />
-			<ColorOption
-				colors="#ff8ed3"
-				displayName="rose"
-				id="39" />
-		</ColorConfiguration>
-		<ColorConfiguration
-			defaultValue="1"
-			displayName="complicationColor"
-			id="a1ComplicationColor">
+			displayName="primaryColor"
+			id="a0PrimaryColor">
 			<ColorOption
 				colors="#ffffff"
 				displayName="snow"
@@ -343,7 +178,337 @@
 		<ColorConfiguration
 			defaultValue="1"
 			displayName="accentColor"
-			id="a2AccentColor">
+			id="a1AccentColor">
+			<ColorOption
+				colors="#ffffff"
+				displayName="snow"
+				id="0" />
+			<ColorOption
+				colors="#a7a7a7"
+				displayName="cloud"
+				id="1" />
+			<ColorOption
+				colors="#e96868"
+				displayName="watermelon"
+				id="2" />
+			<ColorOption
+				colors="#f97254"
+				displayName="tangerine_red"
+				id="3" />
+			<ColorOption
+				colors="#f48465"
+				displayName="pumpkin"
+				id="4" />
+			<ColorOption
+				colors="#c0a489"
+				displayName="coral"
+				id="5" />
+			<ColorOption
+				colors="#f3976b"
+				displayName="mango"
+				id="6" />
+			<ColorOption
+				colors="#f4af65"
+				displayName="gold"
+				id="7" />
+			<ColorOption
+				colors="#edb789"
+				displayName="tangerine"
+				id="8" />
+			<ColorOption
+				colors="#fec086"
+				displayName="peach"
+				id="9" />
+			<ColorOption
+				colors="#e6d469"
+				displayName="sunshine"
+				id="10" />
+			<ColorOption
+				colors="#edd854"
+				displayName="minty_yellow"
+				id="11" />
+			<ColorOption
+				colors="#f8d280"
+				displayName="mango_yellow"
+				id="12" />
+			<ColorOption
+				colors="#88c58e"
+				displayName="mint"
+				id="13" />
+			<ColorOption
+				colors="#6ee294"
+				displayName="peppermint"
+				id="14" />
+			<ColorOption
+				colors="#a4ce82"
+				displayName="spring_green"
+				id="15" />
+			<ColorOption
+				colors="#aac588"
+				displayName="forest"
+				id="16" />
+			<ColorOption
+				colors="#abd686"
+				displayName="emerald"
+				id="17" />
+			<ColorOption
+				colors="#b7e26e"
+				displayName="lime"
+				id="18" />
+			<ColorOption
+				colors="#99b4c5"
+				displayName="sky"
+				id="19" />
+			<ColorOption
+				colors="#83d7ba"
+				displayName="turquoise"
+				id="20" />
+			<ColorOption
+				colors="#83d7ba"
+				displayName="teal"
+				id="21" />
+			<ColorOption
+				colors="#79b1f3"
+				displayName="ocean"
+				id="22" />
+			<ColorOption
+				colors="#8ec2df"
+				displayName="celeste"
+				id="23" />
+			<ColorOption
+				colors="#86b0fa"
+				displayName="azure"
+				id="24" />
+			<ColorOption
+				colors="#80f5e2"
+				displayName="aquamarine"
+				id="25" />
+			<ColorOption
+				colors="#a4beff"
+				displayName="periwinkle"
+				id="26" />
+			<ColorOption
+				colors="#b0e6de"
+				displayName="frost"
+				id="27" />
+			<ColorOption
+				colors="#aed3fb"
+				displayName="baby_blue"
+				id="28" />
+			<ColorOption
+				colors="#aed6fb"
+				displayName="aqua_light"
+				id="29" />
+			<ColorOption
+				colors="#9990be"
+				displayName="royal"
+				id="30" />
+			<ColorOption
+				colors="#9281ef"
+				displayName="lavender"
+				id="31" />
+			<ColorOption
+				colors="#b08cd1"
+				displayName="amethyst"
+				id="32" />
+			<ColorOption
+				colors="#c091eb"
+				displayName="floral"
+				id="33" />
+			<ColorOption
+				colors="#ada5fc"
+				displayName="lilac"
+				id="34" />
+			<ColorOption
+				colors="#c3a6ee"
+				displayName="apricot"
+				id="35" />
+			<ColorOption
+				colors="#e0b2fc"
+				displayName="cotton_candy"
+				id="36" />
+			<ColorOption
+				colors="#e58bb6"
+				displayName="flamingo"
+				id="37" />
+			<ColorOption
+				colors="#e58bb6"
+				displayName="blush"
+				id="38" />
+			<ColorOption
+				colors="#ff8ed3"
+				displayName="rose"
+				id="39" />
+		</ColorConfiguration>
+		<ColorConfiguration
+			defaultValue="1"
+			displayName="compBaseColor"
+			id="a2CompBaseColor">
+			<ColorOption
+				colors="#ffffff"
+				displayName="snow"
+				id="0" />
+			<ColorOption
+				colors="#a7a7a7"
+				displayName="cloud"
+				id="1" />
+			<ColorOption
+				colors="#e96868"
+				displayName="watermelon"
+				id="2" />
+			<ColorOption
+				colors="#f97254"
+				displayName="tangerine_red"
+				id="3" />
+			<ColorOption
+				colors="#f48465"
+				displayName="pumpkin"
+				id="4" />
+			<ColorOption
+				colors="#c0a489"
+				displayName="coral"
+				id="5" />
+			<ColorOption
+				colors="#f3976b"
+				displayName="mango"
+				id="6" />
+			<ColorOption
+				colors="#f4af65"
+				displayName="gold"
+				id="7" />
+			<ColorOption
+				colors="#edb789"
+				displayName="tangerine"
+				id="8" />
+			<ColorOption
+				colors="#fec086"
+				displayName="peach"
+				id="9" />
+			<ColorOption
+				colors="#e6d469"
+				displayName="sunshine"
+				id="10" />
+			<ColorOption
+				colors="#edd854"
+				displayName="minty_yellow"
+				id="11" />
+			<ColorOption
+				colors="#f8d280"
+				displayName="mango_yellow"
+				id="12" />
+			<ColorOption
+				colors="#88c58e"
+				displayName="mint"
+				id="13" />
+			<ColorOption
+				colors="#6ee294"
+				displayName="peppermint"
+				id="14" />
+			<ColorOption
+				colors="#a4ce82"
+				displayName="spring_green"
+				id="15" />
+			<ColorOption
+				colors="#aac588"
+				displayName="forest"
+				id="16" />
+			<ColorOption
+				colors="#abd686"
+				displayName="emerald"
+				id="17" />
+			<ColorOption
+				colors="#b7e26e"
+				displayName="lime"
+				id="18" />
+			<ColorOption
+				colors="#99b4c5"
+				displayName="sky"
+				id="19" />
+			<ColorOption
+				colors="#83d7ba"
+				displayName="turquoise"
+				id="20" />
+			<ColorOption
+				colors="#83d7ba"
+				displayName="teal"
+				id="21" />
+			<ColorOption
+				colors="#79b1f3"
+				displayName="ocean"
+				id="22" />
+			<ColorOption
+				colors="#8ec2df"
+				displayName="celeste"
+				id="23" />
+			<ColorOption
+				colors="#86b0fa"
+				displayName="azure"
+				id="24" />
+			<ColorOption
+				colors="#80f5e2"
+				displayName="aquamarine"
+				id="25" />
+			<ColorOption
+				colors="#a4beff"
+				displayName="periwinkle"
+				id="26" />
+			<ColorOption
+				colors="#b0e6de"
+				displayName="frost"
+				id="27" />
+			<ColorOption
+				colors="#aed3fb"
+				displayName="baby_blue"
+				id="28" />
+			<ColorOption
+				colors="#aed6fb"
+				displayName="aqua_light"
+				id="29" />
+			<ColorOption
+				colors="#9990be"
+				displayName="royal"
+				id="30" />
+			<ColorOption
+				colors="#9281ef"
+				displayName="lavender"
+				id="31" />
+			<ColorOption
+				colors="#b08cd1"
+				displayName="amethyst"
+				id="32" />
+			<ColorOption
+				colors="#c091eb"
+				displayName="floral"
+				id="33" />
+			<ColorOption
+				colors="#ada5fc"
+				displayName="lilac"
+				id="34" />
+			<ColorOption
+				colors="#c3a6ee"
+				displayName="apricot"
+				id="35" />
+			<ColorOption
+				colors="#e0b2fc"
+				displayName="cotton_candy"
+				id="36" />
+			<ColorOption
+				colors="#e58bb6"
+				displayName="flamingo"
+				id="37" />
+			<ColorOption
+				colors="#e58bb6"
+				displayName="blush"
+				id="38" />
+			<ColorOption
+				colors="#ff8ed3"
+				displayName="rose"
+				id="39" />
+		</ColorConfiguration>
+		<ColorConfiguration
+			defaultValue="1"
+			displayName="compFgColor"
+			id="a3CompFgColor">
 			<ColorOption
 				colors="#ffffff"
 				displayName="snow"
@@ -606,31 +771,46 @@
 				<ListOption id="0">
 					<PartImage
 						name="index"
+						alpha="128"
 						height="320"
-						tintColor="#ff57595c"
+						tintColor="[CONFIGURATION.a1AccentColor]"
 						width="320"
 						x="0"
 						y="0">
 						<Variant
 							mode="AMBIENT"
 							target="alpha"
-							value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
-						<Image resource="index_minutes_0" />
+							value="0" />
+						<Image resource="minutes_indices_0" />
+					</PartImage>
+					<PartImage
+						alpha="0"
+						height="320"
+						tintColor="[CONFIGURATION.a1AccentColor]"
+						width="320"
+						x="0"
+						y="0">
+						<Variant
+							mode="AMBIENT"
+							target="alpha"
+							value="128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+						<Image resource="minutes_indices_aod" />
 					</PartImage>
 				</ListOption>
 				<ListOption id="1">
 					<PartImage
 						name="index"
+						alpha="128"
 						height="320"
-						tintColor="#ff57595c"
+						tintColor="[CONFIGURATION.a1AccentColor]"
 						width="320"
 						x="0"
 						y="0">
 						<Variant
 							mode="AMBIENT"
 							target="alpha"
-							value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
-						<Image resource="index_minutes_1" />
+							value="128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+						<Image resource="minutes_indices_1" />
 					</PartImage>
 				</ListOption>
 				<ListOption id="2">
@@ -666,6 +846,7 @@
 					name="00"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="261"
 					y="145">
@@ -678,7 +859,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							00
@@ -689,6 +870,7 @@
 					name="05"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="245"
 					y="85">
@@ -701,7 +883,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							05
@@ -712,6 +894,7 @@
 					name="10"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="201"
 					y="40">
@@ -724,7 +907,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							10
@@ -735,6 +918,7 @@
 					name="15"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="140"
 					y="24">
@@ -747,7 +931,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							15
@@ -758,6 +942,7 @@
 					name="20"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="80"
 					y="40">
@@ -770,7 +955,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							20
@@ -781,6 +966,7 @@
 					name="25"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="35"
 					y="85">
@@ -793,7 +979,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							25
@@ -804,6 +990,7 @@
 					name="30"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="19"
 					y="145">
@@ -816,7 +1003,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							30
@@ -827,6 +1014,7 @@
 					name="35"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="35"
 					y="206">
@@ -839,7 +1027,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							35
@@ -850,6 +1038,7 @@
 					name="40"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="80"
 					y="250">
@@ -862,7 +1051,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							40
@@ -873,6 +1062,7 @@
 					name="45"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="140"
 					y="266">
@@ -885,7 +1075,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							45
@@ -896,6 +1086,7 @@
 					name="50"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="201"
 					y="250">
@@ -908,7 +1099,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							50
@@ -919,6 +1110,7 @@
 					name="55"
 					alpha="255"
 					height="30"
+					tintColor="[CONFIGURATION.a0PrimaryColor]"
 					width="40"
 					x="245"
 					y="206">
@@ -931,7 +1123,7 @@
 					</Transform>
 					<Text>
 						<Font
-							color="#ff999999"
+							color="#ffffffff"
 							family="inter_regular"
 							size="24">
 							55
@@ -979,7 +1171,7 @@
 							<Variant
 								mode="AMBIENT"
 								target="alpha"
-								value="255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+								value="0" />
 							<Condition>
 								<Expressions>
 									<Expression name="small">
@@ -988,26 +1180,41 @@
 								</Expressions>
 								<Compare expression="small">
 									<PartImage
+										alpha="128"
 										height="450"
-										tintColor="#ff57595c"
+										tintColor="[CONFIGURATION.a1AccentColor]"
 										width="450"
 										x="0"
 										y="0">
-										<Image resource="index_small_seconds_0" />
+										<Image resource="seconds_indices_2" />
 									</PartImage>
 								</Compare>
 								<Default>
 									<PartImage
+										alpha="128"
 										height="450"
-										tintColor="#ff57595c"
+										tintColor="[CONFIGURATION.a1AccentColor]"
 										width="450"
 										x="0"
 										y="0">
-										<Image resource="index_seconds_0" />
+										<Image resource="seconds_indices_0" />
 									</PartImage>
 								</Default>
 							</Condition>
 						</Group>
+						<PartImage
+							alpha="0"
+							height="450"
+							tintColor="[CONFIGURATION.a1AccentColor]"
+							width="450"
+							x="0"
+							y="0">
+							<Variant
+								mode="AMBIENT"
+								target="alpha"
+								value="128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+							<Image resource="seconds_indices_aod" />
+						</PartImage>
 					</ListOption>
 					<ListOption id="1">
 						<Group
@@ -1029,23 +1236,25 @@
 								</Expressions>
 								<Compare expression="small">
 									<PartImage
+										alpha="128"
 										angle="15"
 										height="450"
-										tintColor="#ff57595c"
+										tintColor="[CONFIGURATION.a1AccentColor]"
 										width="450"
 										x="0"
 										y="0">
-										<Image resource="index_seconds_1" />
+										<Image resource="seconds_indices_1" />
 									</PartImage>
 								</Compare>
 								<Default>
 									<PartImage
+										alpha="128"
 										height="450"
-										tintColor="#ff57595c"
+										tintColor="[CONFIGURATION.a1AccentColor]"
 										width="450"
 										x="0"
 										y="0">
-										<Image resource="index_seconds_1" />
+										<Image resource="seconds_indices_1" />
 									</PartImage>
 								</Default>
 							</Condition>
@@ -1083,7 +1292,7 @@
 				<Variant
 					mode="AMBIENT"
 					target="alpha"
-					value="[CONFIGURATION.z5_hide_seconds] ? (255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)) : 0" />
+					value="0" />
 				<Condition>
 					<Expressions>
 						<Expression name="small">
@@ -1092,26 +1301,41 @@
 					</Expressions>
 					<Compare expression="small">
 						<PartImage
+							alpha="128"
 							height="450"
-							tintColor="#ff57595c"
+							tintColor="[CONFIGURATION.a1AccentColor]"
 							width="450"
 							x="0"
 							y="0">
-							<Image resource="index_small_seconds_0" />
+							<Image resource="seconds_indices_2" />
 						</PartImage>
 					</Compare>
 					<Default>
 						<PartImage
+							alpha="128"
 							height="450"
-							tintColor="#ff57595c"
+							tintColor="[CONFIGURATION.a1AccentColor]"
 							width="450"
 							x="0"
 							y="0">
-							<Image resource="index_seconds_0" />
+							<Image resource="seconds_indices_0" />
 						</PartImage>
 					</Default>
 				</Condition>
 			</Group>
+			<PartImage
+				alpha="0"
+				height="450"
+				tintColor="[CONFIGURATION.a1AccentColor]"
+				width="450"
+				x="0"
+				y="0">
+				<Variant
+					mode="AMBIENT"
+					target="alpha"
+					value="[CONFIGURATION.z5_hide_seconds] ? (128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)) : 0" />
+				<Image resource="seconds_indices_aod" />
+			</PartImage>
 			<Group
 				name="numbers_gate"
 				alpha="255"
@@ -1139,7 +1363,7 @@
 								name="00"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="392"
 								y="210">
@@ -1163,7 +1387,7 @@
 								name="05"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="366"
 								y="116">
@@ -1187,7 +1411,7 @@
 								name="10"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="298"
 								y="48">
@@ -1211,7 +1435,7 @@
 								name="15"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="205"
 								y="23">
@@ -1235,7 +1459,7 @@
 								name="20"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="112"
 								y="48">
@@ -1259,7 +1483,7 @@
 								name="25"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="44"
 								y="116">
@@ -1283,7 +1507,7 @@
 								name="30"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="18"
 								y="210">
@@ -1307,7 +1531,7 @@
 								name="35"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="44"
 								y="304">
@@ -1331,7 +1555,7 @@
 								name="40"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="112"
 								y="372">
@@ -1355,7 +1579,7 @@
 								name="45"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="205"
 								y="397">
@@ -1379,7 +1603,7 @@
 								name="50"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="298"
 								y="372">
@@ -1403,7 +1627,7 @@
 								name="55"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="366"
 								y="304">
@@ -1441,7 +1665,7 @@
 								name="00"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="414"
 								y="210">
@@ -1465,7 +1689,7 @@
 								name="05"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="386"
 								y="107">
@@ -1489,7 +1713,7 @@
 								name="10"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="309"
 								y="27">
@@ -1513,7 +1737,7 @@
 								name="15"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="205"
 								y="-3">
@@ -1537,7 +1761,7 @@
 								name="20"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="101"
 								y="28">
@@ -1561,7 +1785,7 @@
 								name="25"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="25"
 								y="105">
@@ -1585,7 +1809,7 @@
 								name="30"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="-4"
 								y="210">
@@ -1609,7 +1833,7 @@
 								name="35"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="24"
 								y="314">
@@ -1633,7 +1857,7 @@
 								name="40"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="99"
 								y="391">
@@ -1657,7 +1881,7 @@
 								name="45"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="205"
 								y="419">
@@ -1681,7 +1905,7 @@
 								name="50"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="310"
 								y="391">
@@ -1705,7 +1929,7 @@
 								name="55"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="387"
 								y="314">
@@ -1759,6 +1983,10 @@
 							width="450"
 							x="0"
 							y="0">
+							<Variant
+								mode="AMBIENT"
+								target="alpha"
+								value="0" />
 							<Condition>
 								<Expressions>
 									<Expression name="small">
@@ -1767,26 +1995,41 @@
 								</Expressions>
 								<Compare expression="small">
 									<PartImage
+										alpha="128"
 										height="450"
-										tintColor="#ff57595c"
+										tintColor="[CONFIGURATION.a1AccentColor]"
 										width="450"
 										x="0"
 										y="0">
-										<Image resource="index_small_seconds_0" />
+										<Image resource="seconds_indices_2" />
 									</PartImage>
 								</Compare>
 								<Default>
 									<PartImage
+										alpha="128"
 										height="450"
-										tintColor="#ff57595c"
+										tintColor="[CONFIGURATION.a1AccentColor]"
 										width="450"
 										x="0"
 										y="0">
-										<Image resource="index_seconds_0" />
+										<Image resource="seconds_indices_0" />
 									</PartImage>
 								</Default>
 							</Condition>
 						</Group>
+						<PartImage
+							alpha="0"
+							height="450"
+							tintColor="[CONFIGURATION.a1AccentColor]"
+							width="450"
+							x="0"
+							y="0">
+							<Variant
+								mode="AMBIENT"
+								target="alpha"
+								value="128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+							<Image resource="seconds_indices_aod" />
+						</PartImage>
 					</ListOption>
 					<ListOption id="1">
 						<Group
@@ -1804,23 +2047,25 @@
 								</Expressions>
 								<Compare expression="small">
 									<PartImage
+										alpha="128"
 										angle="15"
 										height="450"
-										tintColor="#ff57595c"
+										tintColor="[CONFIGURATION.a1AccentColor]"
 										width="450"
 										x="0"
 										y="0">
-										<Image resource="index_seconds_1" />
+										<Image resource="seconds_indices_1" />
 									</PartImage>
 								</Compare>
 								<Default>
 									<PartImage
+										alpha="128"
 										height="450"
-										tintColor="#ff57595c"
+										tintColor="[CONFIGURATION.a1AccentColor]"
 										width="450"
 										x="0"
 										y="0">
-										<Image resource="index_seconds_1" />
+										<Image resource="seconds_indices_1" />
 									</PartImage>
 								</Default>
 							</Condition>
@@ -1858,7 +2103,7 @@
 				<Variant
 					mode="AMBIENT"
 					target="alpha"
-					value="[CONFIGURATION.z5_hide_seconds] ? (255 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)) : 0" />
+					value="0" />
 				<Condition>
 					<Expressions>
 						<Expression name="small">
@@ -1867,26 +2112,41 @@
 					</Expressions>
 					<Compare expression="small">
 						<PartImage
+							alpha="128"
 							height="450"
-							tintColor="#ff57595c"
+							tintColor="[CONFIGURATION.a1AccentColor]"
 							width="450"
 							x="0"
 							y="0">
-							<Image resource="index_small_seconds_0" />
+							<Image resource="seconds_indices_2" />
 						</PartImage>
 					</Compare>
 					<Default>
 						<PartImage
+							alpha="128"
 							height="450"
-							tintColor="#ff57595c"
+							tintColor="[CONFIGURATION.a1AccentColor]"
 							width="450"
 							x="0"
 							y="0">
-							<Image resource="index_seconds_0" />
+							<Image resource="seconds_indices_0" />
 						</PartImage>
 					</Default>
 				</Condition>
 			</Group>
+			<PartImage
+				alpha="0"
+				height="450"
+				tintColor="[CONFIGURATION.a1AccentColor]"
+				width="450"
+				x="0"
+				y="0">
+				<Variant
+					mode="AMBIENT"
+					target="alpha"
+					value="[CONFIGURATION.z5_hide_seconds] ? (128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)) : 0" />
+				<Image resource="seconds_indices_aod" />
+			</PartImage>
 			<Group
 				name="numbers_gate"
 				alpha="255"
@@ -1910,7 +2170,7 @@
 								name="00"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="392"
 								y="210">
@@ -1927,7 +2187,7 @@
 								name="05"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="366"
 								y="116">
@@ -1944,7 +2204,7 @@
 								name="10"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="298"
 								y="48">
@@ -1961,7 +2221,7 @@
 								name="15"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="205"
 								y="23">
@@ -1978,7 +2238,7 @@
 								name="20"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="112"
 								y="48">
@@ -1995,7 +2255,7 @@
 								name="25"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="44"
 								y="116">
@@ -2012,7 +2272,7 @@
 								name="30"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="18"
 								y="210">
@@ -2029,7 +2289,7 @@
 								name="35"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="44"
 								y="304">
@@ -2046,7 +2306,7 @@
 								name="40"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="112"
 								y="372">
@@ -2063,7 +2323,7 @@
 								name="45"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="205"
 								y="397">
@@ -2080,7 +2340,7 @@
 								name="50"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="298"
 								y="372">
@@ -2097,7 +2357,7 @@
 								name="55"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="366"
 								y="304">
@@ -2124,7 +2384,7 @@
 								name="00"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="414"
 								y="210">
@@ -2141,7 +2401,7 @@
 								name="05"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="386"
 								y="107">
@@ -2158,7 +2418,7 @@
 								name="10"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="309"
 								y="27">
@@ -2175,7 +2435,7 @@
 								name="15"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="205"
 								y="-3">
@@ -2192,7 +2452,7 @@
 								name="20"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="101"
 								y="28">
@@ -2209,7 +2469,7 @@
 								name="25"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="25"
 								y="105">
@@ -2226,7 +2486,7 @@
 								name="30"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="-4"
 								y="210">
@@ -2243,7 +2503,7 @@
 								name="35"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="24"
 								y="314">
@@ -2260,7 +2520,7 @@
 								name="40"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="99"
 								y="391">
@@ -2277,7 +2537,7 @@
 								name="45"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="205"
 								y="419">
@@ -2294,7 +2554,7 @@
 								name="50"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="310"
 								y="391">
@@ -2311,7 +2571,7 @@
 								name="55"
 								alpha="255"
 								height="30"
-								tintColor="[CONFIGURATION.a0SecondsColor]"
+								tintColor="[CONFIGURATION.a0PrimaryColor]"
 								width="40"
 								x="387"
 								y="314">
@@ -2340,7 +2600,7 @@
 				name="minutes_pill"
 				alpha="255"
 				height="80"
-				tintColor="[CONFIGURATION.a2AccentColor]"
+				tintColor="[CONFIGURATION.a1AccentColor]"
 				width="200"
 				x="136"
 				y="10">
@@ -2360,6 +2620,7 @@
 					</RoundRectangle>
 				</PartDraw>
 				<PartDraw
+					alpha="128"
 					height="80"
 					width="195"
 					x="0"
@@ -2386,6 +2647,7 @@
 				name="minute"
 				alpha="255"
 				height="60"
+				tintColor="[CONFIGURATION.a0PrimaryColor]"
 				width="80"
 				x="135"
 				y="20">
@@ -2405,6 +2667,7 @@
 				name="hour"
 				alpha="255"
 				height="100"
+				tintColor="[CONFIGURATION.a0PrimaryColor]"
 				width="150"
 				x="0"
 				y="0">
@@ -2475,7 +2738,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -2498,7 +2761,7 @@
 									<PartDraw
 										name="border"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -2522,7 +2785,7 @@
 										</Arc>
 									</PartDraw>
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
@@ -2559,7 +2822,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a1ComplicationColor]"
+											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -2578,7 +2841,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -2601,7 +2864,7 @@
 									<PartDraw
 										name="border"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -2625,7 +2888,7 @@
 										</Arc>
 									</PartDraw>
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
@@ -2676,7 +2939,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a1ComplicationColor]"
+											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -2739,90 +3002,54 @@
 								</Expressions>
 								<Compare expression="shortTextIcon">
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
 										y="0">
-										<Group
-											name="color_maks"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
 											<Transform
 												target="alpha"
 												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-											<PartText
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													centerX="225"
-													centerY="225"
-													direction="CLOCKWISE"
-													endAngle="357"
-													height="350"
-													startAngle="281"
-													width="350">
-													<Font
-														color="#ffffff"
-														family="roboto_sb"
-														size="24">
-														<InlineImage
-															height="30"
-															resource="ring"
-															width="80" />
-														<Template>
-															%s
-															<Parameter expression="&#160;" />
-														</Template>
-														<InlineImage
-															height="28"
-															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
-															width="28" />
-														<Upper>
-															<Template>
-																%s%s%s
-																<Parameter expression="&#160;" />
-																<Parameter expression="[COMPLICATION.TEXT]" />
-																<Parameter expression="&#160;" />
-															</Template>
-														</Upper>
-														<InlineImage
-															height="30"
-															resource="ring"
-															width="80" />
-													</Font>
-												</TextCircular>
-											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Arc
-													centerX="225"
-													centerY="225"
-													endAngle="351"
-													height="350"
-													startAngle="288"
-													width="350">
-													<Stroke
-														cap="ROUND"
-														color="#ffffff"
-														thickness="5" />
-												</Arc>
-											</PartDraw>
-										</Group>
+											<Arc
+												centerX="225"
+												centerY="225"
+												endAngle="288"
+												height="350"
+												startAngle="288"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="319.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="225"
+												centerY="225"
+												endAngle="351"
+												height="350"
+												startAngle="351"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="319.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
 										<Group
-											name="color_maks"
+											name="color_mask"
 											height="225"
 											width="225"
 											x="0"
@@ -2864,7 +3091,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -2881,82 +3108,54 @@
 								</Compare>
 								<Compare expression="shortTextTitle">
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
 										y="0">
-										<Group
-											name="color_maks"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
 											<Transform
 												target="alpha"
 												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-											<PartText
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													centerX="225"
-													centerY="225"
-													direction="CLOCKWISE"
-													endAngle="357"
-													height="350"
-													startAngle="279"
-													width="350">
-													<Font
-														color="#ffffff"
-														family="roboto_sb"
-														size="24">
-														<InlineImage
-															height="30"
-															resource="ring"
-															width="80" />
-														<Upper>
-															<Template>
-																%s%s %s%s
-																<Parameter expression="&#160;" />
-																<Parameter expression="[COMPLICATION.TEXT]" />
-																<Parameter expression="[COMPLICATION.TITLE]" />
-																<Parameter expression="&#160;" />
-															</Template>
-														</Upper>
-														<InlineImage
-															height="30"
-															resource="ring"
-															width="80" />
-													</Font>
-												</TextCircular>
-											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Arc
-													centerX="225"
-													centerY="225"
-													endAngle="351"
-													height="350"
-													startAngle="288"
-													width="350">
-													<Stroke
-														cap="ROUND"
-														color="#ffffff"
-														thickness="5" />
-												</Arc>
-											</PartDraw>
-										</Group>
+											<Arc
+												centerX="225"
+												centerY="225"
+												endAngle="288"
+												height="350"
+												startAngle="288"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="319.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="225"
+												centerY="225"
+												endAngle="351"
+												height="350"
+												startAngle="351"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="319.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
 										<Group
-											name="color_maks"
+											name="color_mask"
 											height="225"
 											width="225"
 											x="0"
@@ -2993,7 +3192,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -3010,91 +3209,54 @@
 								</Compare>
 								<Default>
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
 										y="0">
-										<Group
-											name="color_maks"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
 											<Transform
 												target="alpha"
 												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-											<PartText
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													centerX="225"
-													centerY="225"
-													direction="CLOCKWISE"
-													endAngle="357"
-													height="350"
-													startAngle="281"
-													width="350">
-													<Font
-														color="#ffffff"
-														family="roboto_sb"
-														size="24">
-														<InlineImage
-															height="30"
-															resource="ring"
-															width="80" />
-														<Template>
-															%s
-															<Parameter expression="&#160;" />
-														</Template>
-														<InlineImage
-															height="28"
-															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
-															width="28" />
-														<Upper>
-															<Template>
-																%s%s %s%s
-																<Parameter expression="&#160;" />
-																<Parameter expression="[COMPLICATION.TEXT]" />
-																<Parameter expression="[COMPLICATION.TITLE]" />
-																<Parameter expression="&#160;" />
-															</Template>
-														</Upper>
-														<InlineImage
-															height="30"
-															resource="ring"
-															width="80" />
-													</Font>
-												</TextCircular>
-											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Arc
-													centerX="225"
-													centerY="225"
-													endAngle="351"
-													height="350"
-													startAngle="288"
-													width="350">
-													<Stroke
-														cap="ROUND"
-														color="#ffffff"
-														thickness="5" />
-												</Arc>
-											</PartDraw>
-										</Group>
+											<Arc
+												centerX="225"
+												centerY="225"
+												endAngle="288"
+												height="350"
+												startAngle="288"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="319.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="225"
+												centerY="225"
+												endAngle="351"
+												height="350"
+												startAngle="351"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="319.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
 										<Group
-											name="color_maks"
+											name="color_mask"
 											height="225"
 											width="225"
 											x="0"
@@ -3137,7 +3299,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -3265,7 +3427,7 @@
 							<PartDraw
 								alpha="255"
 								height="225"
-								tintColor="[CONFIGURATION.a1ComplicationColor]"
+								tintColor="[CONFIGURATION.a3CompFgColor]"
 								width="225"
 								x="0"
 								y="0">
@@ -3353,7 +3515,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -3377,7 +3539,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -3401,7 +3563,7 @@
 										</Arc>
 									</PartDraw>
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
@@ -3438,7 +3600,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a1ComplicationColor]"
+											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -3457,7 +3619,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -3481,7 +3643,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -3505,7 +3667,7 @@
 										</Arc>
 									</PartDraw>
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
@@ -3556,7 +3718,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a1ComplicationColor]"
+											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -3619,90 +3781,54 @@
 								</Expressions>
 								<Compare expression="shortTextIcon">
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
 										y="0">
-										<Group
-											name="color_maks"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
 											<Transform
 												target="alpha"
 												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-											<PartText
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													centerX="0"
-													centerY="225"
-													direction="CLOCKWISE"
-													endAngle="72"
-													height="350"
-													startAngle="8"
-													width="350">
-													<Font
-														color="#ffffff"
-														family="roboto_sb"
-														size="24">
-														<InlineImage
-															height="30"
-															resource="ring"
-															width="80" />
-														<Template>
-															%s
-															<Parameter expression="&#160;" />
-														</Template>
-														<InlineImage
-															height="28"
-															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
-															width="28" />
-														<Upper>
-															<Template>
-																%s%s%s
-																<Parameter expression="&#160;" />
-																<Parameter expression="[COMPLICATION.TEXT]" />
-																<Parameter expression="&#160;" />
-															</Template>
-														</Upper>
-														<InlineImage
-															height="30"
-															resource="ring"
-															width="80" />
-													</Font>
-												</TextCircular>
-											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Arc
-													centerX="0"
-													centerY="225"
-													endAngle="72"
-													height="350"
-													startAngle="9"
-													width="350">
-													<Stroke
-														cap="ROUND"
-														color="#ffffff"
-														thickness="5" />
-												</Arc>
-											</PartDraw>
-										</Group>
+											<Arc
+												centerX="0"
+												centerY="225"
+												endAngle="9"
+												height="350"
+												startAngle="9"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="40.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="0"
+												centerY="225"
+												endAngle="72"
+												height="350"
+												startAngle="72"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="40.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
 										<Group
-											name="color_maks"
+											name="color_mask"
 											height="225"
 											width="225"
 											x="0"
@@ -3744,7 +3870,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -3761,84 +3887,58 @@
 								</Compare>
 								<Compare expression="shortTextTitle">
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
 										y="0">
-										<PartText
-											name="text"
-											alpha="255"
-											height="225"
-											renderMode="MASK"
-											width="225"
-											x="0"
-											y="0">
-											<TextCircular
-												centerX="0"
-												centerY="225"
-												direction="CLOCKWISE"
-												endAngle="72"
-												height="350"
-												startAngle="9"
-												width="350">
-												<Font
-													color="#ffffff"
-													family="roboto_sb"
-													size="24">
-													<InlineImage
-														height="30"
-														resource="ring"
-														width="80" />
-													<Upper>
-														<Template>
-															%s%s %s%s
-															<Parameter expression="&#160;" />
-															<Parameter expression="[COMPLICATION.TEXT]" />
-															<Parameter expression="[COMPLICATION.TITLE]" />
-															<Parameter expression="&#160;" />
-														</Template>
-													</Upper>
-													<InlineImage
-														height="30"
-														resource="ring"
-														width="80" />
-												</Font>
-											</TextCircular>
-										</PartText>
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a1ComplicationColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Rectangle
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<Fill color="#ffffff" />
-											</Rectangle>
-										</PartDraw>
-									</Group>
-								</Compare>
-								<Default>
-									<Group
-										name="color_maks"
-										height="225"
-										width="225"
-										x="0"
-										y="0">
-										<Group
-											name="color_maks"
-											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
 											<Transform
 												target="alpha"
 												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
+											<Arc
+												centerX="0"
+												centerY="225"
+												endAngle="9"
+												height="350"
+												startAngle="9"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="40.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="0"
+												centerY="225"
+												endAngle="72"
+												height="350"
+												startAngle="72"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="40.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
+										<Group
+											name="color_mask"
+											height="225"
+											width="225"
+											x="0"
+											y="0">
 											<PartText
 												alpha="255"
 												height="225"
@@ -3852,64 +3952,90 @@
 													direction="CLOCKWISE"
 													endAngle="72"
 													height="350"
-													startAngle="8"
+													startAngle="9"
 													width="350">
 													<Font
 														color="#ffffff"
 														family="roboto_sb"
 														size="24">
-														<InlineImage
-															height="30"
-															resource="ring"
-															width="80" />
-														<Template>
-															%s
-															<Parameter expression="&#160;" />
-														</Template>
-														<InlineImage
-															height="28"
-															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
-															width="28" />
 														<Upper>
 															<Template>
-																%s%s %s%s
-																<Parameter expression="&#160;" />
+																%s %s
 																<Parameter expression="[COMPLICATION.TEXT]" />
 																<Parameter expression="[COMPLICATION.TITLE]" />
-																<Parameter expression="&#160;" />
 															</Template>
 														</Upper>
-														<InlineImage
-															height="30"
-															resource="ring"
-															width="80" />
 													</Font>
 												</TextCircular>
 											</PartText>
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Arc
-													centerX="0"
-													centerY="225"
-													endAngle="72"
-													height="350"
-													startAngle="9"
-													width="350">
-													<Stroke
-														cap="ROUND"
-														color="#ffffff"
-														thickness="5" />
-												</Arc>
+												<Rectangle
+													height="225"
+													width="225"
+													x="0"
+													y="0">
+													<Fill color="#ffffff" />
+												</Rectangle>
 											</PartDraw>
 										</Group>
+									</Group>
+								</Compare>
+								<Default>
+									<Group
+										name="color_mask"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<PartDraw
+											alpha="255"
+											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
+											width="225"
+											x="0"
+											y="0">
+											<Transform
+												target="alpha"
+												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
+											<Arc
+												centerX="0"
+												centerY="225"
+												endAngle="9"
+												height="350"
+												startAngle="9"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="40.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="0"
+												centerY="225"
+												endAngle="72"
+												height="350"
+												startAngle="72"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="40.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
 										<Group
-											name="color_maks"
+											name="color_mask"
 											height="225"
 											width="225"
 											x="0"
@@ -3952,7 +4078,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -4080,7 +4206,7 @@
 							<PartDraw
 								alpha="255"
 								height="225"
-								tintColor="[CONFIGURATION.a1ComplicationColor]"
+								tintColor="[CONFIGURATION.a3CompFgColor]"
 								width="225"
 								x="0"
 								y="0">
@@ -4168,7 +4294,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -4192,7 +4318,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -4216,7 +4342,7 @@
 										</Arc>
 									</PartDraw>
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
@@ -4253,7 +4379,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a1ComplicationColor]"
+											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -4272,7 +4398,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -4296,7 +4422,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -4320,7 +4446,7 @@
 										</Arc>
 									</PartDraw>
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
@@ -4371,7 +4497,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a1ComplicationColor]"
+											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -4434,90 +4560,54 @@
 								</Expressions>
 								<Compare expression="shortTextIcon">
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
 										y="0">
-										<Group
-											name="color_maks"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
 											<Transform
 												target="alpha"
 												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-											<PartText
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													centerX="225"
-													centerY="0"
-													direction="COUNTER_CLOCKWISE"
-													endAngle="183"
-													height="350"
-													startAngle="259"
-													width="350">
-													<Font
-														color="#ffffff"
-														family="roboto_sb"
-														size="24">
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-														<Template>
-															%s
-															<Parameter expression="&#160;" />
-														</Template>
-														<InlineImage
-															height="28"
-															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
-															width="28" />
-														<Upper>
-															<Template>
-																%s%s%s
-																<Parameter expression="&#160;" />
-																<Parameter expression="[COMPLICATION.TEXT]" />
-																<Parameter expression="&#160;" />
-															</Template>
-														</Upper>
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-													</Font>
-												</TextCircular>
-											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Arc
-													centerX="225"
-													centerY="0"
-													endAngle="252"
-													height="350"
-													startAngle="189"
-													width="350">
-													<Stroke
-														cap="ROUND"
-														color="#ffffff"
-														thickness="5" />
-												</Arc>
-											</PartDraw>
-										</Group>
+											<Arc
+												centerX="225"
+												centerY="0"
+												endAngle="189"
+												height="350"
+												startAngle="189"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="220.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="225"
+												centerY="0"
+												endAngle="252"
+												height="350"
+												startAngle="252"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="220.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
 										<Group
-											name="color_maks"
+											name="color_mask"
 											height="225"
 											width="225"
 											x="0"
@@ -4559,7 +4649,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -4576,82 +4666,54 @@
 								</Compare>
 								<Compare expression="shortTextTitle">
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
 										y="0">
-										<Group
-											name="color_maks"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
 											<Transform
 												target="alpha"
 												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-											<PartText
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													centerX="225"
-													centerY="0"
-													direction="COUNTER_CLOCKWISE"
-													endAngle="183"
-													height="350"
-													startAngle="258"
-													width="350">
-													<Font
-														color="#ffffff"
-														family="roboto_sb"
-														size="24">
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-														<Upper>
-															<Template>
-																%s%s %s%s
-																<Parameter expression="&#160;" />
-																<Parameter expression="[COMPLICATION.TEXT]" />
-																<Parameter expression="[COMPLICATION.TITLE]" />
-																<Parameter expression="&#160;" />
-															</Template>
-														</Upper>
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-													</Font>
-												</TextCircular>
-											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Arc
-													centerX="225"
-													centerY="0"
-													endAngle="252"
-													height="350"
-													startAngle="189"
-													width="350">
-													<Stroke
-														cap="ROUND"
-														color="#ffffff"
-														thickness="5" />
-												</Arc>
-											</PartDraw>
-										</Group>
+											<Arc
+												centerX="225"
+												centerY="0"
+												endAngle="189"
+												height="350"
+												startAngle="189"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="220.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="225"
+												centerY="0"
+												endAngle="252"
+												height="350"
+												startAngle="252"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="220.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
 										<Group
-											name="color_maks"
+											name="color_mask"
 											height="225"
 											width="225"
 											x="0"
@@ -4688,7 +4750,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -4705,91 +4767,54 @@
 								</Compare>
 								<Default>
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
 										y="0">
-										<Group
-											name="color_maks"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
 											<Transform
 												target="alpha"
 												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-											<PartText
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													centerX="225"
-													centerY="0"
-													direction="COUNTER_CLOCKWISE"
-													endAngle="183"
-													height="350"
-													startAngle="259"
-													width="350">
-													<Font
-														color="#ffffff"
-														family="roboto_sb"
-														size="24">
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-														<Template>
-															%s
-															<Parameter expression="&#160;" />
-														</Template>
-														<InlineImage
-															height="28"
-															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
-															width="28" />
-														<Upper>
-															<Template>
-																%s%s %s%s
-																<Parameter expression="&#160;" />
-																<Parameter expression="[COMPLICATION.TEXT]" />
-																<Parameter expression="[COMPLICATION.TITLE]" />
-																<Parameter expression="&#160;" />
-															</Template>
-														</Upper>
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-													</Font>
-												</TextCircular>
-											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Arc
-													centerX="225"
-													centerY="0"
-													endAngle="252"
-													height="350"
-													startAngle="189"
-													width="350">
-													<Stroke
-														cap="ROUND"
-														color="#ffffff"
-														thickness="5" />
-												</Arc>
-											</PartDraw>
-										</Group>
+											<Arc
+												centerX="225"
+												centerY="0"
+												endAngle="189"
+												height="350"
+												startAngle="189"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="220.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="225"
+												centerY="0"
+												endAngle="252"
+												height="350"
+												startAngle="252"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="220.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
 										<Group
-											name="color_maks"
+											name="color_mask"
 											height="225"
 											width="225"
 											x="0"
@@ -4832,7 +4857,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -4960,7 +4985,7 @@
 							<PartDraw
 								alpha="255"
 								height="225"
-								tintColor="[CONFIGURATION.a1ComplicationColor]"
+								tintColor="[CONFIGURATION.a3CompFgColor]"
 								width="225"
 								x="0"
 								y="0">
@@ -5048,7 +5073,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -5072,7 +5097,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -5096,7 +5121,7 @@
 										</Arc>
 									</PartDraw>
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
@@ -5133,7 +5158,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a1ComplicationColor]"
+											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -5152,7 +5177,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -5176,7 +5201,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a1ComplicationColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -5200,7 +5225,7 @@
 										</Arc>
 									</PartDraw>
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
@@ -5251,7 +5276,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a1ComplicationColor]"
+											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -5314,90 +5339,54 @@
 								</Expressions>
 								<Compare expression="shortTextIcon">
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
 										y="0">
-										<Group
-											name="color_maks"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
 											<Transform
 												target="alpha"
 												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-											<PartText
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													centerX="0"
-													centerY="0"
-													direction="COUNTER_CLOCKWISE"
-													endAngle="102"
-													height="350"
-													startAngle="178"
-													width="350">
-													<Font
-														color="#ffffff"
-														family="roboto_sb"
-														size="24">
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-														<Template>
-															%s
-															<Parameter expression="&#160;" />
-														</Template>
-														<InlineImage
-															height="28"
-															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
-															width="28" />
-														<Upper>
-															<Template>
-																%s%s%s
-																<Parameter expression="&#160;" />
-																<Parameter expression="[COMPLICATION.TEXT]" />
-																<Parameter expression="&#160;" />
-															</Template>
-														</Upper>
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-													</Font>
-												</TextCircular>
-											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Arc
-													centerX="0"
-													centerY="0"
-													endAngle="171"
-													height="350"
-													startAngle="108"
-													width="350">
-													<Stroke
-														cap="ROUND"
-														color="#ffffff"
-														thickness="5" />
-												</Arc>
-											</PartDraw>
-										</Group>
+											<Arc
+												centerX="0"
+												centerY="0"
+												endAngle="108"
+												height="350"
+												startAngle="108"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="139.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="0"
+												centerY="0"
+												endAngle="171"
+												height="350"
+												startAngle="171"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="139.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
 										<Group
-											name="color_maks"
+											name="color_mask"
 											height="225"
 											width="225"
 											x="0"
@@ -5439,7 +5428,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -5456,82 +5445,54 @@
 								</Compare>
 								<Compare expression="shortTextTitle">
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
 										y="0">
-										<Group
-											name="color_maks"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
 											<Transform
 												target="alpha"
 												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-											<PartText
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													centerX="0"
-													centerY="0"
-													direction="COUNTER_CLOCKWISE"
-													endAngle="102"
-													height="350"
-													startAngle="177"
-													width="350">
-													<Font
-														color="#ffffff"
-														family="roboto_sb"
-														size="24">
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-														<Upper>
-															<Template>
-																%s%s %s%s
-																<Parameter expression="&#160;" />
-																<Parameter expression="[COMPLICATION.TEXT]" />
-																<Parameter expression="[COMPLICATION.TITLE]" />
-																<Parameter expression="&#160;" />
-															</Template>
-														</Upper>
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-													</Font>
-												</TextCircular>
-											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Arc
-													centerX="0"
-													centerY="0"
-													endAngle="171"
-													height="350"
-													startAngle="108"
-													width="350">
-													<Stroke
-														cap="ROUND"
-														color="#ffffff"
-														thickness="5" />
-												</Arc>
-											</PartDraw>
-										</Group>
+											<Arc
+												centerX="0"
+												centerY="0"
+												endAngle="108"
+												height="350"
+												startAngle="108"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="139.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="0"
+												centerY="0"
+												endAngle="171"
+												height="350"
+												startAngle="171"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="139.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
 										<Group
-											name="color_maks"
+											name="color_mask"
 											height="225"
 											width="225"
 											x="0"
@@ -5568,7 +5529,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -5585,91 +5546,54 @@
 								</Compare>
 								<Default>
 									<Group
-										name="color_maks"
+										name="color_mask"
 										height="225"
 										width="225"
 										x="0"
 										y="0">
-										<Group
-											name="color_maks"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
 											<Transform
 												target="alpha"
 												value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
-											<PartText
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													centerX="0"
-													centerY="0"
-													direction="COUNTER_CLOCKWISE"
-													endAngle="102"
-													height="350"
-													startAngle="178"
-													width="350">
-													<Font
-														color="#ffffff"
-														family="roboto_sb"
-														size="24">
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-														<Template>
-															%s
-															<Parameter expression="&#160;" />
-														</Template>
-														<InlineImage
-															height="28"
-															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
-															width="28" />
-														<Upper>
-															<Template>
-																%s%s %s%s
-																<Parameter expression="&#160;" />
-																<Parameter expression="[COMPLICATION.TEXT]" />
-																<Parameter expression="[COMPLICATION.TITLE]" />
-																<Parameter expression="&#160;" />
-															</Template>
-														</Upper>
-														<InlineImage
-															height="30"
-															resource="ring_inverse"
-															width="80" />
-													</Font>
-												</TextCircular>
-											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Arc
-													centerX="0"
-													centerY="0"
-													endAngle="171"
-													height="350"
-													startAngle="108"
-													width="350">
-													<Stroke
-														cap="ROUND"
-														color="#ffffff"
-														thickness="5" />
-												</Arc>
-											</PartDraw>
-										</Group>
+											<Arc
+												centerX="0"
+												centerY="0"
+												endAngle="108"
+												height="350"
+												startAngle="108"
+												width="350">
+												<Transform
+													target="endAngle"
+													value="139.5 - (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 - 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+											<Arc
+												centerX="0"
+												centerY="0"
+												endAngle="171"
+												height="350"
+												startAngle="171"
+												width="350">
+												<Transform
+													target="startAngle"
+													value="139.5 + (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])) * 2.25 + 8" />
+												<Stroke
+													cap="ROUND"
+													color="#ffffff"
+													thickness="5" />
+											</Arc>
+										</PartDraw>
 										<Group
-											name="color_maks"
+											name="color_mask"
 											height="225"
 											width="225"
 											x="0"
@@ -5712,7 +5636,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a1ComplicationColor]"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -5840,7 +5764,7 @@
 							<PartDraw
 								alpha="255"
 								height="225"
-								tintColor="[CONFIGURATION.a1ComplicationColor]"
+								tintColor="[CONFIGURATION.a3CompFgColor]"
 								width="225"
 								x="0"
 								y="0">
@@ -5923,9 +5847,9 @@
 						</PartDraw>
 						<PartDraw
 							name="border"
-							alpha="255"
+							alpha="128"
 							height="80"
-							tintColor="[CONFIGURATION.a2AccentColor]"
+							tintColor="[CONFIGURATION.a1AccentColor]"
 							width="195"
 							x="0"
 							y="0">
@@ -5945,7 +5869,7 @@
 							name="icon"
 							alpha="255"
 							height="32"
-							tintColor="[CONFIGURATION.a2AccentColor]"
+							tintColor="[CONFIGURATION.a3CompFgColor]"
 							width="32"
 							x="40"
 							y="24">
@@ -5965,6 +5889,7 @@
 							name="text"
 							alpha="255"
 							height="40"
+							tintColor="[CONFIGURATION.a0PrimaryColor]"
 							width="105"
 							x="80"
 							y="20">
@@ -6002,9 +5927,9 @@
 						</PartDraw>
 						<PartDraw
 							name="border"
-							alpha="255"
+							alpha="128"
 							height="80"
-							tintColor="[CONFIGURATION.a2AccentColor]"
+							tintColor="[CONFIGURATION.a1AccentColor]"
 							width="195"
 							x="0"
 							y="0">
@@ -6024,7 +5949,7 @@
 							name="title"
 							alpha="255"
 							height="40"
-							tintColor="[CONFIGURATION.a2AccentColor]"
+							tintColor="[CONFIGURATION.a3CompFgColor]"
 							width="70"
 							x="40"
 							y="20">
@@ -6046,6 +5971,7 @@
 							name="text"
 							alpha="255"
 							height="40"
+							tintColor="[CONFIGURATION.a0PrimaryColor]"
 							width="71"
 							x="110"
 							y="20">
@@ -6085,9 +6011,9 @@
 				</PartDraw>
 				<PartDraw
 					name="border"
-					alpha="255"
+					alpha="128"
 					height="80"
-					tintColor="[CONFIGURATION.a2AccentColor]"
+					tintColor="[CONFIGURATION.a1AccentColor]"
 					width="195"
 					x="0"
 					y="0">
@@ -6132,9 +6058,9 @@
 				</PartDraw>
 				<PartDraw
 					name="border"
-					alpha="255"
+					alpha="128"
 					height="80"
-					tintColor="[CONFIGURATION.a2AccentColor]"
+					tintColor="[CONFIGURATION.a1AccentColor]"
 					width="195"
 					x="0"
 					y="0">
@@ -6154,7 +6080,7 @@
 					name="icon"
 					alpha="255"
 					height="48"
-					tintColor="[CONFIGURATION.a2AccentColor]"
+					tintColor="[CONFIGURATION.a3CompFgColor]"
 					width="48"
 					x="94"
 					y="16">
