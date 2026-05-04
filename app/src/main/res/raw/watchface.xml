@@ -6447,7 +6447,7 @@
 							alpha="255"
 							height="40"
 							tintColor="[CONFIGURATION.a3CompFgColor]"
-							width="70"
+							width="75"
 							x="40"
 							y="20">
 							<Text ellipsis="TRUE">
