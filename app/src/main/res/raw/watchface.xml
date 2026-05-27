@@ -3235,7 +3235,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -3255,32 +3255,117 @@
 												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										name="border"
-										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
-										width="225"
-										x="0"
-										y="0">
-										<Arc
-											centerX="225"
-											centerY="225"
-											endAngle="351"
-											height="350"
-											startAngle="298"
-											width="350">
-											<Transform
-												target="startAngle"
-												value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
-											<Transform
-												target="endAngle"
-												value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-											<Stroke
-												cap="ROUND"
-												color="#ffffff"
-												thickness="5" />
-										</Arc>
-									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="customRange">
+												[COMPLICATION.RANGED_VALUE_MIN] != 0
+											</Expression>
+										</Expressions>
+										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="225"
+													endAngle="351"
+													height="350"
+													startAngle="298"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator_background"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="225"
+													endAngle="305"
+													height="350"
+													startAngle="303"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#000000"
+														thickness="20" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator"
+												height="225"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="225"
+													endAngle="305"
+													height="350"
+													startAngle="303"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="12" />
+												</Arc>
+											</PartDraw>
+										</Compare>
+										<Default>
+											<PartDraw
+												name="border"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="225"
+													endAngle="351"
+													height="350"
+													startAngle="298"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Transform
+														target="endAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+										</Default>
+									</Condition>
 									<Group
 										name="color_mask"
 										height="225"
@@ -3338,7 +3423,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -3358,32 +3443,117 @@
 												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										name="border"
-										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
-										width="225"
-										x="0"
-										y="0">
-										<Arc
-											centerX="225"
-											centerY="225"
-											endAngle="351"
-											height="350"
-											startAngle="298"
-											width="350">
-											<Transform
-												target="startAngle"
-												value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
-											<Transform
-												target="endAngle"
-												value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-											<Stroke
-												cap="ROUND"
-												color="#ffffff"
-												thickness="5" />
-										</Arc>
-									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="customRange">
+												[COMPLICATION.RANGED_VALUE_MIN] != 0
+											</Expression>
+										</Expressions>
+										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="225"
+													endAngle="351"
+													height="350"
+													startAngle="298"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator_background"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="225"
+													endAngle="305"
+													height="350"
+													startAngle="303"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#000000"
+														thickness="20" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator"
+												height="225"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="225"
+													endAngle="305"
+													height="350"
+													startAngle="303"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="12" />
+												</Arc>
+											</PartDraw>
+										</Compare>
+										<Default>
+											<PartDraw
+												name="border"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="225"
+													endAngle="351"
+													height="350"
+													startAngle="298"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Transform
+														target="endAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+										</Default>
+									</Condition>
 									<Group
 										name="color_mask"
 										height="225"
@@ -4006,7 +4176,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -4026,33 +4196,119 @@
 												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										name="border"
-										alpha="255"
-										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
-										width="225"
-										x="0"
-										y="0">
-										<Arc
-											centerX="0"
-											centerY="225"
-											endAngle="72"
-											height="350"
-											startAngle="19"
-											width="350">
-											<Transform
-												target="startAngle"
-												value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
-											<Transform
-												target="endAngle"
-												value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-											<Stroke
-												cap="ROUND"
-												color="#ffffff"
-												thickness="5" />
-										</Arc>
-									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="customRange">
+												[COMPLICATION.RANGED_VALUE_MIN] != 0
+											</Expression>
+										</Expressions>
+										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="225"
+													endAngle="72"
+													height="350"
+													startAngle="19"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator_background"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="225"
+													endAngle="26"
+													height="350"
+													startAngle="24"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#000000"
+														thickness="20" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator"
+												height="225"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="225"
+													endAngle="26"
+													height="350"
+													startAngle="24"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="12" />
+												</Arc>
+											</PartDraw>
+										</Compare>
+										<Default>
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="225"
+													endAngle="72"
+													height="350"
+													startAngle="19"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Transform
+														target="endAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+										</Default>
+									</Condition>
 									<Group
 										name="color_mask"
 										height="225"
@@ -4110,7 +4366,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -4130,33 +4386,119 @@
 												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										name="border"
-										alpha="255"
-										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
-										width="225"
-										x="0"
-										y="0">
-										<Arc
-											centerX="0"
-											centerY="225"
-											endAngle="72"
-											height="350"
-											startAngle="19"
-											width="350">
-											<Transform
-												target="startAngle"
-												value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
-											<Transform
-												target="endAngle"
-												value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-											<Stroke
-												cap="ROUND"
-												color="#ffffff"
-												thickness="5" />
-										</Arc>
-									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="customRange">
+												[COMPLICATION.RANGED_VALUE_MIN] != 0
+											</Expression>
+										</Expressions>
+										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="225"
+													endAngle="72"
+													height="350"
+													startAngle="19"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator_background"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="225"
+													endAngle="26"
+													height="350"
+													startAngle="24"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#000000"
+														thickness="20" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator"
+												height="225"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="225"
+													endAngle="26"
+													height="350"
+													startAngle="24"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="12" />
+												</Arc>
+											</PartDraw>
+										</Compare>
+										<Default>
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="225"
+													endAngle="72"
+													height="350"
+													startAngle="19"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Transform
+														target="endAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+										</Default>
+									</Condition>
 									<Group
 										name="color_mask"
 										height="225"
@@ -4779,7 +5121,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -4799,33 +5141,119 @@
 												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										name="border"
-										alpha="255"
-										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
-										width="225"
-										x="0"
-										y="0">
-										<Arc
-											centerX="225"
-											centerY="0"
-											endAngle="252"
-											height="350"
-											startAngle="199"
-											width="350">
-											<Transform
-												target="startAngle"
-												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
-											<Transform
-												target="endAngle"
-												value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-											<Stroke
-												cap="ROUND"
-												color="#ffffff"
-												thickness="5" />
-										</Arc>
-									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="customRange">
+												[COMPLICATION.RANGED_VALUE_MIN] != 0
+											</Expression>
+										</Expressions>
+										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="0"
+													endAngle="252"
+													height="350"
+													startAngle="199"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator_background"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="0"
+													endAngle="206"
+													height="350"
+													startAngle="204"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#000000"
+														thickness="20" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator"
+												height="225"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="0"
+													endAngle="206"
+													height="350"
+													startAngle="204"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="12" />
+												</Arc>
+											</PartDraw>
+										</Compare>
+										<Default>
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="0"
+													endAngle="252"
+													height="350"
+													startAngle="199"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Transform
+														target="endAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+										</Default>
+									</Condition>
 									<Group
 										name="color_mask"
 										height="225"
@@ -4883,7 +5311,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -4903,33 +5331,119 @@
 												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										name="border"
-										alpha="255"
-										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
-										width="225"
-										x="0"
-										y="0">
-										<Arc
-											centerX="225"
-											centerY="0"
-											endAngle="252"
-											height="350"
-											startAngle="199"
-											width="350">
-											<Transform
-												target="startAngle"
-												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
-											<Transform
-												target="endAngle"
-												value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-											<Stroke
-												cap="ROUND"
-												color="#ffffff"
-												thickness="5" />
-										</Arc>
-									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="customRange">
+												[COMPLICATION.RANGED_VALUE_MIN] != 0
+											</Expression>
+										</Expressions>
+										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="0"
+													endAngle="252"
+													height="350"
+													startAngle="199"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator_background"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="0"
+													endAngle="206"
+													height="350"
+													startAngle="204"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#000000"
+														thickness="20" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator"
+												height="225"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="0"
+													endAngle="206"
+													height="350"
+													startAngle="204"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="12" />
+												</Arc>
+											</PartDraw>
+										</Compare>
+										<Default>
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="0"
+													endAngle="252"
+													height="350"
+													startAngle="199"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Transform
+														target="endAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+										</Default>
+									</Condition>
 									<Group
 										name="color_mask"
 										height="225"
@@ -5552,7 +6066,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -5572,33 +6086,119 @@
 												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										name="border"
-										alpha="255"
-										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
-										width="225"
-										x="0"
-										y="0">
-										<Arc
-											centerX="0"
-											centerY="0"
-											endAngle="171"
-											height="350"
-											startAngle="108"
-											width="350">
-											<Transform
-												target="startAngle"
-												value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
-											<Transform
-												target="endAngle"
-												value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-											<Stroke
-												cap="ROUND"
-												color="#ffffff"
-												thickness="5" />
-										</Arc>
-									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="customRange">
+												[COMPLICATION.RANGED_VALUE_MIN] != 0
+											</Expression>
+										</Expressions>
+										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="0"
+													endAngle="171"
+													height="350"
+													startAngle="118"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator_background"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="0"
+													endAngle="125"
+													height="350"
+													startAngle="123"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#000000"
+														thickness="20" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator"
+												height="225"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="0"
+													endAngle="125"
+													height="350"
+													startAngle="123"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="12" />
+												</Arc>
+											</PartDraw>
+										</Compare>
+										<Default>
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="0"
+													endAngle="171"
+													height="350"
+													startAngle="118"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Transform
+														target="endAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+										</Default>
+									</Condition>
 									<Group
 										name="color_mask"
 										height="225"
@@ -5656,7 +6256,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -5676,33 +6276,119 @@
 												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										name="border"
-										alpha="255"
-										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
-										width="225"
-										x="0"
-										y="0">
-										<Arc
-											centerX="0"
-											centerY="0"
-											endAngle="171"
-											height="350"
-											startAngle="118"
-											width="350">
-											<Transform
-												target="startAngle"
-												value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
-											<Transform
-												target="endAngle"
-												value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-											<Stroke
-												cap="ROUND"
-												color="#ffffff"
-												thickness="5" />
-										</Arc>
-									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="customRange">
+												[COMPLICATION.RANGED_VALUE_MIN] != 0
+											</Expression>
+										</Expressions>
+										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="0"
+													endAngle="171"
+													height="350"
+													startAngle="118"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator_background"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="0"
+													endAngle="125"
+													height="350"
+													startAngle="123"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#000000"
+														thickness="20" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
+												name="indicator"
+												height="225"
+												tintColor="[CONFIGURATION.a3CompFgColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="0"
+													endAngle="125"
+													height="350"
+													startAngle="123"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) - 0.01" />
+													<Transform
+														target="endAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)) + 0.01" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="12" />
+												</Arc>
+											</PartDraw>
+										</Compare>
+										<Default>
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="0"
+													endAngle="171"
+													height="350"
+													startAngle="118"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Transform
+														target="endAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+										</Default>
+									</Condition>
 									<Group
 										name="color_mask"
 										height="225"
