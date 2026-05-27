@@ -1266,33 +1266,40 @@
 				value="[CONFIGURATION.z1_aod] == 3 ? 0 : 255" />
 			<ListConfiguration id="z0_index">
 				<ListOption id="0">
-					<PartImage
-						name="index"
-						alpha="128"
+					<Group
+						name="index_0"
 						height="320"
-						tintColor="[CONFIGURATION.a1AccentColor]"
 						width="320"
 						x="0"
 						y="0">
-						<Variant
-							mode="AMBIENT"
-							target="alpha"
-							value="0" />
-						<Image resource="minutes_indices_0" />
-					</PartImage>
-					<PartImage
-						alpha="0"
-						height="320"
-						tintColor="[CONFIGURATION.a1AccentColor]"
-						width="320"
-						x="0"
-						y="0">
-						<Variant
-							mode="AMBIENT"
-							target="alpha"
-							value="128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
-						<Image resource="minutes_indices_aod" />
-					</PartImage>
+						<PartImage
+							name="index"
+							alpha="128"
+							height="320"
+							tintColor="[CONFIGURATION.a1AccentColor]"
+							width="320"
+							x="0"
+							y="0">
+							<Variant
+								mode="AMBIENT"
+								target="alpha"
+								value="0" />
+							<Image resource="minutes_indices_0" />
+						</PartImage>
+						<PartImage
+							alpha="0"
+							height="320"
+							tintColor="[CONFIGURATION.a1AccentColor]"
+							width="320"
+							x="0"
+							y="0">
+							<Variant
+								mode="AMBIENT"
+								target="alpha"
+								value="128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+							<Image resource="minutes_indices_aod" />
+						</PartImage>
+					</Group>
 				</ListOption>
 				<ListOption id="1">
 					<PartImage
@@ -1659,59 +1666,66 @@
 				<ListConfiguration id="z0_index">
 					<ListOption id="0">
 						<Group
-							name="index"
-							alpha="255"
+							name="seconds_index_0"
 							height="450"
 							width="450"
 							x="0"
 							y="0">
-							<Variant
-								mode="AMBIENT"
-								target="alpha"
-								value="0" />
-							<Condition>
-								<Expressions>
-									<Expression name="small">
-										[CONFIGURATION.z1_mode] == 1
-									</Expression>
-								</Expressions>
-								<Compare expression="small">
-									<PartImage
-										alpha="128"
-										height="450"
-										tintColor="[CONFIGURATION.a1AccentColor]"
-										width="450"
-										x="0"
-										y="0">
-										<Image resource="seconds_indices_2" />
-									</PartImage>
-								</Compare>
-								<Default>
-									<PartImage
-										alpha="128"
-										height="450"
-										tintColor="[CONFIGURATION.a1AccentColor]"
-										width="450"
-										x="0"
-										y="0">
-										<Image resource="seconds_indices_0" />
-									</PartImage>
-								</Default>
-							</Condition>
+							<Group
+								name="index"
+								alpha="255"
+								height="450"
+								width="450"
+								x="0"
+								y="0">
+								<Variant
+									mode="AMBIENT"
+									target="alpha"
+									value="0" />
+								<Condition>
+									<Expressions>
+										<Expression name="small">
+											[CONFIGURATION.z1_mode] == 1
+										</Expression>
+									</Expressions>
+									<Compare expression="small">
+										<PartImage
+											alpha="128"
+											height="450"
+											tintColor="[CONFIGURATION.a1AccentColor]"
+											width="450"
+											x="0"
+											y="0">
+											<Image resource="seconds_indices_2" />
+										</PartImage>
+									</Compare>
+									<Default>
+										<PartImage
+											alpha="128"
+											height="450"
+											tintColor="[CONFIGURATION.a1AccentColor]"
+											width="450"
+											x="0"
+											y="0">
+											<Image resource="seconds_indices_0" />
+										</PartImage>
+									</Default>
+								</Condition>
+							</Group>
+							<PartImage
+								alpha="0"
+								height="450"
+								tintColor="[CONFIGURATION.a1AccentColor]"
+								width="450"
+								x="0"
+								y="0">
+								<Variant
+									mode="AMBIENT"
+									target="alpha"
+									value="128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+								<Image resource="seconds_indices_aod" />
+							</PartImage>
 						</Group>
-						<PartImage
-							alpha="0"
-							height="450"
-							tintColor="[CONFIGURATION.a1AccentColor]"
-							width="450"
-							x="0"
-							y="0">
-							<Variant
-								mode="AMBIENT"
-								target="alpha"
-								value="128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
-							<Image resource="seconds_indices_aod" />
-						</PartImage>
 					</ListOption>
 					<ListOption id="1">
 						<Group
@@ -2474,59 +2488,66 @@
 				<ListConfiguration id="z0_index">
 					<ListOption id="0">
 						<Group
-							name="index"
-							alpha="255"
+							name="seconds_index_0"
 							height="450"
 							width="450"
 							x="0"
 							y="0">
-							<Variant
-								mode="AMBIENT"
-								target="alpha"
-								value="0" />
-							<Condition>
-								<Expressions>
-									<Expression name="small">
-										[CONFIGURATION.z1_mode] == 1
-									</Expression>
-								</Expressions>
-								<Compare expression="small">
-									<PartImage
-										alpha="128"
-										height="450"
-										tintColor="[CONFIGURATION.a1AccentColor]"
-										width="450"
-										x="0"
-										y="0">
-										<Image resource="seconds_indices_2" />
-									</PartImage>
-								</Compare>
-								<Default>
-									<PartImage
-										alpha="128"
-										height="450"
-										tintColor="[CONFIGURATION.a1AccentColor]"
-										width="450"
-										x="0"
-										y="0">
-										<Image resource="seconds_indices_0" />
-									</PartImage>
-								</Default>
-							</Condition>
+							<Group
+								name="index"
+								alpha="255"
+								height="450"
+								width="450"
+								x="0"
+								y="0">
+								<Variant
+									mode="AMBIENT"
+									target="alpha"
+									value="0" />
+								<Condition>
+									<Expressions>
+										<Expression name="small">
+											[CONFIGURATION.z1_mode] == 1
+										</Expression>
+									</Expressions>
+									<Compare expression="small">
+										<PartImage
+											alpha="128"
+											height="450"
+											tintColor="[CONFIGURATION.a1AccentColor]"
+											width="450"
+											x="0"
+											y="0">
+											<Image resource="seconds_indices_2" />
+										</PartImage>
+									</Compare>
+									<Default>
+										<PartImage
+											alpha="128"
+											height="450"
+											tintColor="[CONFIGURATION.a1AccentColor]"
+											width="450"
+											x="0"
+											y="0">
+											<Image resource="seconds_indices_0" />
+										</PartImage>
+									</Default>
+								</Condition>
+							</Group>
+							<PartImage
+								alpha="0"
+								height="450"
+								tintColor="[CONFIGURATION.a1AccentColor]"
+								width="450"
+								x="0"
+								y="0">
+								<Variant
+									mode="AMBIENT"
+									target="alpha"
+									value="128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
+								<Image resource="seconds_indices_aod" />
+							</PartImage>
 						</Group>
-						<PartImage
-							alpha="0"
-							height="450"
-							tintColor="[CONFIGURATION.a1AccentColor]"
-							width="450"
-							x="0"
-							y="0">
-							<Variant
-								mode="AMBIENT"
-								target="alpha"
-								value="128 * ([CONFIGURATION.z1_aod] == 0 ? 0 : 1) * ([CONFIGURATION.z1_aod] == 3 ? 0 : 1)" />
-							<Image resource="seconds_indices_aod" />
-						</PartImage>
 					</ListOption>
 					<ListOption id="1">
 						<Group
