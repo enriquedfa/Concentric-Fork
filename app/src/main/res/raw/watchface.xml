@@ -3375,7 +3375,6 @@
 										<PartText
 											alpha="255"
 											height="225"
-											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
@@ -3389,7 +3388,7 @@
 												startAngle="288"
 												width="350">
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -3401,21 +3400,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<PartDraw
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Rectangle
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<Fill color="#ffffff" />
-											</Rectangle>
-										</PartDraw>
 									</Group>
 								</Compare>
 								<Default>
@@ -3563,7 +3547,6 @@
 										<PartText
 											alpha="255"
 											height="225"
-											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
@@ -3577,10 +3560,11 @@
 												startAngle="288"
 												width="350">
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="SYNC_TO_DEVICE"
 													size="24">
 													<InlineImage
+														color="[CONFIGURATION.a3CompFgColor]"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -3591,7 +3575,7 @@
 													</Template>
 												</Font>
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -3603,21 +3587,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<PartDraw
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Rectangle
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<Fill color="#ffffff" />
-											</Rectangle>
-										</PartDraw>
 									</Group>
 								</Default>
 							</Condition>
@@ -3724,7 +3693,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -3737,10 +3705,11 @@
 													startAngle="287"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -3755,21 +3724,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Compare>
@@ -3830,7 +3784,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -3843,7 +3796,7 @@
 													startAngle="288"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -3856,21 +3809,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Compare>
@@ -3931,7 +3869,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -3944,10 +3881,11 @@
 													startAngle="287"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -3963,21 +3901,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Default>
@@ -4318,7 +4241,6 @@
 										<PartText
 											alpha="255"
 											height="225"
-											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
@@ -4332,7 +4254,7 @@
 												startAngle="9"
 												width="350">
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -4344,21 +4266,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<PartDraw
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Rectangle
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<Fill color="#ffffff" />
-											</Rectangle>
-										</PartDraw>
 									</Group>
 								</Compare>
 								<Default>
@@ -4508,7 +4415,6 @@
 										<PartText
 											alpha="255"
 											height="225"
-											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
@@ -4522,10 +4428,11 @@
 												startAngle="9"
 												width="350">
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="SYNC_TO_DEVICE"
 													size="24">
 													<InlineImage
+														color="[CONFIGURATION.a3CompFgColor]"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -4536,7 +4443,7 @@
 													</Template>
 												</Font>
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -4548,21 +4455,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<PartDraw
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Rectangle
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<Fill color="#ffffff" />
-											</Rectangle>
-										</PartDraw>
 									</Group>
 								</Default>
 							</Condition>
@@ -4669,7 +4561,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -4682,10 +4573,11 @@
 													startAngle="8"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -4700,21 +4592,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Compare>
@@ -4775,7 +4652,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -4788,7 +4664,7 @@
 													startAngle="9"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -4801,21 +4677,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Compare>
@@ -4876,7 +4737,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -4889,10 +4749,11 @@
 													startAngle="8"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -4908,21 +4769,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Default>
@@ -5263,7 +5109,6 @@
 										<PartText
 											alpha="255"
 											height="225"
-											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
@@ -5277,7 +5122,7 @@
 												startAngle="252"
 												width="350">
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -5289,21 +5134,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<PartDraw
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Rectangle
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<Fill color="#ffffff" />
-											</Rectangle>
-										</PartDraw>
 									</Group>
 								</Compare>
 								<Default>
@@ -5453,7 +5283,6 @@
 										<PartText
 											alpha="255"
 											height="225"
-											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
@@ -5467,7 +5296,7 @@
 												startAngle="252"
 												width="350">
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -5478,7 +5307,7 @@
 													</Upper>
 												</Font>
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="SYNC_TO_DEVICE"
 													size="24">
 													<Template>
@@ -5486,6 +5315,7 @@
 														<Parameter expression="&#160;" />
 													</Template>
 													<InlineImage
+														color="[CONFIGURATION.a3CompFgColor]"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -5493,21 +5323,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<PartDraw
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Rectangle
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<Fill color="#ffffff" />
-											</Rectangle>
-										</PartDraw>
 									</Group>
 								</Default>
 							</Condition>
@@ -5614,7 +5429,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -5627,10 +5441,11 @@
 													startAngle="253"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -5645,21 +5460,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Compare>
@@ -5720,7 +5520,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -5733,7 +5532,7 @@
 													startAngle="252"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -5746,21 +5545,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Compare>
@@ -5821,7 +5605,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -5834,10 +5617,11 @@
 													startAngle="253"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -5853,21 +5637,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Default>
@@ -6208,7 +5977,6 @@
 										<PartText
 											alpha="255"
 											height="225"
-											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
@@ -6222,7 +5990,7 @@
 												startAngle="171"
 												width="350">
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -6234,21 +6002,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<PartDraw
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Rectangle
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<Fill color="#ffffff" />
-											</Rectangle>
-										</PartDraw>
 									</Group>
 								</Compare>
 								<Default>
@@ -6398,7 +6151,6 @@
 										<PartText
 											alpha="255"
 											height="225"
-											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
@@ -6412,7 +6164,7 @@
 												startAngle="171"
 												width="350">
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -6423,7 +6175,7 @@
 													</Upper>
 												</Font>
 												<Font
-													color="#ffffff"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="SYNC_TO_DEVICE"
 													size="24">
 													<Template>
@@ -6431,6 +6183,7 @@
 														<Parameter expression="&#160;" />
 													</Template>
 													<InlineImage
+														color="[CONFIGURATION.a3CompFgColor]"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -6438,21 +6191,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<PartDraw
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Rectangle
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<Fill color="#ffffff" />
-											</Rectangle>
-										</PartDraw>
 									</Group>
 								</Default>
 							</Condition>
@@ -6559,7 +6297,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -6572,10 +6309,11 @@
 													startAngle="172"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -6590,21 +6328,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Compare>
@@ -6665,7 +6388,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -6678,7 +6400,7 @@
 													startAngle="171"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -6691,21 +6413,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Compare>
@@ -6766,7 +6473,6 @@
 											<PartText
 												alpha="255"
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
@@ -6779,10 +6485,11 @@
 													startAngle="172"
 													width="350">
 													<Font
-														color="#ffffff"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -6798,21 +6505,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<PartDraw
-												alpha="255"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
 										</Group>
 									</Group>
 								</Default>
