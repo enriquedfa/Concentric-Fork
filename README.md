@@ -4,7 +4,7 @@
 
 <a href='https://play.google.com/store/apps/details?id=com.watchfacedesigns.Concentric&utm_source=https%3A%2F%2Fgithub.com%2Flukakilic%2Fconcentric-watch-face%2Ftree%2Fmain&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="display:inline-block"><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' style="width:200px;"/></a>
 
-The Concentric design is originally from the Google Pixel Watch (1). This project recreates it using [Watch Face Format](https://developer.android.com/training/wearables/wff). 
+The Concentric design is originally from the Google Pixel Watch (1). This project recreates it using [Watch Face Format](https://developer.android.com/training/wearables/wff).
 
 ## Modify the Watch Face
 
