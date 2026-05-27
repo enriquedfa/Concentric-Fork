@@ -10,10 +10,10 @@
 		Indices Color
 	</string>
 	<string name="compBaseColor">
-		Complication Value Color
+		Icons Color
 	</string>
 	<string name="compFgColor">
-		Complication Accent Color
+		Bars Color
 	</string>
 	<string name="index">
 		Index
@@ -62,9 +62,6 @@
 	</string>
 	<string name="placeholder_bar">
 		Placeholder Bars
-	</string>
-	<string name="complication">
-		Complication
 	</string>
 	<string name="snow">
 		Snow
