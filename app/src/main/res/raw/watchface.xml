@@ -3235,7 +3235,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -3400,7 +3400,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -4136,7 +4136,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -4302,7 +4302,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -5039,7 +5039,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -5205,7 +5205,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -5942,7 +5942,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
@@ -6108,7 +6108,7 @@
 										name="border"
 										alpha="255"
 										height="225"
-										tintColor="[CONFIGURATION.a3CompFgColor]"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
