@@ -108,6 +108,10 @@ jobs:
             echo ""
             echo "${msg:-No result line found in validator output.}"
           } >> "$GITHUB_STEP_SUMMARY"
+          # The validator exits 0 even when validation fails — derive status from the log.
+          if grep -qE "^[A-Z]+:.*FAILED" wff.log; then
+            exit 1
+          fi
           exit "$exit_code"
 
   memory-footprint:
