@@ -3263,6 +3263,29 @@
 										</Expressions>
 										<Compare expression="customRange">
 											<PartDraw
+												name="border"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="225"
+													endAngle="351"
+													height="350"
+													startAngle="298"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
 												name="indicator_background"
 												height="225"
 												width="225"
@@ -3427,6 +3450,29 @@
 											</Expression>
 										</Expressions>
 										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="225"
+													endAngle="351"
+													height="350"
+													startAngle="298"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
 											<PartDraw
 												name="indicator_background"
 												height="225"
@@ -4158,6 +4204,30 @@
 										</Expressions>
 										<Compare expression="customRange">
 											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="225"
+													endAngle="72"
+													height="350"
+													startAngle="19"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
 												name="indicator_background"
 												height="225"
 												width="225"
@@ -4323,6 +4393,30 @@
 											</Expression>
 										</Expressions>
 										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="225"
+													endAngle="72"
+													height="350"
+													startAngle="19"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
 											<PartDraw
 												name="indicator_background"
 												height="225"
@@ -5055,6 +5149,30 @@
 										</Expressions>
 										<Compare expression="customRange">
 											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="0"
+													endAngle="252"
+													height="350"
+													startAngle="199"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
 												name="indicator_background"
 												height="225"
 												width="225"
@@ -5220,6 +5338,30 @@
 											</Expression>
 										</Expressions>
 										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="225"
+													centerY="0"
+													endAngle="252"
+													height="350"
+													startAngle="199"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
 											<PartDraw
 												name="indicator_background"
 												height="225"
@@ -5952,6 +6094,30 @@
 										</Expressions>
 										<Compare expression="customRange">
 											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="0"
+													endAngle="171"
+													height="350"
+													startAngle="118"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
+											<PartDraw
 												name="indicator_background"
 												height="225"
 												width="225"
@@ -6117,6 +6283,30 @@
 											</Expression>
 										</Expressions>
 										<Compare expression="customRange">
+											<PartDraw
+												name="border"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Arc
+													centerX="0"
+													centerY="0"
+													endAngle="171"
+													height="350"
+													startAngle="118"
+													width="350">
+													<Transform
+														target="startAngle"
+														value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
+													<Stroke
+														cap="ROUND"
+														color="#ffffff"
+														thickness="5" />
+												</Arc>
+											</PartDraw>
 											<PartDraw
 												name="indicator_background"
 												height="225"
