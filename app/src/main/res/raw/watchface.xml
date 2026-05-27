@@ -3584,7 +3584,6 @@
 														color="#00000000"
 														height="28"
 														resource="empty"
-														source="COMPLICATION.MONOCHROMATIC_IMAGE"
 														width="28" />
 													<Template>
 														%s
@@ -3810,7 +3809,6 @@
 															color="#00000000"
 															height="28"
 															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>
 															%s
@@ -4090,7 +4088,6 @@
 															color="#00000000"
 															height="28"
 															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>
 															%s
@@ -4742,7 +4739,6 @@
 														color="#00000000"
 														height="28"
 														resource="empty"
-														source="COMPLICATION.MONOCHROMATIC_IMAGE"
 														width="28" />
 													<Template>
 														%s
@@ -4968,7 +4964,6 @@
 															color="#00000000"
 															height="28"
 															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>
 															%s
@@ -5248,7 +5243,6 @@
 															color="#00000000"
 															height="28"
 															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>
 															%s
@@ -5915,7 +5909,6 @@
 														color="#00000000"
 														height="28"
 														resource="empty"
-														source="COMPLICATION.MONOCHROMATIC_IMAGE"
 														width="28" />
 												</Font>
 											</TextCircular>
@@ -6126,7 +6119,6 @@
 															color="#00000000"
 															height="28"
 															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>
 															%s
@@ -6406,7 +6398,6 @@
 															color="#00000000"
 															height="28"
 															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>
 															%s
@@ -7073,7 +7064,6 @@
 														color="#00000000"
 														height="28"
 														resource="empty"
-														source="COMPLICATION.MONOCHROMATIC_IMAGE"
 														width="28" />
 												</Font>
 											</TextCircular>
@@ -7284,7 +7274,6 @@
 															color="#00000000"
 															height="28"
 															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>
 															%s
@@ -7564,7 +7553,6 @@
 															color="#00000000"
 															height="28"
 															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>
 															%s
