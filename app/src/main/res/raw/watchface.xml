@@ -3404,7 +3404,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
+											tintColor="[CONFIGURATION.a0PrimaryColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -3606,6 +3606,71 @@
 										<PartDraw
 											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a0PrimaryColor]"
+											width="225"
+											x="0"
+											y="0">
+											<Rectangle
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Fill color="#ffffff" />
+											</Rectangle>
+										</PartDraw>
+									</Group>
+									<Group
+										name="color_mask"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<PartText
+											alpha="255"
+											height="225"
+											renderMode="MASK"
+											width="225"
+											x="0"
+											y="0">
+											<TextCircular
+												align="START"
+												centerX="225"
+												centerY="225"
+												direction="CLOCKWISE"
+												endAngle="351"
+												height="350"
+												startAngle="288"
+												width="350">
+												<Font
+													color="#ffffff"
+													family="SYNC_TO_DEVICE"
+													size="24">
+													<InlineImage
+														height="28"
+														resource="empty"
+														source="COMPLICATION.MONOCHROMATIC_IMAGE"
+														width="28" />
+													<Template>
+														%s
+														<Parameter expression="&#160;" />
+													</Template>
+												</Font>
+												<Font
+													color="#00ffffff"
+													family="roboto_mono_sb"
+													size="24">
+													<Upper>
+														<Template>
+															%s
+															<Parameter expression="[COMPLICATION.TEXT]" />
+														</Template>
+													</Upper>
+												</Font>
+											</TextCircular>
+										</PartText>
+										<PartDraw
+											alpha="255"
+											height="225"
 											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
@@ -3745,10 +3810,82 @@
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
 														<Upper>
 															<Template>
-																%s%s
-																<Parameter expression="&#160;" />
+																%s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+											<PartDraw
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Rectangle
+													height="225"
+													width="225"
+													x="0"
+													y="0">
+													<Fill color="#ffffff" />
+												</Rectangle>
+											</PartDraw>
+										</Group>
+										<Group
+											name="color_mask"
+											height="225"
+											width="225"
+											x="0"
+											y="0">
+											<PartText
+												alpha="255"
+												height="225"
+												renderMode="MASK"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													centerX="225"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="351"
+													height="350"
+													startAngle="287"
+													width="350">
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
+														<InlineImage
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#00ffffff"
+														family="roboto_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
 																<Parameter expression="[COMPLICATION.TEXT]" />
 															</Template>
 														</Upper>
@@ -3859,7 +3996,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -3952,10 +4089,83 @@
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
 														<Upper>
 															<Template>
-																%s%s %s
-																<Parameter expression="&#160;" />
+																%s %s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+																<Parameter expression="[COMPLICATION.TITLE]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+											<PartDraw
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Rectangle
+													height="225"
+													width="225"
+													x="0"
+													y="0">
+													<Fill color="#ffffff" />
+												</Rectangle>
+											</PartDraw>
+										</Group>
+										<Group
+											name="color_mask"
+											height="225"
+											width="225"
+											x="0"
+											y="0">
+											<PartText
+												alpha="255"
+												height="225"
+												renderMode="MASK"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													centerX="225"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="351"
+													height="350"
+													startAngle="287"
+													width="350">
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
+														<InlineImage
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#00ffffff"
+														family="roboto_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s %s
 																<Parameter expression="[COMPLICATION.TEXT]" />
 																<Parameter expression="[COMPLICATION.TITLE]" />
 															</Template>
@@ -4347,7 +4557,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
+											tintColor="[CONFIGURATION.a0PrimaryColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -4551,6 +4761,71 @@
 										<PartDraw
 											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a0PrimaryColor]"
+											width="225"
+											x="0"
+											y="0">
+											<Rectangle
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Fill color="#ffffff" />
+											</Rectangle>
+										</PartDraw>
+									</Group>
+									<Group
+										name="color_mask"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<PartText
+											alpha="255"
+											height="225"
+											renderMode="MASK"
+											width="225"
+											x="0"
+											y="0">
+											<TextCircular
+												align="START"
+												centerX="0"
+												centerY="225"
+												direction="CLOCKWISE"
+												endAngle="72"
+												height="350"
+												startAngle="9"
+												width="350">
+												<Font
+													color="#ffffff"
+													family="SYNC_TO_DEVICE"
+													size="24">
+													<InlineImage
+														height="28"
+														resource="empty"
+														source="COMPLICATION.MONOCHROMATIC_IMAGE"
+														width="28" />
+													<Template>
+														%s
+														<Parameter expression="&#160;" />
+													</Template>
+												</Font>
+												<Font
+													color="#00ffffff"
+													family="roboto_mono_sb"
+													size="24">
+													<Upper>
+														<Template>
+															%s
+															<Parameter expression="[COMPLICATION.TEXT]" />
+														</Template>
+													</Upper>
+												</Font>
+											</TextCircular>
+										</PartText>
+										<PartDraw
+											alpha="255"
+											height="225"
 											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
@@ -4690,10 +4965,82 @@
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
 														<Upper>
 															<Template>
-																%s%s
-																<Parameter expression="&#160;" />
+																%s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+											<PartDraw
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Rectangle
+													height="225"
+													width="225"
+													x="0"
+													y="0">
+													<Fill color="#ffffff" />
+												</Rectangle>
+											</PartDraw>
+										</Group>
+										<Group
+											name="color_mask"
+											height="225"
+											width="225"
+											x="0"
+											y="0">
+											<PartText
+												alpha="255"
+												height="225"
+												renderMode="MASK"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													centerX="0"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="72"
+													height="350"
+													startAngle="8"
+													width="350">
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
+														<InlineImage
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#00ffffff"
+														family="roboto_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
 																<Parameter expression="[COMPLICATION.TEXT]" />
 															</Template>
 														</Upper>
@@ -4804,7 +5151,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -4897,10 +5244,83 @@
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
 														<Upper>
 															<Template>
-																%s%s %s
-																<Parameter expression="&#160;" />
+																%s %s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+																<Parameter expression="[COMPLICATION.TITLE]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+											<PartDraw
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Rectangle
+													height="225"
+													width="225"
+													x="0"
+													y="0">
+													<Fill color="#ffffff" />
+												</Rectangle>
+											</PartDraw>
+										</Group>
+										<Group
+											name="color_mask"
+											height="225"
+											width="225"
+											x="0"
+											y="0">
+											<PartText
+												alpha="255"
+												height="225"
+												renderMode="MASK"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													centerX="0"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="72"
+													height="350"
+													startAngle="8"
+													width="350">
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
+														<InlineImage
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#00ffffff"
+														family="roboto_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s %s
 																<Parameter expression="[COMPLICATION.TEXT]" />
 																<Parameter expression="[COMPLICATION.TITLE]" />
 															</Template>
@@ -5292,7 +5712,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
+											tintColor="[CONFIGURATION.a0PrimaryColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -5496,6 +5916,71 @@
 										<PartDraw
 											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a0PrimaryColor]"
+											width="225"
+											x="0"
+											y="0">
+											<Rectangle
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Fill color="#ffffff" />
+											</Rectangle>
+										</PartDraw>
+									</Group>
+									<Group
+										name="color_mask"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<PartText
+											alpha="255"
+											height="225"
+											renderMode="MASK"
+											width="225"
+											x="0"
+											y="0">
+											<TextCircular
+												align="END"
+												centerX="225"
+												centerY="0"
+												direction="COUNTER_CLOCKWISE"
+												endAngle="189"
+												height="350"
+												startAngle="252"
+												width="350">
+												<Font
+													color="#00ffffff"
+													family="roboto_mono_sb"
+													size="24">
+													<Upper>
+														<Template>
+															%s
+															<Parameter expression="[COMPLICATION.TEXT]" />
+														</Template>
+													</Upper>
+												</Font>
+												<Font
+													color="#ffffff"
+													family="SYNC_TO_DEVICE"
+													size="24">
+													<Template>
+														%s
+														<Parameter expression="&#160;" />
+													</Template>
+													<InlineImage
+														height="28"
+														resource="empty"
+														source="COMPLICATION.MONOCHROMATIC_IMAGE"
+														width="28" />
+												</Font>
+											</TextCircular>
+										</PartText>
+										<PartDraw
+											alpha="255"
+											height="225"
 											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
@@ -5635,10 +6120,82 @@
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
 														<Upper>
 															<Template>
-																%s%s
-																<Parameter expression="&#160;" />
+																%s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+											<PartDraw
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Rectangle
+													height="225"
+													width="225"
+													x="0"
+													y="0">
+													<Fill color="#ffffff" />
+												</Rectangle>
+											</PartDraw>
+										</Group>
+										<Group
+											name="color_mask"
+											height="225"
+											width="225"
+											x="0"
+											y="0">
+											<PartText
+												alpha="255"
+												height="225"
+												renderMode="MASK"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													centerX="225"
+													centerY="0"
+													direction="COUNTER_CLOCKWISE"
+													endAngle="189"
+													height="350"
+													startAngle="253"
+													width="350">
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
+														<InlineImage
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#00ffffff"
+														family="roboto_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
 																<Parameter expression="[COMPLICATION.TEXT]" />
 															</Template>
 														</Upper>
@@ -5749,7 +6306,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -5842,10 +6399,83 @@
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
 														<Upper>
 															<Template>
-																%s%s %s
-																<Parameter expression="&#160;" />
+																%s %s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+																<Parameter expression="[COMPLICATION.TITLE]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+											<PartDraw
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Rectangle
+													height="225"
+													width="225"
+													x="0"
+													y="0">
+													<Fill color="#ffffff" />
+												</Rectangle>
+											</PartDraw>
+										</Group>
+										<Group
+											name="color_mask"
+											height="225"
+											width="225"
+											x="0"
+											y="0">
+											<PartText
+												alpha="255"
+												height="225"
+												renderMode="MASK"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													centerX="225"
+													centerY="0"
+													direction="COUNTER_CLOCKWISE"
+													endAngle="189"
+													height="350"
+													startAngle="253"
+													width="350">
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
+														<InlineImage
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#00ffffff"
+														family="roboto_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s %s
 																<Parameter expression="[COMPLICATION.TEXT]" />
 																<Parameter expression="[COMPLICATION.TITLE]" />
 															</Template>
@@ -6237,7 +6867,7 @@
 										<PartDraw
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
+											tintColor="[CONFIGURATION.a0PrimaryColor]"
 											width="225"
 											x="0"
 											y="0">
@@ -6441,6 +7071,71 @@
 										<PartDraw
 											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a0PrimaryColor]"
+											width="225"
+											x="0"
+											y="0">
+											<Rectangle
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<Fill color="#ffffff" />
+											</Rectangle>
+										</PartDraw>
+									</Group>
+									<Group
+										name="color_mask"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<PartText
+											alpha="255"
+											height="225"
+											renderMode="MASK"
+											width="225"
+											x="0"
+											y="0">
+											<TextCircular
+												align="END"
+												centerX="0"
+												centerY="0"
+												direction="COUNTER_CLOCKWISE"
+												endAngle="108"
+												height="350"
+												startAngle="171"
+												width="350">
+												<Font
+													color="#00ffffff"
+													family="roboto_mono_sb"
+													size="24">
+													<Upper>
+														<Template>
+															%s
+															<Parameter expression="[COMPLICATION.TEXT]" />
+														</Template>
+													</Upper>
+												</Font>
+												<Font
+													color="#ffffff"
+													family="SYNC_TO_DEVICE"
+													size="24">
+													<Template>
+														%s
+														<Parameter expression="&#160;" />
+													</Template>
+													<InlineImage
+														height="28"
+														resource="empty"
+														source="COMPLICATION.MONOCHROMATIC_IMAGE"
+														width="28" />
+												</Font>
+											</TextCircular>
+										</PartText>
+										<PartDraw
+											alpha="255"
+											height="225"
 											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
@@ -6580,10 +7275,82 @@
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
 														<Upper>
 															<Template>
-																%s%s
-																<Parameter expression="&#160;" />
+																%s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+											<PartDraw
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Rectangle
+													height="225"
+													width="225"
+													x="0"
+													y="0">
+													<Fill color="#ffffff" />
+												</Rectangle>
+											</PartDraw>
+										</Group>
+										<Group
+											name="color_mask"
+											height="225"
+											width="225"
+											x="0"
+											y="0">
+											<PartText
+												alpha="255"
+												height="225"
+												renderMode="MASK"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													centerX="0"
+													centerY="0"
+													direction="COUNTER_CLOCKWISE"
+													endAngle="108"
+													height="350"
+													startAngle="172"
+													width="350">
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
+														<InlineImage
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#00ffffff"
+														family="roboto_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
 																<Parameter expression="[COMPLICATION.TEXT]" />
 															</Template>
 														</Upper>
@@ -6694,7 +7461,7 @@
 											<PartDraw
 												alpha="255"
 												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
 												width="225"
 												x="0"
 												y="0">
@@ -6787,10 +7554,83 @@
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
 														<Upper>
 															<Template>
-																%s%s %s
-																<Parameter expression="&#160;" />
+																%s %s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+																<Parameter expression="[COMPLICATION.TITLE]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+											<PartDraw
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a0PrimaryColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Rectangle
+													height="225"
+													width="225"
+													x="0"
+													y="0">
+													<Fill color="#ffffff" />
+												</Rectangle>
+											</PartDraw>
+										</Group>
+										<Group
+											name="color_mask"
+											height="225"
+											width="225"
+											x="0"
+											y="0">
+											<PartText
+												alpha="255"
+												height="225"
+												renderMode="MASK"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													centerX="0"
+													centerY="0"
+													direction="COUNTER_CLOCKWISE"
+													endAngle="108"
+													height="350"
+													startAngle="172"
+													width="350">
+													<Font
+														color="#ffffff"
+														family="roboto_sb"
+														size="24">
+														<InlineImage
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+														<Template>
+															%s
+															<Parameter expression="&#160;" />
+														</Template>
+													</Font>
+													<Font
+														color="#00ffffff"
+														family="roboto_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s %s
 																<Parameter expression="[COMPLICATION.TEXT]" />
 																<Parameter expression="[COMPLICATION.TITLE]" />
 															</Template>
