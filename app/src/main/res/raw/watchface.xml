@@ -3874,10 +3874,9 @@
 								</TextCircular>
 							</PartText>
 							<PartDraw
-								name="border"
 								alpha="255"
 								height="225"
-								renderMode="MASK"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
 								width="225"
 								x="0"
 								y="0">
@@ -3896,18 +3895,6 @@
 										color="#ffffff"
 										thickness="5" />
 								</Arc>
-							</PartDraw>
-							<PartDraw
-								name="border"
-								alpha="255"
-								height="225"
-								renderMode="MASK"
-								width="225"
-								x="0"
-								y="0">
-								<Transform
-									target="alpha"
-									value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<Arc
 									centerX="225"
 									centerY="225"
@@ -4653,10 +4640,9 @@
 								</TextCircular>
 							</PartText>
 							<PartDraw
-								name="border"
 								alpha="255"
 								height="225"
-								renderMode="MASK"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
 								width="225"
 								x="0"
 								y="0">
@@ -4675,18 +4661,6 @@
 										color="#ffffff"
 										thickness="5" />
 								</Arc>
-							</PartDraw>
-							<PartDraw
-								name="border"
-								alpha="255"
-								height="225"
-								renderMode="MASK"
-								width="225"
-								x="0"
-								y="0">
-								<Transform
-									target="alpha"
-									value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<Arc
 									centerX="0"
 									centerY="225"
@@ -5432,10 +5406,9 @@
 								</TextCircular>
 							</PartText>
 							<PartDraw
-								name="border"
 								alpha="255"
 								height="225"
-								renderMode="MASK"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
 								width="225"
 								x="0"
 								y="0">
@@ -5454,18 +5427,6 @@
 										color="#ffffff"
 										thickness="5" />
 								</Arc>
-							</PartDraw>
-							<PartDraw
-								name="border"
-								alpha="255"
-								height="225"
-								renderMode="MASK"
-								width="225"
-								x="0"
-								y="0">
-								<Transform
-									target="alpha"
-									value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<Arc
 									centerX="225"
 									centerY="0"
@@ -6211,10 +6172,9 @@
 								</TextCircular>
 							</PartText>
 							<PartDraw
-								name="border"
 								alpha="255"
 								height="225"
-								renderMode="MASK"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
 								width="225"
 								x="0"
 								y="0">
@@ -6233,18 +6193,6 @@
 										color="#ffffff"
 										thickness="5" />
 								</Arc>
-							</PartDraw>
-							<PartDraw
-								name="border"
-								alpha="255"
-								height="225"
-								renderMode="MASK"
-								width="225"
-								x="0"
-								y="0">
-								<Transform
-									target="alpha"
-									value="[CONFIGURATION.z4_placeholder_bar]? 255: 0" />
 								<Arc
 									centerX="0"
 									centerY="0"
