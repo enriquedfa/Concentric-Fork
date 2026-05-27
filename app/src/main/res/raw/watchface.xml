@@ -3581,6 +3581,7 @@
 													family="SYNC_TO_DEVICE"
 													size="24">
 													<InlineImage
+														color="#00000000"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -3806,6 +3807,7 @@
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="#00000000"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -4085,6 +4087,7 @@
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="#00000000"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -4736,6 +4739,7 @@
 													family="SYNC_TO_DEVICE"
 													size="24">
 													<InlineImage
+														color="#00000000"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -4961,6 +4965,7 @@
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="#00000000"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -5240,6 +5245,7 @@
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="#00000000"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -5906,6 +5912,7 @@
 														<Parameter expression="&#160;" />
 													</Template>
 													<InlineImage
+														color="#00000000"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -6116,6 +6123,7 @@
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="#00000000"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -6395,6 +6403,7 @@
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="#00000000"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -7061,6 +7070,7 @@
 														<Parameter expression="&#160;" />
 													</Template>
 													<InlineImage
+														color="#00000000"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -7271,6 +7281,7 @@
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="#00000000"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -7550,6 +7561,7 @@
 														family="roboto_sb"
 														size="24">
 														<InlineImage
+															color="#00000000"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
