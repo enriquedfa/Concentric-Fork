@@ -5558,7 +5558,6 @@
 									<Condition>
 										<Expressions>
 											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
-											<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
 										</Expressions>
 										<Compare expression="gpUnder1k">
 											<PartText
@@ -5597,79 +5596,86 @@
 												</TextCircular>
 											</PartText>
 										</Compare>
-										<Compare expression="gpUnder1m">
-											<PartText
-												alpha="255"
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													align="END"
-													centerX="225"
-													centerY="0"
-													direction="COUNTER_CLOCKWISE"
-													endAngle="189"
-													height="350"
-													startAngle="252"
-													width="350">
-													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
-														family="roboto_mono_sb"
-														size="24">
-														<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
-													</Font>
-													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
-														family="SYNC_TO_DEVICE"
-														size="24">
-														<Template>%s<Parameter expression="&#160;" /></Template>
-														<InlineImage
-															color="[CONFIGURATION.a3CompFgColor]"
-															height="28"
-															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
-															width="28" />
-													</Font>
-												</TextCircular>
-											</PartText>
-										</Compare>
 										<Default>
-											<PartText
-												alpha="255"
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													align="END"
-													centerX="225"
-													centerY="0"
-													direction="COUNTER_CLOCKWISE"
-													endAngle="189"
-													height="350"
-													startAngle="252"
-													width="350">
-													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
-														family="roboto_mono_sb"
-														size="24">
-														<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
-													</Font>
-													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
-														family="SYNC_TO_DEVICE"
-														size="24">
-														<Template>%s<Parameter expression="&#160;" /></Template>
-														<InlineImage
-															color="[CONFIGURATION.a3CompFgColor]"
-															height="28"
-															resource="empty"
-															source="COMPLICATION.MONOCHROMATIC_IMAGE"
-															width="28" />
-													</Font>
-												</TextCircular>
-											</PartText>
+											<Condition>
+												<Expressions>
+													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+												</Expressions>
+												<Compare expression="gpUnder1m">
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="225"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="189"
+															height="350"
+															startAngle="252"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+															</Font>
+															<Font
+																color="[CONFIGURATION.a3CompFgColor]"
+																family="SYNC_TO_DEVICE"
+																size="24">
+																<Template>%s<Parameter expression="&#160;" /></Template>
+																<InlineImage
+																	color="[CONFIGURATION.a3CompFgColor]"
+																	height="28"
+																	resource="empty"
+																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
+																	width="28" />
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Compare>
+												<Default>
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="225"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="189"
+															height="350"
+															startAngle="252"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+															</Font>
+															<Font
+																color="[CONFIGURATION.a3CompFgColor]"
+																family="SYNC_TO_DEVICE"
+																size="24">
+																<Template>%s<Parameter expression="&#160;" /></Template>
+																<InlineImage
+																	color="[CONFIGURATION.a3CompFgColor]"
+																	height="28"
+																	resource="empty"
+																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
+																	width="28" />
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Default>
+											</Condition>
 										</Default>
 									</Condition>
 								</Compare>
@@ -5816,7 +5822,6 @@
 									<Condition>
 										<Expressions>
 											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
-											<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
 										</Expressions>
 										<Compare expression="gpUnder1k">
 											<PartText
@@ -5843,55 +5848,62 @@
 												</TextCircular>
 											</PartText>
 										</Compare>
-										<Compare expression="gpUnder1m">
-											<PartText
-												alpha="255"
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													align="END"
-													centerX="225"
-													centerY="0"
-													direction="COUNTER_CLOCKWISE"
-													endAngle="189"
-													height="350"
-													startAngle="252"
-													width="350">
-													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
-														family="roboto_mono_sb"
-														size="24">
-														<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
-													</Font>
-												</TextCircular>
-											</PartText>
-										</Compare>
 										<Default>
-											<PartText
-												alpha="255"
-												height="225"
-												width="225"
-												x="0"
-												y="0">
-												<TextCircular
-													align="END"
-													centerX="225"
-													centerY="0"
-													direction="COUNTER_CLOCKWISE"
-													endAngle="189"
-													height="350"
-													startAngle="252"
-													width="350">
-													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
-														family="roboto_mono_sb"
-														size="24">
-														<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
-													</Font>
-												</TextCircular>
-											</PartText>
+											<Condition>
+												<Expressions>
+													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+												</Expressions>
+												<Compare expression="gpUnder1m">
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="225"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="189"
+															height="350"
+															startAngle="252"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Compare>
+												<Default>
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="225"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="189"
+															height="350"
+															startAngle="252"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Default>
+											</Condition>
 										</Default>
 									</Condition>
 								</Default>
