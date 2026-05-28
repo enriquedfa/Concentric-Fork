@@ -3786,6 +3786,7 @@
 									</Arc>
 								</PartDraw>
 								<Group
+									name="weighted_segments"
 									height="225"
 									width="225"
 									x="0"
@@ -3901,6 +3902,7 @@
 											</Arc>
 										</PartDraw>
 										<Group
+											name="weighted_segments"
 											height="225"
 											width="225"
 											x="0"
@@ -4005,6 +4007,7 @@
 											</Arc>
 										</PartDraw>
 										<Group
+											name="weighted_segments"
 											height="225"
 											width="225"
 											x="0"
@@ -5631,6 +5634,7 @@
 									</Arc>
 								</PartDraw>
 								<Group
+									name="weighted_segments"
 									height="225"
 									width="225"
 									x="0"
@@ -5746,6 +5750,7 @@
 											</Arc>
 										</PartDraw>
 										<Group
+											name="weighted_segments"
 											height="225"
 											width="225"
 											x="0"
@@ -5850,6 +5855,7 @@
 											</Arc>
 										</PartDraw>
 										<Group
+											name="weighted_segments"
 											height="225"
 											width="225"
 											x="0"
@@ -7476,6 +7482,7 @@
 									</Arc>
 								</PartDraw>
 								<Group
+									name="weighted_segments"
 									height="225"
 									width="225"
 									x="0"
@@ -7591,6 +7598,7 @@
 											</Arc>
 										</PartDraw>
 										<Group
+											name="weighted_segments"
 											height="225"
 											width="225"
 											x="0"
@@ -7695,6 +7703,7 @@
 											</Arc>
 										</PartDraw>
 										<Group
+											name="weighted_segments"
 											height="225"
 											width="225"
 											x="0"
@@ -9321,6 +9330,7 @@
 									</Arc>
 								</PartDraw>
 								<Group
+									name="weighted_segments"
 									height="225"
 									width="225"
 									x="0"
@@ -9436,6 +9446,7 @@
 											</Arc>
 										</PartDraw>
 										<Group
+											name="weighted_segments"
 											height="225"
 											width="225"
 											x="0"
@@ -9540,6 +9551,7 @@
 											</Arc>
 										</PartDraw>
 										<Group
+											name="weighted_segments"
 											height="225"
 											width="225"
 											x="0"
