@@ -3677,78 +3677,291 @@
 							width="225"
 							x="0"
 							y="0">
-							<PartDraw
-								name="placeholder"
-								alpha="255"
-								height="225"
-								tintColor="[CONFIGURATION.a2CompBaseColor]"
-								width="225"
-								x="0"
-								y="0">
-								<Transform
-									target="alpha"
-									value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-								<Arc
-									centerX="225"
-									centerY="225"
-									endAngle="351"
-									height="350"
-									startAngle="288"
-									width="350">
-									<Stroke
-										cap="ROUND"
-										color="#33ffffff"
-										thickness="4" />
-								</Arc>
-							</PartDraw>
-							<PartDraw
-								name="segments"
-								alpha="255"
-								height="225"
-								tintColor="[CONFIGURATION.a2CompBaseColor]"
-								width="225"
-								x="0"
-								y="0">
-								<Arc
-									centerX="225"
-									centerY="225"
-									endAngle="351"
-									height="350"
-									startAngle="288"
-									width="350">
-									<WeightedStroke
-										cap="ROUND"
-										colors="#66ffffff #ffffffff"
-										interpolate="true"
-										weights="1"
-										thickness="4" />
-								</Arc>
-							</PartDraw>
+							<Condition>
+								<Expressions>
+									<Expression name="hasIcon">
+										[COMPLICATION.MONOCHROMATIC_IMAGE] != null
+									</Expression>
+								</Expressions>
+								<Compare expression="hasIcon">
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="288"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="304" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="288"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="304" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="225"
+											centerY="225"
+											direction="CLOCKWISE"
+											endAngle="351"
+											height="350"
+											startAngle="288"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a3CompFgColor]"
+												family="SYNC_TO_DEVICE"
+												size="24">
+												<InlineImage
+													color="[CONFIGURATION.a3CompFgColor]"
+													height="28"
+													resource="empty"
+													source="COMPLICATION.MONOCHROMATIC_IMAGE"
+													width="28" />
+												<Template>
+													%s
+													<Parameter expression="&#160;" />
+												</Template>
+											</Font>
+										</TextCircular>
+									</PartText>
+								</Compare>
+								<Default>
+									<Condition>
+										<Expressions>
+											<Expression name="hasText">
+												textLength([COMPLICATION.TEXT]) > 0
+											</Expression>
+										</Expressions>
+										<Compare expression="hasText">
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="288"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="288"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="225"
+											centerY="225"
+											direction="CLOCKWISE"
+											endAngle="351"
+											height="350"
+											startAngle="288"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a0PrimaryColor]"
+												family="roboto_mono_sb"
+												size="24">
+												<Upper>
+													<Template>
+														%s
+														<Parameter expression="[COMPLICATION.TEXT]" />
+													</Template>
+												</Upper>
+											</Font>
+										</TextCircular>
+									</PartText>
+										</Compare>
+										<Default>
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="288"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="304 + textLength([COMPLICATION.TITLE]) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="288"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="304 + textLength([COMPLICATION.TITLE]) * 4.5" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="225"
+											centerY="225"
+											direction="CLOCKWISE"
+											endAngle="351"
+											height="350"
+											startAngle="288"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a0PrimaryColor]"
+												family="roboto_mono_sb"
+												size="24">
+												<Upper>
+													<Template>
+														%s
+														<Parameter expression="[COMPLICATION.TITLE]" />
+													</Template>
+												</Upper>
+											</Font>
+										</TextCircular>
+									</PartText>
+										</Default>
+									</Condition>
+								</Default>
+							</Condition>
 						</Group>
 					</Compare>
 					<Default>
 						<PartDraw
-							name="segments_aod"
-							alpha="255"
-							height="225"
-							tintColor="[CONFIGURATION.a2CompBaseColor]"
-							width="225"
+							alpha="0"
+							height="1"
+							width="1"
 							x="0"
 							y="0">
-							<Arc
-								centerX="225"
-								centerY="225"
-								endAngle="351"
-								height="350"
-								startAngle="288"
-								width="350">
-								<WeightedStroke
-									cap="ROUND"
-									colors="#66ffffff #ffffffff"
-									interpolate="true"
-									weights="1"
-									thickness="4" />
-							</Arc>
+							<Rectangle
+								height="1"
+								width="1"
+								x="0"
+								y="0">
+								<Fill color="#00000000" />
+							</Rectangle>
 						</PartDraw>
 					</Default>
 				</Condition>
@@ -4640,78 +4853,291 @@
 							width="225"
 							x="0"
 							y="0">
-							<PartDraw
-								name="placeholder"
-								alpha="255"
-								height="225"
-								tintColor="[CONFIGURATION.a2CompBaseColor]"
-								width="225"
-								x="0"
-								y="0">
-								<Transform
-									target="alpha"
-									value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-								<Arc
-									centerX="0"
-									centerY="225"
-									endAngle="72"
-									height="350"
-									startAngle="9"
-									width="350">
-									<Stroke
-										cap="ROUND"
-										color="#33ffffff"
-										thickness="4" />
-								</Arc>
-							</PartDraw>
-							<PartDraw
-								name="segments"
-								alpha="255"
-								height="225"
-								tintColor="[CONFIGURATION.a2CompBaseColor]"
-								width="225"
-								x="0"
-								y="0">
-								<Arc
-									centerX="0"
-									centerY="225"
-									endAngle="72"
-									height="350"
-									startAngle="9"
-									width="350">
-									<WeightedStroke
-										cap="ROUND"
-										colors="#66ffffff #ffffffff"
-										interpolate="true"
-										weights="1"
-										thickness="4" />
-								</Arc>
-							</PartDraw>
+							<Condition>
+								<Expressions>
+									<Expression name="hasIcon">
+										[COMPLICATION.MONOCHROMATIC_IMAGE] != null
+									</Expression>
+								</Expressions>
+								<Compare expression="hasIcon">
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="9"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="25" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="9"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="25" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="0"
+											centerY="225"
+											direction="CLOCKWISE"
+											endAngle="72"
+											height="350"
+											startAngle="9"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a3CompFgColor]"
+												family="SYNC_TO_DEVICE"
+												size="24">
+												<InlineImage
+													color="[CONFIGURATION.a3CompFgColor]"
+													height="28"
+													resource="empty"
+													source="COMPLICATION.MONOCHROMATIC_IMAGE"
+													width="28" />
+												<Template>
+													%s
+													<Parameter expression="&#160;" />
+												</Template>
+											</Font>
+										</TextCircular>
+									</PartText>
+								</Compare>
+								<Default>
+									<Condition>
+										<Expressions>
+											<Expression name="hasText">
+												textLength([COMPLICATION.TEXT]) > 0
+											</Expression>
+										</Expressions>
+										<Compare expression="hasText">
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="9"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="9"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="0"
+											centerY="225"
+											direction="CLOCKWISE"
+											endAngle="72"
+											height="350"
+											startAngle="9"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a0PrimaryColor]"
+												family="roboto_mono_sb"
+												size="24">
+												<Upper>
+													<Template>
+														%s
+														<Parameter expression="[COMPLICATION.TEXT]" />
+													</Template>
+												</Upper>
+											</Font>
+										</TextCircular>
+									</PartText>
+										</Compare>
+										<Default>
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="9"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="25 + textLength([COMPLICATION.TITLE]) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="9"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="25 + textLength([COMPLICATION.TITLE]) * 4.5" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="0"
+											centerY="225"
+											direction="CLOCKWISE"
+											endAngle="72"
+											height="350"
+											startAngle="9"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a0PrimaryColor]"
+												family="roboto_mono_sb"
+												size="24">
+												<Upper>
+													<Template>
+														%s
+														<Parameter expression="[COMPLICATION.TITLE]" />
+													</Template>
+												</Upper>
+											</Font>
+										</TextCircular>
+									</PartText>
+										</Default>
+									</Condition>
+								</Default>
+							</Condition>
 						</Group>
 					</Compare>
 					<Default>
 						<PartDraw
-							name="segments_aod"
-							alpha="255"
-							height="225"
-							tintColor="[CONFIGURATION.a2CompBaseColor]"
-							width="225"
+							alpha="0"
+							height="1"
+							width="1"
 							x="0"
 							y="0">
-							<Arc
-								centerX="0"
-								centerY="225"
-								endAngle="72"
-								height="350"
-								startAngle="9"
-								width="350">
-								<WeightedStroke
-									cap="ROUND"
-									colors="#66ffffff #ffffffff"
-									interpolate="true"
-									weights="1"
-									thickness="4" />
-							</Arc>
+							<Rectangle
+								height="1"
+								width="1"
+								x="0"
+								y="0">
+								<Fill color="#00000000" />
+							</Rectangle>
 						</PartDraw>
 					</Default>
 				</Condition>
@@ -5603,78 +6029,291 @@
 							width="225"
 							x="0"
 							y="0">
-							<PartDraw
-								name="placeholder"
-								alpha="255"
-								height="225"
-								tintColor="[CONFIGURATION.a2CompBaseColor]"
-								width="225"
-								x="0"
-								y="0">
-								<Transform
-									target="alpha"
-									value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-								<Arc
-									centerX="225"
-									centerY="0"
-									endAngle="252"
-									height="350"
-									startAngle="189"
-									width="350">
-									<Stroke
-										cap="ROUND"
-										color="#33ffffff"
-										thickness="4" />
-								</Arc>
-							</PartDraw>
-							<PartDraw
-								name="segments"
-								alpha="255"
-								height="225"
-								tintColor="[CONFIGURATION.a2CompBaseColor]"
-								width="225"
-								x="0"
-								y="0">
-								<Arc
-									centerX="225"
-									centerY="0"
-									endAngle="252"
-									height="350"
-									startAngle="189"
-									width="350">
-									<WeightedStroke
-										cap="ROUND"
-										colors="#66ffffff #ffffffff"
-										interpolate="true"
-										weights="1"
-										thickness="4" />
-								</Arc>
-							</PartDraw>
+							<Condition>
+								<Expressions>
+									<Expression name="hasIcon">
+										[COMPLICATION.MONOCHROMATIC_IMAGE] != null
+									</Expression>
+								</Expressions>
+								<Compare expression="hasIcon">
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="189"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="189"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="225"
+											centerY="0"
+											direction="CLOCKWISE"
+											endAngle="252"
+											height="350"
+											startAngle="189"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a3CompFgColor]"
+												family="SYNC_TO_DEVICE"
+												size="24">
+												<InlineImage
+													color="[CONFIGURATION.a3CompFgColor]"
+													height="28"
+													resource="empty"
+													source="COMPLICATION.MONOCHROMATIC_IMAGE"
+													width="28" />
+												<Template>
+													%s
+													<Parameter expression="&#160;" />
+												</Template>
+											</Font>
+										</TextCircular>
+									</PartText>
+								</Compare>
+								<Default>
+									<Condition>
+										<Expressions>
+											<Expression name="hasText">
+												textLength([COMPLICATION.TEXT]) > 0
+											</Expression>
+										</Expressions>
+										<Compare expression="hasText">
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="189"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="189"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="225"
+											centerY="0"
+											direction="CLOCKWISE"
+											endAngle="252"
+											height="350"
+											startAngle="189"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a0PrimaryColor]"
+												family="roboto_mono_sb"
+												size="24">
+												<Upper>
+													<Template>
+														%s
+														<Parameter expression="[COMPLICATION.TEXT]" />
+													</Template>
+												</Upper>
+											</Font>
+										</TextCircular>
+									</PartText>
+										</Compare>
+										<Default>
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="189"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TITLE]) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="189"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TITLE]) * 4.5" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="225"
+											centerY="0"
+											direction="CLOCKWISE"
+											endAngle="252"
+											height="350"
+											startAngle="189"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a0PrimaryColor]"
+												family="roboto_mono_sb"
+												size="24">
+												<Upper>
+													<Template>
+														%s
+														<Parameter expression="[COMPLICATION.TITLE]" />
+													</Template>
+												</Upper>
+											</Font>
+										</TextCircular>
+									</PartText>
+										</Default>
+									</Condition>
+								</Default>
+							</Condition>
 						</Group>
 					</Compare>
 					<Default>
 						<PartDraw
-							name="segments_aod"
-							alpha="255"
-							height="225"
-							tintColor="[CONFIGURATION.a2CompBaseColor]"
-							width="225"
+							alpha="0"
+							height="1"
+							width="1"
 							x="0"
 							y="0">
-							<Arc
-								centerX="225"
-								centerY="0"
-								endAngle="252"
-								height="350"
-								startAngle="189"
-								width="350">
-								<WeightedStroke
-									cap="ROUND"
-									colors="#66ffffff #ffffffff"
-									interpolate="true"
-									weights="1"
-									thickness="4" />
-							</Arc>
+							<Rectangle
+								height="1"
+								width="1"
+								x="0"
+								y="0">
+								<Fill color="#00000000" />
+							</Rectangle>
 						</PartDraw>
 					</Default>
 				</Condition>
@@ -6566,78 +7205,291 @@
 							width="225"
 							x="0"
 							y="0">
-							<PartDraw
-								name="placeholder"
-								alpha="255"
-								height="225"
-								tintColor="[CONFIGURATION.a2CompBaseColor]"
-								width="225"
-								x="0"
-								y="0">
-								<Transform
-									target="alpha"
-									value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-								<Arc
-									centerX="0"
-									centerY="0"
-									endAngle="171"
-									height="350"
-									startAngle="108"
-									width="350">
-									<Stroke
-										cap="ROUND"
-										color="#33ffffff"
-										thickness="4" />
-								</Arc>
-							</PartDraw>
-							<PartDraw
-								name="segments"
-								alpha="255"
-								height="225"
-								tintColor="[CONFIGURATION.a2CompBaseColor]"
-								width="225"
-								x="0"
-								y="0">
-								<Arc
-									centerX="0"
-									centerY="0"
-									endAngle="171"
-									height="350"
-									startAngle="108"
-									width="350">
-									<WeightedStroke
-										cap="ROUND"
-										colors="#66ffffff #ffffffff"
-										interpolate="true"
-										weights="1"
-										thickness="4" />
-								</Arc>
-							</PartDraw>
+							<Condition>
+								<Expressions>
+									<Expression name="hasIcon">
+										[COMPLICATION.MONOCHROMATIC_IMAGE] != null
+									</Expression>
+								</Expressions>
+								<Compare expression="hasIcon">
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="108"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="124" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="108"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="124" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="0"
+											centerY="0"
+											direction="CLOCKWISE"
+											endAngle="171"
+											height="350"
+											startAngle="108"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a3CompFgColor]"
+												family="SYNC_TO_DEVICE"
+												size="24">
+												<InlineImage
+													color="[CONFIGURATION.a3CompFgColor]"
+													height="28"
+													resource="empty"
+													source="COMPLICATION.MONOCHROMATIC_IMAGE"
+													width="28" />
+												<Template>
+													%s
+													<Parameter expression="&#160;" />
+												</Template>
+											</Font>
+										</TextCircular>
+									</PartText>
+								</Compare>
+								<Default>
+									<Condition>
+										<Expressions>
+											<Expression name="hasText">
+												textLength([COMPLICATION.TEXT]) > 0
+											</Expression>
+										</Expressions>
+										<Compare expression="hasText">
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="108"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="108"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="0"
+											centerY="0"
+											direction="CLOCKWISE"
+											endAngle="171"
+											height="350"
+											startAngle="108"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a0PrimaryColor]"
+												family="roboto_mono_sb"
+												size="24">
+												<Upper>
+													<Template>
+														%s
+														<Parameter expression="[COMPLICATION.TEXT]" />
+													</Template>
+												</Upper>
+											</Font>
+										</TextCircular>
+									</PartText>
+										</Compare>
+										<Default>
+									<PartDraw
+										name="placeholder"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="108"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="124 + textLength([COMPLICATION.TITLE]) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="segments"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="108"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="124 + textLength([COMPLICATION.TITLE]) * 4.5" />
+											<WeightedStroke
+												cap="ROUND"
+												colors="#66ffffff #ffffffff"
+												interpolate="true"
+												weights="1"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="0"
+											centerY="0"
+											direction="CLOCKWISE"
+											endAngle="171"
+											height="350"
+											startAngle="108"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a0PrimaryColor]"
+												family="roboto_mono_sb"
+												size="24">
+												<Upper>
+													<Template>
+														%s
+														<Parameter expression="[COMPLICATION.TITLE]" />
+													</Template>
+												</Upper>
+											</Font>
+										</TextCircular>
+									</PartText>
+										</Default>
+									</Condition>
+								</Default>
+							</Condition>
 						</Group>
 					</Compare>
 					<Default>
 						<PartDraw
-							name="segments_aod"
-							alpha="255"
-							height="225"
-							tintColor="[CONFIGURATION.a2CompBaseColor]"
-							width="225"
+							alpha="0"
+							height="1"
+							width="1"
 							x="0"
 							y="0">
-							<Arc
-								centerX="0"
-								centerY="0"
-								endAngle="171"
-								height="350"
-								startAngle="108"
-								width="350">
-								<WeightedStroke
-									cap="ROUND"
-									colors="#66ffffff #ffffffff"
-									interpolate="true"
-									weights="1"
-									thickness="4" />
-							</Arc>
+							<Rectangle
+								height="1"
+								width="1"
+								x="0"
+								y="0">
+								<Fill color="#00000000" />
+							</Rectangle>
 						</PartDraw>
 					</Default>
 				</Condition>
