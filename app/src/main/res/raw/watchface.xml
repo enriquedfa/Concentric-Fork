@@ -1264,6 +1264,18 @@
 				mode="AMBIENT"
 				target="alpha"
 				value="[CONFIGURATION.z1_aod] == 3 ? 0 : 255" />
+			<Variant
+				controls="0.26 0.54 0.06 1.0"
+				interpolation="CUBIC_BEZIER"
+				mode="AMBIENT"
+				target="scaleX"
+				value="0.97" />
+			<Variant
+				controls="0.26 0.54 0.06 1.0"
+				interpolation="CUBIC_BEZIER"
+				mode="AMBIENT"
+				target="scaleY"
+				value="0.97" />
 			<ListConfiguration id="z0_index">
 				<ListOption id="0">
 					<Group
@@ -1653,6 +1665,20 @@
 					angleDirection="CLOCKWISE"
 					duration="1" />
 			</Transform>
+			<Variant
+				controls="0.26 0.54 0.06 1.0"
+				interpolation="CUBIC_BEZIER"
+				mode="AMBIENT"
+				startOffset="0.17"
+				target="scaleX"
+				value="0.97" />
+			<Variant
+				controls="0.26 0.54 0.06 1.0"
+				interpolation="CUBIC_BEZIER"
+				mode="AMBIENT"
+				startOffset="0.17"
+				target="scaleY"
+				value="0.97" />
 			<Group
 				name="index_default"
 				alpha="255"
@@ -3144,7 +3170,8 @@
 					x="0"
 					y="0">
 					<Variant
-						interpolation="EASE_IN_OUT"
+						controls="0.37 0.54 0.02 1.0"
+						interpolation="CUBIC_BEZIER"
 						mode="AMBIENT"
 						target="width"
 						value="[CONFIGURATION.z2_aod_pill] ? 76 : 195" />
