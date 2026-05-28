@@ -3236,7 +3236,7 @@
 			height="225"
 			isCustomizable="TRUE"
 			slotId="0"
-			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
+			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS GOAL_PROGRESS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
 			width="225"
 			x="0"
 			y="0">
@@ -4103,6 +4103,540 @@
 					</Default>
 				</Condition>
 			</Complication>
+			<Complication type="GOAL_PROGRESS">
+				<Condition>
+					<Expressions>
+						<Expression name="modeOn">
+							[CONFIGURATION.z1_mode] != 0
+						</Expression>
+					</Expressions>
+					<Compare expression="modeOn">
+						<Group
+							name="z1_gate"
+							alpha="255"
+							height="225"
+							width="225"
+							x="0"
+							y="0">
+							<Condition>
+								<Expressions>
+									<Expression name="hasIcon">
+										[COMPLICATION.MONOCHROMATIC_IMAGE] != null
+									</Expression>
+								</Expressions>
+								<Compare expression="hasIcon">
+									<PartDraw
+										name="border"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="298"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="progress"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="298"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_outline"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="298"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#000000"
+												thickness="9" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="298"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_highlight"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 128 : 0" />
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="298"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 305 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+										</Expressions>
+										<Compare expression="gpUnder1k">
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="225"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="351"
+													height="350"
+													startAngle="288"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a3CompFgColor]"
+														family="SYNC_TO_DEVICE"
+														size="24">
+														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+														<Template>%s<Parameter expression="&#160;" /></Template>
+													</Font>
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
+											<Condition>
+												<Expressions>
+													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+												</Expressions>
+												<Compare expression="gpUnder1m">
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="START"
+															centerX="225"
+															centerY="225"
+															direction="CLOCKWISE"
+															endAngle="351"
+															height="350"
+															startAngle="288"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a3CompFgColor]"
+																family="SYNC_TO_DEVICE"
+																size="24">
+																<InlineImage
+																	color="[CONFIGURATION.a3CompFgColor]"
+																	height="28"
+																	resource="empty"
+																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
+																	width="28" />
+																<Template>%s<Parameter expression="&#160;" /></Template>
+															</Font>
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Compare>
+												<Default>
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="START"
+															centerX="225"
+															centerY="225"
+															direction="CLOCKWISE"
+															endAngle="351"
+															height="350"
+															startAngle="288"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a3CompFgColor]"
+																family="SYNC_TO_DEVICE"
+																size="24">
+																<InlineImage
+																	color="[CONFIGURATION.a3CompFgColor]"
+																	height="28"
+																	resource="empty"
+																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
+																	width="28" />
+																<Template>%s<Parameter expression="&#160;" /></Template>
+															</Font>
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Default>
+											</Condition>
+										</Default>
+									</Condition>
+								</Compare>
+								<Default>
+									<PartDraw
+										name="border"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="298"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="progress"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="298"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_outline"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="298"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#000000"
+												thickness="9" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="298"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_highlight"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 128 : 0" />
+										<Arc
+											centerX="225"
+											centerY="225"
+											endAngle="351"
+											height="350"
+											startAngle="298"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 291 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+										</Expressions>
+										<Compare expression="gpUnder1k">
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="225"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="351"
+													height="350"
+													startAngle="288"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
+											<Condition>
+												<Expressions>
+													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+												</Expressions>
+												<Compare expression="gpUnder1m">
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="START"
+															centerX="225"
+															centerY="225"
+															direction="CLOCKWISE"
+															endAngle="351"
+															height="350"
+															startAngle="288"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Compare>
+												<Default>
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="START"
+															centerX="225"
+															centerY="225"
+															direction="CLOCKWISE"
+															endAngle="351"
+															height="350"
+															startAngle="288"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Default>
+											</Condition>
+										</Default>
+									</Condition>
+								</Default>
+							</Condition>
+						</Group>
+					</Compare>
+					<Default>
+						<PartDraw
+							alpha="0"
+							height="1"
+							width="1"
+							x="0"
+							y="0">
+							<Rectangle
+								height="1"
+								width="1"
+								x="0"
+								y="0">
+								<Fill color="#00000000" />
+							</Rectangle>
+						</PartDraw>
+					</Default>
+				</Condition>
+			</Complication>
 			<Complication type="SHORT_TEXT">
 				<Condition>
 					<Expressions>
@@ -4545,7 +5079,7 @@
 			height="225"
 			isCustomizable="TRUE"
 			slotId="1"
-			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
+			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS GOAL_PROGRESS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
 			width="225"
 			x="225"
 			y="0">
@@ -5414,6 +5948,540 @@
 					</Default>
 				</Condition>
 			</Complication>
+			<Complication type="GOAL_PROGRESS">
+				<Condition>
+					<Expressions>
+						<Expression name="modeOn">
+							[CONFIGURATION.z1_mode] != 0
+						</Expression>
+					</Expressions>
+					<Compare expression="modeOn">
+						<Group
+							name="z1_gate"
+							alpha="255"
+							height="225"
+							width="225"
+							x="0"
+							y="0">
+							<Condition>
+								<Expressions>
+									<Expression name="hasIcon">
+										[COMPLICATION.MONOCHROMATIC_IMAGE] != null
+									</Expression>
+								</Expressions>
+								<Compare expression="hasIcon">
+									<PartDraw
+										name="border"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="19"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="progress"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="19"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_outline"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="19"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#000000"
+												thickness="9" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="19"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_highlight"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 128 : 0" />
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="19"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 26 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+										</Expressions>
+										<Compare expression="gpUnder1k">
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="0"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="72"
+													height="350"
+													startAngle="9"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a3CompFgColor]"
+														family="SYNC_TO_DEVICE"
+														size="24">
+														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+														<Template>%s<Parameter expression="&#160;" /></Template>
+													</Font>
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
+											<Condition>
+												<Expressions>
+													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+												</Expressions>
+												<Compare expression="gpUnder1m">
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="START"
+															centerX="0"
+															centerY="225"
+															direction="CLOCKWISE"
+															endAngle="72"
+															height="350"
+															startAngle="9"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a3CompFgColor]"
+																family="SYNC_TO_DEVICE"
+																size="24">
+																<InlineImage
+																	color="[CONFIGURATION.a3CompFgColor]"
+																	height="28"
+																	resource="empty"
+																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
+																	width="28" />
+																<Template>%s<Parameter expression="&#160;" /></Template>
+															</Font>
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Compare>
+												<Default>
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="START"
+															centerX="0"
+															centerY="225"
+															direction="CLOCKWISE"
+															endAngle="72"
+															height="350"
+															startAngle="9"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a3CompFgColor]"
+																family="SYNC_TO_DEVICE"
+																size="24">
+																<InlineImage
+																	color="[CONFIGURATION.a3CompFgColor]"
+																	height="28"
+																	resource="empty"
+																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
+																	width="28" />
+																<Template>%s<Parameter expression="&#160;" /></Template>
+															</Font>
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Default>
+											</Condition>
+										</Default>
+									</Condition>
+								</Compare>
+								<Default>
+									<PartDraw
+										name="border"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="19"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="progress"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="19"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_outline"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="19"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#000000"
+												thickness="9" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="19"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_highlight"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 128 : 0" />
+										<Arc
+											centerX="0"
+											centerY="225"
+											endAngle="72"
+											height="350"
+											startAngle="19"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 12 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+										</Expressions>
+										<Compare expression="gpUnder1k">
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="0"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="72"
+													height="350"
+													startAngle="9"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
+											<Condition>
+												<Expressions>
+													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+												</Expressions>
+												<Compare expression="gpUnder1m">
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="START"
+															centerX="0"
+															centerY="225"
+															direction="CLOCKWISE"
+															endAngle="72"
+															height="350"
+															startAngle="9"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Compare>
+												<Default>
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="START"
+															centerX="0"
+															centerY="225"
+															direction="CLOCKWISE"
+															endAngle="72"
+															height="350"
+															startAngle="9"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Default>
+											</Condition>
+										</Default>
+									</Condition>
+								</Default>
+							</Condition>
+						</Group>
+					</Compare>
+					<Default>
+						<PartDraw
+							alpha="0"
+							height="1"
+							width="1"
+							x="0"
+							y="0">
+							<Rectangle
+								height="1"
+								width="1"
+								x="0"
+								y="0">
+								<Fill color="#00000000" />
+							</Rectangle>
+						</PartDraw>
+					</Default>
+				</Condition>
+			</Complication>
 			<Complication type="SHORT_TEXT">
 				<Condition>
 					<Expressions>
@@ -5856,7 +6924,7 @@
 			height="225"
 			isCustomizable="TRUE"
 			slotId="2"
-			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
+			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS GOAL_PROGRESS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
 			width="225"
 			x="0"
 			y="225">
@@ -6725,6 +7793,540 @@
 					</Default>
 				</Condition>
 			</Complication>
+			<Complication type="GOAL_PROGRESS">
+				<Condition>
+					<Expressions>
+						<Expression name="modeOn">
+							[CONFIGURATION.z1_mode] != 0
+						</Expression>
+					</Expressions>
+					<Compare expression="modeOn">
+						<Group
+							name="z1_gate"
+							alpha="255"
+							height="225"
+							width="225"
+							x="0"
+							y="0">
+							<Condition>
+								<Expressions>
+									<Expression name="hasIcon">
+										[COMPLICATION.MONOCHROMATIC_IMAGE] != null
+									</Expression>
+								</Expressions>
+								<Compare expression="hasIcon">
+									<PartDraw
+										name="border"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="progress"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_outline"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#000000"
+												thickness="9" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_highlight"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 128 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 206 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+										</Expressions>
+										<Compare expression="gpUnder1k">
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="END"
+													centerX="225"
+													centerY="0"
+													direction="COUNTER_CLOCKWISE"
+													endAngle="189"
+													height="350"
+													startAngle="252"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+													</Font>
+													<Font
+														color="[CONFIGURATION.a3CompFgColor]"
+														family="SYNC_TO_DEVICE"
+														size="24">
+														<Template>%s<Parameter expression="&#160;" /></Template>
+														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
+											<Condition>
+												<Expressions>
+													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+												</Expressions>
+												<Compare expression="gpUnder1m">
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="225"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="189"
+															height="350"
+															startAngle="252"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+															</Font>
+															<Font
+																color="[CONFIGURATION.a3CompFgColor]"
+																family="SYNC_TO_DEVICE"
+																size="24">
+																<Template>%s<Parameter expression="&#160;" /></Template>
+																<InlineImage
+																	color="[CONFIGURATION.a3CompFgColor]"
+																	height="28"
+																	resource="empty"
+																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
+																	width="28" />
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Compare>
+												<Default>
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="225"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="189"
+															height="350"
+															startAngle="252"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+															</Font>
+															<Font
+																color="[CONFIGURATION.a3CompFgColor]"
+																family="SYNC_TO_DEVICE"
+																size="24">
+																<Template>%s<Parameter expression="&#160;" /></Template>
+																<InlineImage
+																	color="[CONFIGURATION.a3CompFgColor]"
+																	height="28"
+																	resource="empty"
+																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
+																	width="28" />
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Default>
+											</Condition>
+										</Default>
+									</Condition>
+								</Compare>
+								<Default>
+									<PartDraw
+										name="border"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="progress"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_outline"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#000000"
+												thickness="9" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_highlight"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 128 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 192 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+										</Expressions>
+										<Compare expression="gpUnder1k">
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="END"
+													centerX="225"
+													centerY="0"
+													direction="COUNTER_CLOCKWISE"
+													endAngle="189"
+													height="350"
+													startAngle="252"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
+											<Condition>
+												<Expressions>
+													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+												</Expressions>
+												<Compare expression="gpUnder1m">
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="225"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="189"
+															height="350"
+															startAngle="252"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Compare>
+												<Default>
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="225"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="189"
+															height="350"
+															startAngle="252"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Default>
+											</Condition>
+										</Default>
+									</Condition>
+								</Default>
+							</Condition>
+						</Group>
+					</Compare>
+					<Default>
+						<PartDraw
+							alpha="0"
+							height="1"
+							width="1"
+							x="0"
+							y="0">
+							<Rectangle
+								height="1"
+								width="1"
+								x="0"
+								y="0">
+								<Fill color="#00000000" />
+							</Rectangle>
+						</PartDraw>
+					</Default>
+				</Condition>
+			</Complication>
 			<Complication type="SHORT_TEXT">
 				<Condition>
 					<Expressions>
@@ -7167,7 +8769,7 @@
 			height="225"
 			isCustomizable="TRUE"
 			slotId="3"
-			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
+			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS GOAL_PROGRESS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
 			width="225"
 			x="225"
 			y="225">
@@ -8012,6 +9614,540 @@
 												</Font>
 											</TextCircular>
 										</PartText>
+										</Default>
+									</Condition>
+								</Default>
+							</Condition>
+						</Group>
+					</Compare>
+					<Default>
+						<PartDraw
+							alpha="0"
+							height="1"
+							width="1"
+							x="0"
+							y="0">
+							<Rectangle
+								height="1"
+								width="1"
+								x="0"
+								y="0">
+								<Fill color="#00000000" />
+							</Rectangle>
+						</PartDraw>
+					</Default>
+				</Condition>
+			</Complication>
+			<Complication type="GOAL_PROGRESS">
+				<Condition>
+					<Expressions>
+						<Expression name="modeOn">
+							[CONFIGURATION.z1_mode] != 0
+						</Expression>
+					</Expressions>
+					<Compare expression="modeOn">
+						<Group
+							name="z1_gate"
+							alpha="255"
+							height="225"
+							width="225"
+							x="0"
+							y="0">
+							<Condition>
+								<Expressions>
+									<Expression name="hasIcon">
+										[COMPLICATION.MONOCHROMATIC_IMAGE] != null
+									</Expression>
+								</Expressions>
+								<Compare expression="hasIcon">
+									<PartDraw
+										name="border"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="118"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="progress"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="118"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_outline"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="118"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#000000"
+												thickness="9" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="118"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_highlight"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 128 : 0" />
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="118"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 125 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (46 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+										</Expressions>
+										<Compare expression="gpUnder1k">
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="END"
+													centerX="0"
+													centerY="0"
+													direction="COUNTER_CLOCKWISE"
+													endAngle="108"
+													height="350"
+													startAngle="171"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+													</Font>
+													<Font
+														color="[CONFIGURATION.a3CompFgColor]"
+														family="SYNC_TO_DEVICE"
+														size="24">
+														<Template>%s<Parameter expression="&#160;" /></Template>
+														<InlineImage
+															color="[CONFIGURATION.a3CompFgColor]"
+															height="28"
+															resource="empty"
+															source="COMPLICATION.MONOCHROMATIC_IMAGE"
+															width="28" />
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
+											<Condition>
+												<Expressions>
+													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+												</Expressions>
+												<Compare expression="gpUnder1m">
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="0"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="108"
+															height="350"
+															startAngle="171"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+															</Font>
+															<Font
+																color="[CONFIGURATION.a3CompFgColor]"
+																family="SYNC_TO_DEVICE"
+																size="24">
+																<Template>%s<Parameter expression="&#160;" /></Template>
+																<InlineImage
+																	color="[CONFIGURATION.a3CompFgColor]"
+																	height="28"
+																	resource="empty"
+																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
+																	width="28" />
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Compare>
+												<Default>
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="0"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="108"
+															height="350"
+															startAngle="171"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+															</Font>
+															<Font
+																color="[CONFIGURATION.a3CompFgColor]"
+																family="SYNC_TO_DEVICE"
+																size="24">
+																<Template>%s<Parameter expression="&#160;" /></Template>
+																<InlineImage
+																	color="[CONFIGURATION.a3CompFgColor]"
+																	height="28"
+																	resource="empty"
+																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
+																	width="28" />
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Default>
+											</Condition>
+										</Default>
+									</Condition>
+								</Compare>
+								<Default>
+									<PartDraw
+										name="border"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="118"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="progress"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="118"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_outline"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="118"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#000000"
+												thickness="9" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="118"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_highlight"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 128 : 0" />
+										<Arc
+											centerX="0"
+											centerY="0"
+											endAngle="171"
+											height="350"
+											startAngle="118"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 : 111 + ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (60 - ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000 ? textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])) : ([COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000 ? textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1 : textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<Condition>
+										<Expressions>
+											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+										</Expressions>
+										<Compare expression="gpUnder1k">
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="END"
+													centerX="0"
+													centerY="0"
+													direction="COUNTER_CLOCKWISE"
+													endAngle="108"
+													height="350"
+													startAngle="171"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
+											<Condition>
+												<Expressions>
+													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+												</Expressions>
+												<Compare expression="gpUnder1m">
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="0"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="108"
+															height="350"
+															startAngle="171"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Compare>
+												<Default>
+													<PartText
+														alpha="255"
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<TextCircular
+															align="END"
+															centerX="0"
+															centerY="0"
+															direction="COUNTER_CLOCKWISE"
+															endAngle="108"
+															height="350"
+															startAngle="171"
+															width="350">
+															<Font
+																color="[CONFIGURATION.a0PrimaryColor]"
+																family="roboto_mono_sb"
+																size="24">
+																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+															</Font>
+														</TextCircular>
+													</PartText>
+												</Default>
+											</Condition>
 										</Default>
 									</Condition>
 								</Default>
