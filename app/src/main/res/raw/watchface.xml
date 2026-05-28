@@ -4968,7 +4968,7 @@
 			height="225"
 			isCustomizable="TRUE"
 			slotId="2"
-			supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
+			supportedTypes="RANGED_VALUE GOAL_PROGRESS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
 			width="225"
 			x="0"
 			y="225">
@@ -5322,6 +5322,358 @@
 											</PartDraw>
 										</Default>
 									</Condition>
+									<Group
+										name="color_mask"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<PartText
+											alpha="255"
+											height="225"
+											width="225"
+											x="0"
+											y="0">
+											<TextCircular
+												align="END"
+												centerX="225"
+												centerY="0"
+												direction="COUNTER_CLOCKWISE"
+												endAngle="189"
+												height="350"
+												startAngle="252"
+												width="350">
+												<Font
+													color="[CONFIGURATION.a0PrimaryColor]"
+													family="roboto_mono_sb"
+													size="24">
+													<Upper>
+														<Template>
+															%s
+															<Parameter expression="[COMPLICATION.TEXT]" />
+														</Template>
+													</Upper>
+												</Font>
+												<Font
+													color="[CONFIGURATION.a3CompFgColor]"
+													family="SYNC_TO_DEVICE"
+													size="24">
+													<Template>
+														%s
+														<Parameter expression="&#160;" />
+													</Template>
+													<InlineImage
+														color="[CONFIGURATION.a3CompFgColor]"
+														height="28"
+														resource="empty"
+														source="COMPLICATION.MONOCHROMATIC_IMAGE"
+														width="28" />
+												</Font>
+											</TextCircular>
+										</PartText>
+									</Group>
+								</Default>
+							</Condition>
+						</Group>
+					</Compare>
+					<Default>
+						<PartDraw
+							alpha="0"
+							height="1"
+							width="1"
+							x="0"
+							y="0">
+							<Rectangle
+								height="1"
+								width="1"
+								x="0"
+								y="0">
+								<Fill color="#00000000" />
+							</Rectangle>
+						</PartDraw>
+					</Default>
+				</Condition>
+			</Complication>
+			<Complication type="GOAL_PROGRESS">
+				<Condition>
+					<Expressions>
+						<Expression name="modeOn">
+							[CONFIGURATION.z1_mode] != 0
+						</Expression>
+					</Expressions>
+					<Compare expression="modeOn">
+						<Group
+							name="z1_gate"
+							alpha="255"
+							height="225"
+							width="225"
+							x="0"
+							y="0">
+							<Condition>
+								<Expressions>
+									<Expression name="noIcon">
+										[COMPLICATION.MONOCHROMATIC_IMAGE] == null ||
+										textLength([COMPLICATION.TEXT]) > 6
+									</Expression>
+								</Expressions>
+								<Compare expression="noIcon">
+									<PartDraw
+										name="border"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="progress"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT]) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT]) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_highlight"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 128 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT]) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<Group
+										name="color_mask"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<PartText
+											alpha="255"
+											height="225"
+											width="225"
+											x="0"
+											y="0">
+											<TextCircular
+												align="END"
+												centerX="225"
+												centerY="0"
+												direction="COUNTER_CLOCKWISE"
+												endAngle="189"
+												height="350"
+												startAngle="252"
+												width="350">
+												<Font
+													color="[CONFIGURATION.a0PrimaryColor]"
+													family="roboto_mono_sb"
+													size="24">
+													<Upper>
+														<Template>
+															%s
+															<Parameter expression="[COMPLICATION.TEXT]" />
+														</Template>
+													</Upper>
+												</Font>
+											</TextCircular>
+										</PartText>
+									</Group>
+								</Compare>
+								<Default>
+									<PartDraw
+										name="border"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Stroke
+												cap="ROUND"
+												color="#33ffffff"
+												thickness="4" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="progress"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT]) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap"
+										alpha="255"
+										height="225"
+										tintColor="[CONFIGURATION.a3CompFgColor]"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 255 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT]) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
+									<PartDraw
+										name="overlap_highlight"
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<Transform
+											target="alpha"
+											value="[COMPLICATION.GOAL_PROGRESS_VALUE] > [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] ? 128 : 0" />
+										<Arc
+											centerX="225"
+											centerY="0"
+											endAngle="252"
+											height="350"
+											startAngle="199"
+											width="350">
+											<Transform
+												target="startAngle"
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+											<Transform
+												target="endAngle"
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT]) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)" />
+											<Stroke
+												cap="ROUND"
+												color="#ffffff"
+												thickness="5" />
+										</Arc>
+									</PartDraw>
 									<Group
 										name="color_mask"
 										height="225"
