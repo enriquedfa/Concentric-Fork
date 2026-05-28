@@ -3236,7 +3236,7 @@
 			height="225"
 			isCustomizable="TRUE"
 			slotId="0"
-			supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
+			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
 			width="225"
 			x="0"
 			y="0">
@@ -3406,9 +3406,11 @@
 													<Transform
 														target="endAngle"
 														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-													<Stroke
+													<WeightedStroke
 														cap="ROUND"
-														color="#ffffff"
+														colors="#66ffffff #ffffffff"
+														interpolate="true"
+														weights="1"
 														thickness="5" />
 												</Arc>
 											</PartDraw>
@@ -3578,9 +3580,11 @@
 													<Transform
 														target="endAngle"
 														value="304 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-													<Stroke
+													<WeightedStroke
 														cap="ROUND"
-														color="#ffffff"
+														colors="#66ffffff #ffffffff"
+														interpolate="true"
+														weights="1"
 														thickness="5" />
 												</Arc>
 											</PartDraw>
@@ -3654,6 +3658,97 @@
 								y="0">
 								<Fill color="#00000000" />
 							</Rectangle>
+						</PartDraw>
+					</Default>
+				</Condition>
+			</Complication>
+			<Complication type="WEIGHTED_ELEMENTS">
+				<Condition>
+					<Expressions>
+						<Expression name="modeOn">
+							[CONFIGURATION.z1_mode] != 0
+						</Expression>
+					</Expressions>
+					<Compare expression="modeOn">
+						<Group
+							name="z1_gate"
+							alpha="255"
+							height="225"
+							width="225"
+							x="0"
+							y="0">
+							<PartDraw
+								name="placeholder"
+								alpha="255"
+								height="225"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
+								width="225"
+								x="0"
+								y="0">
+								<Transform
+									target="alpha"
+									value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+								<Arc
+									centerX="225"
+									centerY="225"
+									endAngle="351"
+									height="350"
+									startAngle="288"
+									width="350">
+									<Stroke
+										cap="ROUND"
+										color="#33ffffff"
+										thickness="4" />
+								</Arc>
+							</PartDraw>
+							<PartDraw
+								name="segments"
+								alpha="255"
+								height="225"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
+								width="225"
+								x="0"
+								y="0">
+								<Arc
+									centerX="225"
+									centerY="225"
+									endAngle="351"
+									height="350"
+									startAngle="288"
+									width="350">
+									<WeightedStroke
+										cap="ROUND"
+										colors="#66ffffff #ffffffff"
+										interpolate="true"
+										weights="1"
+										thickness="4" />
+								</Arc>
+							</PartDraw>
+						</Group>
+					</Compare>
+					<Default>
+						<PartDraw
+							name="segments_aod"
+							alpha="255"
+							height="225"
+							tintColor="[CONFIGURATION.a2CompBaseColor]"
+							width="225"
+							x="0"
+							y="0">
+							<Arc
+								centerX="225"
+								centerY="225"
+								endAngle="351"
+								height="350"
+								startAngle="288"
+								width="350">
+								<WeightedStroke
+									cap="ROUND"
+									colors="#66ffffff #ffffffff"
+									interpolate="true"
+									weights="1"
+									thickness="4" />
+							</Arc>
 						</PartDraw>
 					</Default>
 				</Condition>
@@ -4100,7 +4195,7 @@
 			height="225"
 			isCustomizable="TRUE"
 			slotId="1"
-			supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
+			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
 			width="225"
 			x="225"
 			y="0">
@@ -4272,9 +4367,11 @@
 													<Transform
 														target="endAngle"
 														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-													<Stroke
+													<WeightedStroke
 														cap="ROUND"
-														color="#ffffff"
+														colors="#66ffffff #ffffffff"
+														interpolate="true"
+														weights="1"
 														thickness="5" />
 												</Arc>
 											</PartDraw>
@@ -4446,9 +4543,11 @@
 													<Transform
 														target="endAngle"
 														value="25 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-													<Stroke
+													<WeightedStroke
 														cap="ROUND"
-														color="#ffffff"
+														colors="#66ffffff #ffffffff"
+														interpolate="true"
+														weights="1"
 														thickness="5" />
 												</Arc>
 											</PartDraw>
@@ -4522,6 +4621,97 @@
 								y="0">
 								<Fill color="#00000000" />
 							</Rectangle>
+						</PartDraw>
+					</Default>
+				</Condition>
+			</Complication>
+			<Complication type="WEIGHTED_ELEMENTS">
+				<Condition>
+					<Expressions>
+						<Expression name="modeOn">
+							[CONFIGURATION.z1_mode] != 0
+						</Expression>
+					</Expressions>
+					<Compare expression="modeOn">
+						<Group
+							name="z1_gate"
+							alpha="255"
+							height="225"
+							width="225"
+							x="0"
+							y="0">
+							<PartDraw
+								name="placeholder"
+								alpha="255"
+								height="225"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
+								width="225"
+								x="0"
+								y="0">
+								<Transform
+									target="alpha"
+									value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+								<Arc
+									centerX="0"
+									centerY="225"
+									endAngle="72"
+									height="350"
+									startAngle="9"
+									width="350">
+									<Stroke
+										cap="ROUND"
+										color="#33ffffff"
+										thickness="4" />
+								</Arc>
+							</PartDraw>
+							<PartDraw
+								name="segments"
+								alpha="255"
+								height="225"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
+								width="225"
+								x="0"
+								y="0">
+								<Arc
+									centerX="0"
+									centerY="225"
+									endAngle="72"
+									height="350"
+									startAngle="9"
+									width="350">
+									<WeightedStroke
+										cap="ROUND"
+										colors="#66ffffff #ffffffff"
+										interpolate="true"
+										weights="1"
+										thickness="4" />
+								</Arc>
+							</PartDraw>
+						</Group>
+					</Compare>
+					<Default>
+						<PartDraw
+							name="segments_aod"
+							alpha="255"
+							height="225"
+							tintColor="[CONFIGURATION.a2CompBaseColor]"
+							width="225"
+							x="0"
+							y="0">
+							<Arc
+								centerX="0"
+								centerY="225"
+								endAngle="72"
+								height="350"
+								startAngle="9"
+								width="350">
+								<WeightedStroke
+									cap="ROUND"
+									colors="#66ffffff #ffffffff"
+									interpolate="true"
+									weights="1"
+									thickness="4" />
+							</Arc>
 						</PartDraw>
 					</Default>
 				</Condition>
@@ -4968,7 +5158,7 @@
 			height="225"
 			isCustomizable="TRUE"
 			slotId="2"
-			supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
+			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
 			width="225"
 			x="0"
 			y="225">
@@ -5140,9 +5330,11 @@
 													<Transform
 														target="endAngle"
 														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-													<Stroke
+													<WeightedStroke
 														cap="ROUND"
-														color="#ffffff"
+														colors="#66ffffff #ffffffff"
+														interpolate="true"
+														weights="1"
 														thickness="5" />
 												</Arc>
 											</PartDraw>
@@ -5314,9 +5506,11 @@
 													<Transform
 														target="endAngle"
 														value="205 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-													<Stroke
+													<WeightedStroke
 														cap="ROUND"
-														color="#ffffff"
+														colors="#66ffffff #ffffffff"
+														interpolate="true"
+														weights="1"
 														thickness="5" />
 												</Arc>
 											</PartDraw>
@@ -5390,6 +5584,97 @@
 								y="0">
 								<Fill color="#00000000" />
 							</Rectangle>
+						</PartDraw>
+					</Default>
+				</Condition>
+			</Complication>
+			<Complication type="WEIGHTED_ELEMENTS">
+				<Condition>
+					<Expressions>
+						<Expression name="modeOn">
+							[CONFIGURATION.z1_mode] != 0
+						</Expression>
+					</Expressions>
+					<Compare expression="modeOn">
+						<Group
+							name="z1_gate"
+							alpha="255"
+							height="225"
+							width="225"
+							x="0"
+							y="0">
+							<PartDraw
+								name="placeholder"
+								alpha="255"
+								height="225"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
+								width="225"
+								x="0"
+								y="0">
+								<Transform
+									target="alpha"
+									value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+								<Arc
+									centerX="225"
+									centerY="0"
+									endAngle="252"
+									height="350"
+									startAngle="189"
+									width="350">
+									<Stroke
+										cap="ROUND"
+										color="#33ffffff"
+										thickness="4" />
+								</Arc>
+							</PartDraw>
+							<PartDraw
+								name="segments"
+								alpha="255"
+								height="225"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
+								width="225"
+								x="0"
+								y="0">
+								<Arc
+									centerX="225"
+									centerY="0"
+									endAngle="252"
+									height="350"
+									startAngle="189"
+									width="350">
+									<WeightedStroke
+										cap="ROUND"
+										colors="#66ffffff #ffffffff"
+										interpolate="true"
+										weights="1"
+										thickness="4" />
+								</Arc>
+							</PartDraw>
+						</Group>
+					</Compare>
+					<Default>
+						<PartDraw
+							name="segments_aod"
+							alpha="255"
+							height="225"
+							tintColor="[CONFIGURATION.a2CompBaseColor]"
+							width="225"
+							x="0"
+							y="0">
+							<Arc
+								centerX="225"
+								centerY="0"
+								endAngle="252"
+								height="350"
+								startAngle="189"
+								width="350">
+								<WeightedStroke
+									cap="ROUND"
+									colors="#66ffffff #ffffffff"
+									interpolate="true"
+									weights="1"
+									thickness="4" />
+							</Arc>
 						</PartDraw>
 					</Default>
 				</Condition>
@@ -5836,7 +6121,7 @@
 			height="225"
 			isCustomizable="TRUE"
 			slotId="3"
-			supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
+			supportedTypes="RANGED_VALUE WEIGHTED_ELEMENTS SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY"
 			width="225"
 			x="225"
 			y="225">
@@ -6008,9 +6293,11 @@
 													<Transform
 														target="endAngle"
 														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-													<Stroke
+													<WeightedStroke
 														cap="ROUND"
-														color="#ffffff"
+														colors="#66ffffff #ffffffff"
+														interpolate="true"
+														weights="1"
 														thickness="5" />
 												</Arc>
 											</PartDraw>
@@ -6182,9 +6469,11 @@
 													<Transform
 														target="endAngle"
 														value="124 + textLength([COMPLICATION.TEXT]) * 4.5 + ((([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])) * (47 - textLength([COMPLICATION.TEXT]) * 4.5))" />
-													<Stroke
+													<WeightedStroke
 														cap="ROUND"
-														color="#ffffff"
+														colors="#66ffffff #ffffffff"
+														interpolate="true"
+														weights="1"
 														thickness="5" />
 												</Arc>
 											</PartDraw>
@@ -6258,6 +6547,97 @@
 								y="0">
 								<Fill color="#00000000" />
 							</Rectangle>
+						</PartDraw>
+					</Default>
+				</Condition>
+			</Complication>
+			<Complication type="WEIGHTED_ELEMENTS">
+				<Condition>
+					<Expressions>
+						<Expression name="modeOn">
+							[CONFIGURATION.z1_mode] != 0
+						</Expression>
+					</Expressions>
+					<Compare expression="modeOn">
+						<Group
+							name="z1_gate"
+							alpha="255"
+							height="225"
+							width="225"
+							x="0"
+							y="0">
+							<PartDraw
+								name="placeholder"
+								alpha="255"
+								height="225"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
+								width="225"
+								x="0"
+								y="0">
+								<Transform
+									target="alpha"
+									value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
+								<Arc
+									centerX="0"
+									centerY="0"
+									endAngle="171"
+									height="350"
+									startAngle="108"
+									width="350">
+									<Stroke
+										cap="ROUND"
+										color="#33ffffff"
+										thickness="4" />
+								</Arc>
+							</PartDraw>
+							<PartDraw
+								name="segments"
+								alpha="255"
+								height="225"
+								tintColor="[CONFIGURATION.a2CompBaseColor]"
+								width="225"
+								x="0"
+								y="0">
+								<Arc
+									centerX="0"
+									centerY="0"
+									endAngle="171"
+									height="350"
+									startAngle="108"
+									width="350">
+									<WeightedStroke
+										cap="ROUND"
+										colors="#66ffffff #ffffffff"
+										interpolate="true"
+										weights="1"
+										thickness="4" />
+								</Arc>
+							</PartDraw>
+						</Group>
+					</Compare>
+					<Default>
+						<PartDraw
+							name="segments_aod"
+							alpha="255"
+							height="225"
+							tintColor="[CONFIGURATION.a2CompBaseColor]"
+							width="225"
+							x="0"
+							y="0">
+							<Arc
+								centerX="0"
+								centerY="0"
+								endAngle="171"
+								height="350"
+								startAngle="108"
+								width="350">
+								<WeightedStroke
+									cap="ROUND"
+									colors="#66ffffff #ffffffff"
+									interpolate="true"
+									weights="1"
+									thickness="4" />
+							</Arc>
 						</PartDraw>
 					</Default>
 				</Condition>
