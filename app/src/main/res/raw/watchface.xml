@@ -3389,7 +3389,8 @@
 											<Condition>
 												<Expressions>
 													<Expression name="hasRangedColors">
-														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE] != null
+														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE]
+														!= null
 													</Expression>
 												</Expressions>
 												<Compare expression="hasRangedColors">
@@ -3417,8 +3418,8 @@
 																cap="ROUND"
 																colors="#66ffffff #ffffffff"
 																interpolate="true"
-																weights="1"
-																thickness="5" />
+																thickness="5"
+																weights="1" />
 														</Arc>
 													</PartDraw>
 												</Compare>
@@ -3600,7 +3601,8 @@
 											<Condition>
 												<Expressions>
 													<Expression name="hasRangedColors">
-														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE] != null
+														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE]
+														!= null
 													</Expression>
 												</Expressions>
 												<Compare expression="hasRangedColors">
@@ -3628,8 +3630,8 @@
 																cap="ROUND"
 																colors="#66ffffff #ffffffff"
 																interpolate="true"
-																weights="1"
-																thickness="5" />
+																thickness="5"
+																weights="1" />
 														</Arc>
 													</PartDraw>
 												</Compare>
@@ -3758,46 +3760,17 @@
 									</Expression>
 								</Expressions>
 								<Compare expression="hasIcon">
-								<PartDraw
-									name="placeholder"
-									alpha="255"
-									height="225"
-									tintColor="[CONFIGURATION.a2CompBaseColor]"
-									width="225"
-									x="0"
-									y="0">
-									<Transform
-										target="alpha"
-										value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-									<Arc
-										centerX="225"
-										centerY="225"
-										endAngle="351"
-										height="350"
-										startAngle="288"
-										width="350">
-										<Transform
-											target="startAngle"
-											value="304" />
-										<Stroke
-											cap="ROUND"
-											color="#33ffffff"
-											thickness="4" />
-									</Arc>
-								</PartDraw>
-								<Group
-									name="weighted_segments"
-									height="225"
-									width="225"
-									x="0"
-									y="0">
 									<PartDraw
+										name="placeholder"
 										alpha="255"
 										height="225"
-										renderMode="MASK"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 										<Arc
 											centerX="225"
 											centerY="225"
@@ -3808,83 +3781,25 @@
 											<Transform
 												target="startAngle"
 												value="304" />
-											<WeightedStroke
+											<Stroke
 												cap="ROUND"
-												colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-												discreteGap="3"
-												interpolate="false"
-												weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-												thickness="5" />
+												color="#33ffffff"
+												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										alpha="255"
+									<Group
+										name="weighted_segments"
 										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
-										<Rectangle
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<Fill color="#ffffff" />
-										</Rectangle>
-									</PartDraw>
-								</Group>
-								<PartText
-									alpha="255"
-									height="225"
-									width="225"
-									x="0"
-									y="0">
-									<TextCircular
-										align="START"
-										centerX="225"
-										centerY="225"
-										direction="CLOCKWISE"
-										endAngle="351"
-										height="350"
-										startAngle="288"
-										width="350">
-										<Font
-											color="[CONFIGURATION.a3CompFgColor]"
-											family="SYNC_TO_DEVICE"
-											size="24">
-											<InlineImage
-												color="[CONFIGURATION.a3CompFgColor]"
-												height="28"
-												resource="empty"
-												source="COMPLICATION.MONOCHROMATIC_IMAGE"
-												width="28" />
-											<Template>
-												%s
-												<Parameter expression="&#160;" />
-											</Template>
-										</Font>
-									</TextCircular>
-								</PartText>
-								</Compare>
-								<Default>
-									<Condition>
-										<Expressions>
-											<Expression name="hasText">
-												textLength([COMPLICATION.TEXT]) > 0
-											</Expression>
-										</Expressions>
-										<Compare expression="hasText">
 										<PartDraw
-											name="placeholder"
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a2CompBaseColor]"
+											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
-											<Transform
-												target="alpha"
-												value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 											<Arc
 												centerX="225"
 												centerY="225"
@@ -3894,26 +3809,84 @@
 												width="350">
 												<Transform
 													target="startAngle"
-													value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
-												<Stroke
+													value="304" />
+												<WeightedStroke
 													cap="ROUND"
-													color="#33ffffff"
-													thickness="4" />
+													colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+													discreteGap="3"
+													interpolate="false"
+													thickness="5"
+													weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
 											</Arc>
 										</PartDraw>
-										<Group
-											name="weighted_segments"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
-											<PartDraw
-												alpha="255"
+											<Rectangle
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
+												<Fill color="#ffffff" />
+											</Rectangle>
+										</PartDraw>
+									</Group>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="225"
+											centerY="225"
+											direction="CLOCKWISE"
+											endAngle="351"
+											height="350"
+											startAngle="288"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a3CompFgColor]"
+												family="SYNC_TO_DEVICE"
+												size="24">
+												<InlineImage
+													color="[CONFIGURATION.a3CompFgColor]"
+													height="28"
+													resource="empty"
+													source="COMPLICATION.MONOCHROMATIC_IMAGE"
+													width="28" />
+												<Template>
+													%s
+													<Parameter expression="&#160;" />
+												</Template>
+											</Font>
+										</TextCircular>
+									</PartText>
+								</Compare>
+								<Default>
+									<Condition>
+										<Expressions>
+											<Expression name="hasText">
+												textLength([COMPLICATION.TEXT]) > 0
+											</Expression>
+										</Expressions>
+										<Compare expression="hasText">
+											<PartDraw
+												name="placeholder"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Transform
+													target="alpha"
+													value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 												<Arc
 													centerX="225"
 													centerY="225"
@@ -3924,101 +3897,101 @@
 													<Transform
 														target="startAngle"
 														value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
-													<WeightedStroke
+													<Stroke
 														cap="ROUND"
-														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="3"
-														interpolate="false"
-														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="5" />
+														color="#33ffffff"
+														thickness="4" />
 												</Arc>
 											</PartDraw>
+											<Group
+												name="weighted_segments"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<PartDraw
+													alpha="255"
+													height="225"
+													renderMode="MASK"
+													width="225"
+													x="0"
+													y="0">
+													<Arc
+														centerX="225"
+														centerY="225"
+														endAngle="351"
+														height="350"
+														startAngle="288"
+														width="350">
+														<Transform
+															target="startAngle"
+															value="304 + textLength([COMPLICATION.TEXT]) * 4.5" />
+														<WeightedStroke
+															cap="ROUND"
+															colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+															discreteGap="3"
+															interpolate="false"
+															thickness="5"
+															weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
+													</Arc>
+												</PartDraw>
+												<PartDraw
+													alpha="255"
+													height="225"
+													tintColor="[CONFIGURATION.a2CompBaseColor]"
+													width="225"
+													x="0"
+													y="0">
+													<Rectangle
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<Fill color="#ffffff" />
+													</Rectangle>
+												</PartDraw>
+											</Group>
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="225"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="351"
+													height="350"
+													startAngle="288"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
 											<PartDraw
+												name="placeholder"
 												alpha="255"
 												height="225"
 												tintColor="[CONFIGURATION.a2CompBaseColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
-										</Group>
-										<PartText
-											alpha="255"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<TextCircular
-												align="START"
-												centerX="225"
-												centerY="225"
-												direction="CLOCKWISE"
-												endAngle="351"
-												height="350"
-												startAngle="288"
-												width="350">
-												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
-													family="roboto_mono_sb"
-													size="24">
-													<Upper>
-														<Template>
-															%s
-															<Parameter expression="[COMPLICATION.TEXT]" />
-														</Template>
-													</Upper>
-												</Font>
-											</TextCircular>
-										</PartText>
-										</Compare>
-										<Default>
-										<PartDraw
-											name="placeholder"
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a2CompBaseColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Transform
-												target="alpha"
-												value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-											<Arc
-												centerX="225"
-												centerY="225"
-												endAngle="351"
-												height="350"
-												startAngle="288"
-												width="350">
 												<Transform
-													target="startAngle"
-													value="304 + textLength([COMPLICATION.TITLE]) * 4.5" />
-												<Stroke
-													cap="ROUND"
-													color="#33ffffff"
-													thickness="4" />
-											</Arc>
-										</PartDraw>
-										<Group
-											name="weighted_segments"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<PartDraw
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
+													target="alpha"
+													value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 												<Arc
 													centerX="225"
 													centerY="225"
@@ -4029,59 +4002,88 @@
 													<Transform
 														target="startAngle"
 														value="304 + textLength([COMPLICATION.TITLE]) * 4.5" />
-													<WeightedStroke
+													<Stroke
 														cap="ROUND"
-														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="3"
-														interpolate="false"
-														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="5" />
+														color="#33ffffff"
+														thickness="4" />
 												</Arc>
 											</PartDraw>
-											<PartDraw
-												alpha="255"
+											<Group
+												name="weighted_segments"
 												height="225"
-												tintColor="[CONFIGURATION.a2CompBaseColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Rectangle
+												<PartDraw
+													alpha="255"
 													height="225"
+													renderMode="MASK"
 													width="225"
 													x="0"
 													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
-										</Group>
-										<PartText
-											alpha="255"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<TextCircular
-												align="START"
-												centerX="225"
-												centerY="225"
-												direction="CLOCKWISE"
-												endAngle="351"
-												height="350"
-												startAngle="288"
-												width="350">
-												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
-													family="roboto_mono_sb"
-													size="24">
-													<Upper>
-														<Template>
-															%s
-															<Parameter expression="[COMPLICATION.TITLE]" />
-														</Template>
-													</Upper>
-												</Font>
-											</TextCircular>
-										</PartText>
+													<Arc
+														centerX="225"
+														centerY="225"
+														endAngle="351"
+														height="350"
+														startAngle="288"
+														width="350">
+														<Transform
+															target="startAngle"
+															value="304 + textLength([COMPLICATION.TITLE]) * 4.5" />
+														<WeightedStroke
+															cap="ROUND"
+															colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+															discreteGap="3"
+															interpolate="false"
+															thickness="5"
+															weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
+													</Arc>
+												</PartDraw>
+												<PartDraw
+													alpha="255"
+													height="225"
+													tintColor="[CONFIGURATION.a2CompBaseColor]"
+													width="225"
+													x="0"
+													y="0">
+													<Rectangle
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<Fill color="#ffffff" />
+													</Rectangle>
+												</PartDraw>
+											</Group>
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="225"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="351"
+													height="350"
+													startAngle="288"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
+																<Parameter expression="[COMPLICATION.TITLE]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
 										</Default>
 									</Condition>
 								</Default>
@@ -4269,7 +4271,9 @@
 									</PartDraw>
 									<Condition>
 										<Expressions>
-											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+											<Expression name="gpUnder1k">
+												[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000
+											</Expression>
 										</Expressions>
 										<Compare expression="gpUnder1k">
 											<PartText
@@ -4297,13 +4301,17 @@
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
-														<Template>%s<Parameter expression="&#160;" /></Template>
+														<Template>%s
+															<Parameter expression="&#160;" />
+														</Template>
 													</Font>
 													<Font
 														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
-														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+														<Template>%s
+															<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" />
+														</Template>
 													</Font>
 												</TextCircular>
 											</PartText>
@@ -4311,7 +4319,10 @@
 										<Default>
 											<Condition>
 												<Expressions>
-													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+													<Expression name="gpUnder1m">
+														[COMPLICATION.GOAL_PROGRESS_VALUE] &lt;
+														1000000
+													</Expression>
 												</Expressions>
 												<Compare expression="gpUnder1m">
 													<PartText
@@ -4339,13 +4350,17 @@
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
-																<Template>%s<Parameter expression="&#160;" /></Template>
+																<Template>%s
+																	<Parameter expression="&#160;" />
+																</Template>
 															</Font>
 															<Font
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+																<Template>%sk
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
@@ -4376,13 +4391,17 @@
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
-																<Template>%s<Parameter expression="&#160;" /></Template>
+																<Template>%s
+																	<Parameter expression="&#160;" />
+																</Template>
 															</Font>
 															<Font
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+																<Template>%sM
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
@@ -4533,7 +4552,9 @@
 									</PartDraw>
 									<Condition>
 										<Expressions>
-											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+											<Expression name="gpUnder1k">
+												[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000
+											</Expression>
 										</Expressions>
 										<Compare expression="gpUnder1k">
 											<PartText
@@ -4555,7 +4576,9 @@
 														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
-														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+														<Template>%s
+															<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" />
+														</Template>
 													</Font>
 												</TextCircular>
 											</PartText>
@@ -4563,7 +4586,10 @@
 										<Default>
 											<Condition>
 												<Expressions>
-													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+													<Expression name="gpUnder1m">
+														[COMPLICATION.GOAL_PROGRESS_VALUE] &lt;
+														1000000
+													</Expression>
 												</Expressions>
 												<Compare expression="gpUnder1m">
 													<PartText
@@ -4585,7 +4611,9 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+																<Template>%sk
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
@@ -4610,7 +4638,9 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+																<Template>%sM
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
@@ -5236,7 +5266,8 @@
 											<Condition>
 												<Expressions>
 													<Expression name="hasRangedColors">
-														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE] != null
+														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE]
+														!= null
 													</Expression>
 												</Expressions>
 												<Compare expression="hasRangedColors">
@@ -5264,8 +5295,8 @@
 																cap="ROUND"
 																colors="#66ffffff #ffffffff"
 																interpolate="true"
-																weights="1"
-																thickness="5" />
+																thickness="5"
+																weights="1" />
 														</Arc>
 													</PartDraw>
 												</Compare>
@@ -5448,7 +5479,8 @@
 											<Condition>
 												<Expressions>
 													<Expression name="hasRangedColors">
-														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE] != null
+														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE]
+														!= null
 													</Expression>
 												</Expressions>
 												<Compare expression="hasRangedColors">
@@ -5476,8 +5508,8 @@
 																cap="ROUND"
 																colors="#66ffffff #ffffffff"
 																interpolate="true"
-																weights="1"
-																thickness="5" />
+																thickness="5"
+																weights="1" />
 														</Arc>
 													</PartDraw>
 												</Compare>
@@ -5606,46 +5638,17 @@
 									</Expression>
 								</Expressions>
 								<Compare expression="hasIcon">
-								<PartDraw
-									name="placeholder"
-									alpha="255"
-									height="225"
-									tintColor="[CONFIGURATION.a2CompBaseColor]"
-									width="225"
-									x="0"
-									y="0">
-									<Transform
-										target="alpha"
-										value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-									<Arc
-										centerX="0"
-										centerY="225"
-										endAngle="72"
-										height="350"
-										startAngle="9"
-										width="350">
-										<Transform
-											target="startAngle"
-											value="25" />
-										<Stroke
-											cap="ROUND"
-											color="#33ffffff"
-											thickness="4" />
-									</Arc>
-								</PartDraw>
-								<Group
-									name="weighted_segments"
-									height="225"
-									width="225"
-									x="0"
-									y="0">
 									<PartDraw
+										name="placeholder"
 										alpha="255"
 										height="225"
-										renderMode="MASK"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 										<Arc
 											centerX="0"
 											centerY="225"
@@ -5656,83 +5659,25 @@
 											<Transform
 												target="startAngle"
 												value="25" />
-											<WeightedStroke
+											<Stroke
 												cap="ROUND"
-												colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-												discreteGap="3"
-												interpolate="false"
-												weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-												thickness="5" />
+												color="#33ffffff"
+												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										alpha="255"
+									<Group
+										name="weighted_segments"
 										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
-										<Rectangle
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<Fill color="#ffffff" />
-										</Rectangle>
-									</PartDraw>
-								</Group>
-								<PartText
-									alpha="255"
-									height="225"
-									width="225"
-									x="0"
-									y="0">
-									<TextCircular
-										align="START"
-										centerX="0"
-										centerY="225"
-										direction="CLOCKWISE"
-										endAngle="72"
-										height="350"
-										startAngle="9"
-										width="350">
-										<Font
-											color="[CONFIGURATION.a3CompFgColor]"
-											family="SYNC_TO_DEVICE"
-											size="24">
-											<InlineImage
-												color="[CONFIGURATION.a3CompFgColor]"
-												height="28"
-												resource="empty"
-												source="COMPLICATION.MONOCHROMATIC_IMAGE"
-												width="28" />
-											<Template>
-												%s
-												<Parameter expression="&#160;" />
-											</Template>
-										</Font>
-									</TextCircular>
-								</PartText>
-								</Compare>
-								<Default>
-									<Condition>
-										<Expressions>
-											<Expression name="hasText">
-												textLength([COMPLICATION.TEXT]) > 0
-											</Expression>
-										</Expressions>
-										<Compare expression="hasText">
 										<PartDraw
-											name="placeholder"
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a2CompBaseColor]"
+											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
-											<Transform
-												target="alpha"
-												value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 											<Arc
 												centerX="0"
 												centerY="225"
@@ -5742,26 +5687,84 @@
 												width="350">
 												<Transform
 													target="startAngle"
-													value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
-												<Stroke
+													value="25" />
+												<WeightedStroke
 													cap="ROUND"
-													color="#33ffffff"
-													thickness="4" />
+													colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+													discreteGap="3"
+													interpolate="false"
+													thickness="5"
+													weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
 											</Arc>
 										</PartDraw>
-										<Group
-											name="weighted_segments"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
-											<PartDraw
-												alpha="255"
+											<Rectangle
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
+												<Fill color="#ffffff" />
+											</Rectangle>
+										</PartDraw>
+									</Group>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="0"
+											centerY="225"
+											direction="CLOCKWISE"
+											endAngle="72"
+											height="350"
+											startAngle="9"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a3CompFgColor]"
+												family="SYNC_TO_DEVICE"
+												size="24">
+												<InlineImage
+													color="[CONFIGURATION.a3CompFgColor]"
+													height="28"
+													resource="empty"
+													source="COMPLICATION.MONOCHROMATIC_IMAGE"
+													width="28" />
+												<Template>
+													%s
+													<Parameter expression="&#160;" />
+												</Template>
+											</Font>
+										</TextCircular>
+									</PartText>
+								</Compare>
+								<Default>
+									<Condition>
+										<Expressions>
+											<Expression name="hasText">
+												textLength([COMPLICATION.TEXT]) > 0
+											</Expression>
+										</Expressions>
+										<Compare expression="hasText">
+											<PartDraw
+												name="placeholder"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Transform
+													target="alpha"
+													value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 												<Arc
 													centerX="0"
 													centerY="225"
@@ -5772,101 +5775,101 @@
 													<Transform
 														target="startAngle"
 														value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
-													<WeightedStroke
+													<Stroke
 														cap="ROUND"
-														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="3"
-														interpolate="false"
-														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="5" />
+														color="#33ffffff"
+														thickness="4" />
 												</Arc>
 											</PartDraw>
+											<Group
+												name="weighted_segments"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<PartDraw
+													alpha="255"
+													height="225"
+													renderMode="MASK"
+													width="225"
+													x="0"
+													y="0">
+													<Arc
+														centerX="0"
+														centerY="225"
+														endAngle="72"
+														height="350"
+														startAngle="9"
+														width="350">
+														<Transform
+															target="startAngle"
+															value="25 + textLength([COMPLICATION.TEXT]) * 4.5" />
+														<WeightedStroke
+															cap="ROUND"
+															colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+															discreteGap="3"
+															interpolate="false"
+															thickness="5"
+															weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
+													</Arc>
+												</PartDraw>
+												<PartDraw
+													alpha="255"
+													height="225"
+													tintColor="[CONFIGURATION.a2CompBaseColor]"
+													width="225"
+													x="0"
+													y="0">
+													<Rectangle
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<Fill color="#ffffff" />
+													</Rectangle>
+												</PartDraw>
+											</Group>
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="0"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="72"
+													height="350"
+													startAngle="9"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
 											<PartDraw
+												name="placeholder"
 												alpha="255"
 												height="225"
 												tintColor="[CONFIGURATION.a2CompBaseColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
-										</Group>
-										<PartText
-											alpha="255"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<TextCircular
-												align="START"
-												centerX="0"
-												centerY="225"
-												direction="CLOCKWISE"
-												endAngle="72"
-												height="350"
-												startAngle="9"
-												width="350">
-												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
-													family="roboto_mono_sb"
-													size="24">
-													<Upper>
-														<Template>
-															%s
-															<Parameter expression="[COMPLICATION.TEXT]" />
-														</Template>
-													</Upper>
-												</Font>
-											</TextCircular>
-										</PartText>
-										</Compare>
-										<Default>
-										<PartDraw
-											name="placeholder"
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a2CompBaseColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Transform
-												target="alpha"
-												value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-											<Arc
-												centerX="0"
-												centerY="225"
-												endAngle="72"
-												height="350"
-												startAngle="9"
-												width="350">
 												<Transform
-													target="startAngle"
-													value="25 + textLength([COMPLICATION.TITLE]) * 4.5" />
-												<Stroke
-													cap="ROUND"
-													color="#33ffffff"
-													thickness="4" />
-											</Arc>
-										</PartDraw>
-										<Group
-											name="weighted_segments"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<PartDraw
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
+													target="alpha"
+													value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 												<Arc
 													centerX="0"
 													centerY="225"
@@ -5877,59 +5880,88 @@
 													<Transform
 														target="startAngle"
 														value="25 + textLength([COMPLICATION.TITLE]) * 4.5" />
-													<WeightedStroke
+													<Stroke
 														cap="ROUND"
-														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="3"
-														interpolate="false"
-														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="5" />
+														color="#33ffffff"
+														thickness="4" />
 												</Arc>
 											</PartDraw>
-											<PartDraw
-												alpha="255"
+											<Group
+												name="weighted_segments"
 												height="225"
-												tintColor="[CONFIGURATION.a2CompBaseColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Rectangle
+												<PartDraw
+													alpha="255"
 													height="225"
+													renderMode="MASK"
 													width="225"
 													x="0"
 													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
-										</Group>
-										<PartText
-											alpha="255"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<TextCircular
-												align="START"
-												centerX="0"
-												centerY="225"
-												direction="CLOCKWISE"
-												endAngle="72"
-												height="350"
-												startAngle="9"
-												width="350">
-												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
-													family="roboto_mono_sb"
-													size="24">
-													<Upper>
-														<Template>
-															%s
-															<Parameter expression="[COMPLICATION.TITLE]" />
-														</Template>
-													</Upper>
-												</Font>
-											</TextCircular>
-										</PartText>
+													<Arc
+														centerX="0"
+														centerY="225"
+														endAngle="72"
+														height="350"
+														startAngle="9"
+														width="350">
+														<Transform
+															target="startAngle"
+															value="25 + textLength([COMPLICATION.TITLE]) * 4.5" />
+														<WeightedStroke
+															cap="ROUND"
+															colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+															discreteGap="3"
+															interpolate="false"
+															thickness="5"
+															weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
+													</Arc>
+												</PartDraw>
+												<PartDraw
+													alpha="255"
+													height="225"
+													tintColor="[CONFIGURATION.a2CompBaseColor]"
+													width="225"
+													x="0"
+													y="0">
+													<Rectangle
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<Fill color="#ffffff" />
+													</Rectangle>
+												</PartDraw>
+											</Group>
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="0"
+													centerY="225"
+													direction="CLOCKWISE"
+													endAngle="72"
+													height="350"
+													startAngle="9"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
+																<Parameter expression="[COMPLICATION.TITLE]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
 										</Default>
 									</Condition>
 								</Default>
@@ -6117,7 +6149,9 @@
 									</PartDraw>
 									<Condition>
 										<Expressions>
-											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+											<Expression name="gpUnder1k">
+												[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000
+											</Expression>
 										</Expressions>
 										<Compare expression="gpUnder1k">
 											<PartText
@@ -6145,13 +6179,17 @@
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
-														<Template>%s<Parameter expression="&#160;" /></Template>
+														<Template>%s
+															<Parameter expression="&#160;" />
+														</Template>
 													</Font>
 													<Font
 														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
-														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+														<Template>%s
+															<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" />
+														</Template>
 													</Font>
 												</TextCircular>
 											</PartText>
@@ -6159,7 +6197,10 @@
 										<Default>
 											<Condition>
 												<Expressions>
-													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+													<Expression name="gpUnder1m">
+														[COMPLICATION.GOAL_PROGRESS_VALUE] &lt;
+														1000000
+													</Expression>
 												</Expressions>
 												<Compare expression="gpUnder1m">
 													<PartText
@@ -6187,13 +6228,17 @@
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
-																<Template>%s<Parameter expression="&#160;" /></Template>
+																<Template>%s
+																	<Parameter expression="&#160;" />
+																</Template>
 															</Font>
 															<Font
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+																<Template>%sk
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
@@ -6224,13 +6269,17 @@
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
-																<Template>%s<Parameter expression="&#160;" /></Template>
+																<Template>%s
+																	<Parameter expression="&#160;" />
+																</Template>
 															</Font>
 															<Font
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+																<Template>%sM
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
@@ -6381,7 +6430,9 @@
 									</PartDraw>
 									<Condition>
 										<Expressions>
-											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+											<Expression name="gpUnder1k">
+												[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000
+											</Expression>
 										</Expressions>
 										<Compare expression="gpUnder1k">
 											<PartText
@@ -6403,7 +6454,9 @@
 														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
-														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+														<Template>%s
+															<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" />
+														</Template>
 													</Font>
 												</TextCircular>
 											</PartText>
@@ -6411,7 +6464,10 @@
 										<Default>
 											<Condition>
 												<Expressions>
-													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+													<Expression name="gpUnder1m">
+														[COMPLICATION.GOAL_PROGRESS_VALUE] &lt;
+														1000000
+													</Expression>
 												</Expressions>
 												<Compare expression="gpUnder1m">
 													<PartText
@@ -6433,7 +6489,9 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+																<Template>%sk
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
@@ -6458,7 +6516,9 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+																<Template>%sM
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
@@ -7084,7 +7144,8 @@
 											<Condition>
 												<Expressions>
 													<Expression name="hasRangedColors">
-														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE] != null
+														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE]
+														!= null
 													</Expression>
 												</Expressions>
 												<Compare expression="hasRangedColors">
@@ -7112,8 +7173,8 @@
 																cap="ROUND"
 																colors="#66ffffff #ffffffff"
 																interpolate="true"
-																weights="1"
-																thickness="5" />
+																thickness="5"
+																weights="1" />
 														</Arc>
 													</PartDraw>
 												</Compare>
@@ -7296,7 +7357,8 @@
 											<Condition>
 												<Expressions>
 													<Expression name="hasRangedColors">
-														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE] != null
+														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE]
+														!= null
 													</Expression>
 												</Expressions>
 												<Compare expression="hasRangedColors">
@@ -7324,8 +7386,8 @@
 																cap="ROUND"
 																colors="#66ffffff #ffffffff"
 																interpolate="true"
-																weights="1"
-																thickness="5" />
+																thickness="5"
+																weights="1" />
 														</Arc>
 													</PartDraw>
 												</Compare>
@@ -7454,46 +7516,17 @@
 									</Expression>
 								</Expressions>
 								<Compare expression="hasIcon">
-								<PartDraw
-									name="placeholder"
-									alpha="255"
-									height="225"
-									tintColor="[CONFIGURATION.a2CompBaseColor]"
-									width="225"
-									x="0"
-									y="0">
-									<Transform
-										target="alpha"
-										value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-									<Arc
-										centerX="225"
-										centerY="0"
-										endAngle="252"
-										height="350"
-										startAngle="189"
-										width="350">
-										<Transform
-											target="startAngle"
-											value="205" />
-										<Stroke
-											cap="ROUND"
-											color="#33ffffff"
-											thickness="4" />
-									</Arc>
-								</PartDraw>
-								<Group
-									name="weighted_segments"
-									height="225"
-									width="225"
-									x="0"
-									y="0">
 									<PartDraw
+										name="placeholder"
 										alpha="255"
 										height="225"
-										renderMode="MASK"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 										<Arc
 											centerX="225"
 											centerY="0"
@@ -7504,83 +7537,25 @@
 											<Transform
 												target="startAngle"
 												value="205" />
-											<WeightedStroke
+											<Stroke
 												cap="ROUND"
-												colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-												discreteGap="3"
-												interpolate="false"
-												weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-												thickness="5" />
+												color="#33ffffff"
+												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										alpha="255"
+									<Group
+										name="weighted_segments"
 										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
-										<Rectangle
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<Fill color="#ffffff" />
-										</Rectangle>
-									</PartDraw>
-								</Group>
-								<PartText
-									alpha="255"
-									height="225"
-									width="225"
-									x="0"
-									y="0">
-									<TextCircular
-										align="START"
-										centerX="225"
-										centerY="0"
-										direction="CLOCKWISE"
-										endAngle="252"
-										height="350"
-										startAngle="189"
-										width="350">
-										<Font
-											color="[CONFIGURATION.a3CompFgColor]"
-											family="SYNC_TO_DEVICE"
-											size="24">
-											<InlineImage
-												color="[CONFIGURATION.a3CompFgColor]"
-												height="28"
-												resource="empty"
-												source="COMPLICATION.MONOCHROMATIC_IMAGE"
-												width="28" />
-											<Template>
-												%s
-												<Parameter expression="&#160;" />
-											</Template>
-										</Font>
-									</TextCircular>
-								</PartText>
-								</Compare>
-								<Default>
-									<Condition>
-										<Expressions>
-											<Expression name="hasText">
-												textLength([COMPLICATION.TEXT]) > 0
-											</Expression>
-										</Expressions>
-										<Compare expression="hasText">
 										<PartDraw
-											name="placeholder"
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a2CompBaseColor]"
+											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
-											<Transform
-												target="alpha"
-												value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 											<Arc
 												centerX="225"
 												centerY="0"
@@ -7590,26 +7565,84 @@
 												width="350">
 												<Transform
 													target="startAngle"
-													value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
-												<Stroke
+													value="205" />
+												<WeightedStroke
 													cap="ROUND"
-													color="#33ffffff"
-													thickness="4" />
+													colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+													discreteGap="3"
+													interpolate="false"
+													thickness="5"
+													weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
 											</Arc>
 										</PartDraw>
-										<Group
-											name="weighted_segments"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
-											<PartDraw
-												alpha="255"
+											<Rectangle
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
+												<Fill color="#ffffff" />
+											</Rectangle>
+										</PartDraw>
+									</Group>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="225"
+											centerY="0"
+											direction="CLOCKWISE"
+											endAngle="252"
+											height="350"
+											startAngle="189"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a3CompFgColor]"
+												family="SYNC_TO_DEVICE"
+												size="24">
+												<InlineImage
+													color="[CONFIGURATION.a3CompFgColor]"
+													height="28"
+													resource="empty"
+													source="COMPLICATION.MONOCHROMATIC_IMAGE"
+													width="28" />
+												<Template>
+													%s
+													<Parameter expression="&#160;" />
+												</Template>
+											</Font>
+										</TextCircular>
+									</PartText>
+								</Compare>
+								<Default>
+									<Condition>
+										<Expressions>
+											<Expression name="hasText">
+												textLength([COMPLICATION.TEXT]) > 0
+											</Expression>
+										</Expressions>
+										<Compare expression="hasText">
+											<PartDraw
+												name="placeholder"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Transform
+													target="alpha"
+													value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 												<Arc
 													centerX="225"
 													centerY="0"
@@ -7620,101 +7653,101 @@
 													<Transform
 														target="startAngle"
 														value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
-													<WeightedStroke
+													<Stroke
 														cap="ROUND"
-														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="3"
-														interpolate="false"
-														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="5" />
+														color="#33ffffff"
+														thickness="4" />
 												</Arc>
 											</PartDraw>
+											<Group
+												name="weighted_segments"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<PartDraw
+													alpha="255"
+													height="225"
+													renderMode="MASK"
+													width="225"
+													x="0"
+													y="0">
+													<Arc
+														centerX="225"
+														centerY="0"
+														endAngle="252"
+														height="350"
+														startAngle="189"
+														width="350">
+														<Transform
+															target="startAngle"
+															value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
+														<WeightedStroke
+															cap="ROUND"
+															colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+															discreteGap="3"
+															interpolate="false"
+															thickness="5"
+															weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
+													</Arc>
+												</PartDraw>
+												<PartDraw
+													alpha="255"
+													height="225"
+													tintColor="[CONFIGURATION.a2CompBaseColor]"
+													width="225"
+													x="0"
+													y="0">
+													<Rectangle
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<Fill color="#ffffff" />
+													</Rectangle>
+												</PartDraw>
+											</Group>
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="225"
+													centerY="0"
+													direction="CLOCKWISE"
+													endAngle="252"
+													height="350"
+													startAngle="189"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
 											<PartDraw
+												name="placeholder"
 												alpha="255"
 												height="225"
 												tintColor="[CONFIGURATION.a2CompBaseColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
-										</Group>
-										<PartText
-											alpha="255"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<TextCircular
-												align="START"
-												centerX="225"
-												centerY="0"
-												direction="CLOCKWISE"
-												endAngle="252"
-												height="350"
-												startAngle="189"
-												width="350">
-												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
-													family="roboto_mono_sb"
-													size="24">
-													<Upper>
-														<Template>
-															%s
-															<Parameter expression="[COMPLICATION.TEXT]" />
-														</Template>
-													</Upper>
-												</Font>
-											</TextCircular>
-										</PartText>
-										</Compare>
-										<Default>
-										<PartDraw
-											name="placeholder"
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a2CompBaseColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Transform
-												target="alpha"
-												value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-											<Arc
-												centerX="225"
-												centerY="0"
-												endAngle="252"
-												height="350"
-												startAngle="189"
-												width="350">
 												<Transform
-													target="startAngle"
-													value="205 + textLength([COMPLICATION.TITLE]) * 4.5" />
-												<Stroke
-													cap="ROUND"
-													color="#33ffffff"
-													thickness="4" />
-											</Arc>
-										</PartDraw>
-										<Group
-											name="weighted_segments"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<PartDraw
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
+													target="alpha"
+													value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 												<Arc
 													centerX="225"
 													centerY="0"
@@ -7725,59 +7758,88 @@
 													<Transform
 														target="startAngle"
 														value="205 + textLength([COMPLICATION.TITLE]) * 4.5" />
-													<WeightedStroke
+													<Stroke
 														cap="ROUND"
-														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="3"
-														interpolate="false"
-														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="5" />
+														color="#33ffffff"
+														thickness="4" />
 												</Arc>
 											</PartDraw>
-											<PartDraw
-												alpha="255"
+											<Group
+												name="weighted_segments"
 												height="225"
-												tintColor="[CONFIGURATION.a2CompBaseColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Rectangle
+												<PartDraw
+													alpha="255"
 													height="225"
+													renderMode="MASK"
 													width="225"
 													x="0"
 													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
-										</Group>
-										<PartText
-											alpha="255"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<TextCircular
-												align="START"
-												centerX="225"
-												centerY="0"
-												direction="CLOCKWISE"
-												endAngle="252"
-												height="350"
-												startAngle="189"
-												width="350">
-												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
-													family="roboto_mono_sb"
-													size="24">
-													<Upper>
-														<Template>
-															%s
-															<Parameter expression="[COMPLICATION.TITLE]" />
-														</Template>
-													</Upper>
-												</Font>
-											</TextCircular>
-										</PartText>
+													<Arc
+														centerX="225"
+														centerY="0"
+														endAngle="252"
+														height="350"
+														startAngle="189"
+														width="350">
+														<Transform
+															target="startAngle"
+															value="205 + textLength([COMPLICATION.TITLE]) * 4.5" />
+														<WeightedStroke
+															cap="ROUND"
+															colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+															discreteGap="3"
+															interpolate="false"
+															thickness="5"
+															weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
+													</Arc>
+												</PartDraw>
+												<PartDraw
+													alpha="255"
+													height="225"
+													tintColor="[CONFIGURATION.a2CompBaseColor]"
+													width="225"
+													x="0"
+													y="0">
+													<Rectangle
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<Fill color="#ffffff" />
+													</Rectangle>
+												</PartDraw>
+											</Group>
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="225"
+													centerY="0"
+													direction="CLOCKWISE"
+													endAngle="252"
+													height="350"
+													startAngle="189"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
+																<Parameter expression="[COMPLICATION.TITLE]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
 										</Default>
 									</Condition>
 								</Default>
@@ -7965,7 +8027,9 @@
 									</PartDraw>
 									<Condition>
 										<Expressions>
-											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+											<Expression name="gpUnder1k">
+												[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000
+											</Expression>
 										</Expressions>
 										<Compare expression="gpUnder1k">
 											<PartText
@@ -7987,13 +8051,17 @@
 														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
-														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+														<Template>%s
+															<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" />
+														</Template>
 													</Font>
 													<Font
 														color="[CONFIGURATION.a3CompFgColor]"
 														family="SYNC_TO_DEVICE"
 														size="24">
-														<Template>%s<Parameter expression="&#160;" /></Template>
+														<Template>%s
+															<Parameter expression="&#160;" />
+														</Template>
 														<InlineImage
 															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
@@ -8007,7 +8075,10 @@
 										<Default>
 											<Condition>
 												<Expressions>
-													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+													<Expression name="gpUnder1m">
+														[COMPLICATION.GOAL_PROGRESS_VALUE] &lt;
+														1000000
+													</Expression>
 												</Expressions>
 												<Compare expression="gpUnder1m">
 													<PartText
@@ -8029,13 +8100,17 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+																<Template>%sk
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" />
+																</Template>
 															</Font>
 															<Font
 																color="[CONFIGURATION.a3CompFgColor]"
 																family="SYNC_TO_DEVICE"
 																size="24">
-																<Template>%s<Parameter expression="&#160;" /></Template>
+																<Template>%s
+																	<Parameter expression="&#160;" />
+																</Template>
 																<InlineImage
 																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
@@ -8066,13 +8141,17 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+																<Template>%sM
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" />
+																</Template>
 															</Font>
 															<Font
 																color="[CONFIGURATION.a3CompFgColor]"
 																family="SYNC_TO_DEVICE"
 																size="24">
-																<Template>%s<Parameter expression="&#160;" /></Template>
+																<Template>%s
+																	<Parameter expression="&#160;" />
+																</Template>
 																<InlineImage
 																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
@@ -8229,7 +8308,9 @@
 									</PartDraw>
 									<Condition>
 										<Expressions>
-											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+											<Expression name="gpUnder1k">
+												[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000
+											</Expression>
 										</Expressions>
 										<Compare expression="gpUnder1k">
 											<PartText
@@ -8251,7 +8332,9 @@
 														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
-														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+														<Template>%s
+															<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" />
+														</Template>
 													</Font>
 												</TextCircular>
 											</PartText>
@@ -8259,7 +8342,10 @@
 										<Default>
 											<Condition>
 												<Expressions>
-													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+													<Expression name="gpUnder1m">
+														[COMPLICATION.GOAL_PROGRESS_VALUE] &lt;
+														1000000
+													</Expression>
 												</Expressions>
 												<Compare expression="gpUnder1m">
 													<PartText
@@ -8281,7 +8367,9 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+																<Template>%sk
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
@@ -8306,7 +8394,9 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+																<Template>%sM
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
@@ -8932,7 +9022,8 @@
 											<Condition>
 												<Expressions>
 													<Expression name="hasRangedColors">
-														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE] != null
+														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE]
+														!= null
 													</Expression>
 												</Expressions>
 												<Compare expression="hasRangedColors">
@@ -8960,8 +9051,8 @@
 																cap="ROUND"
 																colors="#66ffffff #ffffffff"
 																interpolate="true"
-																weights="1"
-																thickness="5" />
+																thickness="5"
+																weights="1" />
 														</Arc>
 													</PartDraw>
 												</Compare>
@@ -9144,7 +9235,8 @@
 											<Condition>
 												<Expressions>
 													<Expression name="hasRangedColors">
-														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE] != null
+														[COMPLICATION.RANGED_VALUE_COLOR_INTERPOLATE]
+														!= null
 													</Expression>
 												</Expressions>
 												<Compare expression="hasRangedColors">
@@ -9172,8 +9264,8 @@
 																cap="ROUND"
 																colors="#66ffffff #ffffffff"
 																interpolate="true"
-																weights="1"
-																thickness="5" />
+																thickness="5"
+																weights="1" />
 														</Arc>
 													</PartDraw>
 												</Compare>
@@ -9302,46 +9394,17 @@
 									</Expression>
 								</Expressions>
 								<Compare expression="hasIcon">
-								<PartDraw
-									name="placeholder"
-									alpha="255"
-									height="225"
-									tintColor="[CONFIGURATION.a2CompBaseColor]"
-									width="225"
-									x="0"
-									y="0">
-									<Transform
-										target="alpha"
-										value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-									<Arc
-										centerX="0"
-										centerY="0"
-										endAngle="171"
-										height="350"
-										startAngle="108"
-										width="350">
-										<Transform
-											target="startAngle"
-											value="124" />
-										<Stroke
-											cap="ROUND"
-											color="#33ffffff"
-											thickness="4" />
-									</Arc>
-								</PartDraw>
-								<Group
-									name="weighted_segments"
-									height="225"
-									width="225"
-									x="0"
-									y="0">
 									<PartDraw
+										name="placeholder"
 										alpha="255"
 										height="225"
-										renderMode="MASK"
+										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
+										<Transform
+											target="alpha"
+											value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 										<Arc
 											centerX="0"
 											centerY="0"
@@ -9352,83 +9415,25 @@
 											<Transform
 												target="startAngle"
 												value="124" />
-											<WeightedStroke
+											<Stroke
 												cap="ROUND"
-												colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-												discreteGap="3"
-												interpolate="false"
-												weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-												thickness="5" />
+												color="#33ffffff"
+												thickness="4" />
 										</Arc>
 									</PartDraw>
-									<PartDraw
-										alpha="255"
+									<Group
+										name="weighted_segments"
 										height="225"
-										tintColor="[CONFIGURATION.a2CompBaseColor]"
 										width="225"
 										x="0"
 										y="0">
-										<Rectangle
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<Fill color="#ffffff" />
-										</Rectangle>
-									</PartDraw>
-								</Group>
-								<PartText
-									alpha="255"
-									height="225"
-									width="225"
-									x="0"
-									y="0">
-									<TextCircular
-										align="START"
-										centerX="0"
-										centerY="0"
-										direction="CLOCKWISE"
-										endAngle="171"
-										height="350"
-										startAngle="108"
-										width="350">
-										<Font
-											color="[CONFIGURATION.a3CompFgColor]"
-											family="SYNC_TO_DEVICE"
-											size="24">
-											<InlineImage
-												color="[CONFIGURATION.a3CompFgColor]"
-												height="28"
-												resource="empty"
-												source="COMPLICATION.MONOCHROMATIC_IMAGE"
-												width="28" />
-											<Template>
-												%s
-												<Parameter expression="&#160;" />
-											</Template>
-										</Font>
-									</TextCircular>
-								</PartText>
-								</Compare>
-								<Default>
-									<Condition>
-										<Expressions>
-											<Expression name="hasText">
-												textLength([COMPLICATION.TEXT]) > 0
-											</Expression>
-										</Expressions>
-										<Compare expression="hasText">
 										<PartDraw
-											name="placeholder"
 											alpha="255"
 											height="225"
-											tintColor="[CONFIGURATION.a2CompBaseColor]"
+											renderMode="MASK"
 											width="225"
 											x="0"
 											y="0">
-											<Transform
-												target="alpha"
-												value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 											<Arc
 												centerX="0"
 												centerY="0"
@@ -9438,26 +9443,84 @@
 												width="350">
 												<Transform
 													target="startAngle"
-													value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
-												<Stroke
+													value="124" />
+												<WeightedStroke
 													cap="ROUND"
-													color="#33ffffff"
-													thickness="4" />
+													colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+													discreteGap="3"
+													interpolate="false"
+													thickness="5"
+													weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
 											</Arc>
 										</PartDraw>
-										<Group
-											name="weighted_segments"
+										<PartDraw
+											alpha="255"
 											height="225"
+											tintColor="[CONFIGURATION.a2CompBaseColor]"
 											width="225"
 											x="0"
 											y="0">
-											<PartDraw
-												alpha="255"
+											<Rectangle
 												height="225"
-												renderMode="MASK"
 												width="225"
 												x="0"
 												y="0">
+												<Fill color="#ffffff" />
+											</Rectangle>
+										</PartDraw>
+									</Group>
+									<PartText
+										alpha="255"
+										height="225"
+										width="225"
+										x="0"
+										y="0">
+										<TextCircular
+											align="START"
+											centerX="0"
+											centerY="0"
+											direction="CLOCKWISE"
+											endAngle="171"
+											height="350"
+											startAngle="108"
+											width="350">
+											<Font
+												color="[CONFIGURATION.a3CompFgColor]"
+												family="SYNC_TO_DEVICE"
+												size="24">
+												<InlineImage
+													color="[CONFIGURATION.a3CompFgColor]"
+													height="28"
+													resource="empty"
+													source="COMPLICATION.MONOCHROMATIC_IMAGE"
+													width="28" />
+												<Template>
+													%s
+													<Parameter expression="&#160;" />
+												</Template>
+											</Font>
+										</TextCircular>
+									</PartText>
+								</Compare>
+								<Default>
+									<Condition>
+										<Expressions>
+											<Expression name="hasText">
+												textLength([COMPLICATION.TEXT]) > 0
+											</Expression>
+										</Expressions>
+										<Compare expression="hasText">
+											<PartDraw
+												name="placeholder"
+												alpha="255"
+												height="225"
+												tintColor="[CONFIGURATION.a2CompBaseColor]"
+												width="225"
+												x="0"
+												y="0">
+												<Transform
+													target="alpha"
+													value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 												<Arc
 													centerX="0"
 													centerY="0"
@@ -9468,101 +9531,101 @@
 													<Transform
 														target="startAngle"
 														value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
-													<WeightedStroke
+													<Stroke
 														cap="ROUND"
-														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="3"
-														interpolate="false"
-														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="5" />
+														color="#33ffffff"
+														thickness="4" />
 												</Arc>
 											</PartDraw>
+											<Group
+												name="weighted_segments"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<PartDraw
+													alpha="255"
+													height="225"
+													renderMode="MASK"
+													width="225"
+													x="0"
+													y="0">
+													<Arc
+														centerX="0"
+														centerY="0"
+														endAngle="171"
+														height="350"
+														startAngle="108"
+														width="350">
+														<Transform
+															target="startAngle"
+															value="124 + textLength([COMPLICATION.TEXT]) * 4.5" />
+														<WeightedStroke
+															cap="ROUND"
+															colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+															discreteGap="3"
+															interpolate="false"
+															thickness="5"
+															weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
+													</Arc>
+												</PartDraw>
+												<PartDraw
+													alpha="255"
+													height="225"
+													tintColor="[CONFIGURATION.a2CompBaseColor]"
+													width="225"
+													x="0"
+													y="0">
+													<Rectangle
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<Fill color="#ffffff" />
+													</Rectangle>
+												</PartDraw>
+											</Group>
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="0"
+													centerY="0"
+													direction="CLOCKWISE"
+													endAngle="171"
+													height="350"
+													startAngle="108"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
+																<Parameter expression="[COMPLICATION.TEXT]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
+										</Compare>
+										<Default>
 											<PartDraw
+												name="placeholder"
 												alpha="255"
 												height="225"
 												tintColor="[CONFIGURATION.a2CompBaseColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Rectangle
-													height="225"
-													width="225"
-													x="0"
-													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
-										</Group>
-										<PartText
-											alpha="255"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<TextCircular
-												align="START"
-												centerX="0"
-												centerY="0"
-												direction="CLOCKWISE"
-												endAngle="171"
-												height="350"
-												startAngle="108"
-												width="350">
-												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
-													family="roboto_mono_sb"
-													size="24">
-													<Upper>
-														<Template>
-															%s
-															<Parameter expression="[COMPLICATION.TEXT]" />
-														</Template>
-													</Upper>
-												</Font>
-											</TextCircular>
-										</PartText>
-										</Compare>
-										<Default>
-										<PartDraw
-											name="placeholder"
-											alpha="255"
-											height="225"
-											tintColor="[CONFIGURATION.a2CompBaseColor]"
-											width="225"
-											x="0"
-											y="0">
-											<Transform
-												target="alpha"
-												value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
-											<Arc
-												centerX="0"
-												centerY="0"
-												endAngle="171"
-												height="350"
-												startAngle="108"
-												width="350">
 												<Transform
-													target="startAngle"
-													value="124 + textLength([COMPLICATION.TITLE]) * 4.5" />
-												<Stroke
-													cap="ROUND"
-													color="#33ffffff"
-													thickness="4" />
-											</Arc>
-										</PartDraw>
-										<Group
-											name="weighted_segments"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<PartDraw
-												alpha="255"
-												height="225"
-												renderMode="MASK"
-												width="225"
-												x="0"
-												y="0">
+													target="alpha"
+													value="[CONFIGURATION.z4_placeholder_bar] ? 255 : 0" />
 												<Arc
 													centerX="0"
 													centerY="0"
@@ -9573,59 +9636,88 @@
 													<Transform
 														target="startAngle"
 														value="124 + textLength([COMPLICATION.TITLE]) * 4.5" />
-													<WeightedStroke
+													<Stroke
 														cap="ROUND"
-														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="3"
-														interpolate="false"
-														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="5" />
+														color="#33ffffff"
+														thickness="4" />
 												</Arc>
 											</PartDraw>
-											<PartDraw
-												alpha="255"
+											<Group
+												name="weighted_segments"
 												height="225"
-												tintColor="[CONFIGURATION.a2CompBaseColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Rectangle
+												<PartDraw
+													alpha="255"
 													height="225"
+													renderMode="MASK"
 													width="225"
 													x="0"
 													y="0">
-													<Fill color="#ffffff" />
-												</Rectangle>
-											</PartDraw>
-										</Group>
-										<PartText
-											alpha="255"
-											height="225"
-											width="225"
-											x="0"
-											y="0">
-											<TextCircular
-												align="START"
-												centerX="0"
-												centerY="0"
-												direction="CLOCKWISE"
-												endAngle="171"
-												height="350"
-												startAngle="108"
-												width="350">
-												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
-													family="roboto_mono_sb"
-													size="24">
-													<Upper>
-														<Template>
-															%s
-															<Parameter expression="[COMPLICATION.TITLE]" />
-														</Template>
-													</Upper>
-												</Font>
-											</TextCircular>
-										</PartText>
+													<Arc
+														centerX="0"
+														centerY="0"
+														endAngle="171"
+														height="350"
+														startAngle="108"
+														width="350">
+														<Transform
+															target="startAngle"
+															value="124 + textLength([COMPLICATION.TITLE]) * 4.5" />
+														<WeightedStroke
+															cap="ROUND"
+															colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
+															discreteGap="3"
+															interpolate="false"
+															thickness="5"
+															weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]" />
+													</Arc>
+												</PartDraw>
+												<PartDraw
+													alpha="255"
+													height="225"
+													tintColor="[CONFIGURATION.a2CompBaseColor]"
+													width="225"
+													x="0"
+													y="0">
+													<Rectangle
+														height="225"
+														width="225"
+														x="0"
+														y="0">
+														<Fill color="#ffffff" />
+													</Rectangle>
+												</PartDraw>
+											</Group>
+											<PartText
+												alpha="255"
+												height="225"
+												width="225"
+												x="0"
+												y="0">
+												<TextCircular
+													align="START"
+													centerX="0"
+													centerY="0"
+													direction="CLOCKWISE"
+													endAngle="171"
+													height="350"
+													startAngle="108"
+													width="350">
+													<Font
+														color="[CONFIGURATION.a0PrimaryColor]"
+														family="roboto_mono_sb"
+														size="24">
+														<Upper>
+															<Template>
+																%s
+																<Parameter expression="[COMPLICATION.TITLE]" />
+															</Template>
+														</Upper>
+													</Font>
+												</TextCircular>
+											</PartText>
 										</Default>
 									</Condition>
 								</Default>
@@ -9813,7 +9905,9 @@
 									</PartDraw>
 									<Condition>
 										<Expressions>
-											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+											<Expression name="gpUnder1k">
+												[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000
+											</Expression>
 										</Expressions>
 										<Compare expression="gpUnder1k">
 											<PartText
@@ -9835,13 +9929,17 @@
 														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
-														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+														<Template>%s
+															<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" />
+														</Template>
 													</Font>
 													<Font
 														color="[CONFIGURATION.a3CompFgColor]"
 														family="SYNC_TO_DEVICE"
 														size="24">
-														<Template>%s<Parameter expression="&#160;" /></Template>
+														<Template>%s
+															<Parameter expression="&#160;" />
+														</Template>
 														<InlineImage
 															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
@@ -9855,7 +9953,10 @@
 										<Default>
 											<Condition>
 												<Expressions>
-													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+													<Expression name="gpUnder1m">
+														[COMPLICATION.GOAL_PROGRESS_VALUE] &lt;
+														1000000
+													</Expression>
 												</Expressions>
 												<Compare expression="gpUnder1m">
 													<PartText
@@ -9877,13 +9978,17 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+																<Template>%sk
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" />
+																</Template>
 															</Font>
 															<Font
 																color="[CONFIGURATION.a3CompFgColor]"
 																family="SYNC_TO_DEVICE"
 																size="24">
-																<Template>%s<Parameter expression="&#160;" /></Template>
+																<Template>%s
+																	<Parameter expression="&#160;" />
+																</Template>
 																<InlineImage
 																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
@@ -9914,13 +10019,17 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+																<Template>%sM
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" />
+																</Template>
 															</Font>
 															<Font
 																color="[CONFIGURATION.a3CompFgColor]"
 																family="SYNC_TO_DEVICE"
 																size="24">
-																<Template>%s<Parameter expression="&#160;" /></Template>
+																<Template>%s
+																	<Parameter expression="&#160;" />
+																</Template>
 																<InlineImage
 																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
@@ -10077,7 +10186,9 @@
 									</PartDraw>
 									<Condition>
 										<Expressions>
-											<Expression name="gpUnder1k">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000</Expression>
+											<Expression name="gpUnder1k">
+												[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000
+											</Expression>
 										</Expressions>
 										<Compare expression="gpUnder1k">
 											<PartText
@@ -10099,7 +10210,9 @@
 														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
-														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
+														<Template>%s
+															<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" />
+														</Template>
 													</Font>
 												</TextCircular>
 											</PartText>
@@ -10107,7 +10220,10 @@
 										<Default>
 											<Condition>
 												<Expressions>
-													<Expression name="gpUnder1m">[COMPLICATION.GOAL_PROGRESS_VALUE] &lt; 1000000</Expression>
+													<Expression name="gpUnder1m">
+														[COMPLICATION.GOAL_PROGRESS_VALUE] &lt;
+														1000000
+													</Expression>
 												</Expressions>
 												<Compare expression="gpUnder1m">
 													<PartText
@@ -10129,7 +10245,9 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
+																<Template>%sk
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
@@ -10154,7 +10272,9 @@
 																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
-																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
+																<Template>%sM
+																	<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" />
+																</Template>
 															</Font>
 														</TextCircular>
 													</PartText>
