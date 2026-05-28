@@ -5433,7 +5433,7 @@
 											width="350">
 											<Transform
 												target="startAngle"
-												value="205 + textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5" />
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
 											<Stroke
 												cap="ROUND"
 												color="#33ffffff"
@@ -5457,10 +5457,10 @@
 											width="350">
 											<Transform
 												target="startAngle"
-												value="205 + textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5" />
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
 											<Transform
 												target="endAngle"
-												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5)" />
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT]) * 4.5 + clamp([COMPLICATION.GOAL_PROGRESS_VALUE] / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)" />
 											<Stroke
 												cap="ROUND"
 												color="#ffffff"
@@ -5487,10 +5487,10 @@
 											width="350">
 											<Transform
 												target="startAngle"
-												value="205 + textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5" />
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
 											<Transform
 												target="endAngle"
-												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5)" />
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT]) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)" />
 											<Stroke
 												cap="ROUND"
 												color="#ffffff"
@@ -5516,10 +5516,10 @@
 											width="350">
 											<Transform
 												target="startAngle"
-												value="205 + textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5" />
+												value="205 + textLength([COMPLICATION.TEXT]) * 4.5" />
 											<Transform
 												target="endAngle"
-												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]) * 4.5)" />
+												value="[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE] == 0 ? 205 + textLength([COMPLICATION.TEXT]) * 4.5 : 205 + textLength([COMPLICATION.TEXT]) * 4.5 + clamp(([COMPLICATION.GOAL_PROGRESS_VALUE] - [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE], 0, 1) * (47 - textLength([COMPLICATION.TEXT]) * 4.5)" />
 											<Stroke
 												cap="ROUND"
 												color="#ffffff"
@@ -5554,7 +5554,7 @@
 													<Upper>
 														<Template>
 															%s
-															<Parameter expression="[COMPLICATION.TEXT] == null ? [COMPLICATION.TITLE] : [COMPLICATION.TEXT]" />
+															<Parameter expression="[COMPLICATION.TEXT]" />
 														</Template>
 													</Upper>
 												</Font>
