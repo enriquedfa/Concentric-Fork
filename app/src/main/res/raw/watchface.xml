@@ -3810,10 +3810,10 @@
 											<WeightedStroke
 												cap="ROUND"
 												colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-												discreteGap="2"
+												discreteGap="3"
 												interpolate="false"
 												weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-												thickness="4" />
+												thickness="5" />
 										</Arc>
 									</PartDraw>
 									<PartDraw
@@ -3925,10 +3925,10 @@
 													<WeightedStroke
 														cap="ROUND"
 														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="2"
+														discreteGap="3"
 														interpolate="false"
 														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="4" />
+														thickness="5" />
 												</Arc>
 											</PartDraw>
 											<PartDraw
@@ -4029,10 +4029,10 @@
 													<WeightedStroke
 														cap="ROUND"
 														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="2"
+														discreteGap="3"
 														interpolate="false"
 														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="4" />
+														thickness="5" />
 												</Arc>
 											</PartDraw>
 											<PartDraw
@@ -5121,10 +5121,10 @@
 											<WeightedStroke
 												cap="ROUND"
 												colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-												discreteGap="2"
+												discreteGap="3"
 												interpolate="false"
 												weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-												thickness="4" />
+												thickness="5" />
 										</Arc>
 									</PartDraw>
 									<PartDraw
@@ -5236,10 +5236,10 @@
 													<WeightedStroke
 														cap="ROUND"
 														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="2"
+														discreteGap="3"
 														interpolate="false"
 														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="4" />
+														thickness="5" />
 												</Arc>
 											</PartDraw>
 											<PartDraw
@@ -5340,10 +5340,10 @@
 													<WeightedStroke
 														cap="ROUND"
 														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="2"
+														discreteGap="3"
 														interpolate="false"
 														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="4" />
+														thickness="5" />
 												</Arc>
 											</PartDraw>
 											<PartDraw
@@ -6432,10 +6432,10 @@
 											<WeightedStroke
 												cap="ROUND"
 												colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-												discreteGap="2"
+												discreteGap="3"
 												interpolate="false"
 												weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-												thickness="4" />
+												thickness="5" />
 										</Arc>
 									</PartDraw>
 									<PartDraw
@@ -6547,10 +6547,10 @@
 													<WeightedStroke
 														cap="ROUND"
 														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="2"
+														discreteGap="3"
 														interpolate="false"
 														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="4" />
+														thickness="5" />
 												</Arc>
 											</PartDraw>
 											<PartDraw
@@ -6651,10 +6651,10 @@
 													<WeightedStroke
 														cap="ROUND"
 														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="2"
+														discreteGap="3"
 														interpolate="false"
 														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="4" />
+														thickness="5" />
 												</Arc>
 											</PartDraw>
 											<PartDraw
@@ -7743,10 +7743,10 @@
 											<WeightedStroke
 												cap="ROUND"
 												colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-												discreteGap="2"
+												discreteGap="3"
 												interpolate="false"
 												weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-												thickness="4" />
+												thickness="5" />
 										</Arc>
 									</PartDraw>
 									<PartDraw
@@ -7858,10 +7858,10 @@
 													<WeightedStroke
 														cap="ROUND"
 														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="2"
+														discreteGap="3"
 														interpolate="false"
 														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="4" />
+														thickness="5" />
 												</Arc>
 											</PartDraw>
 											<PartDraw
@@ -7962,10 +7962,10 @@
 													<WeightedStroke
 														cap="ROUND"
 														colors="[COMPLICATION.WEIGHTED_ELEMENTS_COLORS]"
-														discreteGap="2"
+														discreteGap="3"
 														interpolate="false"
 														weights="[COMPLICATION.WEIGHTED_ELEMENTS_WEIGHTS]"
-														thickness="4" />
+														thickness="5" />
 												</Arc>
 											</PartDraw>
 											<PartDraw
