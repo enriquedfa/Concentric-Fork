@@ -3636,6 +3636,7 @@
 											</TextCircular>
 										</PartText>
 										<Group
+											name="mono_image"
 											height="225"
 											width="225"
 											x="0"
@@ -3925,6 +3926,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
@@ -4024,6 +4026,7 @@
 														</TextCircular>
 													</PartText>
 													<Group
+														name="mono_image"
 														height="225"
 														width="225"
 														x="0"
@@ -4118,6 +4121,7 @@
 														</TextCircular>
 													</PartText>
 													<Group
+														name="mono_image"
 														height="225"
 														width="225"
 														x="0"
@@ -4543,6 +4547,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
@@ -4776,6 +4781,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
@@ -5387,6 +5393,7 @@
 											</TextCircular>
 										</PartText>
 										<Group
+											name="mono_image"
 											height="225"
 											width="225"
 											x="0"
@@ -5676,6 +5683,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
@@ -5775,6 +5783,7 @@
 														</TextCircular>
 													</PartText>
 													<Group
+														name="mono_image"
 														height="225"
 														width="225"
 														x="0"
@@ -5869,6 +5878,7 @@
 														</TextCircular>
 													</PartText>
 													<Group
+														name="mono_image"
 														height="225"
 														width="225"
 														x="0"
@@ -6294,6 +6304,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
@@ -6527,6 +6538,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
@@ -7138,6 +7150,7 @@
 											</TextCircular>
 										</PartText>
 										<Group
+											name="mono_image"
 											height="225"
 											width="225"
 											x="0"
@@ -7427,6 +7440,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
@@ -7526,6 +7540,7 @@
 														</TextCircular>
 													</PartText>
 													<Group
+														name="mono_image"
 														height="225"
 														width="225"
 														x="0"
@@ -7620,6 +7635,7 @@
 														</TextCircular>
 													</PartText>
 													<Group
+														name="mono_image"
 														height="225"
 														width="225"
 														x="0"
@@ -8045,6 +8061,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
@@ -8278,6 +8295,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
@@ -8889,6 +8907,7 @@
 											</TextCircular>
 										</PartText>
 										<Group
+											name="mono_image"
 											height="225"
 											width="225"
 											x="0"
@@ -9178,6 +9197,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
@@ -9277,6 +9297,7 @@
 														</TextCircular>
 													</PartText>
 													<Group
+														name="mono_image"
 														height="225"
 														width="225"
 														x="0"
@@ -9371,6 +9392,7 @@
 														</TextCircular>
 													</PartText>
 													<Group
+														name="mono_image"
 														height="225"
 														width="225"
 														x="0"
@@ -9796,6 +9818,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
@@ -10029,6 +10052,7 @@
 												</TextCircular>
 											</PartText>
 											<Group
+												name="mono_image"
 												height="225"
 												width="225"
 												x="0"
