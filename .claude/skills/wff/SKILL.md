@@ -50,7 +50,7 @@ The full official XSD is vendored at **`reference/wff-schema/v4/`**. Treat it as
 Mirrored from the project `CLAUDE.md`. Apply these when editing:
 
 - Coordinates are **450 × 450**; many nested `<Group>`s use a **225 × 225** local frame (quadrants). Always check the enclosing `<Group>` `width/height/x/y` before reading a child's geometry.
-- **Three shared color palettes** (`a0SecondsColor`, `a1ComplicationColor`, `a2AccentColor`) — same 40 options each. Reference them via `[CONFIGURATION.<id>]`. New user-facing options need an entry in `<UserConfigurations>` **and** a matching `<string>` in `res/values/strings.xml`.
+- **Four shared color palettes** (`a0PrimaryColor`, `a1AccentColor`, `a2CompBaseColor`, `a3CompFgColor`) — same 60 options each. Reference them via `[CONFIGURATION.<id>]`. New user-facing options need an entry in `<UserConfigurations>` **and** a matching `<string>` in `res/values/strings.xml`.
 - **Asset references in WFF** use bare names: `resource="index_minutes_0"`, `family="inter_regular"`. No `@drawable/`, no `@font/`, no extension. Files live in `res/drawable-nodpi/` and `res/font/`.
 - **Redundant defaults are stripped intentionally.** Do not re-add: `align="CENTER"`, `ellipsis="FALSE"`, `weight="NORMAL"`, `slant="NORMAL"`, `direction="CLOCKWISE"`, `hueRotate="0"`, `brightness="1"`. Lint flags them. `saturate="0"` on `<HsbFilter>` is **not** a default — keep it (it desaturates before tinting).
 - **AOD branches** are gated by `<Variant mode="AMBIENT" target="alpha" value="..." />` against `[CONFIGURATION.z1_aod]`.
@@ -74,8 +74,8 @@ Mirrored from the project `CLAUDE.md`. Apply these when editing:
 5. Skim `antipatterns.md` if the change involves `<Condition>`, `<ListConfiguration>`, AOD, or complications — the failure modes there are non-obvious.
 6. After editing, run `./gradlew :app:assembleDebug` — the AGP build does basic XML sanity checks.
 
-## Validator (not yet wired up)
+## Validator (wired up in CI)
 
-Google ships a `dwf-format-validator` and `validator.jar` artifact in `google/watchface` on GitHub that statically verifies a built APK against the WFF spec. It is **not yet integrated** in this project. When set up, it should run in the loop after every edit. Until then, rely on the XSD + `assembleDebug` + on-device preview.
+Google's WFF validator is vendored at `app/libs/wff-validator.jar` and runs in CI on every push/PR via `.github/workflows/checks.yml` (the `validate-wff` job: `java -jar app/libs/wff-validator.jar 4 app/src/main/res/raw/watchface.xml`). Run it locally the same way before pushing — note it exits 0 even on failure, so check the log for `PASSED`/`FAILED`. CI also runs `:app:lintDebug`, `:app:assembleDebug`, and a memory-footprint evaluation.
 
 See `antipatterns.md` next door for concrete past failures and why they happened.

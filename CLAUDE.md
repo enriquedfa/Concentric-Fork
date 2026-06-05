@@ -30,7 +30,7 @@ The entire watch face lives in three XML files under `app/src/main/res/`:
 
 `raw/watchface.xml` has two top-level sections inside `<WatchFace>`:
 
-1. **`<UserConfigurations>`** (lines ~12–1238) — `ColorConfiguration`, `ListConfiguration`, `BooleanConfiguration`, and a `<Flavors>` block expose editor options. Four color palettes (`a0PrimaryColor`, `a1AccentColor`, `a2CompBaseColor`, `a3CompFgColor`) share the same 64-option palette and are referenced elsewhere via `[CONFIGURATION.a0PrimaryColor]` expressions. List configs like `z1_mode`, `z1_aod`, `z0_index` drive `Variant` / `Compare` branches in the scene. String labels for all options come from `res/values/strings.xml`.
+1. **`<UserConfigurations>`** (lines ~12–1238) — `ColorConfiguration`, `ListConfiguration`, `BooleanConfiguration`, and a `<Flavors>` block expose editor options. Four color palettes (`a0PrimaryColor`, `a1AccentColor`, `a2CompBaseColor`, `a3CompFgColor`) share the same 60-option palette and are referenced elsewhere via `[CONFIGURATION.a0PrimaryColor]` expressions. List configs like `z1_mode`, `z1_aod`, `z0_index` drive `Variant` / `Compare` branches in the scene. String labels for all options come from `res/values/strings.xml`.
 2. **`<Scene>`** (line ~152 onward) — the scene graph. Rendered elements:
    - Background and index rings (reuses drawables in `res/drawable-nodpi/`).
    - The `numbers` group: 12 `PartText` elements rotated by `[MINUTE] * (-6)` to form the rotating minute ring.
