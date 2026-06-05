@@ -3436,7 +3436,7 @@
 												startAngle="288"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a3CompFgColor]"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -3623,7 +3623,7 @@
 													</Template>
 												</Font>
 												<Font
-													color="[CONFIGURATION.a3CompFgColor]"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -3918,7 +3918,7 @@
 														<Template>%s<Parameter expression="&#160;" /></Template>
 													</Font>
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -4018,7 +4018,7 @@
 																<Template>%s<Parameter expression="&#160;" /></Template>
 															</Font>
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -4113,7 +4113,7 @@
 																<Template>%s<Parameter expression="&#160;" /></Template>
 															</Font>
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -4344,7 +4344,7 @@
 													startAngle="288"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -4374,7 +4374,7 @@
 															startAngle="288"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -4399,7 +4399,7 @@
 															startAngle="288"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -4527,7 +4527,7 @@
 													startAngle="287"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
@@ -4675,7 +4675,7 @@
 													startAngle="288"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -4760,7 +4760,7 @@
 													startAngle="287"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
@@ -5191,7 +5191,7 @@
 												startAngle="9"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a3CompFgColor]"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -5380,7 +5380,7 @@
 													</Template>
 												</Font>
 												<Font
-													color="[CONFIGURATION.a3CompFgColor]"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -5675,7 +5675,7 @@
 														<Template>%s<Parameter expression="&#160;" /></Template>
 													</Font>
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -5775,7 +5775,7 @@
 																<Template>%s<Parameter expression="&#160;" /></Template>
 															</Font>
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -5870,7 +5870,7 @@
 																<Template>%s<Parameter expression="&#160;" /></Template>
 															</Font>
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -6101,7 +6101,7 @@
 													startAngle="9"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -6131,7 +6131,7 @@
 															startAngle="9"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -6156,7 +6156,7 @@
 															startAngle="9"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -6284,7 +6284,7 @@
 													startAngle="8"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
@@ -6432,7 +6432,7 @@
 													startAngle="9"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -6517,7 +6517,7 @@
 													startAngle="8"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
@@ -6948,7 +6948,7 @@
 												startAngle="252"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a3CompFgColor]"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -7122,7 +7122,7 @@
 												startAngle="252"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a3CompFgColor]"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -7420,7 +7420,7 @@
 													startAngle="252"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -7520,7 +7520,7 @@
 															startAngle="252"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -7615,7 +7615,7 @@
 															startAngle="252"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -7858,7 +7858,7 @@
 													startAngle="252"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -7888,7 +7888,7 @@
 															startAngle="252"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -7913,7 +7913,7 @@
 															startAngle="252"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -8041,7 +8041,7 @@
 													startAngle="253"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
@@ -8189,7 +8189,7 @@
 													startAngle="252"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -8274,7 +8274,7 @@
 													startAngle="253"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
@@ -8705,7 +8705,7 @@
 												startAngle="171"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a3CompFgColor]"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -8879,7 +8879,7 @@
 												startAngle="171"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a3CompFgColor]"
+													color="[CONFIGURATION.a0PrimaryColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -9177,7 +9177,7 @@
 													startAngle="171"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -9277,7 +9277,7 @@
 															startAngle="171"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -9372,7 +9372,7 @@
 															startAngle="171"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -9615,7 +9615,7 @@
 													startAngle="171"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -9645,7 +9645,7 @@
 															startAngle="171"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -9670,7 +9670,7 @@
 															startAngle="171"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a3CompFgColor]"
+																color="[CONFIGURATION.a0PrimaryColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -9798,7 +9798,7 @@
 													startAngle="172"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
@@ -9946,7 +9946,7 @@
 													startAngle="171"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -10031,7 +10031,7 @@
 													startAngle="172"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a3CompFgColor]"
+														color="[CONFIGURATION.a0PrimaryColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
