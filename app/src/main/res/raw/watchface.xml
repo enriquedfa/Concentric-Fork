@@ -3436,7 +3436,7 @@
 												startAngle="288"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -3612,7 +3612,7 @@
 													family="SYNC_TO_DEVICE"
 													size="24">
 													<InlineImage
-														color="#00000000"
+														color="[CONFIGURATION.a3CompFgColor]"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -3623,7 +3623,7 @@
 													</Template>
 												</Font>
 												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -3635,28 +3635,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<Group
-											name="icon_overlay"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<PartImage
-												name="icon"
-												alpha="255"
-												height="28"
-												width="28"
-												x="0"
-												y="0">
-												<Transform target="x" value="225 + 175 * sin(rad(292)) - 14" />
-												<Transform target="y" value="225 - 175 * cos(rad(292)) - 14" />
-												<ImageFilters>
-													<HsbFilter saturate="0" />
-												</ImageFilters>
-												<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-											</PartImage>
-										</Group>
 									</Group>
 								</Default>
 							</Condition>
@@ -3866,7 +3844,7 @@
 														family="SYNC_TO_DEVICE"
 														size="24">
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -3874,35 +3852,13 @@
 														<Template>%s<Parameter expression="&#160;" /></Template>
 													</Font>
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="225 + 175 * sin(rad(292)) - 14" />
-													<Transform target="y" value="225 - 175 * cos(rad(292)) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Compare>
 										<Default>
 											<Condition>
@@ -3930,7 +3886,7 @@
 																family="SYNC_TO_DEVICE"
 																size="24">
 																<InlineImage
-																	color="#00000000"
+																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -3938,35 +3894,13 @@
 																<Template>%s<Parameter expression="&#160;" /></Template>
 															</Font>
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
 															</Font>
 														</TextCircular>
 													</PartText>
-													<Group
-														name="icon_overlay"
-														height="225"
-														tintColor="[CONFIGURATION.a3CompFgColor]"
-														width="225"
-														x="0"
-														y="0">
-														<PartImage
-															name="icon"
-															alpha="255"
-															height="28"
-															width="28"
-															x="0"
-															y="0">
-															<Transform target="x" value="225 + 175 * sin(rad(292)) - 14" />
-															<Transform target="y" value="225 - 175 * cos(rad(292)) - 14" />
-															<ImageFilters>
-																<HsbFilter saturate="0" />
-															</ImageFilters>
-															<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-														</PartImage>
-													</Group>
 												</Compare>
 												<Default>
 													<PartText
@@ -3989,7 +3923,7 @@
 																family="SYNC_TO_DEVICE"
 																size="24">
 																<InlineImage
-																	color="#00000000"
+																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -3997,35 +3931,13 @@
 																<Template>%s<Parameter expression="&#160;" /></Template>
 															</Font>
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
 															</Font>
 														</TextCircular>
 													</PartText>
-													<Group
-														name="icon_overlay"
-														height="225"
-														tintColor="[CONFIGURATION.a3CompFgColor]"
-														width="225"
-														x="0"
-														y="0">
-														<PartImage
-															name="icon"
-															alpha="255"
-															height="28"
-															width="28"
-															x="0"
-															y="0">
-															<Transform target="x" value="225 + 175 * sin(rad(292)) - 14" />
-															<Transform target="y" value="225 - 175 * cos(rad(292)) - 14" />
-															<ImageFilters>
-																<HsbFilter saturate="0" />
-															</ImageFilters>
-															<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-														</PartImage>
-													</Group>
 												</Default>
 											</Condition>
 										</Default>
@@ -4192,7 +4104,7 @@
 													startAngle="288"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -4222,7 +4134,7 @@
 															startAngle="288"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -4247,7 +4159,7 @@
 															startAngle="288"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -4375,11 +4287,11 @@
 													startAngle="287"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -4394,28 +4306,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="225 + 175 * sin(rad(319 - 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
-													<Transform target="y" value="225 - 175 * cos(rad(319 - 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Group>
 									</Group>
 								</Compare>
@@ -4488,7 +4378,7 @@
 													startAngle="288"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -4573,11 +4463,11 @@
 													startAngle="287"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -4593,28 +4483,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="225 + 175 * sin(rad(319 - 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
-													<Transform target="y" value="225 - 175 * cos(rad(319 - 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Group>
 									</Group>
 								</Default>
@@ -4968,7 +4836,7 @@
 												startAngle="9"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -5146,7 +5014,7 @@
 													family="SYNC_TO_DEVICE"
 													size="24">
 													<InlineImage
-														color="#00000000"
+														color="[CONFIGURATION.a3CompFgColor]"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -5157,7 +5025,7 @@
 													</Template>
 												</Font>
 												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -5169,28 +5037,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<Group
-											name="icon_overlay"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<PartImage
-												name="icon"
-												alpha="255"
-												height="28"
-												width="28"
-												x="0"
-												y="0">
-												<Transform target="x" value="0 + 175 * sin(rad(13)) - 14" />
-												<Transform target="y" value="225 - 175 * cos(rad(13)) - 14" />
-												<ImageFilters>
-													<HsbFilter saturate="0" />
-												</ImageFilters>
-												<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-											</PartImage>
-										</Group>
 									</Group>
 								</Default>
 							</Condition>
@@ -5400,7 +5246,7 @@
 														family="SYNC_TO_DEVICE"
 														size="24">
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -5408,35 +5254,13 @@
 														<Template>%s<Parameter expression="&#160;" /></Template>
 													</Font>
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="0 + 175 * sin(rad(13)) - 14" />
-													<Transform target="y" value="225 - 175 * cos(rad(13)) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Compare>
 										<Default>
 											<Condition>
@@ -5464,7 +5288,7 @@
 																family="SYNC_TO_DEVICE"
 																size="24">
 																<InlineImage
-																	color="#00000000"
+																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -5472,35 +5296,13 @@
 																<Template>%s<Parameter expression="&#160;" /></Template>
 															</Font>
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
 															</Font>
 														</TextCircular>
 													</PartText>
-													<Group
-														name="icon_overlay"
-														height="225"
-														tintColor="[CONFIGURATION.a3CompFgColor]"
-														width="225"
-														x="0"
-														y="0">
-														<PartImage
-															name="icon"
-															alpha="255"
-															height="28"
-															width="28"
-															x="0"
-															y="0">
-															<Transform target="x" value="0 + 175 * sin(rad(13)) - 14" />
-															<Transform target="y" value="225 - 175 * cos(rad(13)) - 14" />
-															<ImageFilters>
-																<HsbFilter saturate="0" />
-															</ImageFilters>
-															<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-														</PartImage>
-													</Group>
 												</Compare>
 												<Default>
 													<PartText
@@ -5523,7 +5325,7 @@
 																family="SYNC_TO_DEVICE"
 																size="24">
 																<InlineImage
-																	color="#00000000"
+																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -5531,35 +5333,13 @@
 																<Template>%s<Parameter expression="&#160;" /></Template>
 															</Font>
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
 															</Font>
 														</TextCircular>
 													</PartText>
-													<Group
-														name="icon_overlay"
-														height="225"
-														tintColor="[CONFIGURATION.a3CompFgColor]"
-														width="225"
-														x="0"
-														y="0">
-														<PartImage
-															name="icon"
-															alpha="255"
-															height="28"
-															width="28"
-															x="0"
-															y="0">
-															<Transform target="x" value="0 + 175 * sin(rad(13)) - 14" />
-															<Transform target="y" value="225 - 175 * cos(rad(13)) - 14" />
-															<ImageFilters>
-																<HsbFilter saturate="0" />
-															</ImageFilters>
-															<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-														</PartImage>
-													</Group>
 												</Default>
 											</Condition>
 										</Default>
@@ -5726,7 +5506,7 @@
 													startAngle="9"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -5756,7 +5536,7 @@
 															startAngle="9"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -5781,7 +5561,7 @@
 															startAngle="9"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -5909,11 +5689,11 @@
 													startAngle="8"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -5928,28 +5708,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="0 + 175 * sin(rad(40 - 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
-													<Transform target="y" value="225 - 175 * cos(rad(40 - 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Group>
 									</Group>
 								</Compare>
@@ -6022,7 +5780,7 @@
 													startAngle="9"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -6107,11 +5865,11 @@
 													startAngle="8"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -6127,28 +5885,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="0 + 175 * sin(rad(40 - 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
-													<Transform target="y" value="225 - 175 * cos(rad(40 - 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Group>
 									</Group>
 								</Default>
@@ -6502,7 +6238,7 @@
 												startAngle="252"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -6676,7 +6412,7 @@
 												startAngle="252"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -6695,7 +6431,7 @@
 														<Parameter expression="&#160;" />
 													</Template>
 													<InlineImage
-														color="#00000000"
+														color="[CONFIGURATION.a3CompFgColor]"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -6703,28 +6439,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<Group
-											name="icon_overlay"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<PartImage
-												name="icon"
-												alpha="255"
-												height="28"
-												width="28"
-												x="0"
-												y="0">
-												<Transform target="x" value="225 + 175 * sin(rad(193 + 2.25 * (textLength([COMPLICATION.TEXT])))) - 14" />
-												<Transform target="y" value="0 - 175 * cos(rad(193 + 2.25 * (textLength([COMPLICATION.TEXT])))) - 14" />
-												<ImageFilters>
-													<HsbFilter saturate="0" />
-												</ImageFilters>
-												<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-											</PartImage>
-										</Group>
 									</Group>
 								</Default>
 							</Condition>
@@ -6930,7 +6644,7 @@
 													startAngle="252"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -6941,7 +6655,7 @@
 														size="24">
 														<Template>%s<Parameter expression="&#160;" /></Template>
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -6949,28 +6663,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="225 + 175 * sin(rad(193 + 2.25 * (textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE]))))) - 14" />
-													<Transform target="y" value="0 - 175 * cos(rad(193 + 2.25 * (textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE]))))) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Compare>
 										<Default>
 											<Condition>
@@ -6994,7 +6686,7 @@
 															startAngle="252"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -7005,7 +6697,7 @@
 																size="24">
 																<Template>%s<Parameter expression="&#160;" /></Template>
 																<InlineImage
-																	color="#00000000"
+																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -7013,28 +6705,6 @@
 															</Font>
 														</TextCircular>
 													</PartText>
-													<Group
-														name="icon_overlay"
-														height="225"
-														tintColor="[CONFIGURATION.a3CompFgColor]"
-														width="225"
-														x="0"
-														y="0">
-														<PartImage
-															name="icon"
-															alpha="255"
-															height="28"
-															width="28"
-															x="0"
-															y="0">
-															<Transform target="x" value="225 + 175 * sin(rad(193 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1))) - 14" />
-															<Transform target="y" value="0 - 175 * cos(rad(193 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1))) - 14" />
-															<ImageFilters>
-																<HsbFilter saturate="0" />
-															</ImageFilters>
-															<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-														</PartImage>
-													</Group>
 												</Compare>
 												<Default>
 													<PartText
@@ -7053,7 +6723,7 @@
 															startAngle="252"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -7064,7 +6734,7 @@
 																size="24">
 																<Template>%s<Parameter expression="&#160;" /></Template>
 																<InlineImage
-																	color="#00000000"
+																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -7072,28 +6742,6 @@
 															</Font>
 														</TextCircular>
 													</PartText>
-													<Group
-														name="icon_overlay"
-														height="225"
-														tintColor="[CONFIGURATION.a3CompFgColor]"
-														width="225"
-														x="0"
-														y="0">
-														<PartImage
-															name="icon"
-															alpha="255"
-															height="28"
-															width="28"
-															x="0"
-															y="0">
-															<Transform target="x" value="225 + 175 * sin(rad(193 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1))) - 14" />
-															<Transform target="y" value="0 - 175 * cos(rad(193 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1))) - 14" />
-															<ImageFilters>
-																<HsbFilter saturate="0" />
-															</ImageFilters>
-															<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-														</PartImage>
-													</Group>
 												</Default>
 											</Condition>
 										</Default>
@@ -7260,7 +6908,7 @@
 													startAngle="252"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -7290,7 +6938,7 @@
 															startAngle="252"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -7315,7 +6963,7 @@
 															startAngle="252"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -7443,11 +7091,11 @@
 													startAngle="253"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -7462,28 +7110,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="225 + 175 * sin(rad(221 + 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
-													<Transform target="y" value="0 - 175 * cos(rad(221 + 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Group>
 									</Group>
 								</Compare>
@@ -7556,7 +7182,7 @@
 													startAngle="252"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -7641,11 +7267,11 @@
 													startAngle="253"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -7661,28 +7287,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="225 + 175 * sin(rad(221 + 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
-													<Transform target="y" value="0 - 175 * cos(rad(221 + 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Group>
 									</Group>
 								</Default>
@@ -8036,7 +7640,7 @@
 												startAngle="171"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -8210,7 +7814,7 @@
 												startAngle="171"
 												width="350">
 												<Font
-													color="[CONFIGURATION.a0PrimaryColor]"
+													color="[CONFIGURATION.a3CompFgColor]"
 													family="roboto_mono_sb"
 													size="24">
 													<Upper>
@@ -8229,7 +7833,7 @@
 														<Parameter expression="&#160;" />
 													</Template>
 													<InlineImage
-														color="#00000000"
+														color="[CONFIGURATION.a3CompFgColor]"
 														height="28"
 														resource="empty"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -8237,28 +7841,6 @@
 												</Font>
 											</TextCircular>
 										</PartText>
-										<Group
-											name="icon_overlay"
-											height="225"
-											tintColor="[CONFIGURATION.a3CompFgColor]"
-											width="225"
-											x="0"
-											y="0">
-											<PartImage
-												name="icon"
-												alpha="255"
-												height="28"
-												width="28"
-												x="0"
-												y="0">
-												<Transform target="x" value="0 + 175 * sin(rad(112 + 2.25 * (textLength([COMPLICATION.TEXT])))) - 14" />
-												<Transform target="y" value="0 - 175 * cos(rad(112 + 2.25 * (textLength([COMPLICATION.TEXT])))) - 14" />
-												<ImageFilters>
-													<HsbFilter saturate="0" />
-												</ImageFilters>
-												<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-											</PartImage>
-										</Group>
 									</Group>
 								</Default>
 							</Condition>
@@ -8464,7 +8046,7 @@
 													startAngle="171"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -8475,7 +8057,7 @@
 														size="24">
 														<Template>%s<Parameter expression="&#160;" /></Template>
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -8483,28 +8065,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="0 + 175 * sin(rad(112 + 2.25 * (textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE]))))) - 14" />
-													<Transform target="y" value="0 - 175 * cos(rad(112 + 2.25 * (textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE]))))) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Compare>
 										<Default>
 											<Condition>
@@ -8528,7 +8088,7 @@
 															startAngle="171"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -8539,7 +8099,7 @@
 																size="24">
 																<Template>%s<Parameter expression="&#160;" /></Template>
 																<InlineImage
-																	color="#00000000"
+																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -8547,28 +8107,6 @@
 															</Font>
 														</TextCircular>
 													</PartText>
-													<Group
-														name="icon_overlay"
-														height="225"
-														tintColor="[CONFIGURATION.a3CompFgColor]"
-														width="225"
-														x="0"
-														y="0">
-														<PartImage
-															name="icon"
-															alpha="255"
-															height="28"
-															width="28"
-															x="0"
-															y="0">
-															<Transform target="x" value="0 + 175 * sin(rad(112 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1))) - 14" />
-															<Transform target="y" value="0 - 175 * cos(rad(112 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1))) - 14" />
-															<ImageFilters>
-																<HsbFilter saturate="0" />
-															</ImageFilters>
-															<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-														</PartImage>
-													</Group>
 												</Compare>
 												<Default>
 													<PartText
@@ -8587,7 +8125,7 @@
 															startAngle="171"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -8598,7 +8136,7 @@
 																size="24">
 																<Template>%s<Parameter expression="&#160;" /></Template>
 																<InlineImage
-																	color="#00000000"
+																	color="[CONFIGURATION.a3CompFgColor]"
 																	height="28"
 																	resource="empty"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -8606,28 +8144,6 @@
 															</Font>
 														</TextCircular>
 													</PartText>
-													<Group
-														name="icon_overlay"
-														height="225"
-														tintColor="[CONFIGURATION.a3CompFgColor]"
-														width="225"
-														x="0"
-														y="0">
-														<PartImage
-															name="icon"
-															alpha="255"
-															height="28"
-															width="28"
-															x="0"
-															y="0">
-															<Transform target="x" value="0 + 175 * sin(rad(112 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1))) - 14" />
-															<Transform target="y" value="0 - 175 * cos(rad(112 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1))) - 14" />
-															<ImageFilters>
-																<HsbFilter saturate="0" />
-															</ImageFilters>
-															<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-														</PartImage>
-													</Group>
 												</Default>
 											</Condition>
 										</Default>
@@ -8794,7 +8310,7 @@
 													startAngle="171"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_mono_sb"
 														size="24">
 														<Template>%s<Parameter expression="numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])" /></Template>
@@ -8824,7 +8340,7 @@
 															startAngle="171"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sk<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)" /></Template>
@@ -8849,7 +8365,7 @@
 															startAngle="171"
 															width="350">
 															<Font
-																color="[CONFIGURATION.a0PrimaryColor]"
+																color="[CONFIGURATION.a3CompFgColor]"
 																family="roboto_mono_sb"
 																size="24">
 																<Template>%sM<Parameter expression="numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)" /></Template>
@@ -8977,11 +8493,11 @@
 													startAngle="172"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -8996,28 +8512,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="0 + 175 * sin(rad(140 + 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
-													<Transform target="y" value="0 - 175 * cos(rad(140 + 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Group>
 									</Group>
 								</Compare>
@@ -9090,7 +8584,7 @@
 													startAngle="171"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<Upper>
@@ -9175,11 +8669,11 @@
 													startAngle="172"
 													width="350">
 													<Font
-														color="[CONFIGURATION.a0PrimaryColor]"
+														color="[CONFIGURATION.a3CompFgColor]"
 														family="roboto_sb"
 														size="24">
 														<InlineImage
-															color="#00000000"
+															color="[CONFIGURATION.a3CompFgColor]"
 															height="28"
 															resource="empty"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
@@ -9195,28 +8689,6 @@
 													</Font>
 												</TextCircular>
 											</PartText>
-											<Group
-												name="icon_overlay"
-												height="225"
-												tintColor="[CONFIGURATION.a3CompFgColor]"
-												width="225"
-												x="0"
-												y="0">
-												<PartImage
-													name="icon"
-													alpha="255"
-													height="28"
-													width="28"
-													x="0"
-													y="0">
-													<Transform target="x" value="0 + 175 * sin(rad(140 + 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
-													<Transform target="y" value="0 - 175 * cos(rad(140 + 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
-													<ImageFilters>
-														<HsbFilter saturate="0" />
-													</ImageFilters>
-													<Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-												</PartImage>
-											</Group>
 										</Group>
 									</Group>
 								</Default>
