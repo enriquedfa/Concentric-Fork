@@ -3638,20 +3638,19 @@
 										<Group
 											name="icon_overlay"
 											height="225"
-											pivotX="1.0"
-											pivotY="1.0"
 											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
-											<Transform target="angle" value="292" />
 											<PartImage
 												name="icon"
 												alpha="255"
 												height="28"
 												width="28"
-												x="211"
-												y="36">
+												x="0"
+												y="0">
+												<Transform target="x" value="225 + 175 * sin(rad(292)) - 14" />
+												<Transform target="y" value="225 - 175 * cos(rad(292)) - 14" />
 												<ImageFilters>
 													<HsbFilter saturate="0" />
 												</ImageFilters>
@@ -3885,20 +3884,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="1.0"
-												pivotY="1.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="292" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="211"
-													y="36">
+													x="0"
+													y="0">
+													<Transform target="x" value="225 + 175 * sin(rad(292)) - 14" />
+													<Transform target="y" value="225 - 175 * cos(rad(292)) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
@@ -3950,20 +3948,19 @@
 													<Group
 														name="icon_overlay"
 														height="225"
-														pivotX="1.0"
-														pivotY="1.0"
 														tintColor="[CONFIGURATION.a3CompFgColor]"
 														width="225"
 														x="0"
 														y="0">
-														<Transform target="angle" value="292" />
 														<PartImage
 															name="icon"
 															alpha="255"
 															height="28"
 															width="28"
-															x="211"
-															y="36">
+															x="0"
+															y="0">
+															<Transform target="x" value="225 + 175 * sin(rad(292)) - 14" />
+															<Transform target="y" value="225 - 175 * cos(rad(292)) - 14" />
 															<ImageFilters>
 																<HsbFilter saturate="0" />
 															</ImageFilters>
@@ -4010,20 +4007,19 @@
 													<Group
 														name="icon_overlay"
 														height="225"
-														pivotX="1.0"
-														pivotY="1.0"
 														tintColor="[CONFIGURATION.a3CompFgColor]"
 														width="225"
 														x="0"
 														y="0">
-														<Transform target="angle" value="292" />
 														<PartImage
 															name="icon"
 															alpha="255"
 															height="28"
 															width="28"
-															x="211"
-															y="36">
+															x="0"
+															y="0">
+															<Transform target="x" value="225 + 175 * sin(rad(292)) - 14" />
+															<Transform target="y" value="225 - 175 * cos(rad(292)) - 14" />
 															<ImageFilters>
 																<HsbFilter saturate="0" />
 															</ImageFilters>
@@ -4401,20 +4397,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="1.0"
-												pivotY="1.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="319 - 1.125 * (textLength([COMPLICATION.TEXT]))" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="211"
-													y="36">
+													x="0"
+													y="0">
+													<Transform target="x" value="225 + 175 * sin(rad(319 - 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
+													<Transform target="y" value="225 - 175 * cos(rad(319 - 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
@@ -4601,20 +4596,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="1.0"
-												pivotY="1.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="319 - 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE]))" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="211"
-													y="36">
+													x="0"
+													y="0">
+													<Transform target="x" value="225 + 175 * sin(rad(319 - 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
+													<Transform target="y" value="225 - 175 * cos(rad(319 - 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
@@ -5178,20 +5172,19 @@
 										<Group
 											name="icon_overlay"
 											height="225"
-											pivotX="0.0"
-											pivotY="1.0"
 											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
-											<Transform target="angle" value="13" />
 											<PartImage
 												name="icon"
 												alpha="255"
 												height="28"
 												width="28"
-												x="-14"
-												y="36">
+												x="0"
+												y="0">
+												<Transform target="x" value="0 + 175 * sin(rad(13)) - 14" />
+												<Transform target="y" value="225 - 175 * cos(rad(13)) - 14" />
 												<ImageFilters>
 													<HsbFilter saturate="0" />
 												</ImageFilters>
@@ -5425,20 +5418,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="0.0"
-												pivotY="1.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="13" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="-14"
-													y="36">
+													x="0"
+													y="0">
+													<Transform target="x" value="0 + 175 * sin(rad(13)) - 14" />
+													<Transform target="y" value="225 - 175 * cos(rad(13)) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
@@ -5490,20 +5482,19 @@
 													<Group
 														name="icon_overlay"
 														height="225"
-														pivotX="0.0"
-														pivotY="1.0"
 														tintColor="[CONFIGURATION.a3CompFgColor]"
 														width="225"
 														x="0"
 														y="0">
-														<Transform target="angle" value="13" />
 														<PartImage
 															name="icon"
 															alpha="255"
 															height="28"
 															width="28"
-															x="-14"
-															y="36">
+															x="0"
+															y="0">
+															<Transform target="x" value="0 + 175 * sin(rad(13)) - 14" />
+															<Transform target="y" value="225 - 175 * cos(rad(13)) - 14" />
 															<ImageFilters>
 																<HsbFilter saturate="0" />
 															</ImageFilters>
@@ -5550,20 +5541,19 @@
 													<Group
 														name="icon_overlay"
 														height="225"
-														pivotX="0.0"
-														pivotY="1.0"
 														tintColor="[CONFIGURATION.a3CompFgColor]"
 														width="225"
 														x="0"
 														y="0">
-														<Transform target="angle" value="13" />
 														<PartImage
 															name="icon"
 															alpha="255"
 															height="28"
 															width="28"
-															x="-14"
-															y="36">
+															x="0"
+															y="0">
+															<Transform target="x" value="0 + 175 * sin(rad(13)) - 14" />
+															<Transform target="y" value="225 - 175 * cos(rad(13)) - 14" />
 															<ImageFilters>
 																<HsbFilter saturate="0" />
 															</ImageFilters>
@@ -5941,20 +5931,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="0.0"
-												pivotY="1.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="40 - 1.125 * (textLength([COMPLICATION.TEXT]))" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="-14"
-													y="36">
+													x="0"
+													y="0">
+													<Transform target="x" value="0 + 175 * sin(rad(40 - 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
+													<Transform target="y" value="225 - 175 * cos(rad(40 - 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
@@ -6141,20 +6130,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="0.0"
-												pivotY="1.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="40 - 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE]))" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="-14"
-													y="36">
+													x="0"
+													y="0">
+													<Transform target="x" value="0 + 175 * sin(rad(40 - 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
+													<Transform target="y" value="225 - 175 * cos(rad(40 - 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
@@ -6718,20 +6706,19 @@
 										<Group
 											name="icon_overlay"
 											height="225"
-											pivotX="1.0"
-											pivotY="0.0"
 											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
-											<Transform target="angle" value="193 + 2.25 * (textLength([COMPLICATION.TEXT]))" />
 											<PartImage
 												name="icon"
 												alpha="255"
 												height="28"
 												width="28"
-												x="211"
-												y="-189">
+												x="0"
+												y="0">
+												<Transform target="x" value="225 + 175 * sin(rad(193 + 2.25 * (textLength([COMPLICATION.TEXT])))) - 14" />
+												<Transform target="y" value="0 - 175 * cos(rad(193 + 2.25 * (textLength([COMPLICATION.TEXT])))) - 14" />
 												<ImageFilters>
 													<HsbFilter saturate="0" />
 												</ImageFilters>
@@ -6965,20 +6952,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="1.0"
-												pivotY="0.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="193 + 2.25 * (textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])))" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="211"
-													y="-189">
+													x="0"
+													y="0">
+													<Transform target="x" value="225 + 175 * sin(rad(193 + 2.25 * (textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE]))))) - 14" />
+													<Transform target="y" value="0 - 175 * cos(rad(193 + 2.25 * (textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE]))))) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
@@ -7030,20 +7016,19 @@
 													<Group
 														name="icon_overlay"
 														height="225"
-														pivotX="1.0"
-														pivotY="0.0"
 														tintColor="[CONFIGURATION.a3CompFgColor]"
 														width="225"
 														x="0"
 														y="0">
-														<Transform target="angle" value="193 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1)" />
 														<PartImage
 															name="icon"
 															alpha="255"
 															height="28"
 															width="28"
-															x="211"
-															y="-189">
+															x="0"
+															y="0">
+															<Transform target="x" value="225 + 175 * sin(rad(193 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1))) - 14" />
+															<Transform target="y" value="0 - 175 * cos(rad(193 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1))) - 14" />
 															<ImageFilters>
 																<HsbFilter saturate="0" />
 															</ImageFilters>
@@ -7090,20 +7075,19 @@
 													<Group
 														name="icon_overlay"
 														height="225"
-														pivotX="1.0"
-														pivotY="0.0"
 														tintColor="[CONFIGURATION.a3CompFgColor]"
 														width="225"
 														x="0"
 														y="0">
-														<Transform target="angle" value="193 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)" />
 														<PartImage
 															name="icon"
 															alpha="255"
 															height="28"
 															width="28"
-															x="211"
-															y="-189">
+															x="0"
+															y="0">
+															<Transform target="x" value="225 + 175 * sin(rad(193 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1))) - 14" />
+															<Transform target="y" value="0 - 175 * cos(rad(193 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1))) - 14" />
 															<ImageFilters>
 																<HsbFilter saturate="0" />
 															</ImageFilters>
@@ -7481,20 +7465,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="1.0"
-												pivotY="0.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="221 + 1.125 * (textLength([COMPLICATION.TEXT]))" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="211"
-													y="-189">
+													x="0"
+													y="0">
+													<Transform target="x" value="225 + 175 * sin(rad(221 + 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
+													<Transform target="y" value="0 - 175 * cos(rad(221 + 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
@@ -7681,20 +7664,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="1.0"
-												pivotY="0.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="221 + 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE]))" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="211"
-													y="-189">
+													x="0"
+													y="0">
+													<Transform target="x" value="225 + 175 * sin(rad(221 + 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
+													<Transform target="y" value="0 - 175 * cos(rad(221 + 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
@@ -8258,20 +8240,19 @@
 										<Group
 											name="icon_overlay"
 											height="225"
-											pivotX="0.0"
-											pivotY="0.0"
 											tintColor="[CONFIGURATION.a3CompFgColor]"
 											width="225"
 											x="0"
 											y="0">
-											<Transform target="angle" value="112 + 2.25 * (textLength([COMPLICATION.TEXT]))" />
 											<PartImage
 												name="icon"
 												alpha="255"
 												height="28"
 												width="28"
-												x="-14"
-												y="-189">
+												x="0"
+												y="0">
+												<Transform target="x" value="0 + 175 * sin(rad(112 + 2.25 * (textLength([COMPLICATION.TEXT])))) - 14" />
+												<Transform target="y" value="0 - 175 * cos(rad(112 + 2.25 * (textLength([COMPLICATION.TEXT])))) - 14" />
 												<ImageFilters>
 													<HsbFilter saturate="0" />
 												</ImageFilters>
@@ -8505,20 +8486,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="0.0"
-												pivotY="0.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="112 + 2.25 * (textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE])))" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="-14"
-													y="-189">
+													x="0"
+													y="0">
+													<Transform target="x" value="0 + 175 * sin(rad(112 + 2.25 * (textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE]))))) - 14" />
+													<Transform target="y" value="0 - 175 * cos(rad(112 + 2.25 * (textLength(numberFormat(&quot;0&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE]))))) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
@@ -8570,20 +8550,19 @@
 													<Group
 														name="icon_overlay"
 														height="225"
-														pivotX="0.0"
-														pivotY="0.0"
 														tintColor="[CONFIGURATION.a3CompFgColor]"
 														width="225"
 														x="0"
 														y="0">
-														<Transform target="angle" value="112 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1)" />
 														<PartImage
 															name="icon"
 															alpha="255"
 															height="28"
 															width="28"
-															x="-14"
-															y="-189">
+															x="0"
+															y="0">
+															<Transform target="x" value="0 + 175 * sin(rad(112 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1))) - 14" />
+															<Transform target="y" value="0 - 175 * cos(rad(112 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000.0)) + 1))) - 14" />
 															<ImageFilters>
 																<HsbFilter saturate="0" />
 															</ImageFilters>
@@ -8630,20 +8609,19 @@
 													<Group
 														name="icon_overlay"
 														height="225"
-														pivotX="0.0"
-														pivotY="0.0"
 														tintColor="[CONFIGURATION.a3CompFgColor]"
 														width="225"
 														x="0"
 														y="0">
-														<Transform target="angle" value="112 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1)" />
 														<PartImage
 															name="icon"
 															alpha="255"
 															height="28"
 															width="28"
-															x="-14"
-															y="-189">
+															x="0"
+															y="0">
+															<Transform target="x" value="0 + 175 * sin(rad(112 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1))) - 14" />
+															<Transform target="y" value="0 - 175 * cos(rad(112 + 2.25 * (textLength(numberFormat(&quot;0.#&quot;, [COMPLICATION.GOAL_PROGRESS_VALUE] / 1000000.0)) + 1))) - 14" />
 															<ImageFilters>
 																<HsbFilter saturate="0" />
 															</ImageFilters>
@@ -9021,20 +8999,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="0.0"
-												pivotY="0.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="140 + 1.125 * (textLength([COMPLICATION.TEXT]))" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="-14"
-													y="-189">
+													x="0"
+													y="0">
+													<Transform target="x" value="0 + 175 * sin(rad(140 + 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
+													<Transform target="y" value="0 - 175 * cos(rad(140 + 1.125 * (textLength([COMPLICATION.TEXT])))) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
@@ -9221,20 +9198,19 @@
 											<Group
 												name="icon_overlay"
 												height="225"
-												pivotX="0.0"
-												pivotY="0.0"
 												tintColor="[CONFIGURATION.a3CompFgColor]"
 												width="225"
 												x="0"
 												y="0">
-												<Transform target="angle" value="140 + 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE]))" />
 												<PartImage
 													name="icon"
 													alpha="255"
 													height="28"
 													width="28"
-													x="-14"
-													y="-189">
+													x="0"
+													y="0">
+													<Transform target="x" value="0 + 175 * sin(rad(140 + 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
+													<Transform target="y" value="0 - 175 * cos(rad(140 + 1.125 * (textLength([COMPLICATION.TEXT]) + textLength([COMPLICATION.TITLE])))) - 14" />
 													<ImageFilters>
 														<HsbFilter saturate="0" />
 													</ImageFilters>
