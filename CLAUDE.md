@@ -14,27 +14,29 @@ For format reference, always consult the **WFF v4 documentation**: https://devel
 - **Gradle wrapper**: `./gradlew <task>` (use `gradlew.bat` on Windows cmd; the wrapper works from bash).
 - **Assemble**: `./gradlew :app:assembleDebug` / `:app:assembleRelease`.
 - **Install to a paired watch / emulator**: `./gradlew :app:installDebug` (requires adb-connected Wear OS device). The `android` CLI helper is the preferred way to manage emulators, SDK components, and deploys from the terminal — prefer it over manual `adb`/`sdkmanager` invocations when available.
-- **No unit/instrumented tests** exist — the project has zero source code, so typical test tasks are no-ops.
+- **No app source / no tests** — the app module is pure WFF XML (no Java/Kotlin), so there are no unit or instrumented tests and typical test tasks are no-ops. Correctness is enforced by lint, the WFF validator, and a memory-footprint check (see CI below).
+- **WFF validator** (run before pushing): `java -jar app/libs/wff-validator.jar 4 app/src/main/res/raw/watchface.xml`. It exits `0` even when validation fails, so scan the output for `PASSED` / `FAILED`.
+- **CI** (`.github/workflows/checks.yml`, on every push/PR): runs `:app:lintDebug`, `:app:assembleDebug` (uploads the debug APK as an artifact), the WFF validator above, and a memory-footprint evaluation (`app/libs/memory-footprint.jar`).
 - **AGP 9.1.1** with `android.newDsl=false` in `gradle.properties`. `app/build.gradle.kts` uses `configure<ApplicationExtension> { ... }` (imported from `com.android.build.api.dsl`) instead of the deprecated `android { }` block — keep it that way so AGP 10 removal doesn't break the build.
 - `settings.gradle.kts` suppresses `@Incubating` warnings file-wide for the dependency-resolution DSL; leave the suppression in place.
 
 ## Architecture
 
-The entire watch face lives in three XML files under `app/src/main/res/`:
+The rendered watch face is three XML files under `app/src/main/res/`; everything else in the repo is tooling/reference that never ships in the APK (see [Supporting files & tooling](#supporting-files--tooling)).
 
 | File | Role |
 |---|---|
 | `xml/watch_face_info.xml` | WFF metadata: preview drawable, category, editability. |
 | `xml/watch_face_shapes.xml` | Binds the `CIRCLE` shape at `450×450` to `@raw/watchface`. |
-| `raw/watchface.xml` | ~2100-line scene graph containing user configuration + all visuals. |
+| `raw/watchface.xml` | ~12.8k-line scene graph containing user configuration + all visuals. |
 
 `raw/watchface.xml` has two top-level sections inside `<WatchFace>`:
 
-1. **`<UserConfigurations>`** (lines ~12–1238) — `ColorConfiguration`, `ListConfiguration`, `BooleanConfiguration`, and a `<Flavors>` block expose editor options. Four color palettes (`a0PrimaryColor`, `a1AccentColor`, `a2CompBaseColor`, `a3CompFgColor`) share the same 60-option palette and are referenced elsewhere via `[CONFIGURATION.a0PrimaryColor]` expressions. List configs like `z1_mode`, `z1_aod`, `z0_index` drive `Variant` / `Compare` branches in the scene. String labels for all options come from `res/values/strings.xml`.
-2. **`<Scene>`** (line ~152 onward) — the scene graph. Rendered elements:
+1. **`<UserConfigurations>`** (lines ~12–1239) — `ColorConfiguration`, `ListConfiguration`, `BooleanConfiguration`, and a `<Flavors>` block expose editor options. Four color palettes (`a0PrimaryColor`, `a1AccentColor`, `a2CompBaseColor`, `a3CompFgColor`) share the same 60-option palette and are referenced elsewhere via `[CONFIGURATION.a0PrimaryColor]` expressions. List configs like `z1_mode`, `z1_aod`, `z0_index` drive `Variant` / `Compare` branches in the scene. String labels for all options come from `res/values/strings.xml`.
+2. **`<Scene>`** (line ~1240 onward) — the scene graph. Rendered elements:
    - Background and index rings (reuses drawables in `res/drawable-nodpi/`).
    - The `numbers` group: 12 `PartText` elements rotated by `[MINUTE] * (-6)` to form the rotating minute ring.
-   - Four **`<ComplicationSlot>`** blocks at the corners, each bounded by a `<BoundingArc>` sweeping ~72° around a corner pivot (`centerX`/`centerY` set to 0 or 225 to place the arc's center off-canvas). Each slot has its own `<Complication>` branches for `RANGED_VALUE`, `SHORT_TEXT`, `MONOCHROMATIC_IMAGE`, and `EMPTY` types, with a `<Condition>` that picks `noIcon` vs. default layouts via `textLength([COMPLICATION.TEXT])` and `[COMPLICATION.MONOCHROMATIC_IMAGE] == null`.
+   - Four **`<ComplicationSlot>`** blocks at the corners, each bounded by a `<BoundingArc>` sweeping ~72° around a corner pivot (`centerX`/`centerY` set to 0 or 225 to place the arc's center off-canvas). Each slot has its own `<Complication>` branches for `RANGED_VALUE`, `GOAL_PROGRESS`, `WEIGHTED_ELEMENTS`, `SHORT_TEXT`, `MONOCHROMATIC_IMAGE`, and `EMPTY` types, with a `<Condition>` that picks `noIcon` vs. default layouts via `textLength([COMPLICATION.TEXT])` and `[COMPLICATION.MONOCHROMATIC_IMAGE] == null`.
    - A fifth bottom-center `ComplicationSlot` (`slotId="4"`) for `SHORT_TEXT` / `SMALL_IMAGE` / `MONOCHROMATIC_IMAGE`.
 
 ### Conventions used throughout the file
@@ -53,8 +55,21 @@ The entire watch face lives in three XML files under `app/src/main/res/`:
 ### Assets
 
 - `res/drawable-nodpi/` — all raster assets (rings, index marks, complication border, preview). Referenced by `resource="name"` without a type prefix in WFF.
-- `res/font/` — Inter and Roboto Mono TTFs, referenced by the filename stem via `<Font family="inter_regular" ... />`.
+- `res/font/` — Inter (`inter_regular`, `inter_medium`), Roboto (`roboto_sb`), and Roboto Mono (`roboto_mono_sb`) TTFs, referenced by the filename stem via `<Font family="inter_regular" ... />`.
 - `res/mipmap-*` — launcher icons only; not used by the watch face itself.
+
+### Supporting files & tooling
+
+Everything below lives outside `app/src/main/res/` and never ships in the APK — it's reference material and CI tooling:
+
+| Path | Role |
+|---|---|
+| `reference/wff-schema/v4/` | Vendored copy of Google's official **WFF v4 XSD**. Ground truth for what elements/attributes exist — if it isn't here, it isn't in v4. The `wff` skill treats it as authoritative; grep it before inventing an attribute. |
+| `reference/original notes/` | Markdown research/porting notes from replicating the original Pixel "Concentric 2.0" (visual deltas, schema findings, feature plans). Background only — not consumed by the build, and references a decompiled source project that isn't in this repo. |
+| `tools/generate_index.py` | Pillow helper that renders pixel-perfect index/tick-ring PNGs for `res/drawable-nodpi/`. Run by hand when regenerating ring assets; not part of the Gradle build. |
+| `app/libs/wff-validator.jar`, `app/libs/memory-footprint.jar` | Google's WFF validator and memory-footprint evaluator. Invoked by CI and runnable locally (see Build & tooling). |
+| `.github/workflows/checks.yml` | CI pipeline: lint, assemble + APK upload, WFF validation, memory-footprint evaluation. |
+| `.claude/skills/wff/` | Project skill (`SKILL.md`, `antipatterns.md`, `patterns/`) for authoring WFF XML — load it before editing `watchface.xml`. Committed and shared; `.claude/settings.local.json` is per-machine and is gitignored. |
 
 ## Modifying the watch face
 
