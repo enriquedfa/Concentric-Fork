@@ -1,12 +1,19 @@
-# Concentric - Watch Face
+# Concentric — Wear OS Watch Face
 
-<img src='https://play-lh.googleusercontent.com/Qp-fN1rU6bimstpohGY03DlDPMRdYapLK0CXH-utB6HJQhtCLxBERs47vjFP4rvVU-w=w832-h470' style="width:600px;" ></img>
+<img src="app/src/main/res/drawable-nodpi/preview.png" width="300" alt="Concentric watch face preview">
 
-<a href='https://play.google.com/store/apps/details?id=com.watchfacedesigns.Concentric&utm_source=https%3A%2F%2Fgithub.com%2Flukakilic%2Fconcentric-watch-face%2Ftree%2Fmain&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="display:inline-block"><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' style="width:200px;"/></a>
+A Wear OS watch face inspired by the Concentric design of the original Google Pixel Watch, built entirely with the declarative [Watch Face Format](https://developer.android.com/training/wearables/wff) (WFF v4) — no Java/Kotlin, just XML.
 
-The Concentric design is originally from the Google Pixel Watch (1). This project recreates it using the [Watch Face Format](https://developer.android.com/training/wearables/wff) (WFF v4) — no Java/Kotlin, just declarative XML. This fork extends the original with richer complication support (ranged-value, goal-progress, weighted-elements, and image/text variants across five slots) plus a CI pipeline.
+It began as a fork of [lukakilic/concentric-watch-face](https://github.com/lukakilic/concentric-watch-face) and has since grown into an independently maintained project that extends the original with:
 
-## Modify the Watch Face
+- **Five complication slots** — four corner arcs plus a left pill — supporting ranged-value, goal-progress, weighted-elements, short-text, and image complications.
+- **Four configurable color roles** (digits, indices, bars, icons), each backed by a shared 60-color palette, plus preset flavors.
+- **Multiple AOD styles and dial modes**, configurable from the watch face editor.
+- **A CI pipeline** that lints, builds, validates the WFF XML, and evaluates the memory footprint on every push.
+
+Requires Wear OS 6 or newer (WFF v4).
+
+## Modify the watch face
 
 The whole watch face is XML under `app/src/main/res/`:
 
@@ -15,9 +22,7 @@ The whole watch face is XML under `app/src/main/res/`:
 
 Watch Face Format is well [documented](https://developer.android.com/training/wearables/wff/watch-face) — pin the docs to `?version=4` to match the manifest. See [`CLAUDE.md`](CLAUDE.md) for an architecture tour and the project conventions.
 
-## Build the Watch Face
-
-This fork builds with Gradle, like current Wear OS watch faces:
+## Build the watch face
 
 ```sh
 ./gradlew :app:assembleDebug      # build a debug APK
@@ -31,3 +36,10 @@ java -jar app/libs/wff-validator.jar 4 app/src/main/res/raw/watchface.xml
 ```
 
 For more background on building WFF watch faces, see [wear-os-samples/WatchFaceFormat](https://github.com/android/wear-os-samples/tree/main/WatchFaceFormat).
+
+## Credits & license
+
+- **Original project**: [Concentric watch face](https://github.com/lukakilic/concentric-watch-face) by [Luka Kilic](https://github.com/lukakilic), released under the MIT License. This project would not exist without it.
+- **Design**: the Concentric visual design originates from Google's Pixel Watch. This is an independent recreation, not affiliated with or endorsed by Google.
+- **Fonts**: [Inter](https://rsms.me/inter/) (SIL Open Font License 1.1), Roboto and Roboto Mono (Apache License 2.0).
+- This project is released under the [MIT License](LICENSE).
