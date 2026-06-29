@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-Concentric is a Wear OS watch face built entirely with the declarative **Watch Face Format (WFF)** — there is no Java/Kotlin code. The app module's `AndroidManifest.xml` declares `com.google.wear.watchface.format.version` = `4` and `android:hasCode="false"`; all rendering behavior lives in XML resources.
+Concentric (`com.dfamaya.concentric`) is a Wear OS watch face built entirely with the declarative **Watch Face Format (WFF)** — there is no Java/Kotlin code. The app module's `AndroidManifest.xml` declares `com.google.wear.watchface.format.version` = `4` and `android:hasCode="false"`; all rendering behavior lives in XML resources. WFF v4 requires the Wear OS 6 runtime, so `minSdk`/`targetSdk` are pinned to `36` — keep them in lockstep with the declared format version.
+
+The project started as a fork of [lukakilic/concentric-watch-face](https://github.com/lukakilic/concentric-watch-face) (MIT) and is now independently maintained; the original author is credited in `README.md` and `LICENSE`.
 
 For format reference, always consult the **WFF v4 documentation**: https://developer.android.com/reference/wear-os/wff/watch-face?version=4 — match the `?version=4` query to the manifest, since element/attribute support changes per version.
 
@@ -17,7 +19,7 @@ For format reference, always consult the **WFF v4 documentation**: https://devel
 - **No app source / no tests** — the app module is pure WFF XML (no Java/Kotlin), so there are no unit or instrumented tests and typical test tasks are no-ops. Correctness is enforced by lint, the WFF validator, and a memory-footprint check (see CI below).
 - **WFF validator** (run before pushing): `java -jar app/libs/wff-validator.jar 4 app/src/main/res/raw/watchface.xml`. It exits `0` even when validation fails, so scan the output for `PASSED` / `FAILED`.
 - **CI** (`.github/workflows/checks.yml`, on every push/PR): runs `:app:lintDebug`, `:app:assembleDebug` (uploads the debug APK as an artifact), the WFF validator above, and a memory-footprint evaluation (`app/libs/memory-footprint.jar`).
-- **AGP 9.1.1** with `android.newDsl=false` in `gradle.properties`. `app/build.gradle.kts` uses `configure<ApplicationExtension> { ... }` (imported from `com.android.build.api.dsl`) instead of the deprecated `android { }` block — keep it that way so AGP 10 removal doesn't break the build.
+- **AGP** (version pinned in `gradle/libs.versions.toml`, applied via `alias(libs.plugins.android.application)`) with `android.newDsl=false` in `gradle.properties`. `app/build.gradle.kts` uses `configure<ApplicationExtension> { ... }` (imported from `com.android.build.api.dsl`) instead of the deprecated `android { }` block — keep it that way so AGP 10 removal doesn't break the build.
 - `settings.gradle.kts` suppresses `@Incubating` warnings file-wide for the dependency-resolution DSL; leave the suppression in place.
 
 ## Architecture
@@ -37,7 +39,8 @@ The rendered watch face is three XML files under `app/src/main/res/`; everything
    - Background and index rings (reuses drawables in `res/drawable-nodpi/`).
    - The `numbers` group: 12 `PartText` elements rotated by `[MINUTE] * (-6)` to form the rotating minute ring.
    - Four **`<ComplicationSlot>`** blocks at the corners, each bounded by a `<BoundingArc>` sweeping ~72° around a corner pivot (`centerX`/`centerY` set to 0 or 225 to place the arc's center off-canvas). Each slot has its own `<Complication>` branches for `RANGED_VALUE`, `GOAL_PROGRESS`, `WEIGHTED_ELEMENTS`, `SHORT_TEXT`, `MONOCHROMATIC_IMAGE`, and `EMPTY` types, with a `<Condition>` that picks `noIcon` vs. default layouts via `textLength([COMPLICATION.TEXT])` and `[COMPLICATION.MONOCHROMATIC_IMAGE] == null`.
-   - A fifth bottom-center `ComplicationSlot` (`slotId="4"`) for `SHORT_TEXT` / `SMALL_IMAGE` / `MONOCHROMATIC_IMAGE`.
+   - A fifth left-edge pill `ComplicationSlot` (`slotId="4"`, `name="left_pill_complication"`, vertically centered at the left edge) for `SHORT_TEXT` / `SMALL_IMAGE` / `MONOCHROMATIC_IMAGE`.
+   - Every `ComplicationSlot`'s `displayName` must resolve to a string in `res/values/strings.xml` (bare name, no `@string/` prefix) — these labels show up in the watch face editor.
 
 ### Conventions used throughout the file
 

@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "concentric-watch-face"
+rootProject.name = "concentric"
 include(":app")

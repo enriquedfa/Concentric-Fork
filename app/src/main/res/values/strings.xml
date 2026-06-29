@@ -3,6 +3,21 @@
 	<string name="watch_face_name" translatable="false">
 		Concentric
 	</string>
+	<string name="top_left_complication">
+		Top left complication
+	</string>
+	<string name="top_right_complication">
+		Top right complication
+	</string>
+	<string name="bottom_left_complication">
+		Bottom left complication
+	</string>
+	<string name="bottom_right_complication">
+		Bottom right complication
+	</string>
+	<string name="left_pill_complication">
+		Left complication
+	</string>
 	<string name="primaryColor">
 		Digits Color
 	</string>
