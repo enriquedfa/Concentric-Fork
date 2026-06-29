@@ -1,6 +1,10 @@
 # Concentric — Wear OS Watch Face
 
-<img src="app/src/main/res/drawable-nodpi/preview.png" width="300" alt="Concentric watch face preview">
+<p align="center">
+  <img src="Preview.png" width="300" alt="Concentric watch face with complications">
+  &nbsp;&nbsp;
+  <img src="app/src/main/res/drawable-nodpi/preview.png" width="300" alt="Concentric watch face, clean dial">
+</p>
 
 A Wear OS watch face inspired by the Concentric design of the original Google Pixel Watch, built entirely with the declarative [Watch Face Format](https://developer.android.com/training/wearables/wff) (WFF v4) — no Java/Kotlin, just XML.
 
