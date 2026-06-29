@@ -6,10 +6,11 @@ A Wear OS watch face inspired by the Concentric design of the original Google Pi
 
 It began as a fork of [lukakilic/concentric-watch-face](https://github.com/lukakilic/concentric-watch-face) and has since grown into an independently maintained project that extends the original with:
 
-- **Five complication slots** — four corner arcs plus a left pill — supporting ranged-value, goal-progress, weighted-elements, short-text, and image complications.
-- **Four configurable color roles** (digits, indices, bars, icons), each backed by a shared 60-color palette, plus preset flavors.
-- **Multiple AOD styles and dial modes**, configurable from the watch face editor.
-- **A CI pipeline** that lints, builds, validates the WFF XML, and evaluates the memory footprint on every push.
+- **Complications** — added `GOAL_PROGRESS` and `WEIGHTED_ELEMENTS` support and a custom range indicator that correctly maps `RANGED_VALUE` complications whose bounds aren't 0–100, and reworked the left-edge pill slot to sit symmetrically. Five slots in total: four corner arcs plus the left pill.
+- **Colors** — rebuilt the palette around Material Design 3 colors and the four-role color model of Google's original Concentric face (digits, indices, bars, icons), with preset flavors on top.
+- **AOD** — added subtle ambient animations and new graphics that more closely resemble the original always-on display.
+- **Settings** — redesigned the watch face editor configuration.
+- **CI pipeline** — lints, builds, validates the WFF XML, and evaluates the memory footprint on every push.
 
 Requires Wear OS 6 or newer (WFF v4).
 
