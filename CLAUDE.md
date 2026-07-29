@@ -4,9 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-Concentric (`com.dfamaya.concentric`) is a Wear OS watch face built entirely with the declarative **Watch Face Format (WFF)** — there is no Java/Kotlin code. The app module's `AndroidManifest.xml` declares `com.google.wear.watchface.format.version` = `4` and `android:hasCode="false"`; all rendering behavior lives in XML resources. WFF v4 requires the Wear OS 6 runtime, so `minSdk`/`targetSdk` are pinned to `36` — keep them in lockstep with the declared format version.
+Concentric (`com.dfamaya.concentric`) is a Wear OS watch face built entirely with the declarative **Watch Face Format (WFF)** — there is no Java/Kotlin code in it. The app module's `AndroidManifest.xml` declares `com.google.wear.watchface.format.version` = `4` and `android:hasCode="false"`; all rendering behavior lives in XML resources. WFF v4 requires the Wear OS 6 runtime, so `minSdk`/`targetSdk` are pinned to `36` — keep them in lockstep with the declared format version.
 
 The project started as a fork of [lukakilic/concentric-watch-face](https://github.com/lukakilic/concentric-watch-face) (MIT) and is now independently maintained; the original author is credited in `README.md` and `LICENSE`.
+
+Two Gradle modules (`settings.gradle.kts`):
+
+- **`:app`** — the pure-XML WFF watch face. The heart of the project; the "no code" rule applies here.
+- **`:mobile`** — a Jetpack Compose **phone companion app** that helps users install the face on their watch (Play has trouble offering standalone watch faces on some phones). It shares the watch face's `applicationId` so Play treats them as one multi-form-factor listing, and its FAB uses `RemoteActivityHelper` to open the face's Play listing on the paired watch. It reads `app/src/main/res/values/wear.xml`'s Data Layer capability (`concentric_watchface`) to tell "installed" from "not installed" — keep that string in sync with `WATCH_FACE_CAPABILITY` in `mobile/.../WatchActions.kt`. This module *does* contain Kotlin.
 
 For format reference, always consult the **WFF v4 documentation**: https://developer.android.com/reference/wear-os/wff/watch-face?version=4 — match the `?version=4` query to the manifest, since element/attribute support changes per version.
 
@@ -14,11 +19,11 @@ For format reference, always consult the **WFF v4 documentation**: https://devel
 
 - **Docs**: `android docs` to search docs through android CLI, it might or might not be useful for wear os.
 - **Gradle wrapper**: `./gradlew <task>` (use `gradlew.bat` on Windows cmd; the wrapper works from bash).
-- **Assemble**: `./gradlew :app:assembleDebug` / `:app:assembleRelease`.
+- **Assemble**: `./gradlew :app:assembleDebug` / `:app:assembleRelease`; the companion is `./gradlew :mobile:assembleDebug`.
 - **Install to a paired watch / emulator**: `./gradlew :app:installDebug` (requires adb-connected Wear OS device). The `android` CLI helper is the preferred way to manage emulators, SDK components, and deploys from the terminal — prefer it over manual `adb`/`sdkmanager` invocations when available.
-- **No app source / no tests** — the app module is pure WFF XML (no Java/Kotlin), so there are no unit or instrumented tests and typical test tasks are no-ops. Correctness is enforced by lint, the WFF validator, and a memory-footprint check (see CI below).
+- **No app source / no tests** — the `:app` module is pure WFF XML (no Java/Kotlin), and `:mobile` has no test source set, so there are no unit or instrumented tests and typical test tasks are no-ops. Correctness is enforced by lint, the WFF validator, and a memory-footprint check (see CI below).
 - **WFF validator** (run before pushing): `java -jar app/libs/wff-validator.jar 4 app/src/main/res/raw/watchface.xml`. It exits `0` even when validation fails, so scan the output for `PASSED` / `FAILED`.
-- **CI** (`.github/workflows/checks.yml`, on every push/PR): runs `:app:lintDebug`, `:app:assembleDebug` (uploads the debug APK as an artifact), the WFF validator above, and a memory-footprint evaluation (`app/libs/memory-footprint.jar`).
+- **CI** (`.github/workflows/checks.yml`, on every push/PR): runs lint and `assembleDebug` for both modules (uploading both debug APKs as artifacts), the WFF validator above, and a memory-footprint evaluation (`app/libs/memory-footprint.jar`).
 - **AGP** (version pinned in `gradle/libs.versions.toml`, applied via `alias(libs.plugins.android.application)`) with `android.newDsl=false` in `gradle.properties`. `app/build.gradle.kts` uses `configure<ApplicationExtension> { ... }` (imported from `com.android.build.api.dsl`) instead of the deprecated `android { }` block — keep it that way so AGP 10 removal doesn't break the build.
 - `settings.gradle.kts` suppresses `@Incubating` warnings file-wide for the dependency-resolution DSL; leave the suppression in place.
 
@@ -71,7 +76,8 @@ Everything below lives outside `app/src/main/res/` and never ships in the APK �
 | `reference/original notes/` | Markdown research/porting notes from replicating the original Pixel "Concentric 2.0" (visual deltas, schema findings, feature plans). Background only — not consumed by the build, and references a decompiled source project that isn't in this repo. |
 | `tools/generate_index.py` | Pillow helper that renders pixel-perfect index/tick-ring PNGs for `res/drawable-nodpi/`. Run by hand when regenerating ring assets; not part of the Gradle build. |
 | `app/libs/wff-validator.jar`, `app/libs/memory-footprint.jar` | Google's WFF validator and memory-footprint evaluator. Invoked by CI and runnable locally (see Build & tooling). |
-| `.github/workflows/checks.yml` | CI pipeline: lint, assemble + APK upload, WFF validation, memory-footprint evaluation. |
+| `.github/workflows/checks.yml` | CI pipeline: lint, assemble + APK upload (watch face and companion), WFF validation, memory-footprint evaluation. |
+| `mobile/` | Jetpack Compose phone companion app (Kotlin). Branding lives in `res/values/strings.xml`, the target package / feedback address / capability id in `WatchActions.kt`, and the release notes shown in the About tab in `Changelog.kt`. |
 | `.claude/skills/wff/` | Project skill (`SKILL.md`, `antipatterns.md`, `patterns/`) for authoring WFF XML — load it before editing `watchface.xml`. Committed and shared; `.claude/settings.local.json` is per-machine and is gitignored. |
 
 ## Modifying the watch face

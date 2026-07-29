@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "concentric"
 include(":app")
+include(":mobile")

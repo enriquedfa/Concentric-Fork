@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Data Layer capability advertised by this watch face. A connected watch that
+	has the face installed becomes a "reachable node" providing this capability,
+	which lets the :mobile companion app tell "installed" from "not installed".
+
+	The item value must match WATCH_FACE_CAPABILITY in the companion's
+	WatchActions.kt. Declaring a capability needs no code — a resource
+	string-array is enough, which is why it works in this pure-XML
+	(hasCode="false") module.
+-->
+<resources>
+	<string-array name="android_wear_capabilities">
+		<item>concentric_watchface</item>
+	</string-array>
+</resources>
