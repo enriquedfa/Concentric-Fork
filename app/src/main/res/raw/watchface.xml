@@ -3768,7 +3768,7 @@
 													<InlineImage
 														color="#00000000"
 														height="28"
-														resource="empty"
+														resource="index_icon_2"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
 														width="28" />
 													<Template>
@@ -3818,7 +3818,7 @@
 														<InlineImage
 															color="#FFFFFFFF"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>
@@ -3997,7 +3997,7 @@
 												<InlineImage
 													color="[CONFIGURATION.a3CompFgColor]"
 													height="28"
-													resource="empty"
+													resource="index_icon_2"
 													source="COMPLICATION.MONOCHROMATIC_IMAGE"
 													width="28" />
 												<Template>
@@ -4438,7 +4438,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>%s
@@ -4484,7 +4484,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 															<Template>%s<Parameter expression="&#160;" /></Template>
@@ -4545,7 +4545,7 @@
 																<InlineImage
 																	color="#00000000"
 																	height="28"
-																	resource="empty"
+																	resource="index_icon_2"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
 																<Template>%s
@@ -4591,7 +4591,7 @@
 																	<InlineImage
 																		color="#FFFFFFFF"
 																		height="28"
-																		resource="empty"
+																		resource="index_icon_2"
 																		source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																		width="28" />
 																	<Template>%s<Parameter expression="&#160;" /></Template>
@@ -4644,7 +4644,7 @@
 																<InlineImage
 																	color="#00000000"
 																	height="28"
-																	resource="empty"
+																	resource="index_icon_2"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
 																<Template>%s
@@ -4690,7 +4690,7 @@
 																	<InlineImage
 																		color="#FFFFFFFF"
 																		height="28"
-																		resource="empty"
+																		resource="index_icon_2"
 																		source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																		width="28" />
 																	<Template>%s<Parameter expression="&#160;" /></Template>
@@ -5085,7 +5085,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Upper>
@@ -5126,7 +5126,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 															<Upper>
@@ -5318,7 +5318,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Upper>
@@ -5360,7 +5360,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 															<Upper>
@@ -5490,7 +5490,7 @@
 											size="30">
 											<InlineImage
 												height="28"
-												resource="empty"
+												resource="index_icon_2"
 												source="COMPLICATION.MONOCHROMATIC_IMAGE"
 												width="28" />
 										</Font>
@@ -6077,7 +6077,7 @@
 													<InlineImage
 														color="#00000000"
 														height="28"
-														resource="empty"
+														resource="index_icon_2"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
 														width="28" />
 													<Template>
@@ -6127,7 +6127,7 @@
 														<InlineImage
 															color="#FFFFFFFF"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>
@@ -6306,7 +6306,7 @@
 												<InlineImage
 													color="[CONFIGURATION.a3CompFgColor]"
 													height="28"
-													resource="empty"
+													resource="index_icon_2"
 													source="COMPLICATION.MONOCHROMATIC_IMAGE"
 													width="28" />
 												<Template>
@@ -6747,7 +6747,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Template>%s
@@ -6793,7 +6793,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 															<Template>%s<Parameter expression="&#160;" /></Template>
@@ -6854,7 +6854,7 @@
 																<InlineImage
 																	color="#00000000"
 																	height="28"
-																	resource="empty"
+																	resource="index_icon_2"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
 																<Template>%s
@@ -6900,7 +6900,7 @@
 																	<InlineImage
 																		color="#FFFFFFFF"
 																		height="28"
-																		resource="empty"
+																		resource="index_icon_2"
 																		source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																		width="28" />
 																	<Template>%s<Parameter expression="&#160;" /></Template>
@@ -6953,7 +6953,7 @@
 																<InlineImage
 																	color="#00000000"
 																	height="28"
-																	resource="empty"
+																	resource="index_icon_2"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
 																<Template>%s
@@ -6999,7 +6999,7 @@
 																	<InlineImage
 																		color="#FFFFFFFF"
 																		height="28"
-																		resource="empty"
+																		resource="index_icon_2"
 																		source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																		width="28" />
 																	<Template>%s<Parameter expression="&#160;" /></Template>
@@ -7394,7 +7394,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Upper>
@@ -7435,7 +7435,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 															<Upper>
@@ -7627,7 +7627,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Upper>
@@ -7669,7 +7669,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 															<Upper>
@@ -7799,7 +7799,7 @@
 											size="30">
 											<InlineImage
 												height="28"
-												resource="empty"
+												resource="index_icon_2"
 												source="COMPLICATION.MONOCHROMATIC_IMAGE"
 												width="28" />
 										</Font>
@@ -8401,7 +8401,7 @@
 													<InlineImage
 														color="#00000000"
 														height="28"
-														resource="empty"
+														resource="index_icon_2"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
 														width="28" />
 												</Font>
@@ -8451,7 +8451,7 @@
 														<InlineImage
 															color="#FFFFFFFF"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 													</Font>
@@ -8615,7 +8615,7 @@
 												<InlineImage
 													color="[CONFIGURATION.a3CompFgColor]"
 													height="28"
-													resource="empty"
+													resource="index_icon_2"
 													source="COMPLICATION.MONOCHROMATIC_IMAGE"
 													width="28" />
 												<Template>
@@ -9067,7 +9067,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 													</Font>
@@ -9109,7 +9109,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 														</Font>
@@ -9174,7 +9174,7 @@
 																<InlineImage
 																	color="#00000000"
 																	height="28"
-																	resource="empty"
+																	resource="index_icon_2"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
 															</Font>
@@ -9216,7 +9216,7 @@
 																	<InlineImage
 																		color="#FFFFFFFF"
 																		height="28"
-																		resource="empty"
+																		resource="index_icon_2"
 																		source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																		width="28" />
 																</Font>
@@ -9273,7 +9273,7 @@
 																<InlineImage
 																	color="#00000000"
 																	height="28"
-																	resource="empty"
+																	resource="index_icon_2"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
 															</Font>
@@ -9315,7 +9315,7 @@
 																	<InlineImage
 																		color="#FFFFFFFF"
 																		height="28"
-																		resource="empty"
+																		resource="index_icon_2"
 																		source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																		width="28" />
 																</Font>
@@ -9703,7 +9703,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Upper>
@@ -9744,7 +9744,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 															<Upper>
@@ -9936,7 +9936,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Upper>
@@ -9978,7 +9978,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 															<Upper>
@@ -10108,7 +10108,7 @@
 											size="30">
 											<InlineImage
 												height="28"
-												resource="empty"
+												resource="index_icon_2"
 												source="COMPLICATION.MONOCHROMATIC_IMAGE"
 												width="28" />
 										</Font>
@@ -10710,7 +10710,7 @@
 													<InlineImage
 														color="#00000000"
 														height="28"
-														resource="empty"
+														resource="index_icon_2"
 														source="COMPLICATION.MONOCHROMATIC_IMAGE"
 														width="28" />
 												</Font>
@@ -10760,7 +10760,7 @@
 														<InlineImage
 															color="#FFFFFFFF"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 													</Font>
@@ -10924,7 +10924,7 @@
 												<InlineImage
 													color="[CONFIGURATION.a3CompFgColor]"
 													height="28"
-													resource="empty"
+													resource="index_icon_2"
 													source="COMPLICATION.MONOCHROMATIC_IMAGE"
 													width="28" />
 												<Template>
@@ -11376,7 +11376,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 													</Font>
@@ -11418,7 +11418,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 														</Font>
@@ -11483,7 +11483,7 @@
 																<InlineImage
 																	color="#00000000"
 																	height="28"
-																	resource="empty"
+																	resource="index_icon_2"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
 															</Font>
@@ -11525,7 +11525,7 @@
 																	<InlineImage
 																		color="#FFFFFFFF"
 																		height="28"
-																		resource="empty"
+																		resource="index_icon_2"
 																		source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																		width="28" />
 																</Font>
@@ -11582,7 +11582,7 @@
 																<InlineImage
 																	color="#00000000"
 																	height="28"
-																	resource="empty"
+																	resource="index_icon_2"
 																	source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																	width="28" />
 															</Font>
@@ -11624,7 +11624,7 @@
 																	<InlineImage
 																		color="#FFFFFFFF"
 																		height="28"
-																		resource="empty"
+																		resource="index_icon_2"
 																		source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																		width="28" />
 																</Font>
@@ -12012,7 +12012,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Upper>
@@ -12053,7 +12053,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 															<Upper>
@@ -12245,7 +12245,7 @@
 														<InlineImage
 															color="#00000000"
 															height="28"
-															resource="empty"
+															resource="index_icon_2"
 															source="COMPLICATION.MONOCHROMATIC_IMAGE"
 															width="28" />
 														<Upper>
@@ -12287,7 +12287,7 @@
 															<InlineImage
 																color="#FFFFFFFF"
 																height="28"
-																resource="empty"
+																resource="index_icon_2"
 																source="COMPLICATION.MONOCHROMATIC_IMAGE"
 																width="28" />
 															<Upper>
@@ -12417,7 +12417,7 @@
 											size="30">
 											<InlineImage
 												height="28"
-												resource="empty"
+												resource="index_icon_2"
 												source="COMPLICATION.MONOCHROMATIC_IMAGE"
 												width="28" />
 										</Font>
