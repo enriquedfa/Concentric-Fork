@@ -14,7 +14,7 @@ val CHANGELOG: List<ChangelogEntry> = listOf(
         changes = listOf(
             "Companion phone app to install Concentric on your paired Wear OS watch.",
             "Detects whether a watch is connected and whether the face is already installed.",
-            "Quick links to rate the face and send feedback.",
+            "Quick links to rate the face, send feedback, and share it.",
         ),
     ),
 )

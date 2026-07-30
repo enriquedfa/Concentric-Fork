@@ -16,6 +16,12 @@ import java.util.concurrent.Executor
  *  :app's and :mobile's applicationId. */
 const val WATCH_FACE_PACKAGE = "com.dfamaya.concentric"
 
+/**
+ * The Play listing as a plain https link. Shared text uses this rather than the
+ * `market://` form so the link still resolves wherever it ends up pasted.
+ */
+const val PLAY_URL = "https://play.google.com/store/apps/details?id=$WATCH_FACE_PACKAGE"
+
 /** Where "Send feedback" mail is addressed. */
 const val FEEDBACK_EMAIL = "developerdfa@gmail.com"
 
@@ -99,6 +105,25 @@ fun sendFeedback(context: Context): Boolean {
     ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     return try {
         context.startActivity(intent)
+        true
+    } catch (e: ActivityNotFoundException) {
+        false
+    }
+}
+
+/**
+ * Opens the system share sheet with a short pitch and the face's [PLAY_URL], so
+ * users can hand the listing to someone else. Returns false if no app can
+ * handle the chooser.
+ */
+fun shareApp(context: Context): Boolean {
+    val send = Intent(Intent.ACTION_SEND)
+        .setType("text/plain")
+        .putExtra(Intent.EXTRA_TEXT, context.getString(R.string.share_text, PLAY_URL))
+    val chooser = Intent.createChooser(send, context.getString(R.string.share_chooser_title))
+        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    return try {
+        context.startActivity(chooser)
         true
     } catch (e: ActivityNotFoundException) {
         false

@@ -44,7 +44,8 @@ fun AboutScreen(modifier: Modifier = Modifier) {
             ChangelogCard(entry)
         }
         item {
-            Spacer(modifier = Modifier.height(32.dp))
+            // Breathing room so the share FAB never overlaps the last card.
+            Spacer(modifier = Modifier.height(96.dp))
         }
     }
 }

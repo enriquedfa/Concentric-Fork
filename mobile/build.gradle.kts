@@ -108,6 +108,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    // Navigation 3 — NavDisplay owns the two top-level destinations, their
+    // back stack, and the transitions between them.
+    implementation(libs.androidx.navigation3.runtime)
+    implementation(libs.androidx.navigation3.ui)
     implementation(libs.androidx.wear.remote.interactions)
     implementation(libs.play.services.wearable)
     implementation(libs.kotlinx.coroutines.play.services)

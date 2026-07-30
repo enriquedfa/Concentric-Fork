@@ -72,12 +72,21 @@ private val DarkColors = darkColorScheme(
 
 // Material 3 Expressive leans on rounder, more generous shapes than the
 // baseline. Bump every shape token up a notch.
+// All EIGHT tokens have to be set. The three "increased" tiers default to the M3
+// baseline (20 / 32 / 48) when omitted, which would leave them *smaller* than an
+// inflated large (28) and extraLarge (36) — a component asking for the increased
+// variant of a tier would get tighter corners than the tier itself. The extra
+// values keep M3's own step deltas: +4 into each increased tier, +16 into
+// extraExtraLarge.
 private val ExpressiveShapes = Shapes(
     extraSmall = RoundedCornerShape(8.dp),
     small = RoundedCornerShape(12.dp),
     medium = RoundedCornerShape(20.dp),
     large = RoundedCornerShape(28.dp),
+    largeIncreased = RoundedCornerShape(32.dp),
     extraLarge = RoundedCornerShape(36.dp),
+    extraLargeIncreased = RoundedCornerShape(40.dp),
+    extraExtraLarge = RoundedCornerShape(56.dp),
 )
 
 /**

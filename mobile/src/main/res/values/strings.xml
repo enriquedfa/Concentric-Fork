@@ -21,6 +21,10 @@
 	<string name="feedback_subject">Concentric feedback</string>
 	<string name="feedback_body">\n\n---\nApp version: %1$s</string>
 	<string name="no_email_client">No email app found.</string>
+	<string name="share">Share</string>
+	<string name="share_text">Concentric — a Watch Face Format take on the Pixel Concentric face for Wear OS. Get it here: %1$s</string>
+	<string name="share_chooser_title">Share this face</string>
+	<string name="share_unavailable">No app available to share with.</string>
 	<string name="setup_dialog_title">How to set on watch</string>
 	<string name="setup_step_1">Long-press your watch\'s current face to enter the picker.</string>
 	<string name="setup_step_2">Swipe left or right and tap \"Add watch face\" (+).</string>
