@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -58,20 +57,6 @@ jobs:
             echo ""
             echo "Run page: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           } >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Comment APK download link on PR
-        if: github.event_name == 'pull_request'
-        uses: marocchino/sticky-pull-request-comment@v3
-        with:
-          header: watchface-apk
-          message: |
-            Debug APK built for ${{ github.event.pull_request.head.sha }}
-
-            - Watch face: [`watchface-debug-apk.zip`](${{ steps.upload_apk.outputs.artifact-url }})
-
-            (GitHub login required, expires in 14 days)
-
-            Sideload the watch face onto a Wear OS 6 device/emulator and verify both interactive and AOD modes.
 
       - name: Upload lint report
         if: always()
