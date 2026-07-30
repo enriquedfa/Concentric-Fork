@@ -1,0 +1,5 @@
+<resources>
+	<!-- Launch-window background. Matches a neutral dark surface so the cold-start
+	     window doesn't flash a bright rectangle before Compose draws. -->
+	<color name="window_background">#FF111318</color>
+</resources>

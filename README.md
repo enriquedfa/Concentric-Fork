@@ -15,8 +15,23 @@ It began as a fork of [lukakilic/concentric-watch-face](https://github.com/lukak
 - **AOD** — added subtle ambient animations and new graphics that more closely resemble the original always-on display.
 - **Settings** — redesigned the watch face editor configuration.
 - **CI pipeline** — lints, builds, validates the WFF XML, and evaluates the memory footprint on every push.
+- **Phone companion** — an optional Jetpack Compose app (`:mobile`) that installs the face on your paired watch from your phone.
 
-Requires Wear OS 6 or newer (WFF v4).
+Requires Wear OS 6 or newer (WFF v4). The companion app runs on Android 8.0+.
+
+## Modules
+
+- **`:app`** — the pure-XML WFF watch face (`android:hasCode="false"`). The core of the project.
+- **`:mobile`** — the phone companion. Some phones can't offer standalone watch
+  faces in the Play Store, so the companion opens the face's Play listing on the
+  paired watch via `RemoteActivityHelper`. Built with Material 3 Expressive and
+  Material You dynamic color on Android 12+.
+
+The companion shares the watch face's `applicationId` (`com.dfamaya.concentric`)
+so Google Play treats the two as one multi-form-factor listing. The watch face
+declares a Data Layer capability in `app/src/main/res/values/wear.xml`, which
+lets the companion tell whether a watch is connected and whether the face is
+already installed.
 
 ## Modify the watch face
 
@@ -30,8 +45,9 @@ Watch Face Format is well [documented](https://developer.android.com/training/we
 ## Build the watch face
 
 ```sh
-./gradlew :app:assembleDebug      # build a debug APK
+./gradlew :app:assembleDebug      # build a debug watch face APK
 ./gradlew :app:installDebug       # install to a connected Wear OS 6 device/emulator
+./gradlew :mobile:assembleDebug   # build the phone companion APK
 ```
 
 Every push and pull request runs [`.github/workflows/checks.yml`](.github/workflows/checks.yml), which lints, assembles the APK, validates the WFF XML with Google's validator, and evaluates the memory footprint. Run the validator locally the same way CI does (it exits `0` even on failure, so check the log for `PASSED`/`FAILED`):

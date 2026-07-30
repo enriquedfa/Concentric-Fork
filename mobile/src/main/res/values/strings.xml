@@ -1,0 +1,33 @@
+<resources>
+	<string name="app_name">Concentric</string>
+	<string name="tagline">Concentric rings on your wrist</string>
+	<string name="home">Home</string>
+	<string name="about">About</string>
+	<string name="install_on_watch">Install on watch</string>
+	<string name="status_checking">Checking watch…</string>
+	<string name="no_watch_connected">No watch connected</string>
+	<string name="watch_connected">Watch connected</string>
+	<string name="set_on_watch">Set on watch</string>
+	<string name="rate">Rate</string>
+	<string name="home_headline">Concentric</string>
+	<string name="home_body">A Watch Face Format take on the Pixel Concentric face — a rotating minute ring, configurable colour palettes, and five complication slots. Install it on your Wear OS watch straight from your phone: some phones can\'t offer standalone watch faces in the Play Store, so this companion sends the install to your watch for you.</string>
+	<string name="home_hint">Tap \"Install on watch\" to open the Play Store on your paired Wear OS watch. If your watch isn\'t connected, you\'ll be prompted to open it manually.</string>
+	<string name="install_sending">Opening the Play Store on your watch…</string>
+	<string name="install_sent">Check your watch to finish installing.</string>
+	<string name="install_failed">Couldn\'t reach a watch. Make sure one is paired and connected.</string>
+	<string name="store_unavailable">Google Play isn\'t available on this device.</string>
+	<string name="changelog_title">Changelog</string>
+	<string name="send_feedback">Send feedback</string>
+	<string name="feedback_subject">Concentric feedback</string>
+	<string name="feedback_body">\n\n---\nApp version: %1$s</string>
+	<string name="no_email_client">No email app found.</string>
+	<string name="share">Share</string>
+	<string name="share_text">Concentric — a Watch Face Format take on the Pixel Concentric face for Wear OS. Get it here: %1$s</string>
+	<string name="share_chooser_title">Share this face</string>
+	<string name="share_unavailable">No app available to share with.</string>
+	<string name="setup_dialog_title">How to set on watch</string>
+	<string name="setup_step_1">Long-press your watch\'s current face to enter the picker.</string>
+	<string name="setup_step_2">Swipe left or right and tap \"Add watch face\" (+).</string>
+	<string name="setup_step_3">Scroll and select Concentric from the list.</string>
+	<string name="setup_got_it">Got it</string>
+</resources>
