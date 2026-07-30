@@ -1,9 +1,11 @@
 package com.dfamaya.concentric.companion
 
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.EnterExitState
 import androidx.compose.animation.SizeTransform
 import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.LinearOutSlowInEasing
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.snap
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -31,6 +33,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.ExtendedFloatingActionButton
+import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearWavyProgressIndicator
@@ -249,6 +252,18 @@ fun CompanionApp() {
                 label = "fab",
             ) { destination ->
                 val onAbout = destination == About
+                // The shadow is drawn outside the FAB's own bounds, so whatever
+                // clips during the transition (the animating container, the
+                // Scaffold's FAB slot) shaves it flat along the bottom. Rather
+                // than chase the clipper, carry no elevation while this child is
+                // entering or leaving and fade the shadow in once it has settled.
+                val settled = transition.currentState == EnterExitState.Visible &&
+                    transition.targetState == EnterExitState.Visible
+                val fabElevation by animateDpAsState(
+                    targetValue = if (settled) 6.dp else 0.dp,
+                    animationSpec = tween(durationMillis = 200),
+                    label = "fabElevation",
+                )
                 // Muted palette for the non-actionable states (checking / no watch).
                 val mutedContainer = MaterialTheme.colorScheme.surfaceContainerHighest
                 val mutedContent = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
@@ -316,6 +331,12 @@ fun CompanionApp() {
                         actionable -> MaterialTheme.colorScheme.onPrimaryContainer
                         else -> mutedContent
                     },
+                    elevation = FloatingActionButtonDefaults.elevation(
+                        defaultElevation = fabElevation,
+                        pressedElevation = fabElevation,
+                        focusedElevation = fabElevation,
+                        hoveredElevation = fabElevation,
+                    ),
                 )
             }
         },
