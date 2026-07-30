@@ -1,8 +1,10 @@
 package com.dfamaya.concentric.companion
 
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.SizeTransform
 import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.LinearOutSlowInEasing
+import androidx.compose.animation.core.snap
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -232,8 +234,18 @@ fun CompanionApp() {
                     val exit = tween<Float>(durationMillis = 100, easing = FastOutLinearInEasing)
                     (fadeIn(enter) + scaleIn(enter, initialScale = 0.8f))
                         .togetherWith(fadeOut(exit) + scaleOut(exit, targetScale = 0.8f))
-                        .using(null)
+                        // snap: the container takes the incoming FAB's size at
+                        // once rather than animating between the two widths.
+                        // clip = false: the FAB's elevation shadow is drawn
+                        // outside its bounds and AnimatedContent would otherwise
+                        // clip it flat for the length of the transition.
+                        .using(SizeTransform(clip = false) { _, _ -> snap() })
                 },
+                // The FAB is end-aligned in the Scaffold, so the animating
+                // children must be too — with the default TopStart the narrower
+                // of the two labels sits left of its final position until the
+                // transition ends.
+                contentAlignment = Alignment.CenterEnd,
                 label = "fab",
             ) { destination ->
                 val onAbout = destination == About
