@@ -1,7 +1,11 @@
 name: Checks
 
 on:
+  # `labeled` is here so adding the `companion-apk` label re-runs checks and
+  # picks up the companion upload — a plain re-run replays the original event
+  # payload, which would not carry the new label.
   pull_request:
+    types: [opened, synchronize, reopened, labeled]
   push:
     branches: [main]
   workflow_dispatch:
@@ -51,8 +55,14 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
+      # The companion APK is ~12.4 MiB a run and dominated the account-wide
+      # Actions storage quota. Ordinary runs still assemble it (so a broken
+      # :mobile build fails CI) but only publish it on request.
       - name: Upload companion debug APK
         id: upload_mobile_apk
+        if: >-
+          github.event_name == 'workflow_dispatch' ||
+          contains(github.event.pull_request.labels.*.name, 'companion-apk')
         uses: actions/upload-artifact@v6
         with:
           name: companion-debug-apk
@@ -61,13 +71,19 @@ jobs:
           retention-days: 7
 
       - name: Add APK link to job summary
+        env:
+          COMPANION_URL: ${{ steps.upload_mobile_apk.outputs.artifact-url }}
         run: |
           {
             echo "### 🚀 Build Successful!"
             echo ""
             echo "Watch face APK: [\`watchface-debug-apk.zip\`](${{ steps.upload_apk.outputs.artifact-url }}) (GitHub login required, expires in 7 days)"
             echo ""
-            echo "Companion APK: [\`companion-debug-apk.zip\`](${{ steps.upload_mobile_apk.outputs.artifact-url }})"
+            if [ -n "$COMPANION_URL" ]; then
+              echo "Companion APK: [\`companion-debug-apk.zip\`]($COMPANION_URL)"
+            else
+              echo "Companion APK: built, not uploaded. Add the \`companion-apk\` label to this PR (or re-run via **Run workflow**) to publish it."
+            fi
             echo ""
             echo "Run page: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           } >> "$GITHUB_STEP_SUMMARY"
