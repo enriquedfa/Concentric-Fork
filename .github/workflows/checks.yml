@@ -49,7 +49,7 @@ jobs:
           name: watchface-debug-apk
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
-          retention-days: 14
+          retention-days: 7
 
       - name: Upload companion debug APK
         id: upload_mobile_apk
@@ -58,14 +58,14 @@ jobs:
           name: companion-debug-apk
           path: mobile/build/outputs/apk/debug/*.apk
           if-no-files-found: error
-          retention-days: 14
+          retention-days: 7
 
       - name: Add APK link to job summary
         run: |
           {
             echo "### 🚀 Build Successful!"
             echo ""
-            echo "Watch face APK: [\`watchface-debug-apk.zip\`](${{ steps.upload_apk.outputs.artifact-url }}) (GitHub login required, expires in 14 days)"
+            echo "Watch face APK: [\`watchface-debug-apk.zip\`](${{ steps.upload_apk.outputs.artifact-url }}) (GitHub login required, expires in 7 days)"
             echo ""
             echo "Companion APK: [\`companion-debug-apk.zip\`](${{ steps.upload_mobile_apk.outputs.artifact-url }})"
             echo ""
